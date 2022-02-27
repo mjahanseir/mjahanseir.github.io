@@ -14,47 +14,9 @@
         .box {
             width: 100%;
             height: 100vh;
-            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            /* OLD background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);*/
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(2, 42, 30) 35%, rgb(4, 124, 88) 100%);
         }
-
-        h2 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 40px;
-        }
-
-        h3 {
-            position: absolute;
-            top: 62%;
-            left: 50%;
-            transform: translate(-62%, -50%);
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 900;
-            font-size: 30px;
-        }
-
-        .link {
-            position: absolute;
-            top: 75%;
-            left: 50%;
-            transform: translate(-75%, -50%);
-            color: #fff;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 25px;
-        }
-
         .box div {
             height: 60px;
             width: 60px;
@@ -135,26 +97,74 @@
                 transform: scale(1.6) translateY(-250px) rotate(360deg);
             }
         }
+        .mainarea{
+            width: 25%;
+            height: 15%;
+            padding: 5%;
+            /*transform: translate(-55%, -50%);*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*background: rgba(255, 255, 255, .1);*/
+            border-radius: 15px;
+            text-align: center;
+        }
+        h1 ,h2{
+            color: #fff; text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            color: #fff;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none; text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+        }
+        a:hover{
+            /*font-size: 1.7rem;*/
+            background-color: rgba(0,0,0,0.1);
+        }
+        a:hover::after {
+            content: " ] ";
+        }
+        a:hover::before {
+            content: " [ ";
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
-    </div>
-    <h2> Mohammad Jahanseir </h2>
-    <h3> Software Developer</h3>
-    <div class="link"> <a href="mailto:mjahanseir@gmail.com"> Email</a> &nbsp; | &nbsp;<a href="https://www.linkedin.com/in/jahanseir/">Linkedin</a>
-    </div>
+<di class="mainarea">
+    <h1> Mohammad Jahanseir </h1>
+    <h2> Software Developer</h2>
+    <br>
+    <!--    <p>Over 14 years’ experience in all facets of software and Network, with possess outstanding creative problem-solving and analytical skills. Objective – Seeking challenging position in Software and ICT related projects, highly motivated team player with the positive attitude to support a co-operative environment.-->
+    <!--        Enjoy learning new things and assimilate new ideas quickly and strong organizational skills with the ability to execute tasks within the tight deadline.-->
+    <!--        Equipped with both hands-on work experience and industry knowledge that will make me a great asset to the IT position.</p>-->
+    <br>
+    <a href="https://www.linkedin.com/in/jahanseir/">Linkedin</a>
+    <br>
+    <a href="mailto:mjahanseir@gmail.com"> Be&nbsp;in&nbsp;touch</a>
+</di>
+<div class="box">
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+</div>
+
 </body>
 
 </html>
