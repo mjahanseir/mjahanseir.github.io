@@ -9,162 +9,234 @@
         * {
             margin: 0;
             padding: 0;
+            height: auto;
+            background-color: #e1faf3;
         }
 
-        .box {
+
+        .mainimage{
             width: 100%;
-            height: 100vh;
-            /* OLD background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);*/
-            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(2, 42, 30) 35%, rgb(4, 124, 88) 100%);
+            top: 0;
+            height: auto;
         }
-        .box div {
-            height: 60px;
-            width: 60px;
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            animation: animate 4s linear infinite;
-            background: rgba(255, 255, 255, .5);
-            border-radius: 15px;
+        .mainarea  {
+            max-width: 70%;
+            margin: auto;
+            background: white;
+            padding: 0;
+            box-shadow: #2d2c2c 4px 0  50px ;
         }
 
-        .box div:nth-child(1) {
-            top: 20%;
-            left: 20%;
-            animation: animate 8s linear infinite;
-        }
-
-        .box div:nth-child(2) {
-            top: 26%;
-            left: 89%;
-            animation: animate 10s linear infinite;
-        }
-
-        .box div:nth-child(3) {
-            top: 80%;
-            left: 90%;
-            animation: animate 5s linear infinite;
-        }
-
-        .box div:nth-child(4) {
-            top: 65%;
-            left: 75%;
-            animation: animate 7s linear infinite;
-        }
-
-        .box div:nth-child(5) {
-            top: 90%;
-            left: 10%;
-            animation: animate 9s linear infinite;
-        }
-
-        .box div:nth-child(6) {
-            top: 30%;
-            left: 60%;
-            animation: animate 5s linear infinite;
-        }
-
-        .box div:nth-child(7) {
-            top: 70%;
-            left: 33%;
-            animation: animate 8s linear infinite;
-        }
-
-        .box div:nth-child(8) {
-            top: 75%;
-            left: 60%;
-            animation: animate 10s linear infinite;
-        }
-
-        .box div:nth-child(9) {
-            top: 23%;
-            left: 50%;
-            animation: animate 6s linear infinite;
-        }
-
-        .box div:nth-child(10) {
-            top: 35%;
-            left: 7%;
-            animation: animate 10s linear infinite;
-        }
-
-        @keyframes animate {
-            0% {
-                transform: scale(0) translateY(0) rotate(50deg);
-            }
-
-            100% {
-                transform: scale(1.6) translateY(-250px) rotate(360deg);
-            }
-        }
-        .mainarea{
-            width: 25%;
-            height: 15%;
-            padding: 5%;
-            /*transform: translate(-55%, -50%);*/
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /*background: rgba(255, 255, 255, .1);*/
-            border-radius: 15px;
-            text-align: center;
-        }
-        h1 ,h2{
-            color: #fff; text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        p {
-            color: #fff;
-            text-align: center;
-        }
 
         a {
-            color: #fff;
+            color: #690606;
             text-decoration: none; text-align: center;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         a:hover{
-            /*font-size: 1.7rem;*/
-            background-color: rgba(0,0,0,0.1);
+            /*background-color: rgba(0,0,0,0.1);*/
+            font-weight: bold;
         }
-        a:hover::after {
-            content: " ] ";
+        h1:hover::after {
+            content: "   ] ";
         }
-        a:hover::before {
-            content: " [ ";
+        h1:hover::before {
+            content: " [   ";
         }
+        h2:hover::after {
+            content: "   >> ";
+        }
+        h2:hover::before {
+            content: " <<   ";
+        }
+
+        /*    my menu   */
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #021812; color: whitesmoke; margin:0; padding: 14px 25px; text-align: center;display: block;
+        }
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #053b2a; color: whitesmoke; margin:0; padding: 14px 25px; text-align: center; display: block;
+        }
+        h3{
+            background-color: #061c1a; color: whitesmoke; margin:0; padding: 24px 25px;  text-align: center; display: block;
+        }
+        h1:nth-of-type(even),h2:nth-of-type(even),h3:nth-of-type(even) {
+            border: 1px solid #129877;
+        }
+        .collapsible {
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .collapsible:hover { background-color: rgb(1, 42, 30); ;}
+
+        .content {
+            background-color: ivory;
+            text-align: justify;
+            font-family:Verdana, Geneva, monospace;
+            color: #2d2c2c;
+            font-size: 1rem;
+            display: none;
+            overflow: hidden;
+        }
+        .text{
+            padding:20px;
+        }
+        .footer{
+            max-width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 10%;
+            z-index: 99;
+            font-size: 23px;
+            font-weight: bold;
+            font-family: "Times New Roman",sans-serif;
+            border: none;
+            outline: none;
+            background-color: #730b0b;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 10px 60px black;
+        }
+
+        #myBtn:hover {
+            background-color: #2d2c2c;
+        }
+
 
     </style>
 </head>
 
 <body>
-<di class="mainarea">
-    <h1> Mohammad Jahanseir </h1>
-    <h2> Software Developer</h2>
-    <br>
-    <!--    <p>Over 14 years’ experience in all facets of software and Network, with possess outstanding creative problem-solving and analytical skills. Objective – Seeking challenging position in Software and ICT related projects, highly motivated team player with the positive attitude to support a co-operative environment.-->
-    <!--        Enjoy learning new things and assimilate new ideas quickly and strong organizational skills with the ability to execute tasks within the tight deadline.-->
-    <!--        Equipped with both hands-on work experience and industry knowledge that will make me a great asset to the IT position.</p>-->
-    <br>
-    <a href="https://www.linkedin.com/in/jahanseir/">Linkedin</a>
-    <br>
-    <a href="mailto:mjahanseir@gmail.com"> Be&nbsp;in&nbsp;touch</a>
-</di>
-<div class="box">
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-    <div> </div>
-</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<div class="mainarea">
+    <img class="mainimage" src="mo.jpeg" alt="">
+    <h1 class="collapsible"> Mohammad Jahanseir </h1>
+    <div class="content">
+        <h2 class="collapsible">  Highlight</h2>
+        <div class="content">
+            <ul class="text">
+                <li>Software Developer and Full Stack Java Certified
+                </li> <li>Master’s Degree in Software Engineering
+            </li><li>Over 15 years experience providing excellent IT service and support
+            </li><li>Excellent computer skills, adopting new concepts as well as responsibilities
+            </li><li>Excellent customer service skills with an outgoing, confident personality allow me to engage with clients quickly and easily
+            </li><li>Ability to remain calm and focused even in the most stressful situations
+            </li><li>Committed to continuous learning to find new solutions and new technology
+            </li></Ul>
+        </div>
+
+        <h2 class="collapsible"> Areas of Expertise</h2>
+        <div class="content">
+            <ul class="text">
+                <li>	Back End: Java, C++, C#
+                </li><li>	Front End: Java Script, Node.js, React, HTML, CSS, JQuery, Bootstrap, XML
+            </li><li>   DataBase: My SQL, MongoDB
+            </li><li>	Software Development: UX and UI design, Agile
+            </li><li>	Version Control System: GIT(GitHub, Bitbucket)
+            </li><li>	Operating Systems: MacOS, Windows, Linux
+            </li><li>	Application: MS Office, Adobe Photoshop and Premiere, Balsamiq, Figma
+            </li>
+            </ul>
+        </div>
+
+        <h2 class="collapsible"> Work Experience </h2>
+        <div class="content">
+            <ul class="text">
+                <li>Tech Specialist [May2021 - Present]</li>
+                <p>  London Drugs, Saskatoon, Canada</p>
+                <hr>
+                <li>Certified Advisor [Sep 2019 – May 2021]</li>
+                <p>Best Buy, Saskatoon, Canada</p>
+                <hr>
+                <li>SEO and Social media Expert (Casual) [Apr 2019 – Jun 2019]</li>
+                <p> 1Maids, Saskatoon, Canada</p>
+                <hr>
+                <li>IT Support Specialist [Dec 2018 - Jul 2019]</li>
+                <p> Atlas Office Solution, Saskatoon, Canada</p>
+                <hr>
+                <li>Senior IT Specialist [May 2004 - Jul 2018]</li>
+                <p> Azad University (IAU), Science and Research Branch, Tehran, Iran</p>
+                <hr>
+                <li>University Lecturer [Feb 2014 - Feb 2018]</li>
+                <p> University of Applied Science and Technology, Iran</p>
+                <p> Azad University (IAU), Iran</p>
+                <p> SAMA Technical and Vocational Center, Iran</p>
+                <hr>
+                <li>Network Support Specialist [Apr 2004 - Sep 2005]</li>
+                <p>Alborz Computer Company, Tehran, Iran</p>
+            </ul>
+
+        </div>
+
+        <h2 class="collapsible">Education</h2>
+        <div class="content">
+            <ul class="text">
+                <li>Software Developer, Post-Graduate Program [2022]
+                </li><li>Full Stack Java Developer Bootcamp [2019]
+            </li><li>Master’s Degree - Computer Engineering – Software [2013]
+            </li><li>Bachelor’s Degree - Computer Engineering - Software [2009]
+            </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<div class="footer">
+    <a href="https://www.linkedin.com/in/jahanseir/">Linkedin</a> &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/mjahanseir"> GitHub</a> &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;
+    <a href="mailto:mjahanseir@gmail.com"> Email</a>
+</div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 </body>
 
 </html>
