@@ -3,7 +3,9 @@
     padding: 0;
     height: auto;
 }
-
+.fa{
+    direction: rtl;
+}
 .mainimage {
     width: 100%;
     top: 0;
