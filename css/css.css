@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.mainimage {
+    width: 100%;
+    top: 0;
+    height: auto;
+}
+
+.mainarea {
+    max-width: 70%;
+    margin: auto;
+    background: white;
+    padding: 0;
+    box-shadow: #2d2c2c 4px 0 50px;
+}
+
+a {
+    color: #690606;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+h1:hover::after {
+    content: "   ] ";
+}
+
+h1:hover::before {
+    content: " [   ";
+}
+
+h2:hover::after {
+    content: "   >> ";
+}
+
+h2:hover::before {
+    content: " <<   ";
+}
+
+.udemy a {
+    background-color: #690606;
+    color: whitesmoke;
+    font-size: 0.7rem;
+    padding: 0 20px;
+}
+
+.udemy a:hover {
+    font-weight: normal;
+}
+
+h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #021812;
+    color: whitesmoke;
+    margin: 0;
+    padding: 14px 25px;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #053b2a;
+    color: whitesmoke;
+    margin: 0;
+    padding: 14px 25px;
+    text-align: center;
+    display: block;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
+    margin: 0;
+    text-align: center;
+    display: block;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    display: block;
+}
+
+h1:nth-of-type(even),
+h2:nth-of-type(even) {
+    border: 1px solid #129877;
+}
+
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+}
+
+.collapsible:hover {
+    background-color: rgb(1, 42, 30);
+}
+
+.content {
+    background-color: ivory;
+    text-align: justify;
+    font-family: "Times New Roman", Times, serif, Geneva, monospace;
+    color: #2d2c2c;
+    font-size: 1.2rem;
+    display: none;
+    overflow: hidden;
+}
+
+.text {
+    padding: 20px;
+}
+
+.footer {
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+    background-color: #e1faf3;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: "-  ";
+}
+
+ol {
+    margin-left: 25px;
+}
+
+li:nth-of-type(even) {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10%;
+    z-index: 99;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Times New Roman", sans-serif;
+    border: none;
+    outline: none;
+    background-color: #730b0b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 10px 60px black;
+}
+
+#myBtn:hover {
+    background-color: #2d2c2c;
+}
