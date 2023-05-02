@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="..\..\css\style.css" />
-    <title>Learn English</title>
-  </head>
-  <body>
-    <a href="..\index.html">Back to Home</a>
-    <p class="headerPage">Code With Mosh</p>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="..\..\css\style.css" />
+  <title>Learn English</title>
+</head>
 
-    <!------------------------------------------------   Power Platform        -------------------------------------------------->
-    <h1 id="ielts" class="collapsible">Power Apps</h1>
-    <div class="content">
-      <h4>
-        <a
-          href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUNv0LtNwEydJd3huH0O-L9"
-          >[PL-100 ] PluralSight - Getting Started with Model-driven Apps in
-          Power Apps - by Amber Israelsen (Youtube)</a
-        >
-      </h4>
-    </div>
+<body>
+  <a href="..\index.html">Back to Home</a>
+  <p class="headerPage">Microsoft</p>
 
-    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+  <!------------------------------------------------   Power Platform        -------------------------------------------------->
+  <h2 id="ielts" class="collapsible">Power Apps</h2>
+  <div class="content">
+    <h4>
+      <a href="Microsoft/powerapps.html">Powerapps</a>
+    </h4>
+  </div>
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
-      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
-      //Get the button
-      var mybutton = document.getElementById("myBtn");
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
         } else {
-          mybutton.style.display = "none";
+          content.style.display = "block";
         }
-      }
+      });
+    }
 
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
       //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
