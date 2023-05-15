@@ -186,3 +186,16 @@ li:nth-of-type(even) {
 #myBtn:hover {
   background-color: #2d2c2c;
 }
+
+.RedSolidboxLink a {
+  background-color: #690606;
+  color: whitesmoke;
+  /* font-size: 0.7rem; */
+  padding: 5px 20px;
+}
+
+.RedSolidboxLink a:hover {
+  box-shadow: inset 1000px 0 0 0 black;
+  font-weight: normal;
+  transition: color 1s linear, box-shadow 1s linear;
+}
