@@ -199,3 +199,6 @@ li:nth-of-type(even) {
   font-weight: normal;
   transition: color 1s linear, box-shadow 1s linear;
 }
+.DarkPurple{
+  background-color: #300240;
+}
