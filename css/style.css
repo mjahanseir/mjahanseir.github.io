@@ -27,30 +27,6 @@ a {
   text-decoration: none;
 }
 
-h1:hover::after {
-  content: "   ] ";
-}
-
-h1:hover::before {
-  content: " [   ";
-}
-
-h2:hover::after {
-  content: "   >> ";
-}
-
-h2:hover::before {
-  content: " <<   ";
-}
-
-h3:hover::after {
-  content: "      ------    ";
-}
-
-h3:hover::before {
-  content: "    ------      ";
-}
-
 .udemy a {
   background-color: #690606;
   color: whitesmoke;
@@ -83,6 +59,11 @@ h1 {
   display: block;
 }
 
+h1:hover::after {   content: "   ] "; }
+
+h1:hover::before {   content: " [   ";  }
+
+
 h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14pt;
@@ -93,6 +74,9 @@ h2 {
   text-align: center;
   display: block;
 }
+h2:hover::after {   content: "   >> ";}
+h2:hover::before {  content: " <<   ";}
+
 
 h3 {
   font-size: 12pt;
@@ -103,6 +87,8 @@ h3 {
   text-align: center;
   display: block;
 }
+h3:hover::after {  content: "      ------    ";}
+h3:hover::before {  content: "    ------      ";}
 
 h4 {
   font-size: 1.3rem;
@@ -127,7 +113,7 @@ h4:nth-of-type(even) {
 }
 
 .collapsible:hover {
-  background-color: rgb(1, 42, 30);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .content {
@@ -153,11 +139,14 @@ h4:nth-of-type(even) {
 
 ul {
   margin-left: 20px;
+  margin-right: 20px;
   list-style-type: "-  ";
 }
 
 ol {
   margin-left: 25px;
+  margin-right: 25px;
+  padding: 25px;
 }
 
 li:nth-of-type(even) {
@@ -199,6 +188,8 @@ li:nth-of-type(even) {
   font-weight: normal;
   transition: color 1s linear, box-shadow 1s linear;
 }
-.DarkPurple{
-  background-color: #300240;
-}
+.DarkPurple{  background-color: #300240;}
+.pyBlue{  background-color: #3673a5;}
+.pyBlue:hover {  background-color: #2d608a; }
+.pyYellow{  color: black;  background-color: #ffd342;}
+.pyYellow:hover {  background-color: #ebc23d; }
