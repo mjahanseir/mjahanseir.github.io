@@ -198,3 +198,123 @@ li:nth-of-type(even) {
 .dbBlue:hover {  background-color: #015070; }
 .dbOrange{  color: black;  background-color: #e79700;}
 .dbOrange:hover {  background-color: #c48002; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                                                          ANIMATION                                          */
+.blackBox {
+   background-color: black;
+  }
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(225,225,225, .01);
+  background-image: url("watermark.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 35s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+
+}
+
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }
+}
+
+.watermark{
+  height: 200px;
+  width:auto;
+    background: url("watermark.jpg") no-repeat;
+    background-size: cover;
+
+}
