@@ -193,3 +193,8 @@ li:nth-of-type(even) {
 .pyBlue:hover {  background-color: #2d608a; }
 .pyYellow{  color: black;  background-color: #ffd342;}
 .pyYellow:hover {  background-color: #ebc23d; }
+
+.dbBlue{   background-color: #006892;}
+.dbBlue:hover {  background-color: #015070; }
+.dbOrange{  color: black;  background-color: #e79700;}
+.dbOrange:hover {  background-color: #c48002; }
