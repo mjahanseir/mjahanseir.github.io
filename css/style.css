@@ -199,6 +199,20 @@ li:nth-of-type(even) {
 .dbOrange{  color: black;  background-color: #e79700;}
 .dbOrange:hover {  background-color: #c48002; }
 
+.tileBG{
+  background-image: url("bg1.jpg");
+  background-repeat: repeat;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(0,0,0, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
