@@ -271,9 +271,7 @@ li:nth-of-type(even) {
 
 
 /*                                                          ANIMATION                                          */
-.blackBox {
-   background-color: black;
-  }
+
 .text-container {
   display: flex;
   justify-content: center;
