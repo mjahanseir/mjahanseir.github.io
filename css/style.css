@@ -113,7 +113,8 @@ h4:nth-of-type(even) {
 }
 
 .collapsible:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
 }
 
 .content {
@@ -216,10 +217,12 @@ li:nth-of-type(even) {
 
 
 
-
-
-
-
+/* English */
+.EnPurple{   background-color: #581845;}
+.EnDarkRed{   background-color: #900C3F;}
+.EnRed{   background-color: #C70039;}
+.EnOrange{   background-color: #FF5733;}
+.EnYellow{ color: black; background-color: #FFC300;}
 
 
 
