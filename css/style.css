@@ -189,16 +189,6 @@ li:nth-of-type(even) {
   font-weight: normal;
   transition: color 1s linear, box-shadow 1s linear;
 }
-.DarkPurple{  background-color: #300240;}
-.pyBlue{  background-color: #3673a5;}
-.pyBlue:hover {  background-color: #2d608a; }
-.pyYellow{  color: black;  background-color: #ffd342;}
-.pyYellow:hover {  background-color: #ebc23d; }
-
-.dbBlue{   background-color: #006892;}
-.dbBlue:hover {  background-color: #015070; }
-.dbOrange{  color: black;  background-color: #e79700;}
-.dbOrange:hover {  background-color: #c48002; }
 
 .tileBG{
   background-image: url("bg1.jpg");
@@ -216,22 +206,21 @@ li:nth-of-type(even) {
 }
 
 
+.DarkPurple{  background-color: #300240;}
+/* Python */
+.pyBlue{  background-color: #3673a5;}
+.pyYellow{  color: black;  background-color: #ffd342;}
+/* database */
+.dbBlue{   background-color: #006892;}
+.dbOrange{  color: black;  background-color: #FFC300;}
+/* .dbOrange{  color: black;  background-color: #e79700;} */
 
 /* English */
 .EnPurple{   background-color: #581845;}
 .EnDarkRed{   background-color: #900C3F;}
 .EnRed{   background-color: #C70039;}
-.EnOrange{   background-color: #FF5733;}
+.EnOrange{ color:whitesmoke;  background-color: #FF5733;}
 .EnYellow{ color: black; background-color: #FFC300;}
-
-
-
-
-
-
-
-
-
 
 
 
