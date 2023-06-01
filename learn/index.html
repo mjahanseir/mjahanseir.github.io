@@ -27,20 +27,41 @@
         box-shadow: inset 300px 0 0 0 #900C3F;
         color: white;
       }
-
+#clock{
+      color: whitesmoke;
+      background-color: rgba(0,0,0,0.8);
+      font-weight: bold;
+      height: 100%;
+      margin: auto;
+      min-height: 100vh;
+       text-align: center;
+       font-size: 30rem;
+       top: 100%;
+}
   </style>
 </head>
 
-<body>
+<body onload="startTime()">
 
 <div class="tileBG">
-  <p class="space">Home</p>
+  <p  class="space">Home</p>
 </div>
 
 
 
 
+
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!----------------------------------------------    Region workout        -------------------------------------------------->
+
+    <h1 class="EnPurple collapsible">Workout</h1>
+    <div class="content">
+      <h4>  <a href="workout\workout.html">  Workout </a></h4>
+      <h4>  <a href="workout\workout\Workouts.pdf">  Workout Excercise Program [PDF]</a></h4>
+      <h4>  <a href="workout\workout\WorkoutsDumbbells.pdf">  Workout Excercise With Dumbbells Program [PDF]</a></h4>
+      <h4>  <a href="https://anc.ca.apm.activecommunities.com/ymcasaskatoon/calendars?onlineSiteId=0&no_scroll_top=true&defaultCalendarId=1&locationId=2&displayType=0&view=2"> YMCA Schedule</a></h4>
+
+    </div
 
   <!----------------------------------------------    Region 1        -------------------------------------------------->
   <h1 class="EnDarkRed collapsible">COMPUTER</h1>
@@ -83,7 +104,6 @@
       </div
 
 
-
     <!----------------------------------------------    Region Links        -------------------------------------------------->
 
       <h1 class="EnYellow collapsible"style="color:whitesmoke;">Links</h1>
@@ -106,8 +126,7 @@
 
 
 
-
-
+<br><br><br><br>
 <div class="box">
     <div> </div>
     <div> </div>
@@ -120,6 +139,7 @@
     <div> </div>
     <div> </div>
 </div>
+<p id="clock"> </p>
 
   <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
@@ -164,6 +184,25 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
+    // clock
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+
+
       //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
   </script>
 </body>
