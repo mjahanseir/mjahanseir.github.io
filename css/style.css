@@ -244,12 +244,71 @@ text-shadow: 0 10px 60px rgba(255,255,255,0.7);
 
 
 
+/* TOP MENU RESPONSIVE */
+.topMenu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topMenu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topMenu a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topMenu a:hover {
+ font-size: 17px;
+  background-color: #ddd;
+  color: black;
+}
+
+.topMenu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topMenu .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topMenu a:not(:first-child) {display: none;}
+  .topMenu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topMenu.responsive {position: relative;}
+  .topMenu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topMenu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 
 
-
-
-
+.topMenu a.split {
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+}
 
 
 

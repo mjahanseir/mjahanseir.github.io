@@ -6,9 +6,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="..\css\style.css" />
-  <link rel="stylesheet" href="..\css\bubble.css" />
-  <title>Home</title>
+  <link rel="stylesheet" href="..\..\css\style.css" />
+  <link rel="stylesheet" href="..\..\css\bubble.css" />
+  <title>31 days Challenge</title>
   <style>
   body {
         background-image: url("http://drmazhari.com/mo.jahan.pics/images/bgGol.jpg"), url("pic/bg.jpg");
@@ -20,7 +20,7 @@
         .today{
           font-size: 3.5rem;
           color: whitesmoke;
-          background-color: tomato;
+          background-color: #e45d20;
           padding:1.5rem;
         }
         #current_day{
@@ -66,14 +66,25 @@
 </head>
 
 <body>
-
-<a target="_blank" href="..\index.html">Back to Home</a>
+  <body>
+  <div id="mytopMenu" class="topMenu">
+          <a class="active" target="_blank" href="..\index.html">Back to Home</a>
+        <a href="workout.html" >Work out</a>
+        <a href="yoga.html">Yoga</a>
+        <a href="31daysChallenge.html">31 days Challenge</a>
+        <a href="water.html">Water Activities</a>
+        <a href="gym.html">Budy Building and Fitness</a>
+  </div>
+<br>
 <div class="tileBG">
-  <center> <img src="pic\31Days.JPG" alt=""> </center>
-</div>
+    <center> <img src="pic/31Days.JPG" > </center>
+  <p style=" align-items: center; font-family: 'Work Sans', sans-serif;  font-size:4rem ;color:#e45d20;  text-transform: uppercase;  text-align: center; font-weight: 900; line-height: 1;">31 days Challenge</p>
+
+  </div>
+
+
 
 <div class="mytable">
-<a target="_blank" href="pic/31DaysChallenge.jpg"><center><img src="pic/31DaysChallenge.jpg" style="width:30%""></center></a>
 
 <p class="today"> Today is : Day <span id="current_day" ></span></p>
 
@@ -117,6 +128,7 @@
 <hr>		Day 31      <br> <a target="_blank" href="https://www.youtube.com/watch?v=T1cio6MJ7Fs&amp;list=PLN99XDk2SYr42t1QEbcI0hwz8LsDCeB09&amp;index=37&amp;pp=iAQB">20 MIN BOOTY / LEG WORKOUT - weights &amp; booty band (grow your booty)</a>
 
 
+<a target="_blank" href="pic/31DaysChallenge.jpg"><center><img src="pic/31DaysChallenge.jpg" style="width:30%""></center></a>
 
 
 </div>
@@ -183,6 +195,15 @@
     var date = new Date();
     document.getElementById("current_day").innerHTML = date.getDate();
 
+    // Responsive Navigation Bar
+    function myFunction() {
+      var x = document.getElementById("mytopMenu");
+      if (x.className === "topMenu") {
+        x.className += " responsive";
+      } else {
+        x.className = "topMenu";
+      }
+    }
       //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
   </script>
 </body>

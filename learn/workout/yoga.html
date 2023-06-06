@@ -66,10 +66,18 @@
 </head>
 
 <body>
-
-<a target="_blank" href="..\index.html">Back to Home</a>
+  <body>
+  <div id="mytopMenu" class="topMenu">
+          <a class="active" target="_blank" href="..\index.html">Back to Home</a>
+        <a href="workout.html" >Work out</a>
+        <a href="yoga.html">Yoga</a>
+        <a href="31daysChallenge.html">31 days Challenge</a>
+        <a href="water.html">Water Activities</a>
+        <a href="gym.html">Budy Building and Fitness</a>
+  </div>
+<br>
 <div class="tileBG">
-  <!-- <center> <img src="pic/workout.JPG" alt=""> </center> -->
+    <center> <img src="pic/yoga.JPG" > </center>
   <p style=" align-items: center; font-family: 'Work Sans', sans-serif;  font-size:4rem ;color:#e45d20;  text-transform: uppercase;  text-align: center; font-weight: 900; line-height: 1;">Yoga</p>
 
 </div>
@@ -88,7 +96,23 @@
 
 <a href="https://www.udemy.com/course/complete-beginner-yoga-course/">udemy - page</a>
 </div>
+<h1 class="EnDarkRed collapsible">One Yoga </h1>
+  <div class="content">
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=5E6cD2lOxRA&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=1">Vinyasa </a>Christine Chénier</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=5MXfrVaN41Q&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=2">Spa Flow</a> Carolyn Budgell</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=AqGNnW3uc6Y&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=3">Vinyasa </a>Christie Baumgartner</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=DkjIvLxIJdc&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=4">Vinyasa </a>Ryan Leier Unfinished</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=FXN66SRC9q0&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=5">Vinyasa </a>Cecily Elmas</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=JySSqixkQjE&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=6">Flow + Restore </a>Christine Chénier</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=PYrLiZy05cM&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=7">Vinyasa </a>Peter Elmas</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=PreMdgw32xQ&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=8">Power Flow </a>Amy Chalmers</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=f0rlf9fMP10&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=9"> Vinyasa </a>Sophie Trudeau</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=kx5WaIksGO8&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=10">Vinyasa </a>Vanessa Bourget</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=podBO6ej8sg&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=11"> Slow Flow + Restore </a>Ariffa Lalani</h4>
+  <h4><a target="_blank" href="https://www.youtube.com/watch?v=qikJmf7aOng&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=12">Vinyasa </a>Kiyah Leier Marshall</h4>
 
+<a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk">All Playlist</a>
+</div>
 
   <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
@@ -153,7 +177,15 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
-
+// Responsive Navigation Bar
+function myFunction() {
+  var x = document.getElementById("mytopMenu");
+  if (x.className === "topMenu") {
+    x.className += " responsive";
+  } else {
+    x.className = "topMenu";
+  }
+}
       //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
   </script>
 </body>
