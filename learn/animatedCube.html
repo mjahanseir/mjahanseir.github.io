@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\css\style.css" />
+    <title>Learn English</title>
+
+    <style media="screen">
+    html, body {
+            padding: 0;
+            height: 100%;
+            display: grid;
+            place-content: center;
+            background: #0A0A27;
+            }
+
+            a {
+              box-shadow: inset 0 0 0 0 #54b3d6;
+              /* color: #54b3d6; */
+              margin: 0 -.25rem;
+              padding: 0 1.25rem;
+              transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+
+
+              align-items: center;
+              font-family: 'Work Sans', sans-serif;
+              font-size:3rem ;
+              color:#e45d20;
+              text-transform: uppercase;
+              /* text-align: center; */
+              font-weight: 900;
+              line-height: 1;
+              /* padding: 25px 1px 1px 1px; */
+
+
+
+            }
+            a:hover {
+              box-shadow: inset 800px 0 0 0 #e45d20;
+              color: white;
+              /* background-color: #e45d20; */
+            }
+
+    </style>
+  </head>
+  <body>
+<!-- <img class="mainimage" src="mo.jpeg" alt="Mohammad Jahanseir Photo" /> -->
+    <a href="index.html">Computer</a>
+
+
+<!--
+    <a href="computer/Mosh.html">   Code With Mosh  </a>
+
+       <a href="computer/Python.html">Python</a>
+       <a href="computer/DataBase.html">Data Base</a>
+
+         <a href="computer/DataStructureAlgorithm.html">Data Structure and Algorithm</a>
+         <a href="computer/SoftwareEngineering.html">Software Engineering</a>
+         <a href="computer/SaskPolytech.html">SaskPolytech</a>
+         <a href="computer/java.html">Java</a>
+         <a href="computer/JavaScript.html">C#</a>
+         <a href="computer/JavaScript.html">Java Script</a>
+         <a href="computer/NodeJS.html">NodeJS</a>
+         <a href="computer/React.html">REACT</a>
+         <a href="computer/htmlcss.html">HTML/CSS</a>
+         <a href="computer/htmlcss.html">My SQL</a>
+         <a href="computer/htmlcss.html">My SQL</a>
+
+
+
+    <a href="computer/Microsoft/Microsoft.html">   Microsoft  </a>
+  -->
+
+   <a href="english\english.html">  English </a>
+
+
+    <a href="Links.html">  Links  </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="animatedCube">
+      animatedCube
+    </div>
+
+
+    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+
+      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    </script>
+  </body>
+</html>
