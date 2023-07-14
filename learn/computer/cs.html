@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="..\..\css\style.css" />
+  <title>C#</title>
+  <link rel="icon"  href="../pic/favicon.ico" type="image/x-icon" />
+
+  <style>
+        body{
+
+
+          background-color: #e5e5f7;
+          background: linear-gradient(135deg, #e2cee5 25%, transparent 5%) -21px 0/ 42px 42px, linear-gradient(225deg, #e2cee5 25%, transparent 5%) -21px 0/ 42px 42px, linear-gradient(315deg, #e2cee5 25%, transparent 5%) 0px 0/ 42px 42px;
+
+        }
+        .collapsible:hover { background-image:linear-gradient(hsla(0,0%,0%,.2) 100%,transparent 100%)       }
+        a {
+          box-shadow: inset 0 0 0 0 #48005E;
+          color: #48005E;
+          padding: 0 2.25rem;
+          transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+        }
+        a:hover {
+          box-shadow: inset 1000px 0 0 0 #48005E;
+          color: white;
+        }
+        .cscontent{
+            padding: 0px  10%;
+        }
+         strong:hover{
+          background-color: purple;
+        }
+      .cscontent a{
+        /* display: block; */
+        /* background-color: dodgerblue; */
+        text-align:center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .cscontent  a:hover {
+                /* box-shadow:none;
+                color: dodgerblue; */
+              }
+
+              .headerPage {
+                margin: 2% 20%;
+                padding: 0.5% 5% ;
+                display: block;
+                background-color: whitesmoke;
+                border-radius: 10rem;
+                 box-shadow: 0 0 15px rgba(72, 0, 94, 0.65);
+                 text-shadow:5px  10px  15px rgba(0, 0, 0,0.6);
+                align-items: center;
+                font-family: 'Work Sans', sans-serif;
+                font-size:6rem ;
+                color:#48005e;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 900;
+              }
+
+    h1{
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size:4rem ;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+      line-height: 1;
+      padding: 25px 1px 1px 1px;
+    }
+    h1:hover::after {   content: "    ";}
+    h1:hover::before {  content: "     ";}
+    h2:hover::after {   content: "    ";}
+    h2:hover::before {  content: "     ";}
+    </style>
+</head>
+
+<body>
+  <a href="..\index.html">Back to Home</a>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><small>[C#]</small> <br><br> <b>&nbsp; Top &nbsp;</b>  </button>
+  <p class="headerPage">C#</p>
+  <!----------------------------------------------    Region 1        -------------------------------------------------->
+
+  <h1 class="csh1 collapsible">Mosh</h1>
+    <div class="content">
+              <h2 class="csh2 collapsible">[Mosh-C#] 01- C# Basics for Beginners (80Lessons,5.5Hours)</h2>
+              <div class="content">
+
+                          <div class="cscontent">
+
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=fOH6Zglsqxo&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=1&pp=gAQBiAQBsAQB"> 	1.1.Welcome (2m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=2&pp=gAQBiAQBsAQB"> 	1.2.Getting Started (20m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=3&pp=gAQBiAQBsAQB"> 	1.3.Primitive Types and Expressions (35m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=4&pp=gAQBiAQBsAQB"> 	1.4. Non-Primitive Types (1h)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=5&pp=gAQBiAQBsAQB"> 	1.5. Control Flow (40m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=6&pp=gAQBiAQBsAQB"> 	1.6. Arrays and Lists (30m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=7&pp=gAQBiAQBsAQB"> 	1.7. Working with Dates (10m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=8&pp=gAQBiAQBsAQB"> 	1.8. Working with Text (50m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=9&pp=gAQBiAQBsAQB"> 	1.9. Working with Files (25m)	</a>	<br>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=2XxK6BRteXs&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=10&pp=gAQBiAQBsAQB"> 	1.10. Debugging Applications (40m)	</a>	<br>
+
+                                            <strong>	1.1.Welcome (2m)	</strong>	<br>
+                                            ___  01.01.01	About This Course (1:21)		<br>
+                                            ___  01.01.02	Follow Me Around		<br>
+                                            ___  01.01.03	Learning Paths		<br>
+                                            <strong>	1.2.Getting Started (20m)	</strong>	<br>
+                                            ___  01.02.1	Introduction (0:55)		<br>
+                                            ___  01.02.2	C# vs .NET (0:53)		<br>
+                                            ___  01.02.3	What is CLR (2:12)		<br>
+                                            ___  01.02.4	Architecture of .NET Applications (2:42)		<br>
+                                            ___  01.02.5	Getting Visual Studio		<br>
+                                            ___  01.02.6	Your First C# Application (9:53)		<br>
+                                            ___  01.02.7	Quiz		<br>
+                                            ___  01.02.8	Summary		<br>
+                                            <strong>	1.3.Primitive Types and Expressions (35m)	</strong>	<br>
+                                            ___  01.03.1	Introduction (0:26)		<br>
+                                            ___  01.03.2	Variables and Constants (8:43)		<br>
+                                            ___  01.03.3	Overflowing (2:13)		<br>
+                                            ___  01.03.4	Scope (1:02)		<br>
+                                            ___  01.03.5	Demo: Variables and Constants (11:27)		<br>
+                                            ___  01.03.6	Type Conversion (4:48)		<br>
+                                            ___  01.03.7	Demo: Type Conversion (10:16)		<br>
+                                            ___  01.03.8	Operators (4:12)		<br>
+                                            ___  01.03.9	What are Logical Operations?		<br>
+                                            ___  01.03.10	Demo: Operators (6:21)		<br>
+                                            ___  01.03.11	Comments (1:43)		<br>
+                                            ___  01.03.12	Summary (0:35)		<br>
+                                            <strong>	1.4. Non-Primitive Types (1h)	</strong>	<br>
+                                            ___  01.04.1	Introduction (0:25)		<br>
+                                            ___  01.04.2	Classes (5:55)		<br>
+                                            ___  01.04.3	Demo: Classes (8:27)		<br>
+                                            ___  01.04.4	Structs (1:28)		<br>
+                                            ___  01.04.5	Arrays (2:15)		<br>
+                                            ___  01.04.6	Demo: Arrays (3:51)		<br>
+                                            ___  01.04.7	Strings (5:49)		<br>
+                                            ___  01.04.8	Demo: Strings (7:42)		<br>
+                                            ___  01.04.9	Enums (1:47)		<br>
+                                            ___  01.04.10	Demo: Enums (7:37)		<br>
+                                            ___  01.04.11	Reference Types and Value Types (3:14)		<br>
+                                            ___  01.04.12	Demo: Reference Types and Value Types (5:48)		<br>
+                                            ___  01.04.13	Demo: Reference Types and Value Types (3:48)		<br>
+                                            ___  01.04.14	Summary (0:56)		<br>
+                                            <strong>	1.5. Control Flow (40m)	</strong>	<br>
+                                            ___  01.05.1	Introduction (1:13)		<br>
+                                            ___  01.05.2	Conditional Statements (2:43)		<br>
+                                            ___  01.05.3	Demo: If/Else, Switch/Case (8:40)		<br>
+                                            ___  01.05.4	Exercises		<br>
+                                            ___  01.05.5	Iteration Statements (3:59)		<br>
+                                            ___  01.05.6	Demo: For loops (1:56)		<br>
+                                            ___  01.05.7	Demo: Foreach loops (3:42)		<br>
+                                            ___  01.05.8	Demo: While loops (7:00)		<br>
+                                            ___  01.05.9	Random Class (9:05)		<br>
+                                            ___  01.05.10	Exercises		<br>
+                                            ___  01.05.11	Summary (0:37)		<br>
+                                            <strong>	1.6. Arrays and Lists (30m)	</strong>	<br>
+                                            ___  01.06.1	Introduction (0:38)		<br>
+                                            ___  01.06.2	Arrays (4:47)		<br>
+                                            ___  01.06.3	Demo: Arrays (10:02)		<br>
+                                            ___  01.06.4	Lists (2:18)		<br>
+                                            ___  01.06.5	Demo: Lists (10:11)		<br>
+                                            ___  01.06.6	Excercises		<br>
+                                            ___  01.06.7	Summary (0:38)		<br>
+                                            <strong>	1.7. Working with Dates (10m)	</strong>	<br>
+                                            ___  01.07.1	Introduction (0:17)		<br>
+                                            ___  01.07.2	DateTime (6:20)		<br>
+                                            ___  01.07.3	TimeSpan (7:28)		<br>
+                                            ___  01.07.4	Summary (0:35)		<br>
+                                            <strong>	1.8. Working with Text (50m)	</strong>	<br>
+                                            ___  01.08.1	Introduction (0:16)		<br>
+                                            ___  01.08.2	String (4:24)		<br>
+                                            ___  01.08.3	Demo: Strings (12:28)		<br>
+                                            ___  01.08.4	Live Coding: Summarizing Text (11:18)		<br>
+                                            ___  01.08.5	StringBuilder (1:07)		<br>
+                                            ___  01.08.6	Demo: StringBuilder (7:30)		<br>
+                                            ___  01.08.7	Exercises		<br>
+                                            ___  01.08.8	Procedural Programming (8:45)		<br>
+                                            ___  01.08.9	Summary (0:35)		<br>
+                                            <strong>	1.9. Working with Files (25m)	</strong>	<br>
+                                            ___  01.09.1	Introduction (0:20)		<br>
+                                            ___  01.09.2	Introduction to System.IO (3:58)		<br>
+                                            ___  01.09.3	File and File Info (5:50)		<br>
+                                            ___  01.09.4	Directory and Directory Info (6:01)		<br>
+                                            ___  01.09.5	Path (2:53)		<br>
+                                            ___  01.09.6	Exercises		<br>
+                                            ___  01.09.7	Summary (1:00)		<br>
+                                            <strong>	1.10. Debugging Applications (40m)	</strong>	<br>
+                                            ___  01.10.1	Introduction (0:21)		<br>
+                                            ___  01.10.2	Debugging Tools in Visual Studio (10:24)		<br>
+                                            ___  01.10.3	Removing Side Effects (9:15)		<br>
+                                            ___  01.10.4	Defensive Programming (7:44)		<br>
+                                            ___  01.10.5	Call Stack Window (1:46)		<br>
+                                            ___  01.10.6	Locals and Autos Windows (1:49)		<br>
+                                            ___  01.10.7	Summary (0:38)		<br>
+                                            ___  01.10.8	Whats Next (0:50)		<br>
+
+                           </div><!-- end of content -->
+              </div>
+
+
+                <h2 class="csh2 collapsible">[Mosh-C#] 02- C# Intermediate, OOP (40Lessons,6Hours)</h2>
+                <div class="content">
+
+                            <div class="cscontent">
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=12&pp=gAQBiAQBsAQB"> 	2.1.Introduction (3m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=13&pp=gAQBiAQBsAQB">  	2.2.Classes (1h50m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=14&pp=gAQBiAQBsAQB">  	2.3.Association Between Classes (25m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=15&pp=gAQBiAQBsAQB">  	2.4.Inheritance: Second Pillar of OOP (50m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=16&pp=gAQBiAQBsAQB">  	2.5.Polymorphism: Third Pillar of OOP (35m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=17&pp=gAQBiAQBsAQB">  	2.6.Interfaces (1h5m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=KSNOQx9Gk3g&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=18&pp=gAQBiAQBsAQB">  	2.7.Students' Code Reviews (35m)	</a>	<br>
+                                <strong>	2.1.Introduction (3m)	</strong>	<br>
+                                  ___  02.01.01	About this Course (2:42)		<br>
+                                  ___  02.01.02	Source Code		<br>
+                                  ___  02.01.03	Exercises		<br>
+                                  ___  02.01.04	Follow Me Around		<br>
+                                  ___  02.01.05	Learning Paths		<br>
+                                  <strong>	2.2.Classes (1h50m)	</strong>	<br>
+                                  ___  02.02.01	Introduction to Classes (13:56)		<br>
+                                  ___  02.02.02	Constructors (22:54)		<br>
+                                  ___  02.02.03	Object Initializers (2:20)		<br>
+                                  ___  02.02.04	Methods (23:59)		<br>
+                                  ___  02.02.05	Fields (9:21)		<br>
+                                  ___  02.02.06	Access Modifiers (10:48)		<br>
+                                  ___  02.02.07	Properties (16:19)		<br>
+                                  ___  02.02.08	Indexers (9:30)		<br>
+                                  ___  02.02.09	Summary		<br>
+                                  ___  02.02.10	Exercises		<br>
+                                  <strong>	2.3.Association Between Classes (25m)	</strong>	<br>
+                                  ___  02.03.01	Class Coupling (3:45)		<br>
+                                  ___  02.03.02	Inheritance (7:54)		<br>
+                                  ___  02.03.03	Composition (7:27)		<br>
+                                  ___  02.03.04	Composition over Inheritance (8:48)		<br>
+                                  ___  02.03.05	Composition over Inheritance (8:48)		<br>
+                                  <strong>	2.4.Inheritance: Second Pillar of OOP (50m)	</strong>	<br>
+                                  ___  02.04.01	Access Modifiers (22:37)		<br>
+                                  ___  02.04.02	Constructors and Inheritance (9:42)		<br>
+                                  ___  02.04.03	Upcasting and Down-casting (17:45)		<br>
+                                  ___  02.04.04	Boxing and Unboxing (7:09)		<br>
+                                  ___  02.04.05	Summary		<br>
+                                  ___  02.04.06	Exercises		<br>
+                                  <strong>	2.5.Polymorphism: Third Pillar of OOP (35m)	</strong>	<br>
+                                  ___  02.05.01	Method Overriding (17:15)		<br>
+                                  ___  02.05.02	Abstract Classes and Members (11:58)		<br>
+                                  ___  02.05.03	Sealed Classes and Members (2:38)		<br>
+                                  ___  02.05.04	Summary		<br>
+                                  ___  02.05.05	Exercises		<br>
+                                  <strong>	2.6.Interfaces (1h5m)	</strong>	<br>
+                                  ___  02.06.01	What is an Interface? (4:35)		<br>
+                                  ___  02.06.02	Interfaces and Testability (25:12)		<br>
+                                  ___  02.06.03	Interfaces and Extensibility (18:15)		<br>
+                                  ___  02.06.04	Interfaces are NOT for Multiple Inheritance (4:26)		<br>
+                                  ___  02.06.05	Interfaces and Polymorphism (11:47)		<br>
+                                  ___  02.06.06	Summary		<br>
+                                  ___  02.06.07	Exercises		<br>
+                                  <strong>	2.7.Students' Code Reviews (35m)	</strong>	<br>
+                                  ___  02.07.01	StopWatch Exercise (12:21)		<br>
+                                  ___  02.07.02	Stack Exercise (7:24)		<br>
+                                  ___  02.07.03	WorkflowEngine Exercise (12:36)		<br>
+                       </div><!-- end of content -->
+              </div>
+
+              <h2 class="csh2 collapsible">[Mosh-C#] C# Advanced (10Lessons,3Hours)</h2>
+              <div class="content">
+
+                            <div class="cscontent">
+                              <a target="_blank" href="https://www.youtube.com/watch?v=pb0WpUlE3FY&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=19&pp=gAQBiAQBsAQB"> 	3.1.Introduction (3m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=pb0WpUlE3FY&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=20&pp=gAQBiAQBsAQB"> 	3.2.Advance (173m)	</a>	<br>
+                              <a target="_blank" href="https://www.youtube.com/watch?v=pb0WpUlE3FY&list=PLt4zoIx-WdZUIj-xFmoCpW1WQ33Ttndwp&index=21&pp=gAQBiAQBsAQB"> 	3.3.Next (8m)	</a>	<br>
+
+                              <strong>	3.1.Introduction (1m)	</strong>	<br>
+                              ___  03.01.01	About the Course (0:39)		<br>
+                              ___  03.01.02	Source Code		<br>
+                              ___  03.01.03	Follow Me Around		<br>
+                              ___  03.01.04	Learning Paths		<br>
+                              <strong>	3.2.Advanced C# Topics (2h25m)	</strong>	<br>
+                              ___  03.02.01	Delegates (13:38)		<br>
+                              ___  03.02.02	Lambda Expressions (12:59)		<br>
+                              ___  03.02.03	Events and Delegates (31:44)		<br>
+                              ___  03.02.04	Extension Methods (12:11)		<br>
+                              ___  03.02.05	LINQ (20:31)		<br>
+                              ___  03.02.06	Nullable Types (8:03)		<br>
+                              ___  03.02.07	Dynamic (9:54)		<br>
+                              ___  03.02.08	Exception Handling (23:07)		<br>
+                              ___  03.02.09	Async/Await (20:21)		<br>
+
+                            </div>
+              </div>
+    </div>
+
+
+
+
+    <h1 class="csh1 collapsible">Mike Dane</h1>
+        <div class="content">
+                  <h2 class="csh2 collapsible">C# - Programming Language | Tutorial </h2>
+                  <div class="content">
+
+                                <div class="cscontent">
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=52r9qUToOD8&list=PLLAZ4kZ9dFpNIBTYHNDrhfE9C-imUXCmk&pp=iAQB">  C# - Programming Language | Tutorial on Youtube  </a> <br>
+                                    1		-		Introduction 		<br>
+                                    2		-		Installation & Setup 		<br>
+                                    3		-		Drawing a Shape		<br>
+                                    4		-		Variables 		<br>
+                                    5		-		Data Types 		<br>
+                                    6		-		Working With Strings 		<br>
+                                    7		-		Working With Numbers 		<br>
+                                    8		-		Getting User Input 		<br>
+                                    9		-		Building a Calculator 		<br>
+                                    10		-		Building a Mad Lib 		<br>
+                                    11		-		Arrays 		<br>
+                                    12		-		Methods 		<br>
+                                    13		-		Return Statement 		<br>
+                                    14		-		If Statements 		<br>
+                                    15		-		If Statements (con't) 		<br>
+                                    16		-		Building a Better Calculator 		<br>
+                                    17		-		Switch Statements 		<br>
+                                    18		-		While Loops		<br>
+                                    19		-		Building a Guessing Game 		<br>
+                                    20		-		For Loops 		<br>
+                                    21		-		Building an Exponent Method 		<br>
+                                    22		-		2d Arrays		<br>
+                                    23		-		Comments 		<br>
+                                    24		-		Exception Handling 		<br>
+                                    25		-		Classes & Objects 		<br>
+                                    26		-		Constructors 		<br>
+                                    27		-		Object Methods 		<br>
+                                    28		-		Getters & Setters 		<br>
+                                    29		-		Static Class Attributes		<br>
+                                    30		-		Static Methods & Classes 		<br>
+                                    31		-		Inheritance		<br>
+
+
+                                      <br> <br>
+                                    ALL-IN-ONE <br>
+
+                                    <a target="_blank" href="https://youtu.be/8lCoo5y2RnU"> [Mike-C#] C# for Beginners - Mike  Dane</a><br>
+                                    <a target="_blank" href="https://youtu.be/fYGOgpH2Hig"> [C#] Advanced C# Programming Course </a> <br>
+
+
+                                </div><!-- end of content -->
+                  </div>
+          </div>
+
+
+        ‎
+              <h1 class="csh1 collapsible">C# - Farsi</h1>
+                  <div class="content">
+                            <h2 class="csh2 collapsible"> [Faradars-C#] آموزش کاربردی برنامه نویسی سی شارپ </h2>
+                            <div class="content">
+
+                                          <div class="fa cscontent">
+                                              <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWDWZFSIV9WCdrwXztEKl3l"> [Faradars-C#] آموزش کاربردی برنامه نویسی C#‎   -  YouTube</a> <br>
+                                              بخش یکم۱۷:۱۰	<br>
+                                                بخش دوم۰۱:۰۱:۲۰	<br>
+                                                بخش سوم۵۵:۳۶	<br>
+                                                بخش چهارم۰۱:۰۲:۲۵	<br>
+                                                بخش پنجم۰۱:۱۹:۴۲	<br>
+                                                بخش ششم۴۳:۱۴	<br>
+                                                بخش هفتم۰۱:۰۸:۱۸	<br>
+                                                بخش هشتم۰۱:۲۵:۳۹	<br>
+                                                بخش نهم۰۱:۰۱:۴۵	<br>
+                                                بخش دهم۵۵:۵۷	<br>
+                                                بخش یازدهم۰۱:۱۴:۱۰	<br>
+                                                بخش دوازدهم۰۱:۰۰:۱۶	<br>
+                                                بخش سیزدهم۰۱:۳۸:۵۸	<br>
+                                                بخش چهاردهم۱۳:۵۴	<br>
+
+
+                                          </div><!-- end of content -->
+                            </div><!-- end of h2 -->
+
+                            <h2 class="csh2 collapsible">  [Faradars-C#] آموزش شی گرایی در سی شارپ </h2>
+                            <div class="fa content">
+
+                                          <div class="cscontent">
+                                              <a target="_blank" href="https://www.youtube.com/watch?v=z2E5RDENhiY&list=PLt4zoIx-WdZVVn1X6TCrDP3r-wb2S521a">[Faradars-C#] آموزش شی گرایی در سی شارپ C# - YouTube</a>
+
+
+
+<pre>
+  چکیده
+  ۰۲:۵۳
+
+  شیئ گرایی به همراه پیاده سازی عملی در سی شارپ
+  ۰۱:۱۵:۰۹
+
+  شیئ گرایی به همراه پیاده سازی عملی در سی شارپ
+  ۰۱:۲۳:۵۷
+
+  بازنویسی عملگرها به همراه پیاده سازی مثال My Date
+  ۰۱:۱۱:۳۶
+
+  بازنویسی عملگرها به همراه پیاده سازی مثال My Date
+  ۰۱:۵۴:۲۸
+
+  وراثت با پیاده سازی پرداخت حقوق با ساختار سلسله مراتب
+  ۰۱:۱۱:۲۲
+
+  وراثت با پیاده سازی پرداخت حقوق با ساختار سلسله مراتب
+  ۰۱:۱۲:۳۵
+
+  index ها به همراه پیاده سازی مثال کاربردی چند ضلعی ها
+  ۳۸:۵۲
+
+  چند ریختی با پیاده سازی سیستم پرداخت حقوق یکسان شرکت
+  ۰۱:۴۸:۰۶
+
+  واسط ها به همراه پیاده سازی مثال سیستم پرداخت یکسان شرکت
+  ۵۰:۴۲
+
+  Delegate وEvent با پیاده سازی اطلاع رسانی با Notification
+  ۰۱:۳۳:۳۸
+
+  مدیریت استثنا به همراه بازنویسی مجدد مثال چند ضلعی ها
+  ۰۱:۰۱:۵۹
+</pre>
+</div><!-- end of content -->
+</div><!-- end of h2 -->
+
+
+
+                            <h2 class="csh2 collapsible"> Vision Academy- دوره ی کامل آموزش مقدماتی زبان برنامه نویسی سی شارپ  </h2>
+                            <div class="content">
+
+                                          <div class="cscontent">
+                                                       <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=2&pp=iAQB">  C# Introduction -  مفاهیم اولیه سی شارپ و آشنایی با دات نت فریم وورک
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=3&pp=iAQB"> C# Hello World - یک برنامه ی ساده ی کاربردی
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=4&pp=iAQB">  C# Variables and Data Types - ثابت ها و متغیرها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=5&pp=iAQB">  C# Operators  - عملگرها و عملوند ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=6&pp=iAQB">  C# If Statements - جملات شرطی
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=7&pp=iAQB">   C# switch-case - سوییچ کیس
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=8&pp=iAQB">   C# while loops - حلقه های وایل
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=9&pp=iAQB">   C# for loops - حلقه های فور
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=1&pp=iAQB">   C# Arrays - آرایه ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=11&pp=iAQB">   C# Lists  - لیست ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=12&pp=iAQB">   C# strings  - رشته ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=13&pp=iAQB">   C# Methods - توابع
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=14&pp=iAQB">   C# Classes and OOP - کلاس ها و شی گرایی
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=15&pp=iAQB">   OOP 4 Pillars - ابسترکشن و انکپسولیشن و ارث بری و پلی مورفیزم
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=16&pp=iAQB">   C# Interfaces  - اینترفیس ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=17&pp=iAQB">   C# Abstract - توابع و کلاس های ابسترکت
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=cXBw1ulsd9k&list=PL8oRZVu1TnSLry0iwYTHzWhcpSg1w4K1c&index=18&pp=iAQB">   C# Static - کلاس ها، متغیرها و توابع استاتیک
+                                              </a>
+                                            </div><!-- end of content -->
+                            </div><!-- end of h2 -->
+
+                            <h2 class="csh2 collapsible">Vision Academy- C# Advanced (Farsi) - آموزش پیشرفته زبان برنامه نویسی سی شارپ  </h2>
+                            <div class="content">
+
+                                          <div class="cscontent">
+                                                       <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=1&pp=iAQB">  C# Advanced - try / catch / finally - آموزش پیشرفته زبان برنامه نویسی سی شارپ - مدریت استثناء
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=2&pp=iAQB"> C# Advanced - Class Properties - آموزش پیشرفته زبان برنامه نویسی سی شارپ - کلاس پراپرتی ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=3&pp=iAQB"> C# Advanced - LINQ - آموزش پیشرفته زبان برنامه نویسی سی شارپ - لینک برای کوئری روی داده ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=4&pp=iAQB"> C# Advanced - Access Modifiers - آموزش پیشرفته زبان برنامه نویسی سی شارپ - سطوح دسترسی
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=5&pp=iAQB"> C# Advanced - Interfaces - آموزش پیشرفته زبان برنامه نویسی سی شارپ - اینترفیس ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=6&pp=iAQB"> C# Advanced - Delegates- آموزش پیشرفته زبان برنامه نویسی سی شارپ - دلگیت - لامبدا اکسپرشن
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=7&pp=iAQB"> C# Advanced - Async - َAwait - آموزش پیشرفته زبان برنامه نویسی سی شارپ - توابع ناهمگام
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=8&pp=iAQB"> C# Advanced - Abstract - آموزش پیشرفته زبان برنامه نویسی سی شارپ - کلاس ها و توابع ابسترکت
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=9&pp=iAQB"> C# Advanced - Debugging - آموزش پیشرفته زبان برنامه نویسی سی شارپ - دیباگ، اشکال یابی و اشکال زدایی
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=10&pp=iAQB"> C# Advanced - File System - آموزش پیشرفته زبان برنامه نویسی سی شارپ - فایل سیستم، فولدر ها و فایل ها
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=11&pp=iAQB"> C# Advanced - Code Snippets - آموزش پیشرفته زبان برنامه نویسی سی شارپ -کد اسنیپت
+                                              </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=IAd9syBhX6Q&list=PL8oRZVu1TnSJgN_FjsA1pNa7pXr0g5QO_&index=12&pp=iAQB"> C# Advanced - Multi-Threading - آموزش پیشرفته زبان برنامه نویسی سی شارپ - مالتی ترد یا چند نخی
+                                                </a>
+                                            </div><!-- end of content -->
+                            </div><!-- end of h2 -->
+
+                          <h2 class="csh2 collapsible"> Vision Academy- SQL Tutorials (Farsi) - My SQL - آموزش مقدماتی اس کیو ال پ  </h2>
+                          <div class="content">
+
+                                        <div class="cscontent">
+                                                <a target="_blank" href="https://www.youtube.com/playlist?list=PL8oRZVu1TnSKM795wZk1_BbW4bRPt2sqs">Playlist</a>
+                                          </div><!-- end of content -->
+                          </div><!-- end of h2 -->
+                          <h2 class="csh2 collapsible"> Vision Academy - WPF آموزش پروژه محورپ  </h2>
+                          <div class="content">
+
+                                        <div class="cscontent">
+                                                         <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=1&pp=iAQB"> #1 WPF Tutorial - Introduction - نرم افزار مدیریت فروشگاه - مفاهیم اولیه - WPF آموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=2&pp=iAQB">#2 WPF Tutorial - GUI Design - نرم افزار مدیریت فروشگاه - طراحی گرافیک اولیه - WPF آموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=3&pp=iAQB">#3 WPF Tutorial - Event Handling - نرم افزار مدیریت فروشگاه - مدیریت رویدادها - WPF آموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=4&pp=iAQB">#4 WPF-Models and OOP - نرم افزارمدیریت فروشگاه - مدل کردن موجودیتها با کلاسها - WPFآموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=5&pp=iAQB">#5 WPF - Data Access - نرم افزارمدیریت فروشگاه - دسترسی به داده ها و دیتابیس - WPFآموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=6&pp=iAQB">#6 WPF - Data Binding - نرم افزارمدیریت فروشگاه - بایند کردن داده ها - WPFآموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=7&pp=iAQB">#7 WPF - Add New Pages - نرم افزارمدیریت فروشگاه - اضافه کردن صفحات جدید - WPFآموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=8&pp=iAQB">#8 WPF - Form Validation - نرم افزارمدیریت فروشگاه - اعتبارسنجی فرم - WPFآموزش پروژه محور
+                                                </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=TbmFURlYPWI&list=PL8oRZVu1TnSKm9s5Wlg0VkL3MsITgiC1E&index=9&pp=iAQB">#9 WPF - Use Databases - نرم افزارمدیریت فروشگاه - استفاده از دیتابیس - WPFآموزش پروژه محور
+                                                  </a>
+                                          </div><!-- end of content -->
+                          </div><!-- end of h2 -->
+                          <h2 class="csh2 collapsible"> Vision Academy- C# Complementary (Farsi) - آموزش تکمیلی برنامه نویسی سی شارپ  </h2>
+                          <div class="content">
+
+                                        <div class="cscontent">
+                                                   <a target="_blank" href="https://www.youtube.com/watch?v=8z2d5aNbySk&list=PL8oRZVu1TnSKajSMQEYYQH7J8VbbZ_pSe&index=1&pp=iAQB"> C# Complementary - DRY Principle - آموزش تکمیلی برنامه نویسی سی شارپ - خودت رو تکرار نکن
+                                          </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=8z2d5aNbySk&list=PL8oRZVu1TnSKajSMQEYYQH7J8VbbZ_pSe&index=2&pp=iAQB"> C# Complementary - GIT - آموزش تکمیلی برنامه نویسی سی شارپ - ورژن کنترل با آموزش گیت
+                                          </a><br> <a target="_blank" href="https://www.youtube.com/watch?v=8z2d5aNbySk&list=PL8oRZVu1TnSKajSMQEYYQH7J8VbbZ_pSe&index=3&pp=iAQB"> C# Complementary - .Net Core vs .Net Framework - آموزش تکمیلی-مقایسه ی دات نت کور با دات نت فریم ورک
+                                            </a>
+                                          </div><!-- end of content -->
+                          </div><!-- end of h2 -->
+                          <h2 class="csh2 collapsible"> Maktabkhoneh -    C# پیش‌مقدماتی </h2>
+                          <div class="content">
+
+                                        <div class="fa cscontent">
+                                          <a target="_blank" href="https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86-%D8%B3%DB%8C-%D8%B4%D8%A7%D8%B1%D9%BE-mk1312/">Maktabkhoneh</a><br>
+
+                                          مقدمه
+                                       -   (00:17)-
+                                        1 جلسه
+                                        <br>
+                                          آشنایی با محیط ویژوال استودیو
+                                         - (01:39)-
+                                        12 جلسه
+                                        <br>
+                                          تفاوت فضای نامی، اسمبلی و انواع
+                                         - (00:51)-
+                                        5 جلسه
+                                        <br>
+                                          ساختار یک برنامه ساده
+                                       -  (01:01)-
+                                        4 جلسه
+                                        <br>
+                                          کلاس System.Console
+                                       -   (01:19)-
+                                        6 جلسه
+                                        <br>
+                                          انواع داده‌ها در .NET
+                                       - (03:00)-
+                                        11 جلسه
+                                        <br>
+                                          کار با رشته‌ها
+                                         - (02:08)-
+                                        10 جلسه
+                                      </div><!-- end of content -->
+                          </div><!-- end of h2 -->
+
+
+                                  <h2 class="csh2 collapsible"> [TopLearn-C#] سی شارپ مقدماتی تا پیشرفته </h2>
+                                  <div class="content">
+
+                                                <div class="fa cscontent">
+                                                    <a target="_blank" href="https://www.youtube.com/watch?v=5LVhuwN7Dyg&list=PLt4zoIx-WdZUHDvGZoLF5NYJ2GiKxD4O6">  سی شارپ مقدماتی تا پیشرفته </a> <br>
+<pre>
+  01- معرفی دوره
+  02-معرفی و بررسی زبان سی شارپ
+  03- معرفی و نصب Visual Studio 2017
+  04-قواعد دستوری سی شارپ
+  05- متغیر ها در سی شارپ
+  06-مدیریت خطاها در سی شارپ
+  07-دستورات شرطی در سی شارپ
+  08-آرایه ها و حلقه ها در سی شارپ
+  09-متد ها در سی شارپ
+  10-کلاس ها در سی شارپ
+  11-کلمه کلیدی Static و ارث بری در سی شارپ
+  12- کپسوله سازی و Generic List ها در سی شارپ
+  13-Interface ها در سی شارپ
+  14-فضاهای نام در سی شارپ
+  15- معرفی و شروع کار با Windows Form Application
+  16-کلاس های Partial در سی شارپ
+  17-پروژه ماشین حساب
+  18-بانک اطلاعاتی Sql Server
+  19-پروژه عملی بخش اول
+  20-پروژه عملی بخش دوم
+  21-پروژه عملی بخش آخر
+</pre>
+
+                                                    </div><!-- end of content -->
+                                  </div>
+
+                                  <h2 class="csh2 collapsible">[TopLearn-C#]  سی شارپ پیشرفته</h2>
+                                  <div class="content">
+
+                                                <div class="fa cscontent">
+                                                    <a target="_blank" href="https://www.youtube.com/watch?v=eWotA9rFaeA&list=PLt4zoIx-WdZX-QtBZNH_tQKhfjqjr97zH">  سی شارپ پیشرفته </a> <br>
+<pre>
+  01- معرفی دوره
+  02-آموزش Linq
+  03-آموزش Lambda Expression
+  04- آموزش Entity Framework
+  05- شروع پروژه حسابداری
+  06- تکمیل لایه DataLayer
+  07-الگوی Unit Of Work
+  08-ایجاد مدیریت اشخاص
+  09- افزودن و حذف شخص
+  10- Extension Method ها
+  11- ویرایش شخص
+  12-آموزش Generic Repository
+  13- کلمه کلیدی Virtual
+  14-ساخت بخش تراکنش ها
+  15- ساخت بخش تراکنش جدید
+  16- گزارش تراکنش ها
+  17-ویرایش تراکنش ها
+  18- فیلتر گزارش ها
+  19- فرم ورود به برنامه
+  20-چاپ گزارش
+  21- کلاس های Abstract
+  22- لایه Business
+</pre>
+                                              </div><!-- end of content -->
+                                            </div>
+
+
+
+                                              <h2 class="csh2 collapsible">[TopLearn-C#]  OOP</h2>
+                                              <div class="content">
+
+                                                            <div class="fa cscontent">
+                                                                <a target="_blank" href="https://www.youtube.com/watch?v=6DICufDMjsI&list=PLt4zoIx-WdZXM_ciLoDdThlxSg91Hbvug"> OOP </a> <br>
+<pre>
+  01-Intro-OOP
+  02-Inheritance
+  03-Inheritance-2
+  04-ForEach
+  05-Dispose-Object
+  06-IDisposable
+  07-FileStream
+  08-Forms
+  09-Form
+  10-MVC
+  11-WPF
+  12-Procedural Oriented Programming
+  13-Constructor-Destructor
+  14-Property
+  15-Static members
+  16-ref-out
+  17-Params
+  18-Partial Class
+  19-Operator Overloading
+  20-Inheritance
+  21-Inheritance Levels
+  22-Protected
+  23-Hiding inheritance Members
+  24-Virtual
+  25-Abstract Class
+  26-Seald
+  27-Polymorphism-Type Compatibility
+  28-Polymorphism-Type Testing
+  29-Delegate
+  30-Delegate-Example
+</pre>
+                                                                                              </div><!-- end of content -->
+                                                                                            </div>
+                          </div>
+
+                                              <h1 class="csh1 collapsible">All in One</h1>
+                                                  <div class="myLink content">
+                                                      <a target="_blank" href="https://youtu.be/W3xlahYYtsw"> [Mosh-C#] 1 - Basics </a> <br>
+                                                      <a target="_blank" href="https://youtu.be/R4qfd9XCuVY"> [Mosh-C#] 2 - OOP</a><br>
+                                                      <a target="_blank" href="https://youtu.be/aOHzQrI2rKk"> [Mosh-C#] 3 - Advanced </a> <br>
+                                                      <a target="_blank" href="https://youtu.be/8lCoo5y2RnU"> [Mike-C#] C# for Beginners - Mike  Dane</a><br>
+                                                      <a target="_blank" href="https://youtu.be/fYGOgpH2Hig"> [C#] Advanced C# Programming Course </a> <br>
+                                                    </div>
+
+  <!--
+                   </div>
+
+                                         <h1 class="csh1 collapsible"></h1>
+                                             <div class="content">
+                                                       <h2 class="csh2 collapsible">3333</h2>
+                                                       <div class="content">
+
+                                                                     <div class="cscontent">
+                                                                         <a href="#"> fddf </a> <br>
+
+
+                                                                     </div>
+                                                       </div>
+                  </div>
+                  -->
+
+
+<div class="foot">
+<a href="#">  Learn C# with ❤ </a>
+</div>
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+  </script>
+</body>
+
+</html>

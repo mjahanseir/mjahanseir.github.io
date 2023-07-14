@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,17 +8,15 @@
       <link rel="stylesheet" href="css\css.css" />
       <link rel="stylesheet" href="css\img.css" />
 </head>
-
 <body>
       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="mainarea">
+      <div class="mainarea tooltip">
+            <span class="tooltiptext">Please click on my name</span>
             <img class="mainimage" src="mo.jpeg" alt="Mohammad Jahanseir Photo" />
             <h1 class="collapsible">Mohammad Jahanseir</h1>
             <div class="content">
-
 <!-- Highlight -->
-                  <!--#region                 HIGHLIGHT                              -->
-                  <h2 class="collapsible">Highlight</h2>
+                  <h2 id="highlight" class="collapsible">Highlight</h2>
                   <div class="content">
                         <ul class="text">
                               <li> Software Developer and Full Stack Java Certified </li>
@@ -29,151 +26,99 @@
                               <li> Unique customer service skills with an outgoing, confident personality allowing me to   engage with clients quickly and easily </li>
                               <li> Ability to remain calm and focused even in the most stressful situations </li>
                               <li>Committed to continuous learning to find new solutions and new technology </li>
-
                         </ul>
                   </div>
-                  <!--#endregion -->
-
-
 <!-- Areas of Expertise -->
-                  <!--#region               Areas of Expertise                           -->
-                  <h2 class="collapsible">Areas of Expertise</h2>
+                  <h2 id="expertise" class="collapsible">Areas of Expertise</h2>
                   <div class="content">
                         <ul class="text">
-
-                          <strong>Programming:</strong>
-                          <ul>
-                            <li>Java, C++, C#, Node.js, React, HTML, CSS</li>
-                          </ul>
-
-                          <br>
-
-                          <strong>Database:</strong>
-                          <ul>
-                            <li>My SQL, MongoDB, Dataverse</li>
-                          </ul>
-
-                          <br>
-
-                          <strong> Software:</strong>
-                          <ul>
-                            <li>ServiceNow, Salesforce, Microsoft PowerApps</li>
-                          </ul>
-
-                          <br>
-
-                          <strong> Software Development / Version Control:</strong>
-                          <ul>
-                            <li>UX and UI design, Agile, GIT (GitHub, Bitbucket)</li>
-                          </ul>
-
-                          <br>
-
-                          <strong> Operating Systems: </strong>
-                          <ul>
-                            <li>Windows, Linux, macOS</li>
-                          </ul>
-
-                          <br>
-
-                          <strong> Application</strong>
-                         <ul>
-                           <li>MS Office, Adobe Photoshop, Premiere, Balsamiq, Figma </li>
+                                <strong>Programming:</strong>  <ul>  <li>Java, C++, C#, Node.js, React, HTML, CSS</li></ul>
+                                <br>
+                                <strong>Database:</strong><ul><li>My SQL, MongoDB, Dataverse</li></ul>
+                                <br>
+                                <strong> Software:</strong><ul><li>ServiceNow, Salesforce, Microsoft PowerApps</li></ul>
+                                <br>
+                                <strong> Software Development / Version Control:</strong><ul><li>UX and UI design, Agile, GIT (GitHub, Bitbucket)</li></ul>
+                                <br>
+                                <strong> Operating Systems: </strong><ul><li>Windows, Linux, macOS</li></ul>
+                                <br>
+                                <strong> Application</strong><ul><li>MS Office, Adobe Photoshop, Premiere, Balsamiq, Figma </li>
                         </ul>
-
                   </div>
-                  <!--#endregion -->
-
-
 <!-- Work Experience -->
-                  <!--#region               Work Experience                          -->
-                  <h2 class="collapsible">Work Experience</h2>
-                  <div class="content">
-  <!-- ISM -->
+            <h2 id="experience" class="collapsible">Work Experience</h2>
+            <div class="content">
+    <!-- Work Experience  ISM -->
                         <ul class="text"> <strong>Programmer Analyst [Jun 2022 - Present]</strong>
                               <p>ISM, Canada</p> <br>
-                              <ol>
-                                <li> <strong> PowerApps Developer [Jun 2023 - Jul. 2023]</strong>
-                                      <ul>
-                                            <li>The RBC Order Management System (RBOMS) is an app based on fulfilling service requests from RBC customers. It allows users to track order details such as completion status, location, and date, and generate and analyze financial reports that are validated against the OMS database. RBOMS also ensures that the requested hardware has been accurately ordered through shipping vendors</li>
-                                            <li>RBOMS enables users to view orders for financial reporting purposes and run queries on records within a specific period. It allows users to create new orders in the database for tracking purposes, update all order record information for billing purposes monthly, and generate monthly and yearly financial reports that are validated against the database</li>
-                                            <li>Overall, the application reduces manual work, automates complex scripts, eliminates redundancy, and enhances workflow efficiency and repeatability</li>
-                                             <em> Technology: </em>Microsoft PowerApps, Dataverse, Power Automate, Microsoft Planner
-                                      </ul>
-                                </li> <br>
-                                <li> <strong> PowerApps Developer [Feb. 2023 - May 2023]</strong>
-                                      <ul>
-                                            <li> The RBC Order Management System (RBOMS) is an App base on fulfillment based on a request for service from an RBC customer</li>
-                                              <li> OMS database, and then track its details (including completion status, location, and date) and generate and analyze financial reports and validate them against the database. Ensure that the requested hardware has been correctly ordered by the shipping vendors</li>
-                                              <li> With RBMOS users can view orders for financial reporting purposes and run a query on records within a given period, create a new order to the database for tracking purposes, updates all order record information for the month for billing purposes and generate monthly and yearly financial reports and validate them against the database</li>
-                                               <li>All in all, the application helps to reduce manual work and run complex scripts with automation and remove redundancy to make workflow efficient and repeatable.</li>
-                                             <em> Technology: </em>Microsoft PowerApps, Dataverse, Power Automate, Microsoft Planner
-                                      </ul>
-                                </li> <br>
-                                <li>
-
+                                  <ol>
                                     <li> <strong> PowerApps Developer [Feb. 2023 - May 2023]</strong>
                                           <ul>
-                                                <li> FOREX is a database utilized by Kyndryl ITS Order Support Center in Canada for OEM fulfillment </li>
-                                                <li> Provides support for OEM fulfillment from quoting to final collection </li>
-                                                <li> Serves as a centralized location for all related information </li>
-                                                <li> Manage and track orders for various product types, vendors, and  Business Units </li>
-                                                <li> Ensures consistent processing and recording of orders and related  data </li>
-                                                <li> Efficiently manages invoice reconciliation and financial summaries   </li>
-                                                <li> Exception management feature enables quick identification and resolution of issues </li>
-                                                <li> Provides valuable metrics and reports for informed decision-making and performance monitoring </li> <em> Technology: </em>Microsoft PowerApps, Dataverse, Power Automate, Microsoft Planner
-                                          </ul>
+                                                <li> The RBC Order Management System (RBOMS) is an App base on fulfillment based on a request for service from an RBC customer</li>
+                                                  <li> OMS database, and then track its details (including completion status, location, and date) and generate and analyze financial reports and validate them against the database. Ensure that the requested hardware has been correctly ordered by the shipping vendors</li>
+                                                  <li> With RBMOS users can view orders for financial reporting purposes and run a query on records within a given period, create a new order to the database for tracking purposes, updates all order record information for the month for billing purposes and generate monthly and yearly financial reports and validate them against the database</li>
+                                                   <li>All in all, the application helps to reduce manual work and run complex scripts with automation and remove redundancy to make workflow efficient and repeatable.</li>
+                                                 <em> Technology: </em>Microsoft PowerApps, Dataverse, Power Automate, Microsoft Planner
+                                           </ul>
                                     </li> <br>
-                                    <li>
-                                      <strong>Salesforce developer [Nov. 2022 - Jan. 2023]</strong>
-                                          <ul>
-                                                <li> Engaged in a long-term project with SaskTel </li>
-                                                <li> Utilized murals to capture business process flow </li>
-                                                <li> Captured UX in the In Vision app and attached it to each JIRA story </li>
-                                                <li> Created a data model captured in the config workbook </li>
-                                                <li> Ensured effective communication and collaboration </li>
-                                                <li> Facilitated better comprehension and understanding of the process   </li>
-                                                <li> Tracked and documented critical information </li>
-                                                <li> Ensured consistency throughout the project </li>
 
-                                                <em>Technology:</em>Visual Studio Code, Salesforce, Vlocity Build Tool  CLI, GitHub Desktop, Jira and Bitbucket
-                                          </ul>
-                                    </li>
-                                    <br>
-                                    <li>
-                                      <strong> ServiceNow Developer [Aug. 2022 – Nov. 2022]</strong>
-                                          <ul>
-                                                <li> Set up customers in ServiceNow and build integrations </li>
-                                                <li> Establish processes for extracting, transforming, and presenting Service Level and Billing reports </li>
-                                                <li> Continually enhance ServiceNow with new features and fix defects </li>
-                                                <li> Provide education and support to ServiceNow users </li>
-                                                <li> Customize and develop backend and user interface stories as requested by clients </li>
-                                                <li> Deliver personalized solutions tailored to each client's uniqueneeds </li>
-                                                <li> Ensure comprehensive and effective ServiceNow implementation. </li>
+                                        <li> <strong> PowerApps Developer [Feb. 2023 - May 2023]</strong>
+                                              <ul>
+                                                    <li> FOREX is a database utilized by Kyndryl ITS Order Support Center in Canada for OEM fulfillment </li>
+                                                    <li> Provides support for OEM fulfillment from quoting to final collection </li>
+                                                    <li> Serves as a centralized location for all related information </li>
+                                                    <li> Manage and track orders for various product types, vendors, and  Business Units </li>
+                                                    <li> Ensures consistent processing and recording of orders and related  data </li>
+                                                    <li> Efficiently manages invoice reconciliation and financial summaries   </li>
+                                                    <li> Exception management feature enables quick identification and resolution of issues </li>
+                                                    <li> Provides valuable metrics and reports for informed decision-making and performance monitoring </li> <em> Technology: </em>Microsoft PowerApps, Dataverse, Power Automate, Microsoft Planner
+                                               </ul>
+                                        </li> <br>
+                                        <li>
+                                          <strong>Salesforce developer [Nov. 2022 - Jan. 2023]</strong>
+                                              <ul>
+                                                    <li> Engaged in a long-term project with SaskTel </li>
+                                                    <li> Utilized murals to capture business process flow </li>
+                                                    <li> Captured UX in the In Vision app and attached it to each JIRA story </li>
+                                                    <li> Created a data model captured in the config workbook </li>
+                                                    <li> Ensured effective communication and collaboration </li>
+                                                    <li> Facilitated better comprehension and understanding of the process   </li>
+                                                    <li> Tracked and documented critical information </li>
+                                                    <li> Ensured consistency throughout the project </li>
 
-                                                <em>Technology: </em>ServiceNow GUI, JavaScript, Visual Studio Code
-                                          </ul>
-                                    </li>
-                                    <br>
-                                    <li>
-                                       <strong>ScienceLogic Automation [Jul. 2022 – Aug. 2022]</strong>
-                                          <ul>
-                                                <li> Specialize in delivering SL1 architectural designed services </li>
-                                                <li> Provide detailed specifications for the SL1 system </li>
-                                                <li> Determine the client's preferred authentication methods and  multi-tenancy requirements </li>
-                                                <li> Tailor SL1 solution to meet specific client needs </li>
-                                                <li> Design and implement scalable, efficient, and reliable SL1 solutions </li>
-                                                <li> Ensure long-term success for clients </li>
+                                                    <em>Technology:</em>Visual Studio Code, Salesforce, Vlocity Build Tool  CLI, GitHub Desktop, Jira and Bitbucket
+                                               </ul>
+                                            </li>   <br>
+                                        <li>
+                                          <strong> ServiceNow Developer [Aug. 2022 – Nov. 2022]</strong>
+                                              <ul>
+                                                    <li> Set up customers in ServiceNow and build integrations </li>
+                                                    <li> Establish processes for extracting, transforming, and presenting Service Level and Billing reports </li>
+                                                    <li> Continually enhance ServiceNow with new features and fix defects </li>
+                                                    <li> Provide education and support to ServiceNow users </li>
+                                                    <li> Customize and develop backend and user interface stories as requested by clients </li>
+                                                    <li> Deliver personalized solutions tailored to each client's uniqueneeds </li>
+                                                    <li> Ensure comprehensive and effective ServiceNow implementation. </li>
 
-                                                 <em>Technology:  </em>ScienceLogic Platform
-                                          </ul>
-                                    </li>
-                              </ol>
-                              <br>
-                              <hr />
-                              <br>
+                                                    <em>Technology: </em>ServiceNow GUI, JavaScript, Visual Studio Code
+                                               </ul>
+                                          </li>   <br>
+                                        <li>
+                                           <strong>ScienceLogic Automation [Jul. 2022 – Aug. 2022]</strong>
+                                              <ul>
+                                                    <li> Specialize in delivering SL1 architectural designed services </li>
+                                                    <li> Provide detailed specifications for the SL1 system </li>
+                                                    <li> Determine the client's preferred authentication methods and  multi-tenancy requirements </li>
+                                                    <li> Tailor SL1 solution to meet specific client needs </li>
+                                                    <li> Design and implement scalable, efficient, and reliable SL1 solutions </li>
+                                                    <li> Ensure long-term success for clients </li>
 
-<!-- LD -->
+                                                     <em>Technology:  </em>ScienceLogic Platform
+                                               </ul>
+                                        </li>
+                                  </ol>
+                              </ul>  <br>  <hr /><br>
+    <!-- Work Experience  LD -->
                               <strong>Tech Specialist [May2021 - Present]</strong>
                               <p>London Drugs, Canada</p>
                               <ul>
@@ -182,11 +127,10 @@
                                     <li> Provide assistance to management on special projects or any other tasks </li>
                                     <li> Ensure quality and service levels are maintained to Company standards </li>
                                     <li> Keep learning and updating the latest technical knowledge to promote Tech products, peripherals, and Tech technologies </li>
-                              </ul>
-                              <br>
-                              <hr> <br>
-
-<!-- BBY -->
+                                </ul>
+                                <br>
+                                <hr> <br>
+    <!-- Work Experience  BBY -->
                               <strong>Certified Advisor [Sep 2019 – May 2021]</strong>
                               <p>Best Buy, Canada</p>
                               <ul>
@@ -194,27 +138,22 @@
                                     <li> Provide customer service by addressing and resolving customer inquiries/issues   in a timely manner and communicating efficiently with the manager </li>
                                     <li> Staying up to date with the latest technology trends and product releases in order to provide the most relevant and accurate advice </li>
                                     <li> Demonstrating product features and benefits to customers and helping them make informed purchasing decisions </li>
-                              </ul>
-                              <br>
-                              <hr>
-                              <br>
-
-<!-- Atlas  -->
+                                </ul>
+                                <br>
+                                <hr>
+                                <br>
+    <!-- Work Experience  Atlas  -->
                               <strong>IT Support Specialist [Dec 2018 - Aug 2019]</strong>
                               <p>Atlas Office Solution, Canada</p>
                               <ul>
-                                    <li> Set up and maintenance of LAN and wireless systems for clients, diagnose errors
-                                          and technical problems and determine proper solutions </li>
-                                    <li> Performed network support tasks for WAN, LAN, and support client’s hardware
-                                          andsoftware </li>
-                                    <li> Configured Active Directory, security policies, DNS and DHCP services and
-                                          installed computers in both stand-alone and network environments </li>
-                              </ul>
-                              <br>
-                              <hr />
-                              <br>
-
-<!-- IAU -->
+                                    <li> Set up and maintenance of LAN and wireless systems for clients, diagnose errors and technical problems and determine proper solutions </li>
+                                    <li> Performed network support tasks for WAN, LAN, and support client’s hardware andsoftware </li>
+                                    <li> Configured Active Directory, security policies, DNS and DHCP services and installed computers in both stand-alone and network environments </li>
+                                  </ul>
+                                  <br>
+                                  <hr />
+                                  <br>
+    <!-- Work Experience  IAU -->
                               <strong>Senior IT Specialist [May 2004 - Jul 2018]</strong>
                               <p> Azad University (IAU), Science and Research Branch, Iran </p>
                               <ul>
@@ -222,12 +161,11 @@
                                     <li> Installed and configured different servers and client’s systems, supervised,  and assisted with the training of primary clients </li>
                                     <li> Configured and monitored DNS policy, and network security and maintained updated antivirus servers and assisted clients with troubleshooting their networks, security, operating system, and e-mail </li>
                                     <li> Conduct server security administration and management system, review and recommend secure system configuration for workstations and laptops </li>
-                              </ul>
-                              <br>
-                              <hr />
-                              <br>
-
-<!-- Lecturer -->
+                                  </ul>
+                                  <br>
+                                  <hr />
+                                  <br>
+    <!-- Work Experience  Lecturer -->
                             <strong>University Lecturer [Feb 2014 - Feb 2018]</strong>
                                 <p>University of Applied Science and Technology, Iran</p>
                                 <p>Azad University (IAU), Iran</p>
@@ -237,7 +175,7 @@
                               <hr />
                                <br>
 
-<!-- Alborz -->
+    <!-- Work Experience  Alborz -->
                               <strong>Network Support Specialist [Apr 2004 - Sep 2005]</strong>
                               <p>Alborz Computer Company, Iran</p>
                               <ul>
@@ -245,16 +183,13 @@
                                     <li> Monitored, responded to, and administered security incidents, DNS, email gateway, ftp, VPN, and other internet services </li>
                                     <li> Managed and monitored support for all TCP/IP network configurations (LAN and WAN), troubleshot network, hardware, and software issues, and resolved client problems and provided communications to clients and management </li>
                               </ul>
-                        </ul>
+
                         <br>
-                  </div>
-                  <!--#endregion -->
+                  </div><!-- END of  Work Experience -->
 
 
-
-
-                  <!--#region                  Education                             -->
-                  <h2 class="collapsible">Education</h2>
+ <!--   Education       -->
+      <h2 id="education" class="collapsible">Education</h2>
                   <div class="content">
                         <ul class="text">
                               <li>Software Developer, Post-Graduate Program [2022]</li>
@@ -262,121 +197,100 @@
                               <li>Master’s Degree - Computer Engineering – Software [2013]</li>
                               <li>Bachelor’s Degree - Computer Engineering - Software [2009]</li>
                         </ul>
-                  </div>
-                  <!--#endregion -->
+                   </div>
+<!-- Certification    -->
+      <h2 id="certification" class="collapsible"> Certification </h2>
+        <div class="content">
+          <!-- Software Engineering Certification -->
+                  <h3 class="collapsible"> Software Engineering </h3>
+                    <div class="content">
+                          <h4> Software </h4>
+                          <ul class="text">
+                                <ul class="myRedLink">
+                                      <li> Team Solution Design <a  href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/TeamSolutionDesign.JPG"  target="_blank">Certificate</a> </li>
+                                </ul>
+                          </ul>
 
 
+                          <h4> C# </h4>
+                          <ul class="text">
+                          <strong>.NET</strong>  <ol class="myRedLink">
+                                      <li> Demystifying the .NET Platform: Structure, Features, and Potential <a  href="cert\Demystifying the .NET Platform Structure Features and Potential.pdf"  target="_blank">Certificate</a>   <a  href="https://www.linkedin.com/learning/demystifying-the-dot-net-platform-structure-features-and-potential" target="_blank">Course page</a></li>
+                                      <li> Introducing .NET Core <a  href="cert\Introducing .NET Core.pdf"  target="_blank">Certificate</a>   <a  href="https://www.linkedin.com/learning/introducing-dot-net-core" target="_blank">Course page</a></li>
+                                      <li> .NET 6: First Look <a  href="cert\.NET 6 First Look.pdf"  target="_blank">Certificate</a>   <a  href="https://www.linkedin.com/learning/dot-net-6-first-look" target="_blank">Course page</a></li>
+                                </ol>
+                          </ul>
+                          <h4> Tools </h4>
+                          <ul class="text">
+                                <ul class="myRedLink">
+                                      <li> Visualize Data with Excel <a  href="cert\Visualize Data with Excel Course.pdf"  target="_blank">Certificate</a> <a  href="https://www.codecademy.com/learn/visualize-data-with-excel-course" target="_blank">Course page</a> </li>
+                                </ul>
+                          </ul>
 
-
-                  <!--#region                Certification                          -->
-                  <h2 class="collapsible"> Certification </h2>
-                  <div class="content">
-
-
-<!-- Software Engineering Certification -->
-                        <h3> Software Engineering </h3>
-
-                        <ul class="text">
-                              <ul class="myRedLink">
-                                    <li> Team Solution Design <a  href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/TeamSolutionDesign.JPG"  target="_blank">Certificate</a> </li>
-                              </ul>
-                        </ul>
-                        <br />
-
-
-<!-- Microsoft Certification -->
-                              <h3> Microsoft</h3>
+                        </div>
+          <!-- Microsoft Certification -->
+                            <h3 class="collapsible">  Microsoft</h3>
+                              <div class="content">
                               <ul class="text myRedLink">
                                     <li> Microsoft Learning Page<a href="https://learn.microsoft.com/en-us/users/jahanseir/" target="_blank"> Personal Page  </a> </li>
-                                    <h4> >> Azure DevOps << </h4>
+                                    <h4>  Azure DevOps  </h4>
                                                 <ul class="myRedLink">
-                                                      <li>
-                                                         Essentials on Azure DevOps Services and GitHub  Certificate <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Essentials%20on%20Azure%20DevOps%20Services%20and%20GitHub%20Certificate.pdf"  target="_blank">Certificate</a>
-                                                      </li>
+                                                      <li>Essentials on Azure DevOps Services and GitHub  Certificate <a href="cert\Essentials on Azure DevOps Services and GitHub Certificate.pdf"  target="_blank">Certificate</a></li>
                                                 </ul>
-                                   <h4> >> PowerApps << </h4>
+                                   <h4>  PowerApps  </h4>
                                               <ul class="myRedLink">
                                                   <li> UDEMY : PowerApps</li>
                                                         <ol class="myRedLink">
-                                                              <li> Power Apps - Complete Guide to Microsoft PowerApps
-                                                                 <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Power%20Apps%20-%20Complete%20Guide%20to%20Microsoft%20PowerApps.jpg" target="_blank">Certificate</a>
-                                                                 <a href="https://www.udemy.com/course/complete-guide-to-microsoft-powerapps-basic-to-advanced/"   target="_blank">Course page</a>
-                                                              </li>
-
-                                                              <li> Microsoft PowerApps crash course - from UI to Integration
-                                                                 <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Microsoft%20PowerApps%20crash%20course%20-%20from%20UI%20to%20Integration.jpg"target="_blank">Certificate</a>
-                                                                    <a href="https://www.udemy.com/course/microsoft-power-apps-crash-course-from-ui-to-integration" target="_blank">Course page</a>
-                                                              </li>
+                                                              <li> Power Apps - Complete Guide to Microsoft PowerApps <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Power%20Apps%20-%20Complete%20Guide%20to%20Microsoft%20PowerApps.jpg" target="_blank">Certificate</a>  <a href="https://www.udemy.com/course/complete-guide-to-microsoft-powerapps-basic-to-advanced/" target="_blank">Course page</a> </li>
+                                                              <li> Microsoft PowerApps crash course - from UI to Integration <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Microsoft%20PowerApps%20crash%20course%20-%20from%20UI%20to%20Integration.jpg"target="_blank">Certificate</a>   <a href="https://www.udemy.com/course/microsoft-power-apps-crash-course-from-ui-to-integration" target="_blank">Course page</a></li>
                                                           </ol>
                                                 </ul>
                                 </ul>
-
-
-                             <br />
-
-
-
-
-                            <h3> Salesforce</h3>
-                            <ul class="text myRedLink">
-                                  <li>Trailblazer <a href="https://trailblazer.me/id/jahanseir"   target="_blank">  Personal Page </a> </li>
-                                  <h4> >> Salesforce Administrator << </h4>
-                                              <li>Salesforce Certified Administrator<a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Mohammad%20Jahanseir%20Salesforce%20%20Administrator.jpg"   target="_blank">Official Certificate</a>
+                             </div>
+          <!-- Salesforce Certification -->
+                            <h3 class="collapsible">  Salesforce</h3>
+                              <div class="content">
+                                  <ul class="text myRedLink">
+                                    <li>Trailblazer <a href="https://trailblazer.me/id/jahanseir"   target="_blank">  Personal Page </a> </li>
+                                      <h4>  Salesforce Administrator  </h4>
+                                              <li>Salesforce Certified Administrator<a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Mohammad%20Jahanseir%20Salesforce%20%20Administrator.jpg"   target="_blank">Official Certificate</a> <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=xRW6eKDnl0DR5kBOBZy4S4nwTKuicPqp6ku1Xm4QOaAxE/rNVTNtoyknvkBgXltU"   target="_blank">Salesforce.com</a>
                                               </li>
-                                              <li> UDEMY : Salesforce Administrator</li>
-                                              <ol class="myRedLink">
-                                                    <li> Salesforce 101: Introduction to Salesforce
-                                                       <a   href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20101%20Introduction%20to%20Salesforce.jpg"   target="_blank"> Certificate</a>
-                                                       <a href="https://www.udemy.com/course/salesforce-101-introduction-to-salesforce/">Course page</a>
-                                                    </li>
-                                                    <li> Salesforce Certified Administrator Training
-                                                       <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Certified%20Administrator%20Training%20(July%202022).jpg" target="_blank">Certificate</a>
-                                                    <a href="https://www.udemy.com/course/salesforce-certified-administrator-201-2017/">Course page</a>
-                                                    </li>
-                                                    <li> Complete Salesforce Administrator Certification Course
-                                                      <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Complete%20Salesforce%20Administrator%20Certification%20Course.jpeg" target="_blank">   Certificate</a>
-                                                      <a href="https://www.udemy.com/course/salesforce-administrator/">Course page</a>
-                                                    </li>
-                                                    <li> Salesforce Admin certification course
-                                                      <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Admin%20certification%20course.jpg" target="_blank">Certificate</a>
-                                                      <a href="https://www.udemy.com/course/build-your-app-using-salesforce/">Course   page</a>
-                                                    </li>
-                                                    <li> Salesforce Admin Masterclass- Salesforce Admin For Beginners
-                                                          <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Admin%20Masterclass-%20Salesforce%20Admin%20For%20Beginners.jpg" target="_blank"> Certificate</a>
-                                                          <a href="https://www.udemy.com/course/salesforce-admin-masterclass-salesforce-admin-for-beginners/">Course page</a>
-                                                    </li>
-                                                    <li> Salesforce Certified Administrator Practice Tests
-                                                          <a href="https://www.udemy.com/course/salesforce-administrator-practice-tests/">Course page</a>
-                                                    </li>
-                                              </ol>
-                            </ul>
+                                              <li> UDEMY - Salesforce Administrator:</li>
+                                                            <ol class="myRedLink">
+                                                                  <li> Salesforce 101: Introduction to Salesforce  <a   href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20101%20Introduction%20to%20Salesforce.pdf"   target="_blank"> Certificate</a>  <a href="https://www.udemy.com/course/salesforce-101-introduction-to-salesforce/"  target="_blank">Course page</a> </li>
+                                                                  <li> Salesforce Certified Administrator Training <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Certified%20Administrator%20Training%20(July%202022).jpg" target="_blank">Certificate</a><a href="https://www.udemy.com/course/salesforce-certified-administrator-201-2017/"  target="_blank">Course page</a> </li>
+                                                                  <li> Complete Salesforce Administrator Certification Course   <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Complete%20Salesforce%20Administrator%20Certification%20Course.jpeg" target="_blank">   Certificate</a>   <a href="https://www.udemy.com/course/salesforce-administrator/"  target="_blank">Course page</a></li>
+                                                                  <li> Salesforce Admin certification course <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Admin%20certification%20course.jpg" target="_blank">Certificate</a>  <a href="https://www.udemy.com/course/build-your-app-using-salesforce/"  target="_blank">Course   page</a>  </li>
+                                                                  <li> Salesforce Admin Masterclass- Salesforce Admin For Beginners <a href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/master/cert/Salesforce%20Admin%20Masterclass-%20Salesforce%20Admin%20For%20Beginners.jpg" target="_blank"> Certificate</a>   <a href="https://www.udemy.com/course/salesforce-admin-masterclass-salesforce-admin-for-beginners/"  target="_blank">Course page</a></li>
+                                                                  <li> Salesforce Certified Administrator Practice Tests <a href="https://www.udemy.com/course/salesforce-administrator-practice-tests/"  target="_blank">Course page</a></li>
+                                                            </ol>
+                                 </ul>
+                               </div>
+          <!-- Operational Certification -->
+                        <h3 class="collapsible">  Operational</h3>
+                          <div class="content">
+                                  <ul class="text">
+                                        <li>MCITP 2008 Server Administrator - 2011</li>
+                                        <li>Network+ (CompTIA Network+) - 2010</li>
+                                        <li>Information Technology (IT) in Multimedia (Level   1) - 2003</li>
+                                        <li>Information Technology (IT) in Multimedia (Level 2) - 2003</li>
+                                        <li>Hardware Technician (CompTIA A+) - 2003</li>
+                                  </ul>
+                            </div>
+          <!-- other Certification -->
+                          <h3 class="collapsible">  Others</h3>
+                            <div class="content">
+                                  <ul class="text">
+                                        <li>Leadership and Community Engagement (LACE) - 2019   </li>
+                                        <li>Cultural Bridging: Train the Trainer - 2019</li>
+                                        <li>OHS Standard First Aid, CPR-A and AED - 2019</li>
+                                  </ul>
+                           </div>
+          </div><!-- END of Certification -->
+      </div> <!-- END of Parent Dropdown(my Name) -->
+</div><!-- END of mainarea -->
 
-                            <br />
-
-                                                      <h3>Operational</h3>
-                                                      <ul class="text">
-                                                            <li>MCITP 2008 Server Administrator - 2011</li>
-                                                            <li>Network+ (CompTIA Network+) - 2010</li>
-                                                            <li>Information Technology (IT) in Multimedia (Level   1) - 2003</li>
-                                                            <li>Information Technology (IT) in Multimedia (Level 2) - 2003</li>
-                                                            <li>Hardware Technician (CompTIA A+) - 2003</li>
-                                                      </ul> <br />
-                                                      <h3>Managment Certification</h3>
-                                                      <ul class="text">
-                                                            <li>Leadership and Community Engagement (LACE) - 2019
-                                                            </li>
-                                                            <li>Cultural Bridging: Train the Trainer - 2019</li>
-                                                            <li>OHS Standard First Aid, CPR-A and AED - 2019</li>
-                                                      </ul> <br>
-                  </div>
-
-                  <!--#endregion -->
-
-            </div> <!--mainarea for dropdown my name-->
-      </div>
-
-
-      <!--#region                               Footer                               -->
+<!--   Footer    -->
       <div class="footer">
             <a href="https://www.linkedin.com/in/jahanseir/">Linkedin</a>
             &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
@@ -384,50 +298,7 @@
             &nbsp;&nbsp;&nbsp;
             <a href="mailto:mjahanseir@gmail.com?subject=Personal page FeedBack"> Email</a>
       </div>
-
-      <!--#endregion -->
-
-      <!--#region                                Script                               -->
-      <script>
-            var coll = document.getElementsByClassName("collapsible"); var i;
-            for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function () { this.classList.toggle("active"); var content = this.nextElementSibling; if (content.style.display === "block") { content.style.display = "none"; } else { content.style.display = "block"; } }); }
-            var mybutton = document.getElementById("myBtn");
-            window.onscroll = function () { scrollFunction(); };
-            function scrollFunction() { if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; } }
-            function topFunction() { document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
-
-
-            <!-- img -->
-            // Get the modal
-            var modal = document.getElementById("myModal");
-
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById("myImg");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            img.onclick = function () {
-                  modal.style.display = "block";
-                  modalImg.src = this.src;
-                  captionText.innerHTML = this.alt;
-            }
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function () {
-                  modal.style.display = "none";
-            }
-      </script>
-      <!--#endregion -->
-
-
-
-
-
-
-
+<script src="js/js.js"></script>
 </body>
 
 </html>

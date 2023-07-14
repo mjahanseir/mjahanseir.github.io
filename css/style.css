@@ -50,7 +50,7 @@ a {
   align-items: center;
   font-family: 'Work Sans', sans-serif;
   font-size:4rem ;
-  color:#e45d20;
+  color:DarkRed;
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
@@ -357,7 +357,26 @@ text-shadow: 0 10px 60px rgba(255,255,255,0.7);
         }
 
 
-
+.myLink {
+          background-color: whitesmoke;
+          text-align: left;
+          font-family: "Times New Roman", Times, serif, Geneva, monospace;
+          color: #2d2c2c;
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding: 0px  10%;
+}
+.myLink a {
+          box-shadow: inset 0 0 0 0 #900C3F;
+          color: #900C3F;
+          font-size: 1.2rem;
+          text-decoration:none;
+          transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        }
+.myLink a:hover {
+          box-shadow: inset 1500px 0 0 0 #900C3F;
+          color: white;
+        }
 
 
 
@@ -546,3 +565,18 @@ box-shadow: inset 0 0 0 0 DarkRed;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           margin: 0 0 10px 0;
         }
+
+
+
+
+ .csh1{  background-color:#48005e;} /* #7f0303; } */
+.csh2{  background-color: #681c7c;} /*#b40606}*/
+.csh3{  background-color: #e10404;}
+
+
+.foot {
+  margin: 3rem;
+  pading: 3rem;
+  text-align: center;
+  font-family: monospace;
+}
