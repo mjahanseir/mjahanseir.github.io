@@ -18,6 +18,19 @@
     font-family:"Times New Roman", Times, serif;
 
   }
+  a {
+    box-shadow: inset 0 0 0 0 #900C3F;
+    color: #900C3F;
+    margin: 0 -.25rem;
+    padding: 0 1.25rem;
+    font-size: 1.2rem;
+    text-decoration:none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  a:hover {
+    box-shadow: inset 1000px 0 0 0 #900C3F;
+    color: white;
+  }
   #myBtn {
     display: none;
     position: fixed;
@@ -52,22 +65,32 @@
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 14px 16px; */
   text-decoration: none;
   font-size: 17px;
 }
 
 .navbar a:hover {
-  background: #ddd;
-  color: black;
+  /* background: #ddd; */
+  color: white;
+}
+.MenuLabel{
+  background-color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: right;
+  margin: 0;
+  padding: 0;
 }
 
+
 .main {
-  margin-top: 30px;
-  height: 1500px;
-padding: 0;
+  /* margin-top: 30px; */
+  /* height: 1500px; */
+  padding: 0;
   background-color: white;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
@@ -110,20 +133,9 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 1
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
-.main {
-  /* padding: 16px; */
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
-}
 
-h1{
-  background-color: black;
-  color: whitesmoke;
-  text-align: right;
-  margin: 0;
-  padding: 0;
 
-}
+
 </style>
 </head>
 <body>
@@ -133,26 +145,46 @@ h1{
   <a target="_blank" href="..\index.html">Home</a>
   <a target="_blank" href="Microsoft.html">Microsoft</a>
 
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+  <a href="#az900">AZ-900</a>
+  <a href="#az104">AZ-104</a>
+  <a href="#az204">AZ-204</a>
 </div>
 
 <div class="main">
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
-<h1>AZURE</h1>
+<div class="MenuLabel"> AZURE </div>
 
-
-
-          <button id="az900" class="collapsible">Open Section 1</button>
+          <button id="azure" class="collapsible">Learnin Path</button>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a target="_blank" href="pic\Azure_Certification_poster.pdf">Microsoft Azure certifications (pdf)</a> <br>
+            <a target="_blank" href="pic\MicrosoftCertification2023.pdf">Microsoft Certification RoadMap 2023 (pdf)</a> <br>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/?WT.mc_id=certposter_poster-wwl">Microsoft Certifications</a> <br>
+
           </div>
-          <button class="collapsible">Open Section 2</button>
+
+          <button id="az900" class="collapsible">AZ-900: Azure Fundamentals</button>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
           </div>
+
+
+          <button id="az104" class="collapsible">AZ-104: Azure Administrator Associate</button>
+          <div  target="_blank" class="content">
+            <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-administrator/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
+
+          </div>
+
+
+          <button id="az204" class="collapsible">AZ-204: Azure Developer Associate</button>
+          <div class="content">
+            <a  target="_blank" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4woK5">The journey to Microsoft Certified: Azure Developer Associate (PDF)</a> <br>
+            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-developer/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
+
+          </div>
+
+
           <button class="collapsible">Open Section 3</button>
           <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
