@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +6,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="..\..\css\style.css" />
-  <title>Learning AZURE</title>
-      <!-- <link rel="stylesheet" href="..\..\..\css\style.css" /> -->
-  <link rel="icon"  href="pic/azure.ico" type="image/x-icon" />
-<style>
+  <link rel="stylesheet" href="..\..\..\css\style.css" />
+  <script src="..\..\css\style.js"></script>
+  <title>Azure</title>
+  <style>
   body{
     background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#a8a8ae 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #a8a8ae 0.8px, #e5e5f7 0.8px) -0.4px 0;
     background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
@@ -18,268 +18,341 @@
     font-family:"Times New Roman", Times, serif;
 
   }
-  a {
-    box-shadow: inset 0 0 0 0 #900C3F;
-    color: #900C3F;
-    margin: 0 -.25rem;
-    padding: 0 1.25rem;
-    font-size: 1.2rem;
-    text-decoration:none;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-  a:hover {
-    box-shadow: inset 1000px 0 0 0 #900C3F;
-    color: white;
-  }
-  #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 10%;
-    z-index: 99;
-    font-size: 23px;
-    font-weight: bold;
-    font-family: "Times New Roman", sans-serif;
-    border: none;
-    outline: none;
-    background-color: #730b0b;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 10px 60px black;
-  }
-
-  #myBtn:hover {
-    background-color: #2d2c2c;
-  }
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 85%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  /* padding: 14px 16px; */
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  /* background: #ddd; */
-  color: white;
-}
-.MenuLabel{
-  background-color: black;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: whitesmoke;
-  text-align: right;
-  margin: 0;
-  padding: 0;
-}
+        .collapsible:hover { background-image:linear-gradient(hsla(0,0%,0%,.2) 100%,transparent 100%)       }
+        a {
+          box-shadow: inset 0 0 0 0 #004589;
+          color: #004589;
+          margin: 0 -.25rem;
+          padding: 0 1.25rem;
+          font-size: 1.2rem;
+          text-decoration:none;
+          transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        }
+        a:hover {
+          box-shadow: inset 1000px 0 0 0 #004589;
+          color: white;
+        }
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 10%;
+          z-index: 99;
+          font-size: 23px;
+          font-weight: bold;
+          font-family: "Times New Roman", sans-serif;
+          border: none;
+          outline: none;
+          background-color: #004589;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+          box-shadow: 0 10px 60px black;
+        }
 
 
-.main {
-  /* margin-top: 30px; */
-  /* height: 1500px; */
-  padding: 0;
-  background-color: white;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px ;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 25px;
+      .cscontent a{
+        /* display: block; */
+        /* background-color: dodgerblue; */
+        text-align:center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .cscontent  a:hover {
+                /* box-shadow:none;
+                color: dodgerblue; */
+              }
+
+              .headerPage {
+                margin: 2% 20%;
+                padding: 0.5% 5% ;
+                display: block;
+                background-color: whitesmoke;
+                border-radius: 10rem;
+                 box-shadow: 0 0 15px rgba(72, 0, 94, 0.65);
+                 text-shadow:5px  10px  15px rgba(0, 0, 0,0.6);
+                align-items: center;
+                font-family: 'Work Sans', sans-serif;
+                font-size:6rem ;
+                color:#48005e;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 900;
+              }
+
+    h1{
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size:5rem ;
       text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+      line-height: 1;
+      padding: 0;
+       letter-spacing: -7px;
+    }
+    h1:hover::after {   content: "    ";}
+    h1:hover::before {  content: "     ";}
+    h2:hover::after {   content: "    ";}
+    h2:hover::before {  content: "     ";}
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 85%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      /* background: #ddd; */
+      color: white;
+    }
+    .MenuLabel{
+      background-color: black;
+      font-size: 1.2rem;
       font-weight: bold;
-        border-bottom: 1px solid #9e9e9e;
-}
+      color: whitesmoke;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+    }
+    .Menuiner{
+        background-color: #4e555c;
+        font-size: 1.5rem;
+        color: whitesmoke;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+      list-style-type: none;
+    }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-.foot {
-  margin: 3rem;
-  pading: 3rem;
-  text-align: center;
-  font-family: monospace;
-}
+    </style>
 
 
-</style>
+  </style>
 </head>
+
 <body>
+  <div class="header"> header </div>
+  <div class="navbar">
+    <a href="..\..\index.html">Home</a>
+    <a  href="Microsoft.html">Microsoft</a>
 
-<div class="header"> header </div>
-<div class="navbar">
-  <a href="..\..\index.html">Home</a>
-  <a  href="Microsoft.html">Microsoft</a>
-
-  <a href="#az900">AZ-900</a>
-  <a href="#az104">AZ-104</a>
-  <a href="#az204">AZ-204</a>
-</div>
-
-<div class="main">
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
+    <a href="#az900">AZ-900</a>
+    <a href="#az104">AZ-104</a>
+    <a href="#az204">AZ-204</a>
+  </div>
 
 <div class="MenuLabel"> AZURE </div>
+<!-- RoadMap -->
+<h1 id="az104" class="azurecolor collapsible"> Road Map</h1>
+          <div   class="content">
+              <div class="Menuiner">Azure Certification Road Map</div>
 
-          <button id="azure" class="collapsible">Learnin Path</button>
-          <div class="content"> <br>
-            <a target="_blank" href="pic\Azure_Certification_poster.pdf">Microsoft Azure certifications (pdf)</a> <br>
-            <a target="_blank" href="pic\MicrosoftCertification2023.pdf">Microsoft Certification RoadMap 2023 (pdf)</a> <br>
-            <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/?WT.mc_id=certposter_poster-wwl">Microsoft Certifications</a> <br>
+              <ul>Azure Administrtator Road :
+                  <li> <a href="#az900">AZ900: Microsoft Azure Fundamentals </a></li>
+                  <li> <a href="#azure104">AZ-104: Microsoft Azure Administrator </a></li>
+                  <li> <a href="#az305">AZ-305: Designing Microsoft Azure Infrastructure Solutions</a></li>
+              </ul>
+                <br>
+                  <ul>Azure Developer Road :
+                  <li> <a href="#az204">AZ-204: Developing Solutions for Microsoft Azure</a></li>
+                  <li> <a href="#az400">AZ-400: Designing and Implementing Microsoft DevOps Solutions</a></li>
+                  <li> <a href="#az220">AZ-220 IoT Developer Certification Study Guide</a></li>
+              </ul>
+              <br>
+              <ul>Data Science Road :
+                  <li> <a href="#dp900" >DP-900: Microsoft Azure Data Fundamentals </a> </li>
+                  <li> <a href="#dp420" >DP-420: Designing and Implementing Cloud-Native Applications Using Microsoft Azure Cosmos DB </a> </li>
+                  <li> <a href="#dp100" >DP-100: Designing and Implementing a Data Science Solution on Azure</a> </li>
+                  <li> <a href="#dp203">DP-203: Data Engineering on Microsoft Azure </a> </li>
+                  <li> <a href="#dp203">DP-300: Administering Microsoft Azure SQL Solutions </a> </li>
+                  <li> <a href="#dp500" > DP-500: Designing and Implementing Enterprise-Scale Analytics Solutions Using Microsoft Azure and Microsoft Power BI</a> </li>
+              </ul>
+                <br>
+              <ul>AI Road :
+                  <li> <a href="#ai900" >AI-900: Microsoft Azure AI Fundamentals </a> </li>
+                  <li> <a href="#ai102" >AI-102: Designing and Implementing a Microsoft Azure AI Solution </a> </li>
+              </ul>
+              <br>
+              <ul>Hybrid Neighborhood :
+                  <li> <a href=""> AZ-600 </a> </li>
+                  <li> <a href=""> AZ800 / 801 </a> </li>
+              </ul>
+              <br>
 
-            <br> <br>
+              <ul>Workload Special  Neighborhood :
+                  <li> <a href=""> AZ-140 </a> </li>
+                  <li> <a href=""> AZ-120 </a> </li>
+              </ul>
+              <br>
+                <ul>Networking Neighborhood :
+                    <li> <a href=""> AZ-700 </a> </li>
+                    <li> <a href=""> AZ-720 </a> </li>
+                </ul>
+                <br>
+                  <ul>Security Road :
+                      <li> <a href=""> SC-900 </a> </li>
+                      <li> <a href="">  </a> </li>
+                  </ul>
+ <img src="pic\MS-Partner-FundamentalTrack.JPG" alt="MS-Partner-FundamentalTrack.JPG">
+              <img src="pic\MS-Partner-AdvancedTrack.JPG" alt="MS-Partner-AdvancedTrack.JPG">
           </div>
+
+
 <!-- AZ-900 -->
-          <button id="az900" class="collapsible">AZ-900: Azure Fundamentals</button>
-          <div class="content"><br>
+<h1 id="az900" class="azurecolor collapsible"> Az-900</h1>
+  <div class="content">
+    <div class="Menuiner"> Azure Fundamentals </div>
+
             <a target="_blank" href="pic\AZ-900-ExamGuide.pdf">AZ-900 Exam Guide (pdf)</a> <br>
-            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <hr>
+            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/?WT.mc_id=certposter_poster-wwl">Microsoft Learning Page</a> <hr>
+            <ul>Microsoft Partner :
+                <li> <a href="https://youtu.be/DelEUa2hMac" target="_blank">[AZ900-1]  Microsoft Azure Fundamentals Day 1 of 5 </a> </li>
+                <li> <a href="https://youtu.be/BviI9gUPsL0" target="_blank">[AZ900-2]  Microsoft Azure Fundamentals Day 2 of 5 </a> </li>
+                <li> <a href="https://youtu.be/TwFkGVNv3wM" target="_blank">[AZ900-3]  Microsoft Azure Fundamentals Day 3 of 5 </a> </li>
+                <li> <a href="https://youtu.be/KOnVmdn_bSA" target="_blank">[AZ900-4]  Microsoft Azure Fundamentals Day 4 of 5 </a> </li>
+                <li> <a href="https://youtu.be/KOnVmdn_bSA" target="_blank">[AZ900-5]  Microsoft Azure Fundamentals Day 5 of 5 </a> </li>
+            </ul>
+            <hr>
+
+
             . <strong>Scott Duffy</strong> |  AZ-900: Microsoft Azure Fundamentals Exam Prep - Udemy <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWRRTzgZDE1bySBlrWm_miL">YouTube(old)</a> <a target="_blank" href="https://www.udemy.com/course/az900-azure/">Udemy</a>
                                 <a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/08/AZ-900-Official-Course-Study-Guide-v2.0.pdf">Official PDF Study Guide</a> <a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/05/AZ-900-2022-OCT-shrunk-new.pdf">AZ-900 2022 slides</a><a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/05/AZ900-2023-shrunk.pdf">AZ-900 2023 slides</a>
              <hr>. Exam AZ-900: Microsoft Azure Fundamentals, 3rd Edition - LiveLessons - By Jim Cheshire <a target="_blank" href="https://learning.oreilly.com/videos/exam-az-900-microsoft/9780137969753/">O'Reilly online</a> <hr>
             . Exam AZ-900: Microsoft Azure Fundamentals, 3rd Edition - LiveLessons - By Jim Cheshire <a target="_blank" href="https://learning.oreilly.com/library/view/-/9780137955107/">Microsoft Press Book</a> <hr>
             . Microsoft Azure Fundamentals (AZ-900) Certification - Pragmatic Labs - By Alfredo Deza, Noah Gift <a target="_blank" href="https://learning.oreilly.com/videos/microsoft-azure-fundamentals/27702422VIDEOPAIML/">O'Reilly online</a>
-            <br> <br>
+
           </div>
 
 
-          <button id="az104" class="collapsible">AZ-104: Azure Administrator Associate</button>
-          <div  target="_blank" class="content"> <br>
-            <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-administrator/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
-            <br> <br>
-          </div>
+  <!-- dp900         -->
+          <h1 id="dp900" class="azurecolor collapsible"> DP-900</h1>
+                    <div   class="content">
+                        <div class="Menuiner">DP-900: Microsoft Azure Data Fundamentals </div>
 
+                        <ul>Microsoft Partner :
+                          <li> <a href="https://youtu.be/itd5pDiBqUQ" target="_blank">[DP900-1]  Microsoft Azure Data Fundamentals Day 1 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/cthtmRp-esQ" target="_blank">[DP900-2]  Microsoft Azure Data Fundamentals Day 2 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/zEKOMXoK9R0" target="_blank">[DP900-3]  Microsoft Azure Data Fundamentals Day 3 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/LLd0mIZJmak" target="_blank">[DP900-4]  Microsoft Azure Data Fundamentals Day 4 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/TYP0bHLVNiE" target="_blank">[DP900-5]  Microsoft Azure Data Fundamentals Day 5 of 5 </a> </li>
+                        </ul>
+                        <hr>
 
-          <button id="az204" class="collapsible">AZ-204: Azure Developer Associate</button>
-          <div class="content"> <br>
-            <a  target="_blank" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4woK5">The journey to Microsoft Certified: Azure Developer Associate (PDF)</a> <br>
-            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-developer/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
-
-            . AZ-204 Developing Solutions for Microsoft Azure - Packt - Scott Duffy <a target="_blank" href="https://learning.oreilly.com/videos/az-204-developing-solutions/9781838989293/">O'Reilly online</a> <br>
-            . Developing Solutions for Microsoft Azure AZ-204 Exam Guide - Packt - By Paul Ivey, Alex Ivanov <a target="_blank" href="https://leaning.oreilly.com/library/view/developing-solutions-for/9781803237060/">O'Reilly Book</a> <br>
-
-            <br> <br>
-          </div>
-
-
-          <button class="collapsible">Open Section 3</button>
-          <div class="content"> <br>
-              <br> <br>
-          </div>
-          <button class="collapsible">Open Section 3</button>
-          <div class="content"> <br>
-              <br> <br>
-          </div>
-
-</div>
-
-<div class="foot">
-<a href="#">  Let's Learn more AZURE with ❤ </a>
-</div>
+                    </div>
 
 
 
-<!--------------------------------------------------    SCRIPT          ------------------------------------>
+          <h1 id="azure104" class="azurecolor collapsible"> AZ-104</h1>
+                    <div   class="content">
+                        <div class="Menuiner">Azure Administrator Associate</div>
 
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+                      <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-administrator/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
+                      <ul>Microsoft Partner :
+                                  <li> <a href="https://youtu.be/jMHluOFtUXQ" target="_blank">[AZ104-1]  Microsoft Azure Administrator Day 1 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/V-bUM7lTtAc" target="_blank">[AZ104-2]  Microsoft Azure Administrator Day 2 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/SEg-Q4RatAw" target="_blank">[AZ104-3]  Microsoft Azure Administrator Day 3 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/fET136UiuYM" target="_blank">[AZ104-4]  Microsoft Azure Administrator Day 4 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/8t0L2dlZwyE" target="_blank">[AZ104-5]  Microsoft Azure Administrator Day 5 of 5 </a> </li>
+                      </ul>
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
+                    </div>
 
 
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+                <h1  id="az204" class="azurecolor collapsible"> AZ-204</h1>
+                    <div class="content">
+                          <div class="Menuiner"> Azure Developer Associate</div>
+                      <a  target="_blank" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4woK5">The journey to Microsoft Certified: Azure Developer Associate (PDF)</a> <br>
+                      <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-developer/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
+                      . AZ-204 Developing Solutions for Microsoft Azure - Packt - Scott Duffy <a target="_blank" href="https://learning.oreilly.com/videos/az-204-developing-solutions/9781838989293/">O'Reilly online</a> <br>
+                      . Developing Solutions for Microsoft Azure AZ-204 Exam Guide - Packt - By Paul Ivey, Alex Ivanov <a target="_blank" href="https://leaning.oreilly.com/library/view/developing-solutions-for/9781803237060/">O'Reilly Book</a> <br>
 
-      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
-      //Get the button
-      var mybutton = document.getElementById("myBtn");
+                      <br> <br>
+                    </div>
 
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
 
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
+                    <div class="foot">
+                    <a href="#">  Let's Learn more AZURE with ❤ </a>
+                    </div>
+
+
+
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
         } else {
-          mybutton.style.display = "none";
+          content.style.display = "block";
         }
-      }
+      });
+    }
 
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    var date = new Date();
+    document.getElementById("current_day").innerHTML = date.getDate();
+
+
+
+    // Responsive Navigation Bar
+    function myFunction() {
+      var x = document.getElementById("mytopMenu");
+      if (x.className === "topMenu") {
+        x.className += " responsive";
+      } else {
+        x.className = "topMenu";
+      }
+    }
       //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
-</script>
-
+  </script>
 </body>
+
 </html>
