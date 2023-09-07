@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="..\..\..\css\style.css" />
-        <link rel="icon"  href="pic/ms.ico" type="image/x-icon" />
   <script src="..\..\css\style.js"></script>
   <title>Azure</title>
   <style>
@@ -85,14 +84,13 @@
     h1{
       align-items: center;
       font-family: 'Work Sans', sans-serif;
-      font-size:3.5rem ;
+      font-size:5rem ;
       text-transform: uppercase;
       text-align: center;
       font-weight: 900;
-      line-height: 0.7;
+      line-height: 1;
       padding: 0;
-       letter-spacing: -5px;
-       margin: 0;
+       letter-spacing: -7px;
     }
     h1:hover::after {   content: "    ";}
     h1:hover::before {  content: "     ";}
@@ -134,11 +132,18 @@
         background-color: #000000;
         font-size: 1.5rem;
         color: whitesmoke;
-        /* text-align: center; */
+        text-align: center;
         font-weight: bold;
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
         margin: 0;
-        padding: 0 ;
+        padding: 10px;
+    }
+    .roadTitr{
+        background-color: #4e555c;
+        color: whitesmoke;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 2%;
         display: block;
     }
     .pass::after {
@@ -146,11 +151,6 @@
         background-color: #ffff00;
         margin: 0;
         padding: 0 2%;
-    }
-    .text {
-        background-color: whitesmoke;
-        margin: 0;
-        padding:0  10px;
     }
     ul{
       list-style-type: none;
@@ -168,31 +168,37 @@
   <div class="navbar">
     <a href="..\..\index.html">Home</a>
     <a  href="Microsoft.html">Microsoft</a>
-    <a  href="#azure">Azure</a>
-    <a href="#powerplatform">PowerPlatform</a>
-    <a href="#ms365">Microsoft 365</a>
-    <a href="#dy365">Dynamics 365</a>
+    <a href="#road">Road Map</a>
+    <a href="#az900">AZ-900</a>
+    <a href="#az104">AZ-104</a>
+    <a href="#az204">AZ-204</a><a href="#top">|</a>
+    <a href="#pl900">PL-900</a>
+    <a href="#pl900">PL-900</a>
   </div>
 
-<div class="MenuLabel ">MICROSOFT  </div>
-
-<!--               ----------------------------------------------------------                    Azure                        ----------------------------------------------------------             -->
-
-<h1 id="azure" class=" azurecolor collapsible"> Azure</h1>
+<div class="MenuLabel"> AZURE </div>
+<!-- RoadMap -->
+<h1 id="road" class="azurecolor collapsible"> Road Map</h1>
 <div   class="content">
-    <ul><span class="Menuiner">Azure Administrtator :</span>
+
+  <a href="pic\MicrosoftCertification2023.pdf" target="_blank">Microsoft Certification 2023(pdf) </a><br>
+  <a href="pic\Azure-SecurityPath.png" target="_blank">Microsoft Certification RoadMap </a><br>
+
+    <div class="Menuiner">Azure  </div>
+    <br>
+    <ul><span class="roadTitr">Azure Administrtator Road :</span>
         <li class="pass">  <a  href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXLusvDMeA-wSJ-0-rp7la2" target="_blank">AZ-900: Microsoft Azure Fundamentals (*) </a></li>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUQJ3jdTD3WlYHXL0j8cqiK" target="_blank">AZ-104 : Microsoft Azure Administrator (**) </a></li>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVKZn07Kthn9xafvh4KPiIR" target="_blank">AZ-305 : Designing Microsoft Azure Infrastructure Solutions (***)</a></li>
     </ul>
       <br>
-        <ul><span class="Menuiner">Azure Developer  :</span>
+        <ul><span class="roadTitr">Azure Developer Road :</span>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T" target="_blank">AZ-204 : Developing Solutions for Microsoft Azure (**)</a></li>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT"target="_blank">AZ-400 :  Designing and Implementing Microsoft DevOps Solutions (***)</a></li>
         <li> <a href="#az220">AZ-220 IoT Developer Certification Study Guide</a></li>
     </ul>
     <br>
-    <ul><span class="Menuiner">Data Science  :</span>
+    <ul><span class="roadTitr">Data Science Road :</span>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWFlGKQeDQ-ZFO_FMaey_of" target="_blank" >DP-900 : Microsoft Azure Data Fundamentals  (*) </a>  </li>
         <li> <a href="#dp420" >DP-420: Designing and Implementing Cloud-Native Applications Using Microsoft Azure Cosmos DB </a> </li>
         <li> <a href="#dp100" >DP-100: Designing and Implementing a Data Science Solution on Azure</a> </li>
@@ -201,44 +207,44 @@
         <li> <a href="#dp500" > DP-500: Designing and Implementing Enterprise-Scale Analytics Solutions Using Microsoft Azure and Microsoft Power BI</a> </li>
     </ul>
       <br>
-    <ul><span class="Menuiner">AI :</span>
+    <ul><span class="roadTitr">AI Road :</span>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZV_rGQh37LXSwpXnwVQ_3BC" target="_blank">AI-900: Microsoft Azure AI Fundamentals  (*) </a> </li>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVtheqMc95gRFky_YnysVq7" target="_blank">AI-102: Designing and Implementing a Microsoft Azure AI Solution (**)</a> </li>
     </ul>
     <br>
-    <ul><span class="Menuiner">Hybrid Neighborhood :</span>
+    <ul><span class="roadTitr">Hybrid Neighborhood :</span>
         <li> <a href=""> AZ-600 </a> </li>
         <li> <a href=""> AZ800 / 801 </a> </li>
     </ul>
     <br>
 
-    <ul><span class="Menuiner">Workload Special  Neighborhood :</span>
+    <ul><span class="roadTitr">Workload Special  Neighborhood :</span>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUaFoFsbf8ARWKbcLMRsXzI"target="_blank"> AZ-120 : Planning and Administering Microsoft Azure for SAP Workloads (s) </a> </li>
         <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUHCogwATDPO01cvBQmCfkz"  target="_blank"> AZ-140 : Microsoft Certified: Azure Virtual Desktop Specialty (s) </a> </li>
 
     </ul>
     <br>
-      <ul><span class="Menuiner">Networking Neighborhood :</span>
+      <ul><span class="roadTitr">Networking Neighborhood :</span>
           <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU4Udy7o7kCIn5Lb8kZ9jy2"target="_blank"> AZ-700 : Designing and Implementing Microsoft Azure Networking Solutions(**) </a> </li>
           <li> <a href=""> AZ-720 : Microsoft Certified: Azure Support Engineer for Connectivity Specialty (***)  </a> </li>
       </ul>
       <br>
-        <ul><span class="Menuiner">Security :</span>
+        <ul><span class="roadTitr">Security Road :</span>
             <li> <a href=""> SC-900 </a> </li>
             <li> <a href="">  </a> </li>
         </ul>
         <br>
 
 
-</div>
+
 
 <!--               ----------------------------------------------------------                    Power Platform                        ----------------------------------------------------------             -->
 
-<h1 id="powerplatform" class=" azurecolor collapsible"> Power Platform</h1>
-<div   class="content">
-          <ul><span class="Menuiner">Power Platform :</span>
+        <div id="powerplatform" class="Menuiner">Power Platform  </div>
+        <br>
+          <ul><span class="roadTitr">Power Platform :</span>
               <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZV_Y_YoeNEElti6i22in9RR"target="_blank"> PL-900 : Microsoft Certified: Power Platform Fundamentals (*)  </a>  | <a href="https://learn.microsoft.com/en-us/certifications/power-platform-fundamentals/" target="_blank">MS-Page</a> </li>
-              <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUz7u0VFLxbz7ZKGXTqedX5"target="_blank"> PL-100 : Microsoft Certified: Power Platform App Maker Associate  (**) </a> | <a href="https://learn.microsoft.com/en-gb/certifications/power-platform-app-maker/" target="_blank"></a> </li>
+              <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUz7u0VFLxbz7ZKGXTqedX5"target="_blank"> PL-100 : Microsoft Certified: Power Platform App Maker Associate  (**) </a> </li>
               <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXlKmghbyTAtb5V4UnBzOS4"target="_blank"> PL-200 : Microsoft Certified: Power Platform Functional Consultant Associate  (**) </a> </li>
               <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA" target="_blank"> PL-300 : Microsoft Certified: Power BI Data Analyst Associate  (**) </a> </li>
               <li> <a href="#"> PL-400 : Microsoft Certified: Power Platform Developer Associate (**) </a> </li>
@@ -247,71 +253,137 @@
           </ul>
 
 
-
-        </div>
-
-    <!--               ----------------------------------------------------------                    Microsoft 365                        ----------------------------------------------------------             -->
-
-  <h1 id="ms365" class=" azurecolor collapsible"> Microsoft 365</h1>
-  <div   class="content">
-            <ul><span class="Menuiner">Microsoft 365 :</span>
+          <div class="Menuiner">Microsoft 365  </div>
+          <br>
+            <ul><span class="roadTitr">Microsoft 365 :</span>
                 <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVRw2DDgjuqor81QsJbpdc-" target="_blank"> MD-100 Modern Desktop Administor Associate </a> </li>
-                <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVKMd4dhzA3ccjJORqbmABH" target="_blank"> MS-101 Enterprise Administrator Expert  </a> </li>
-                <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVpu2iahL_7RJ0YaJVXok-C" target="_blank"> MB-210- Microsoft Dynamics 365 Sales Functional Consultant Associate  </a> </li>
-                <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVKMd4dhzA3ccjJORqbmABH" target="_blank"> MB-220 : Microsoft Dynamics 365 Marketing  </a> </li>
-                <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVzn_TxIzxcvF60ueGqsSXL" target="_blank">  MB-260 : Microsoft Customer Data Platform Specialty </a> </li>
-                <li> <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWtFlToPcu9i8vzTx08lB63" target="_blank">  MB-230 - Microsoft Dynamics 365 Customer Service </a> </li>
-                <li> <a href="" target="_blank">   </a> </li>
+                <li> <a href="" target="_blank"> MS-101 Enterprise Administrator Expert  </a> </li>
+                <li> <a href="" target="_blank"> MB-210- Microsoft Dynamics 365 Sales Functional Consultant Associate  </a> </li>
                 <li> <a href="" target="_blank">   </a> </li>
                 <li> <a href="" target="_blank">   </a> </li>
                 <li> <a href="" target="_blank">   </a> </li>
             </ul>
-    </div>
 
 
 
-
-  <!--               ----------------------------------------------------------                    Dynamics 365                        ----------------------------------------------------------             -->
-
-    <h1 id="dy365" class=" azurecolor collapsible"> Dynamics 365</h1>
-    <div   class="content">
-
-              <ul><span class="Menuiner">Dynamic 365 :</span>
+            <div class="Menuiner">Dynamic 365  </div>
+            <br>
+              <ul><span class="roadTitr">Dynamic 365 :</span>
                   <li> <a href="">  (*) </a> </li>
               </ul>
 
-</div>
 
 
 
-<!-- RoadMap -->
-<div   class="text">
-<a href="pic\MicrosoftCertification2023.pdf" target="_blank">Microsoft Certification 2023(pdf) </a> |
-<a href="pic\Azure-SecurityPath.png" target="_blank">Microsoft Certification RoadMap </a><br>
-</div>
+<br><br>
+ <img src="pic\MS-Partner-FundamentalTrack.JPG" alt="MS-Partner-FundamentalTrack.JPG">
+              <img src="pic\MS-Partner-AdvancedTrack.JPG" alt="MS-Partner-AdvancedTrack.JPG">
+          </div>
 
+
+<!-- AZ-900 -->
+<h1 id="az900" class="azurecolor collapsible"> Az-900</h1>
+  <div class="content">
+    <div class="Menuiner"> Azure Fundamentals </div>
+
+            <a target="_blank" href="pic\AZ-900-ExamGuide.pdf">AZ-900 Exam Guide (pdf)</a> <br>
+            <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/?WT.mc_id=certposter_poster-wwl">Microsoft Learning Page</a> <hr>
+            <ul>Microsoft Partner :
+                <li> <a href="https://youtu.be/DelEUa2hMac" target="_blank">[AZ900-1]  Microsoft Azure Fundamentals Day 1 of 5 </a> </li>
+                <li> <a href="https://youtu.be/BviI9gUPsL0" target="_blank">[AZ900-2]  Microsoft Azure Fundamentals Day 2 of 5 </a> </li>
+                <li> <a href="https://youtu.be/TwFkGVNv3wM" target="_blank">[AZ900-3]  Microsoft Azure Fundamentals Day 3 of 5 </a> </li>
+                <li> <a href="https://youtu.be/JXALSZPmmpY" target="_blank">[AZ900-4]  Microsoft Azure Fundamentals Day 4 of 5 </a> </li>
+                <li> <a href="https://youtu.be/KOnVmdn_bSA" target="_blank">[AZ900-5]  Microsoft Azure Fundamentals Day 5 of 5 </a> </li>
+            </ul>
+            <hr>
+
+
+            . <strong>Scott Duffy</strong> |  AZ-900: Microsoft Azure Fundamentals Exam Prep - Udemy <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWRRTzgZDE1bySBlrWm_miL">YouTube(old)</a> <a target="_blank" href="https://www.udemy.com/course/az900-azure/">Udemy</a>
+                                <a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/08/AZ-900-Official-Course-Study-Guide-v2.0.pdf">Official PDF Study Guide</a> <a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/05/AZ-900-2022-OCT-shrunk-new.pdf">AZ-900 2022 slides</a><a target="_blank" href="https://softwarearchitect.ca/wp-content/uploads/2023/05/AZ900-2023-shrunk.pdf">AZ-900 2023 slides</a>
+             <hr>. Exam AZ-900: Microsoft Azure Fundamentals, 3rd Edition - LiveLessons - By Jim Cheshire <a target="_blank" href="https://learning.oreilly.com/videos/exam-az-900-microsoft/9780137969753/">O'Reilly online</a> <hr>
+            . Exam AZ-900: Microsoft Azure Fundamentals, 3rd Edition - LiveLessons - By Jim Cheshire <a target="_blank" href="https://learning.oreilly.com/library/view/-/9780137955107/">Microsoft Press Book</a> <hr>
+            . Microsoft Azure Fundamentals (AZ-900) Certification - Pragmatic Labs - By Alfredo Deza, Noah Gift <a target="_blank" href="https://learning.oreilly.com/videos/microsoft-azure-fundamentals/27702422VIDEOPAIML/">O'Reilly online</a>
+
+          </div>
+
+
+  <!-- dp900         -->
+          <h1 id="dp900" class="azurecolor collapsible"> DP-900</h1>
+                    <div   class="content">
+                        <div class="Menuiner">DP-900: Microsoft Azure Data Fundamentals </div>
+
+                        <ul>Microsoft Partner :
+                          <li> <a href="https://youtu.be/itd5pDiBqUQ" target="_blank">[DP900-1]  Microsoft Azure Data Fundamentals Day 1 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/cthtmRp-esQ" target="_blank">[DP900-2]  Microsoft Azure Data Fundamentals Day 2 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/zEKOMXoK9R0" target="_blank">[DP900-3]  Microsoft Azure Data Fundamentals Day 3 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/LLd0mIZJmak" target="_blank">[DP900-4]  Microsoft Azure Data Fundamentals Day 4 of 5 </a> </li>
+                          <li> <a href="https://youtu.be/TYP0bHLVNiE" target="_blank">[DP900-5]  Microsoft Azure Data Fundamentals Day 5 of 5 </a> </li>
+                        </ul>
+                        <hr>
+
+                    </div>
+
+
+
+          <h1 id="az104" class="azurecolor collapsible"> AZ-104</h1>
+                    <div   class="content">
+                        <div class="Menuiner">Azure Administrator Associate</div>
+
+                      <a target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-administrator/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
+                      <ul>Microsoft Partner :
+                                  <li> <a href="https://youtu.be/jMHluOFtUXQ" target="_blank">[AZ104-1]  Microsoft Azure Administrator Day 1 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/V-bUM7lTtAc" target="_blank">[AZ104-2]  Microsoft Azure Administrator Day 2 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/SEg-Q4RatAw" target="_blank">[AZ104-3]  Microsoft Azure Administrator Day 3 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/fET136UiuYM" target="_blank">[AZ104-4]  Microsoft Azure Administrator Day 4 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/8t0L2dlZwyE" target="_blank">[AZ104-5]  Microsoft Azure Administrator Day 5 of 5 </a> </li>
+                      </ul>
+
+                    </div>
+
+
+                <h1  id="az204" class="azurecolor collapsible"> AZ-204</h1>
+                    <div class="content">
+                          <div class="Menuiner"> Azure Developer Associate</div>
+                      <a  target="_blank" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4woK5">The journey to Microsoft Certified: Azure Developer Associate (PDF)</a> <br>
+                      <a  target="_blank" href="https://learn.microsoft.com/en-us/certifications/azure-developer/?WT.mc_id=certposter_poster-wwl">Learning Page</a> <br>
+
+                      . AZ-204 Developing Solutions for Microsoft Azure - Packt - Scott Duffy <a target="_blank" href="https://learning.oreilly.com/videos/az-204-developing-solutions/9781838989293/">O'Reilly online</a> <br>
+                      . Developing Solutions for Microsoft Azure AZ-204 Exam Guide - Packt - By Paul Ivey, Alex Ivanov <a target="_blank" href="https://leaning.oreilly.com/library/view/developing-solutions-for/9781803237060/">O'Reilly Book</a> <br>
+
+                      <br> <br>
+                    </div>
+<!-- ML-900 -->
+                <h1  id="ms900" class="azurecolor collapsible"> PL-900</h1>
+                    <div class="content">
+                      <div class="Menuiner"> Microsoft Power Platform Fundamentals</div>
+                          <ul>Microsoft Partner :
+                                  <li> <a href="https://youtu.be/uKXdZZ1nIwU" target="_blank">[ML900-1] Microsoft Power Platform FundamentalsDay 1 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/S3XHtK3iBNg" target="_blank">[ML900-2] Microsoft Power Platform FundamentalsDay 2 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/xHN6gbyJqA8" target="_blank">[ML900-3] Microsoft Power Platform FundamentalsDay 3 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/oDyMZtvJBXA" target="_blank">[ML900-4] Microsoft Power Platform FundamentalsDay 4 of 5 </a> </li>
+                                  <li> <a href="https://youtu.be/z7Qa458OA7E" target="_blank">[ML900-5] Microsoft Power Platform FundamentalsDay 5 of 5 </a> </li>
+                          </ul>
+                          <hr>
+                          <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZV_Y_YoeNEElti6i22in9RR" target="_blank">Youtube Playlist for PL-900 : Microsoft Power Platform Fundamentals </a>
+                    </div>
+
+  <!-- MS-900 -->
+                  <h1  id="ms900" class="azurecolor collapsible"> MS-900</h1>
+                      <div class="content">
+                            <div class="Menuiner"> Microsoft 365 Fundamentals</div>
+                            <ul>Microsoft Partner :
+                              <li> <a href="https://youtu.be/LNiCJXXRy4o" target="_blank">[MS900-1] Microsoft 365 FundamentalsDay 1 of 5 </a> </li>
+                              <li> <a href="https://youtu.be/4zqOapafFZM" target="_blank">[MS900-2] Microsoft 365 FundamentalsDay 2 of 5 </a> </li>
+                              <li> <a href="https://youtu.be/Vq-tbWuAHRU" target="_blank">[MS900-3] Microsoft 365 FundamentalsDay 3 of 5 </a> </li>
+                              <li> <a href="https://youtu.be/BM84-KNtmaU" target="_blank">[MS900-4] Microsoft 365 FundamentalsDay 4 of 5 </a> </li>
+                              <li> <a href="https://youtu.be/JXSFw1OcMaM" target="_blank">[MS900-5] Microsoft 365 FundamentalsDay 5 of 5 </a> </li>
+                            </ul>
+                            <hr>
+                      </div>
 
 
                     <div class="foot">
                     <a href="#">  Let's Learn more AZURE with ❤ </a>
-                    <br> <br>
-                    <img src="..\..\..\cert\Adv.Cer\Logo\MS-Logo.svg" alt="" width="200" height="200">
-
-                    <br> <br>
-
-                    <img src="..\..\..\cert\Adv.Cer\Logo\MS-Fundamentals.svg" alt="" width="200" height="200">
-                    <img src="..\..\..\cert\Adv.Cer\Logo\MS-Associate.svg" alt="" width="200" height="200">
-                    <img src="..\..\..\cert\Adv.Cer\Logo\MS-Expert.svg" alt="" width="200" height="200">
-
-                    <br> <br>
-
-                    <img src="..\..\..\cert\Adv.Cer\Logo\AZ-900.png" alt="" width="200" height="200">
-
-                    <br> <br>
-
-
-                    <img src="..\..\..\cert\Adv.Cer\Logo\SaskPolytech.png" alt="" width="200" height="200">
-                    <br><br>
                     </div>
 
 
