@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="..\..\css\style.css" />
+  <title>CISCO</title>
+  <link rel="icon"  href="pic/cisco.ico" type="image/x-icon" />
+
+  <style>
+        body{
+          background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+          margin:auto auto;
+          width:85%;
+          font-family:"Times New Roman", Times, serif;
+          background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+        .collapsible:hover { background-image:linear-gradient(hsla(0,0%,0%,.2) 100%,transparent 100%)       }
+        a {
+          box-shadow: inset 0 0 0 0 dodgerblue;
+          color: dodgerblue;
+          padding: 0 2.25rem;
+          transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+        }
+        a:hover {
+          box-shadow: inset 1000px 0 0 0 dodgerblue;
+          color: white;
+        }
+        .cscontent{
+            padding: 0px  10%;
+        }
+         strong:hover{
+          background-color: purple;
+        }
+      .cscontent a{
+        text-align:center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+
+    h1{
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size:4rem ;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+      line-height: 1;
+      padding: 25px 1px 1px 1px;
+    }
+    h1:hover::after {   content: "    ";}
+    h1:hover::before {  content: "     ";}
+    h2:hover::after {   content: "    ";}
+    h2:hover::before {  content: "     ";}
+
+
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 85%;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .MenuLabel{
+      background-color: black;
+      font-size: 0.8rem;
+      color: whitesmoke;
+      text-align: center;
+      margin: 0;
+      padding: 0.2rem;
+    }
+
+    .ciscoColor{
+      background-color: dodgerblue;
+    }
+
+    h1:nth-of-type(even),
+    h2:nth-of-type(even),
+    h3:nth-of-type(even),
+    h4:nth-of-type(even) {
+      border: 1px solid grey;
+    }
+    #myBtn{
+      background-color: dodgerblue
+    }
+
+    ul{
+      list-style-type: none;
+    }
+    li{
+       a{
+      padding: 0 0  0 10px;
+    }
+
+
+
+    </style>
+</head>
+
+<body>
+  <a href="..\index.html">Back to Home</a>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
+
+  <div class="navbar">
+    <a style="background-color:#BE1459;" href="..\index.html">Home</a>
+    <a style="color:#BE1459;"  href="Microsoft\Azure.html">Azure</a>
+    <a href="#ccna">CCNA</a>
+    <a href="#ccnp">CCNP</a>
+  </div>
+
+<div class="MenuLabel ">CISCO  </div>
+  <!----------------------------------------------    Region 1        -------------------------------------------------->
+
+  <h1 id="ccna" class="ciscoColor collapsible">CCNA</h1>
+    <div class="content">
+      <ul>
+          <li> cisco  <a href="https://learningnetwork.cisco.com/s/ccna" target="_blank">Page </a> |
+                      <a href="https://learningcontent.cisco.com/documents/200-301-CCNA-v1.0.pdf" target="_blank">Exam Topic </a> |
+                      <a href="https://learningnetwork.cisco.com/s/learning-plan-detail-standard?ltui__urlRecordId=a1c3i0000005hsQAAQ&ltui__urlRedirect=learning-plan-detail-standard" target="_blank">Learning </a> |
+          </li>
+
+          <li> Book <a href="https://drive.google.com/file/d/1WHj2EhkdtP7K5CT2VbabTU-2zz4zjBC2/view?usp=drive_link" target="_blank">Volum 1</a>
+                    <a href="https://drive.google.com/file/d/1yrXCIM90QTIH3BJxDwKfHDZ8ZI-_UBi3/view?usp=drive_link" target="_blank">Volum 2</a>
+           </li>
+
+    </div>
+<!-- END of R1 -->
+
+<!-- ‎************************************************************************************************************************************************************* -->
+<h1 id="ccnp" class="ciscoColor collapsible">CCNP</h1>
+  <div class="content">
+
+test <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+  </div>
+<!-- END of R1 -->
+
+<!-- ‎************************************************************************************************************************************************************* -->
+
+
+
+
+
+<div class="foot">
+<a href="#">  Learn C# with ❤ </a>
+</div>
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+  </script>
+</body>
+
+</html>
