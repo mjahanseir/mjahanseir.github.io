@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="..\..\css\style.css" />
-  <title>CISCO</title>
-  <link rel="icon"  href="pic/cisco.ico" type="image/x-icon" />
+  <title>Networks</title>
+  <link rel="icon"  href="pic/network.ico" type="image/x-icon" />
 
   <style>
         body{
@@ -15,17 +15,20 @@
           margin:auto auto;
           width:85%;
           font-family:"Times New Roman", Times, serif;
-          background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+          background: linear-gradient(135deg, #ffa5a5 25%, transparent 25%) -16px 0/ 32px 32px,
+                      linear-gradient(225deg, #ffa5a5 25%, transparent 25%) -16px 0/ 32px 32px,
+                      linear-gradient(315deg, #ffa5a5 25%, transparent 25%) 0px 0/ 32px 32px,
+                      linear-gradient(45deg, #ffa5a5 25%, #ffffff 25%) 0px 0/ 32px 32px;
         }
         .collapsible:hover { background-image:linear-gradient(hsla(0,0%,0%,.2) 100%,transparent 100%)       }
         a {
-          box-shadow: inset 0 0 0 0 dodgerblue;
-          color: dodgerblue;
-          padding: 0 2.25rem;
+          box-shadow: inset 0 0 0 0 maroon;
+          color: maroon;
+          padding: 0 1.25rem;
           transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
         }
         a:hover {
-          box-shadow: inset 1000px 0 0 0 dodgerblue;
+          box-shadow: inset 1000px 0 0 0 maroon;
           color: white;
         }
         .cscontent{
@@ -41,22 +44,13 @@
       }
 
 
-    h1{
-      align-items: center;
+    h4{
+      background-color: maroon;
+      color: whitesmoke;
       font-family: 'Work Sans', sans-serif;
-      font-size:4rem ;
       text-transform: uppercase;
       text-align: center;
-      font-weight: 900;
-      line-height: 1;
-      padding: 25px 1px 1px 1px;
     }
-    h1:hover::after {   content: "    ";}
-    h1:hover::before {  content: "     ";}
-    h2:hover::after {   content: "    ";}
-    h2:hover::before {  content: "     ";}
-
-
 
     .navbar {
       overflow: hidden;
@@ -82,19 +76,17 @@
       margin: 0;
       padding: 0.2rem;
     }
-
-    .ciscoColor{
-      background-color: dodgerblue;
+    .pageContent{
+      background-color: whitesmoke;
+      font-size: 1.1rem;
+        text-align:left;
+        padding: 0;
+        margin: 0;
     }
 
-    h1:nth-of-type(even),
-    h2:nth-of-type(even),
-    h3:nth-of-type(even),
-    h4:nth-of-type(even) {
-      border: 1px solid grey;
-    }
+
     #myBtn{
-      background-color: dodgerblue
+      background-color: maroon
     }
 
     ul{
@@ -111,59 +103,61 @@
 </head>
 
 <body>
-  <a href="..\index.html">Back to Home</a>
+  <a href="..\index.html">Back to Home</a> <br/>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
 
   <div class="navbar">
     <a style="background-color:#BE1459;" href="..\index.html">Home</a>
-    <a style="color:#BE1459;"  href="Microsoft\azure.html">Azure</a>
-    <a href="network.html"> Network</a>
-    <a href="#ccna">CCNA</a>
-    <a href="#ccnp">CCNP</a>
+    <a href="Microsoft\azure.html">Azure</a> <
+    <a href="cisco.html">CISCO</a>
+    <!-- <a href="#ccna">CCNA</a>
+    <a href="#ccnp">CCNP</a>  -->
   </div>
 
-<div class="MenuLabel ">CISCO  </div>
-  <!----------------------------------------------    Region 1        -------------------------------------------------->
+<div class="MenuLabel ">Computer Network Concepts  </div>
 
-  <h1 id="ccna" class="ciscoColor collapsible">CCNA</h1>
-    <div class="content">
-      <ul>
-          <li> cisco  <a href="https://learningnetwork.cisco.com/s/ccna" target="_blank">Page </a> |
-                      <a href="https://learningcontent.cisco.com/documents/200-301-CCNA-v1.0.pdf" target="_blank">Exam Topic </a> |
-                      <a href="https://learningnetwork.cisco.com/s/learning-plan-detail-standard?ltui__urlRecordId=a1c3i0000005hsQAAQ&ltui__urlRedirect=learning-plan-detail-standard" target="_blank">Learning </a> |
-          </li>
 
-          <li> Book <a href="https://drive.google.com/file/d/1WHj2EhkdtP7K5CT2VbabTU-2zz4zjBC2/view?usp=drive_link" target="_blank">Volum 1</a>
-                    <a href="https://drive.google.com/file/d/1yrXCIM90QTIH3BJxDwKfHDZ8ZI-_UBi3/view?usp=drive_link" target="_blank">Volum 2</a>
-           </li>
+<!----------------------------------------------    Region 1        -------------------------------------------------->
+<div class="pageContent">
+<h4>TCP/IP</h4>
+TCP/IP Fundamentals LiveLessons, 2nd Edition By Michael J. Shannon <a href="https://www.youtube.com/watch?v=GEXXFd9H7pQ&list=PLt4zoIx-WdZUxTuBFbs6IGL3T4G8Rjj_y&pp=gAQBiAQB"> Youtube </a>   <a href="https://learning.oreilly.com/videos/tcp-ip-fundamentals-livelessons/9780137658909/">O'Reilly</a> <br/>
 
-<a href="https://www.youtube.com/watch?v=AJeAYxcBYYg&list=PLt4zoIx-WdZUn92VoEB4jXL1irQ5o3w0H&index=1">CCNA-200-301-Kevin Wallace 2020</a>
-
-<a href="https://www.youtube.com/watch?v=UN2AVf-3Ru0&list=PLt4zoIx-WdZVLQap7K5EvmP4YeR8pA6EK">[CBTNuggets] CCNA 200 301</a>
-
-            <a href="https://www.youtube.com/watch?v=-k7a6jtGITw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p">[Farsi] CCNA</a>
-
-    </div>
+</div>
 <!-- END of R1 -->
 
 <!-- ‎************************************************************************************************************************************************************* -->
-<h1 id="ccnp" class="ciscoColor collapsible">CCNP</h1>
-  <div class="content">
+<div class="pageContent">
+<h4>Network+</h4>
+<a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU1_msAQ__9ZP1Qs6BXlStg"> [CBTNuggets] Network+ </a> <br/>
+<a href="https://www.youtube.com/watch?v=GMPX1wmao1s&list=PLt4zoIx-WdZWDzH3urNWFu2ypn7UevgPz">[Udemy] Network+ Jason Dion</a> <br/>
+<a href="https://www.youtube.com/watch?v=Fz16eirECys&list=PLt4zoIx-WdZXt3p6IZVYoqtZ4HgIh4cRW">[Farsi] Network+</a> <br/>
 
-test <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-
-  </div>
-<!-- END of R1 -->
-
+</div>
+<!-- END of R2 -->
 <!-- ‎************************************************************************************************************************************************************* -->
 
-
+<div class="pageContent">
+<h4>Fundamentals</h4>
+<a href="https://www.youtube.com/watch?v=oD9PrzabcBg&list=PLt4zoIx-WdZWw1dxqLpuXDDjoh9W8pBbU">[CBTNuggets] IT Expert - Installing Network Cabling and Devices </a> <br/>
+<a href="https://www.youtube.com/watch?v=xZFCNFLKfX8&list=PLt4zoIx-WdZU_yYyKrZLHx6TAEDiv6SIB">[CBTNuggets] IT Expert Building and Configuring a Business Wireless Network</a> <br/>
+<a href="https://www.youtube.com/watch?v=Yd41UDJWHHA&list=PLt4zoIx-WdZVeM14tyocz9nOD2oHnv1GT">[CBTNuggets] IT Expert: Building and Configuring a Business Switch Network</a> <br/>
+<a href="https://www.youtube.com/watch?v=UzIc0RcYAIg&list=PLt4zoIx-WdZV28_7nXdNW5WPqJXBAJe-j">[LiveLessons] Building a Computer Network</a> <br/>
+<a href="https://www.youtube.com/watch?v=7AtvWNVGREU&list=PLt4zoIx-WdZXUEOQMnNdXaQVPbw8p6vlr">[LiveLessons] Abstraction in Computer Networks</a> <br/>
+</div>
+<!-- END of R3 -->
+<!-- ‎************************************************************************************************************************************************************* -->
+<div class="pageContent">
+<h4>Others</h4>
+<a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWwRetg1C7DcdgVL-Q__Vep"> [CBTNuggets] VMware vSphere 6.5 (VCP6.5-DCV) </a> <br/>
+</div>
+<!-- END of R3 -->
+<!-- ‎************************************************************************************************************************************************************* -->
 
 
 
 <div class="foot">
-<a href="#">  Learn C# with ❤ </a>
+<a href="#">  Learn Networking with ❤ </a> <br/>
 </div>
   <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
