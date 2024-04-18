@@ -14,12 +14,15 @@
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 3rem;
+  font-size: 2rem;
   text-rendering: auto;
 text-align: center;
-margin:0 1.5rem;
+margin:0 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+a:hover{
+  color:red;
 }
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {

@@ -1,5 +1,5 @@
 /*
-Author: http://webthemez.com 
+Author: http://webthemez.com
 */
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:800,700,400);
@@ -43,7 +43,7 @@ a, a:hover, a:active {
 
 .clearfix:after {
     clear: both;
-} 
+}
 /* Common style */
 .grid figure {
 	position: relative;
@@ -261,7 +261,7 @@ p {
 .res-nav_click {
     display: none;
 }
-	
+
 
 /* Nav Styles
 ---------------------------------*/
@@ -470,12 +470,12 @@ a.read_more:hover {
     border: 1px solid #ED5441;
 }
 
-	
+
 
 .timeline{
 	padding:110px 0;
 }
-.timeline h2{ 
+.timeline h2{
 }
 
 
@@ -502,7 +502,7 @@ a.read_more:hover {
 .service_block {
     text-align: center;
     padding-left: 15px;
-    padding-right: 15px; 
+    padding-right: 15px;
 	position: relative;
 }
 
@@ -513,7 +513,7 @@ a.read_more:hover {
     border-bottom: 1px dashed #000000;
 }
 
- 
+
 
 .service_icon span {
     background: transparent;
@@ -547,7 +547,7 @@ a.read_more:hover {
     color: #585858;
     margin: 0 0 35px 0;
 }
-	
+
 #mobox {
     padding: 20px 0px;
     background: #fcfcfc;
@@ -833,7 +833,7 @@ img {
 
 /* About Us
 --------------------------- */
- 
+
 .aboutUs-container {
 background-repeat: no-repeat;
 background-position: right;
@@ -863,7 +863,7 @@ background-position-y: 70px;
 	font-size:28px;
 	color: #000;
 }
-.points{ 
+.points{
 	margin-bottom: 10px;
 	font-size:14px;
 	padding-left:0px;
@@ -909,7 +909,7 @@ background-position-y: 70px;
 
 .team_area {
     width: 30.66%;
-    margin-right: 3.82979%; 
+    margin-right: 3.82979%;
     overflow: hidden;
     text-align: center;
     float: left;
@@ -946,7 +946,7 @@ background-position-y: 70px;
 .team_box_shadow a {
     display: block;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 .team_box:hover .team_box_shadow {
@@ -985,14 +985,14 @@ background-position-y: 70px;
 .team_box ul li {
     display: inline-block;
     margin: 0 11px;
-	width: 34px; 
+	width: 34px;
 border-radius: 50%;
 background: #fff;
 padding: 10px 0 4px;
 margin-bottom: 5px;
 }
 
-.team_box ul li a { 
+.team_box ul li a {
     display: inline-block;
     font-size: 18px;
     color: #232323;
@@ -1051,7 +1051,7 @@ border: 1px solid #CE1139;
     padding: 90px 0 100px;
     color: #fff;
 }
- 
+
 .contact_section {
     margin: 0 0 60px 0;
 }
@@ -1156,9 +1156,10 @@ border: 1px solid #CE1139;
     display: block;
     overflow: hidden;
     list-style: none;
-    text-align: right;
+    text-align: left;
     margin: 0 auto;
 }
+
 .footer_wrapper .social_links{
     text-align: left;
     padding-left: 17px;
@@ -1208,7 +1209,7 @@ border: 1px solid #CE1139;
 .gplus a:hover {
     color: #ffffff;
 }
- 
+
 
 .form {
     margin: 0 66px 0 30px;
@@ -1241,7 +1242,7 @@ border: 1px solid #CE1139;
     height: 230px;
     resize: none;
     overflow: auto;
-    
+
 }
 
 .input-btn {
@@ -1357,9 +1358,9 @@ border: 1px solid #CE1139;
 
 
 
-	
-/* Portfolio */	
-	
+
+/* Portfolio */
+
 .container.portfolio_title {
     padding-bottom: 0px;
 }
@@ -1370,7 +1371,7 @@ border: 1px solid #CE1139;
 
 
 
-/* Portfolio Filters */	
+/* Portfolio Filters */
 
 #filters {
     margin-top: 10px;
@@ -1434,7 +1435,7 @@ border: 1px solid #CE1139;
 
 
 
-/* Portfolio Items */	
+/* Portfolio Items */
 
 #portfolio_wrapper {
     position: relative;
@@ -1516,7 +1517,7 @@ border: 1px solid #CE1139;
     color: #fff;
     text-transform: uppercase;
     margin-top: 25px;
-    
+
     opacity: 0;
     font-size: 18px;
     transition: all 0.2s ease 0s;
@@ -1584,11 +1585,11 @@ border: 1px solid #CE1139;
     -o-transition: opacity .3s .2s, margin-top .3s .2s;
     transition: opacity .3s .2s, margin-top .3s .2s;
 }
-	
-	
-	
-	
-/* Portfolio Isotope Transitions */	
+
+
+
+
+/* Portfolio Isotope Transitions */
 
 .isotope, .isotope .isotope-item {
     -webkit-transition-duration: 0.8s;
@@ -1622,13 +1623,13 @@ border: 1px solid #CE1139;
     transition-duration: 0s;
 }
 
-.tooltip{ 
+.tooltip{
   position:relative;
   float:right;
 }
 .tooltip > .tooltip-inner {background-color: #000000;padding:5px 15px;color: rgb(255, 255, 255);font-weight:bold;font-size:13px;}
 .popOver + .tooltip > .tooltip-arrow {border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 5px solid #000000;}
- 
+
 .progress{
   border-radius:0;
   overflow:visible;
@@ -1647,7 +1648,7 @@ border: 1px solid #CE1139;
 .skills p{
 	margin-bottom:20px;
 }
-/* Portfolio Expander */	
+/* Portfolio Expander */
 
 
 
@@ -1720,10 +1721,10 @@ border: 1px solid #CE1139;
     padding-bottom: 40px;
 }
 
-	
-/* Portfolio*/	
-	
-	
+
+/* Portfolio*/
+
+
 .project-image-slider .bx-wrapper .bx-next {
     background: url("images/project_slider_right.png") no-repeat;
     background-size: 35px 65px;
@@ -1753,9 +1754,9 @@ border: 1px solid #CE1139;
     width: 35px;
     z-index: 100;
 }
-	
-/* Portfolio Normal Expander */		
-	
+
+/* Portfolio Normal Expander */
+
 .project-description {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -1783,11 +1784,11 @@ border: 1px solid #CE1139;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
-	
-	
-	
-/* Portfolio FullScreen Expander */			
-	
+
+
+
+/* Portfolio FullScreen Expander */
+
 #cycle-loader {
     height: 32px;
     left: 50%;
@@ -2218,7 +2219,7 @@ img {
     color: #ffffff;
     vertical-align: middle;
 }
-.card.hovercard .info .title a{ 
+.card.hovercard .info .title a{
     color: #ffffff;
 }
 .card.hovercard .info .desc {
@@ -2271,9 +2272,9 @@ background-position-y: 150px;
 @media (max-width: 768px) {
 .navStyle {
 float: right;
-width: auto; 
+width: auto;
 text-align: center;
-} 
+}
 .aboutUs-container{
 	background-image:none;
 }
@@ -2299,11 +2300,11 @@ margin-bottom:20px;
 font-size:26px;
 line-height:22px;
 }
-.service_block h3 { 
+.service_block h3 {
 font-size: 16px;
 }
 service_block p {
-font-size: 14px; 
+font-size: 14px;
 margin: 0px;
 margin-bottom: 20px;
 }
@@ -2334,7 +2335,7 @@ font-size: 30px;
 }
 .page_section.contact {
 padding: 60px 0 50px;
-} 
+}
 .navbar-inverse .navbar-toggle .icon-bar{background: #ffffff;}
 .navbar-inverse .navbar-toggle {
 border-color: transparent;
@@ -2360,11 +2361,11 @@ margin: 0px;
 margin: 0px;
 }
 .navbar-inverse .navbar-nav > li > a {/* color: #222; */font-size:12px;padding: 10px 11px;}
-} 
-@media (max-width: 480px){ 
+}
+@media (max-width: 480px){
 .navStyle {
 float: left;
-width: 100%; 
+width: 100%;
 text-align: left;
 }
 .navbar {
