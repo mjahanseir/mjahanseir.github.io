@@ -378,12 +378,12 @@ p {
 /* Top_content
 ---------------------------------*/
 .hero_section img{
-	width:80%;
+	width:85%;
 }
 .top_cont_outer {
     position: relative;
     /* height: 750px; */
-    background: url('../img/home2.jpg') no-repeat;
+    /* background: url('../img/home2.jpg') no-repeat; */
     background-size: cover;
     background: #fff;
 }
@@ -407,7 +407,7 @@ p {
 }
 
 .top_left_cont {
-    padding: 50px 0 0 0;
+    padding: 5px 0 0 0;
 }
 
 .top_left_cont h3 {
@@ -2384,3 +2384,12 @@ display:none;
 }
 .rt-box {/* float: left; *//* width: 88%; */text-align: left;margin-left: 10px;margin-bottom: 25px;text-align: center;}
 img.img.img-circle.lt-box {/* float: left; */width: 64px;height: auto;}
+
+
+
+/* .hovereffect:hover{
+  box-shadow: inset 700px 0 0 0  Orange;
+  /* color: whitesmoke; */
+  font-weight: normal;
+  transition: color 1s  linear, box-shadow 1s linear;
+} */
