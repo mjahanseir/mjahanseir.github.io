@@ -2386,10 +2386,38 @@ display:none;
 img.img.img-circle.lt-box {/* float: left; */width: 64px;height: auto;}
 
 
+.seperatorEslimi{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* .hovereffect:hover{
-  box-shadow: inset 700px 0 0 0  Orange;
-  /* color: whitesmoke; */
-  font-weight: normal;
-  transition: color 1s  linear, box-shadow 1s linear;
-} */
+/* Get In Touch
+---------------------------------*/
+#typedtext{
+  height:25vh;
+}
+.footer_wrapper h1 { color: #fff; font-size:6rem; font-weight:lighter; margin: 5rem 0 0 0; text-transform: uppercase; text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; text-align: center; }
+
+
+.footer_wrapper h2 {
+                    font-size:2.5rem;
+                    text-align: left;
+                    text-shadow: 1px 1px 0 #000;
+                    padding: 2rem;
+                     letter-spacing: -1px;
+                    color: white;
+}
+
+
+
+
+
+.boxOrange{
+  font-size: 2rem; letter-spacing: -1px; text-transform: uppercase;
+  width:10vw; padding: 1rem 5rem; color: white; background-color: orange; align-items: right;
+}
+.boxOrange:hover{
+color: #fff;
+background-color: red;
+}
