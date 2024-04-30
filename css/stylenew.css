@@ -2421,3 +2421,12 @@ img.img.img-circle.lt-box {/* float: left; */width: 64px;height: auto;}
 color: #fff;
 background-color: red;
 }
+
+.boxRed{
+  font-size: 1rem; letter-spacing: 1px; text-transform: uppercase;
+  width:5vw; padding: 0.5rem 1rem; color: white; background-color: red; align-items: right;
+}
+.boxRed:hover{
+color: #fff;
+background-color: DarkRed;
+}
