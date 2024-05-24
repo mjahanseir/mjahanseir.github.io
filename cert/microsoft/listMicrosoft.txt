@@ -1,0 +1,28 @@
+ Prepare for the Microsoft Azure AI Fundamentals (AI-900) Certification 
+https://www.linkedin.com/learning/paths/prepare-for-the-microsoft-azure-ai-fundamentals-ai-900-certification
+
+Microsoft Azure AI Fundamentals (AI-900) Exam Tips
+Azure AI Fundamentals (AI-900) Cert Prep: 1 Conversational AI on Azure
+Azure AI Fundamentals (AI-900) Cert Prep: 2 Principles of Machine Learning on Azure
+Azure AI Fundamentals (AI-900) Cert Prep: 3 Computer Vision Workloads on Azure
+Azure AI Fundamentals (AI-900) Cert Prep: 4 Natural Language Processing (NLP) Workloads on Azure 
+
+Prepare for the Azure Data Fundamentals (DP-900) Certification Exam
+https://www.linkedin.com/learning/paths/prepare-for-the-azure-data-fundamentals-dp-900-certification-exam
+Azure Data Fundamentals (DP-900) Cert Prep: 1 Core Data Concepts
+Azure Data Fundamentals (DP-900) Cert Prep: 2 Working with Relational Data on Azure
+Azure Data Fundamentals (DP-900) Cert Prep: 3 Working with Non-Relational Data on Azure
+Azure Data Fundamentals (DP-900) Cert Prep: 4 Analytics Workloads on Azure
+
+
+
+
+
+Prepare for the Power Platform Fundamentals (PL-900) Certification from Microsoft Press
+https://www.linkedin.com/learning/paths/prepare-for-the-power-platform-fundamentals-pl-900-certification-from-microsoft-press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 1 The Business Value of Power Platform by Microsoft Press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 2 Core Components by Microsoft Press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 3 Power BI by Microsoft Press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 4 Power Apps by Microsoft Press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 5 Power Automate by Microsoft Press
+Microsoft Power Platform Fundamentals (PL-900) Cert Prep: 6 Power Virtual Agents by Microsoft Press 
