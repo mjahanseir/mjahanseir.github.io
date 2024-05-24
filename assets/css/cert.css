@@ -1,0 +1,480 @@
+body{
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  margin:auto auto;
+  width:85%;
+  font-family:"Times New Roman", Times, serif;
+  background: linear-gradient(135deg, #ffa5c3 25%, transparent 25%) -16px 0/ 32px 32px,
+               linear-gradient(225deg, #ffa5c3 25%, transparent 25%) -16px 0/ 32px 32px,
+               linear-gradient(315deg, #ffa5c3 25%, transparent 25%) 0px 0/ 32px 32px,
+               linear-gradient(45deg, #ffa5c3 25%, #ffffff 25%) 0px 0/ 32px 32px;
+}
+
+
+.mainimage {
+  width: 100%;
+  top: 0;
+  height: auto;
+}
+
+.mainarea {
+  max-width: 70%;
+  margin: auto;
+  background: white;
+  padding: 0;
+  box-shadow: #2d2c2c 4px 0 50px;
+}
+
+
+.collapsible {
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.collapsible:hover {
+  background-image:linear-gradient(hsla(0,0%,0%,.2) 100%,transparent 100%) ;
+}
+
+
+.content {
+  background-color: ivory;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif, Geneva, monospace;
+  color: #2d2c2c;
+  font-size: 1.2rem;
+  display: none;
+  overflow: hidden;
+}
+
+
+.headerPage {
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size:4rem ;
+  color:DarkRed;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1;
+  padding: 25px 1px 1px 1px;
+}
+
+/* HEADERS */
+h1{
+  align-items: center;
+  /* font-family: 'Work Sans', sans-serif; */
+  font-size:2rem ;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  padding: 14px 25px;
+  text-align: center;
+  background-color: #900c3f;
+}
+/* h2{
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size:2rem ;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1;
+  background-color: #c70039;
+  margin: 0;
+  padding: 14px 25px;
+} */
+h3{
+  align-items: center;
+  font-family:'Work Sans', sans-serif;
+  font-size:1.7rem ;
+  text-align: center;
+  margin: 0 1%;
+  padding: 0.5%;
+  background-color:#616161;
+  border-radius:  10px;
+  box-shadow: 0 0 3px #000000;
+    letter-spacing: 0.3rem;
+}
+h4{
+  align-items: center;
+  font-family: 'Work Sans', serif;
+  font-size:1.5rem ;
+  /* text-transform: uppercase; */
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.1rem;
+  /* text-shadow: 0 0 3px #fff; */
+  padding:0.5rem;
+  margin: 0 5%;
+  border-radius:  20px;
+}
+
+
+/* h1:hover::after {   content: "   ] "; }
+h1:hover::before {   content: " [   ";  } */
+
+/* h2:hover::after {   content: "   >> ";}
+h2:hover::before {  content: " <<   ";} */
+
+/* h3:hover::after {  content: "      ------    ";}
+h3:hover::before {  content: "    ------      ";} */
+
+h1:nth-of-type(even),
+/* h2:nth-of-type(even), */
+h3:nth-of-type(even),
+h4:nth-of-type(even) {
+  border: 1px solid #129877;
+}
+
+/* h4:hover{
+  color: white;
+  background-color:orange;
+} */
+
+.navbar {
+overflow: hidden;
+background-color: #333;
+position: fixed;
+top: 0;
+width: 85%;
+height: auto;
+min-height: 20;
+margin:0;
+padding: 0;
+font-size: 1rem;
+}
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+text-decoration: none;
+/* font-size: 1rem; */
+/* margin:0; */
+/* padding: 0.1rem 1.9rem; */
+  box-shadow: inset 0 0 0 0 #8b0000;
+  padding: 0 1.25rem;
+  transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+}
+.navbar  a:hover {
+  box-shadow: inset 1000px 0 0 0 #8b0000;
+  color: white;
+}
+
+.MenuLabel{
+  background-color: black;
+  font-size: 2rem;
+  color: whitesmoke;
+  text-align: right;
+  margin:2rem 0 0 0;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+/*
+h1:nth-of-type(even),
+h2:nth-of-type(even),
+h3:nth-of-type(even),
+h4:nth-of-type(even) {
+border: 1px solid grey;
+} */
+
+
+
+
+
+
+
+
+
+/* .BoxWrapper {
+display: grid;
+grid-template-columns: 23% 23% 23% 23%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+} */
+
+.BoxWrapper {
+display: grid;
+grid-template-columns:  23% 23% 23% 23%;; /*  DEFAULT 4 COLUMN */
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper1 {
+display: grid;
+grid-template-columns: 100%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper2 {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+}
+.BoxWrapper3 {
+display: grid;
+grid-template-columns:33% 33% 33%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper4 {
+display: grid;
+grid-template-columns: 23% 23% 23% 23%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper5 {
+display: grid;
+grid-template-columns:  19% 19% 19% 19% 19%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper6 {
+display: grid;
+grid-template-columns: 16% 16% 16% 16% 16% 16%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper7 {
+display: grid;
+grid-template-columns: 13.5% 13.5% 13.5% 13.5% 13.5% 13.5% 13.5%;
+grid-gap: 1%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper8 {
+display: grid;
+grid-template-columns:12% 12% 12% 12% 12% 12% 12% 12%;
+grid-gap: 0.5%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+.BoxWrapper9 {
+display: grid;
+grid-template-columns:11.5% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5% ;
+grid-gap: 0.5%;
+margin: auto auto;
+width: 95%;
+/* height: 100%; */
+}
+
+.Box {
+/* height: 350px; */
+margin: 0;
+border-radius: 20px;
+padding: 5px;
+text-align: center;
+box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0.1), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Box img{
+height: 70%;
+width: 90%;
+margin: 0;
+}
+.Box img:hover{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(100, 100, 100, 0.19);
+}
+
+ .title {
+  margin:0  5px ;
+    padding: 5px  0;
+}
+
+ .title:hover {
+color: white;
+background-color: #BE1459;
+box-shadow:none;
+
+}
+
+.number{
+background-color:  #BE1459;
+color: white;
+font-family: 'Work Sans', sans-serif;
+font-size: 1.5rem;
+font-weight: bold;
+border-radius: 0 0 10px 10px;
+text-align: center;
+margin:5px;
+padding: 5px 10px;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(100, 100, 100, 0.19);
+}
+.description{
+font-family: 'Work Sans', sans-serif;
+color: blockquote;
+}
+.descriptionHeader{
+font-family: cursive;
+color: black;
+}
+.descriptionHeader:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.star{
+  background-color:  orange;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  margin:5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(100, 100, 100, 0.19);
+  }
+
+
+.azure{background-color: #0065ba; color: white;}
+
+.seperator{
+  margin:15px;
+  padding: 15px;
+}
+
+
+
+
+.footer {
+  max-width: 70%;
+  margin: auto;
+  text-align: center;
+  background-color: #e1faf3;
+}
+
+.foot {
+  margin: 3rem;
+  pading: 3rem;
+  text-align: center;
+  font-family: monospace;
+}
+
+.footerLinks {
+background-color: gray;
+font-size: 0.9rem;
+color: white;
+padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSEIVE */
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .BoxWrapper5 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+
+  /* }
+  img{
+    display: none;
+  } */
+}
+/*
+@media screen and (max-width: 600px) {
+  .BoxWrapper,.BoxWrapper2 , .BoxWrapper3 , .BoxWrapper4 , .BoxWrapper5 , .BoxWrapper6, .BoxWrapper7 , .BoxWrapper8 ,.BoxWrapper9{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow:none;
+    border: none;
+    line-height: auto;
+  } */
+
+
+      /* h1{
+        display: block;
+        align-items: center;
+        font-family:'Work Sans', sans-serif;
+        font-size:2rem ;
+      }
+    h3{
+      display: block;
+      align-items: center;
+      font-family:'Work Sans', sans-serif;
+      font-size:1.2rem ;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color:#616161;
+      radius:0;
+      border:none;
+      box-shadow: none;
+      letter-spacing: 0;
+    }
+    h4{
+      display: block;
+      align-items: center;
+      font-family:'Work Sans', sans-serif;
+      font-size:1rem ;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color:black;
+      radius:0;
+      border:none;
+      box-shadow: none;
+      letter-spacing: 0;
+    } */
+/*
+    .Box{    display: block;         width: 100%;        margin: 0;        padding: 0; box-shadow:none;     border: none;   }
+    .title{   width: 100%; padding: 0; margin: 0;}
+    .MenuLabel {display: none;}
+    .linkpath{display: none;}
+    .number{display: none;}
+    .description{font-family: 'Work Sans', sans-serif;color: blockquote;}
+    .star{ display: none;  }
+    .seperator{display:none;}
+    img{ display: none;  }
+
+} */
