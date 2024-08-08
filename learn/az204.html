@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\css\style.css" />
+    <title>AZ-204: Azure Developer Associate</title>
+    <!-- <link rel="icon" href="computer/pic/dev.ico" type="image/x-icon" /> -->
+    <link rel="icon"  href="computer/Microsoft/pic/ms.ico" type="image/x-icon" />
+    <style>
+      *{
+        font-family: 'Work Sans', sans-serif;
+      }
+        body {
+            background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+            margin: auto auto;
+            width: 85%;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .2) 100%, transparent 100%)
+        }
+
+        a {
+            box-shadow: inset 0 0 0 0 #8b0000;
+            color: #8b0000;
+            padding: 0 2.25rem;
+            transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 #8b0000;
+            color: white;
+        }
+
+        .cscontent {
+            padding: 0px 10%;
+        }
+
+        /* strong:hover {
+            background-color: purple;
+        } */
+
+        .cscontent a {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            align-items: center;
+            font-size: 1.2rem;
+            /* text-transform: uppercase; */
+            text-align: center;
+            font-weight: normal;
+            line-height: 1;
+            padding: 25px 1px 1px 1px;
+            background-color: #900c3f;
+        }
+
+        h2 {
+            align-items: center;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #c70039;
+        }
+
+        h3 {
+            align-items: center;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #616161;
+        }
+
+        h1:hover::after {
+            content: "    ";
+        }
+
+        h1:hover::before {
+            content: "     ";
+        }
+
+        h2:hover::after {
+            content: "    ";
+        }
+
+        h2:hover::before {
+            content: "     ";
+        }
+
+        h3:hover::after {
+            content: "    ";
+        }
+
+        h3:hover::before {
+            content: "     ";
+        }
+
+        .yellow {
+            color: #333333;
+            background-color: #ffd342;
+        }
+        .blue {
+            color: #333333;
+            background-color:#00a0e0;
+        }
+        .green {
+            color: #333333;
+            background-color:#00a0a0;
+        }
+        .sky {
+            color: #333333;
+            background-color:#00e0e0;
+        }
+        .footerLinks {
+            background-color: gray;
+            font-size: 0.9rem;
+            color: white;
+            padding: 5px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            /* margin:0; */
+            padding: 0.1rem 0.9rem;
+        }
+
+        .MenuLabel {
+            background-color: black;
+            font-size: 0.9rem;
+            color: whitesmoke;
+            text-align: right;
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        h1:nth-of-type(even),
+        h2:nth-of-type(even),
+        h3:nth-of-type(even),
+        h4:nth-of-type(even) {
+            border: 1px solid grey;
+        }
+
+        #myBtn {
+            background-color: #8b0000
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li a {
+            padding: 0 0 0 10px;
+        }
+        h6{
+          display: block;
+          background-color: orange;
+          color:#1e1e1e;
+          font-size: 1rem;
+          font-weight: normal;
+          padding: .5rem;
+          text-align: center;
+          border-bottom:0.5px SOLID  grey;
+        }
+        .collapsible {
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+        }
+
+        .collapsible:hover {
+          /* background-color: rgba(0, 0, 0, 0.8); */
+          background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
+        }
+
+        .content {
+          background-color: ivory;
+          text-align: justify;
+          font-family: "Times New Roman", Times, serif, Geneva, monospace;
+          color: #2d2c2c;
+          font-size: 1rem;
+          display: none;
+          overflow: hidden;
+        }
+
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 10%;
+          z-index: 99;
+          font-size: 23px;
+          font-weight: bold;
+          font-family: "Times New Roman", sans-serif;
+          border: none;
+          outline: none;
+          background-color: #730b0b;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+          box-shadow: 0 10px 60px black;
+        }
+
+        #myBtn:hover {
+          background-color: #2d2c2c;
+        }
+
+        /* ul {
+          margin-left: 20px;
+          margin-right: 20px;
+          list-style-type: "-  ";
+        }
+
+        ol {
+          margin-left: 25px;
+          margin-right: 25px;
+          padding: 25px;
+        }
+
+        li:nth-of-type(even) {
+          color: rgba(0, 0, 0, 0.8);
+        } */
+        ol li{
+          font-family: 'Work Sans', sans-serif;
+          font-size: 1rem;
+          padding:.3rem;
+          color:Black;
+        }
+        .app{color:white;background-color:#b30b91; display: block;padding:.5rem; font-weight: normal;}
+        .func{color:white;background-color:dodgerblue ; display: block;padding:.5rem; font-weight: normal;}
+        .blog{color:white;background-color:orange ; display: block;padding:.5rem; font-weight: normal;}
+        .cosmos{color:white;background-color:green ; display: block;padding:.5rem; font-weight: normal;}
+        .container{color:white;background-color:red ; display: block;padding:.5rem; font-weight: normal;}
+        .authn{color:white;background-color:purple ; display: block;padding:.5rem; font-weight: normal;}
+        .sec{color:white;background-color:brown ; display: block;padding:.5rem; font-weight: normal;}
+        .api{color:white;background-color:blue ; display: block;padding:.5rem; font-weight: normal;}
+        .event{color:white;background-color:#563e9e ; display: block;padding:.5rem; font-weight: normal;}
+        .msg{color:white;background-color:#b3ad0b ; display: block;padding:.5rem; font-weight: normal;}
+        .monitor{color:white;background-color:#99240c ; display: block;padding:.5rem; font-weight: normal;}
+        .cache{color:white;background-color:#0c9978 ; display: block;padding:.5rem; font-weight: normal;}
+
+        /*
+        class="app"
+        class="func"
+        class="blog"
+        class="cosmos"
+        class="container"
+        class="authn"
+        class="sec"
+        class="api"
+        class="event"
+        class="msg"
+        class="monitor"
+        class="cache"
+        */
+
+    </style>
+</head>
+
+<body>
+    <a href="..\index.html">Back to Home</a>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
+
+    <div class="navbar">
+        <a style="background-color:#BE1459;" href="index.html">Home</a>
+        <a href="dev.html">Software Developer</a>
+        <a href="computer\Microsoft\azure.html">Azure</a>
+        <a href="az400.html">AZ-400</a>
+        <a href="Microsoft.html">Microsoft</a>
+          <a href="https://github.com/mjahanseir/Microsoft/tree/main/AZ-204">GitHub</a>
+
+    </div>
+
+    <div class="MenuLabel" style="Letter-Spacing:.5rem">AZ-204 :   Azure   Developer   Associate</div>
+
+
+
+    <h1 class="collapsible">Overview</h1>
+    <div class="content">
+      <a href="	https://learn.microsoft.com/en-us/collections/3127b5w77g80?WT.mc_id=cloudskillschallenge_4b2f91e9-04c5-4a1c-8f67-443adefd0806	" target="_blank" >	[MS-Learn] Challenge	</a>	 |
+            <a href="	https://learn.microsoft.com/en-us/collections/rqrnbgkkxkzw?WT.mc_id=cloudskillschallenge_4ab7a1b6-fb12-47a2-88ad-2a40c408b253	" target="_blank" >	[Microsoft Build] Accelerate Developer Productivity with GitHub 	</a>	 |
+            <a href="	https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-204-develop-azure-compute-solutions-1-of-5?source=recommendations	" target="_blank" >	[MS-Learn] Preparing Exam	</a>	 |
+            <a href="	https://docs.google.com/spreadsheets/d/1x_esW1bzEsL2Ewv4r4c-HTOjwo6nGHO4/edit?usp=sharing&ouid=108937142670041165815&rtpof=true&sd=true	" target="_blank" >	Syllabous Tracker	</a>	 |
+            <a href="	https://drive.google.com/drive/folders/1D33nEtyd3EKh0G9ckYqWzB2dUfSn7rYJ	" target="_blank" >	az204-Slides	</a>
+      <h6 class="collapsible">MS-Learn</h6>
+      <div class="content">
+                  <ol id="sampleOL">
+                      <li><a href="	https://learn.microsoft.com/training/paths/create-azure-app-service-web-apps/	" target="_blank" >	AZ-204: Implement Azure App Service web apps	</a>	[	2 hr 3 min	-	4 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/implement-azure-functions/	" target="_blank" >	AZ-204: Implement Azure Functions	</a>	[	53 min	-	2 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/develop-solutions-that-use-blob-storage/	" target="_blank" >	AZ-204: Develop solutions that use Blob storage	</a>	[	1 hr 22 min	-	3 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-develop-solutions-that-use-azure-cosmos-db/	" target="_blank" >	AZ-204: Develop solutions that use Azure Cosmos DB	</a>	[	1 hr 19 min	-	2 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-implement-iaas-solutions/	" target="_blank" >	AZ-204: Implement containerized solutions	</a>	[	1 hr 42 min	-	3 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-implement-authentication-authorization/	" target="_blank" >	AZ-204: Implement user authentication and authorization	</a>	[	1 hr 25 min	-	4 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-implement-secure-cloud-solutions/	" target="_blank" >	AZ-204: Implement secure Azure solutions	</a>	[	1 hr 5 min	-	3 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-implement-api-management/	" target="_blank" >	AZ-204: Implement API Management	</a>	[	42 min	-	1 unit	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-develop-event-based-solutions/	" target="_blank" >	AZ-204: Develop event-based solutions	</a>	[	54 min	-	2 units	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-develop-message-based-solutions/	" target="_blank" >	AZ-204: Develop message-based solutions	</a>	[	57 min	-	1 unit	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-instrument-solutions-support-monitoring-logging/	" target="_blank" >	AZ-204: Troubleshoot solutions by using Application Insights	</a>	[	24 min	-	1 unit	]	</li>
+                      <li><a href="	https://learn.microsoft.com/training/paths/az-204-integrate-caching-content-delivery-within-solutions/	" target="_blank" >	AZ-204: Implement caching for solutions	</a>	[	48 min	-	2 units	]	</li>
+                    </ol>
+                  </div>
+
+
+
+                  <h6 class="collapsible">[Microsoft-learn] ESI 2023</h6>
+                          <div class="content">
+                            <ul>
+                              0-Introduction	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=0s	" target="_blank" >	0:00:00	</a><br>
+                              <br>
+                              <strong   class="app">Module 01: Azure App Service web apps	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=300s	" target="_blank" >	0:05:00	</a><br>
+                              </strong>        02-Create Azure App Service web apps - Part 1		<a href="	https://www.youtube.com/watch?v=XpG7jVoDiE4&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=11&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                03-Create Azure App Service web apps - Part 2		<a href="	https://www.youtube.com/watch?v=AvFFAXKC77o&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=12&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                04-Create Azure App Service web apps - Part 3		<a href="	https://www.youtube.com/watch?v=Ix_IbCTELSk&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=13&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                05-Create Azure App Service web apps - Part 4		<a href="	https://www.youtube.com/watch?v=qTMSl7VmsO0&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=14&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="func">Module 02: Azure Functions	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=3940s	" target="_blank" >	1:05:40	</a><br>
+                              </strong>        06-Implement Azure Functions - Part 1			<a href="	https://www.youtube.com/watch?v=NsFZYOZWYjw&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=15&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                07-Implement Azure Functions - Part 2			<a href="	https://www.youtube.com/watch?v=amXNdar253w&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=16&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                08-Implement Azure Functions - Part 3			<a href="	https://www.youtube.com/watch?v=o_Ln6oZ69q0&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=17&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong   class="blog">Module 03: Blob storage 	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=7425s	" target="_blank" >	2:03:45	</a><br>
+                              </strong>        09-Develop solutions that use Blob storage - Part 1		<a href="	https://www.youtube.com/watch?v=2Jds58p15l4&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=18&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                10-Develop solutions that use Blob storage - Part 2	<a href="	https://www.youtube.com/watch?v=yYOe_0C8ljo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=19&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                11-Develop solutions that use Blob storage - Part 3		<a href="	https://www.youtube.com/watch?v=sXS2ghqxn7U&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=20&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong   class="cosmos">Module 04: Cosmos DB 	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=9610s	" target="_blank" >	2:40:10	</a><br>
+                              </strong>        12-Develop solutions that use Azure Cosmos DB - Part 1 <a href="	https://www.youtube.com/watch?v=AmesmEm_ISQ&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=21&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                13-Develop solutions that use Azure Cosmos DB - Part 2 <a href="	https://www.youtube.com/watch?v=f80acu5q0Mk&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=22&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                14-Develop solutions that use Azure Cosmos DB - Part 3 <a href="	https://www.youtube.com/watch?v=Ayw_V8F6j3A&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=23&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong   class="container">Module 05: IaaS 	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=11735s	" target="_blank" >	3:15:35	</a><br>
+                              </strong>        15-Implement infrastructure as a service solutions - Part 1			<a href="	https://www.youtube.com/watch?v=OqoTYp-goaU&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=24&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                16-Implement infrastructureas a serv1ce solutions - Part 2			<a href="	https://www.youtube.com/watch?v=7cZDXLsuZic&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=25&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                17-Implement infrastructure as a service solutions - Part 3			<a href="	https://www.youtube.com/watch?v=sQlpulpc86k&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=26&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                18-Implement infrastructure as a service solutions - Part 4			<a href="	https://www.youtube.com/watch?v=kglSZGC94UI&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=27&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                               <br>
+                               <strong class="authn" >Module 06: Authentication & Authorization 	   <a href="	https://www.youtube.com/watch?v=Z58jJzWVYWo&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=56&t=15815s	" target="_blank" >	4:23:35	</a><br>
+                               </strong>        19-Implement user authentication and authorization - Part 1	<a href="	https://www.youtube.com/watch?v=EZ1ii_gMaDw&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=28&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                20-Implement user authentication and authorization - Part 2	<a href="	https://www.youtube.com/watch?v=4GWrYX3ZThk&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=29&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                21-Implement user authentication and authorization - Part 3 <a href="	https://www.youtube.com/watch?v=gHUZMXElQp4&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=30&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                22-Implement user authentication and authorization - Part 4<a href="	https://www.youtube.com/watch?v=HJ4bc8d2HQE&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=31&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strongclass="sec">Module 07: Secure cloud solutions	   <a href="	#	" target="_blank" >		</a><br>
+                              </strong>        23-Implement serure doud solutions - Part l			 		  <a href="	https://www.youtube.com/watch?v=4YcSVKFp5-g&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=32&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                24-Implement secure cloud solutions - Part 2			 		 <a href="	https://www.youtube.com/watch?v=fw-HzmAIX38&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=33&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                25-Implement secure doud solutions - Part 3			 		  <a href="	https://www.youtube.com/watch?v=fwUm_cIAZrk&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=34&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="api" >Module 08: API Management	   <a href="	#	" target="_blank" >		</a><br>
+                              </strong>        26-Implement API Management			 		 <a href="	https://www.youtube.com/watch?v=9XiTwFaa_LQ&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=35&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="event" >Module 09: Event-Based solutions	   <a href="	#	" target="_blank" >		</a><br>
+                              </strong>        27-Develop event-based solutions - Part 1			 		<a href="	https://www.youtube.com/watch?v=6i5mujvUBLE&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=36&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                28-Develop event-based solutions - Part 2			 		<a href="	https://www.youtube.com/watch?v=hzxuEUQhrAc&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=37&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="msg" >Module 10: Message-Based solutions	    <a href="	#	" target="_blank" >		</a><br>
+                              </strong>        29-Develop message-based solutions	 <a href="	https://www.youtube.com/watch?v=VjyRAK1FfCg&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=38&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="monitor" >Module 11: Instrument solutions to support monitoring an	</a><br>
+                              </strong>        30-Instrument solutions to support monitoring and logging			 		  <a href="	https://www.youtube.com/watch?v=LoTF37F8NKg&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=39&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                              <br>
+                              <strong class="cache">Module 12: Integrate caching and content delivery within solutions	   <a href="	#	" target="_blank" >		</a><br>
+                              </strong>        31-Integrate caching and content delivery wrthm solutions - Pan l			 	<a href="	https://www.youtube.com/watch?v=8Lghfm3jU6A&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=40&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                                                32-Integrate caching and content delivery within solutions - Part 2			 			<a href="	https://www.youtube.com/watch?v=S3qCYzKDD5Q&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=41&pp=iAQBsAQB	" target="_blank" >	watch	</a>	<br>
+                            </ul>
+                  </div>
+
+
+          <h6 class="collapsible">Saskpolytech</h6>
+                  <div class="content">
+                    <ul>
+                          <br><strong class='app'>			App	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=Y8YlAvkxBVk&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=1&pp=gAQBiAQBsAQB	" target="_blank" >	01-Module01-Create Azure App Service Web Apps Part I	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=tX224EE7G48&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=2&pp=gAQBiAQBsAQB	" target="_blank" >	02-Module01-Create Azure App Service Web Apps Part II	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=ZnaLLmr4UIM&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=3&pp=gAQBiAQBsAQB	" target="_blank" >	03-Module01-Lab 01 Build a Web Application on Azure Platform as a Service Offering	</a></li>
+                        <br><strong class="func">			Func	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=gZa_kceMd54&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=5&pp=gAQBiAQBsAQB	" target="_blank" >	04-Module02 Azure Functions Overview	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=ZiPH785QxRM&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=6&pp=gAQBiAQBsAQB	" target="_blank" >	05-Module02 Lab 02 Implement Task Processing Logic by Using Azure Functions	</a></li>
+                        <br><strong class="blog">			Blob	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=2eTqr_kkJEs&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=8&pp=gAQBiAQBsAQB	" target="_blank" >	06-Module03 Explore Azure Blob Storage	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=WzM7yd8Ppgw&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=9&pp=gAQBiAQBsAQB	" target="_blank" >	07-Module03 Lab 03 Retrieve Azure Storage Resources and Metadata by Using the Azure Storage SDK for	</a></li>
+                        <br><strong class="cosmos">			Cosmos	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=hoNCJscXnBk&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=11&pp=gAQBiAQBsAQB	" target="_blank" >	08-Module04 Explore Azure Cosmos DB	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=SFqOfnyUmns&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=12&pp=gAQBiAQBsAQB	" target="_blank" >	09-Module04 Lab 04 Construct a Polyglot Data Solution	</a></li>
+                        <br><strong class="container">			Container	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=g5Sx-rNfryc&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=14&pp=gAQBiAQBsAQB	" target="_blank" >	10-Module05 Provision Virtual Machines in Azure	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=fnay3STur0A&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=15&pp=gAQBiAQBsAQB	" target="_blank" >	11-Module05 Create and Deploy Azure Resource Manager Templates	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=wktaKQSvMUI&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=16&pp=gAQBiAQBsAQB	" target="_blank" >	12-Module05 Manage Container Images in Azure Container Registry and Run Container Images in Azure Co	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=3CmPDAVjM_M&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=17&pp=gAQBiAQBsAQB	" target="_blank" >	13-Lab 05 Deploy Compute Workloads by Using Images and Containers	</a></li>
+                        <br><strong class="authn">			AuthN	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=oawnztsBljw&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=19&pp=gAQBiAQBsAQB	" target="_blank" >	14-Module06 Explore the Microsoft Identity Platform	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=YcTEkDA34VQ&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=20&pp=gAQBiAQBsAQB	" target="_blank" >	15-Module06 Implement Authentication by Using the MSAL and Explore Microsoft Graph and Implement SAS	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=hSqjJDvCaLo&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=21&pp=gAQBiAQBsAQB	" target="_blank" >	16-Module06 Lab 06 Authenticate to and Querying Microsoft Graph by Using MSAL and NET SDKs	</a></li>
+                        <br><strong class="sec">			Sec	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=5Y1KSR6Tnkc&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=23&pp=gAQBiAQBsAQB	" target="_blank" >	17-Module07 Implement Secure Cloud Solutions	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=Qff-K9ZAKO0&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=24&pp=gAQBiAQBsAQB	" target="_blank" >	18-Module07 Lab 07 Access Resource Secrets More Securely Across Services	</a></li>
+                        <br><strong class="api">			API	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=cIWi5y08tcE&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=26&pp=gAQBiAQBsAQB	" target="_blank" >	19-Module08 Explore API Management	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=YlKEBsjUt3A&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=27&pp=gAQBiAQBsAQB	" target="_blank" >	20-Module08 Discover the API Management Service	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=6eCB5asiY3Y&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=28&pp=gAQBiAQBsAQB	" target="_blank" >	21-Module08 Lab 08 Create a Multi Tier Solution by Using Azure Services	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=MiwD4WW91BQ&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=29&pp=gAQBiAQBsAQB	" target="_blank" >	22-Module08 Lab 08 Create a Multi Tier Solution by Using Azure Services	</a></li>
+                        <br><strong class="event">			Event	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=bpDUzOjj5Es&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=31&pp=gAQBiAQBsAQB	" target="_blank" >	23-Module09 Explore Azure Event Grid	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=rvFoKIfndn4&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=32&pp=gAQBiAQBsAQB	" target="_blank" >	24-Module09 Explore Azure Event Hubs	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=BVgPKTKf0HM&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=33&pp=gAQBiAQBsAQB	" target="_blank" >	25-Module09 Lab 09 Publish and Subscribe to Event Grid Events	</a></li>
+                        <br><strong class="msg">			Msg	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=9zzSJRbYh5s&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=35&pp=gAQBiAQBsAQB	" target="_blank" >	26-Module10 Discover Azure Message Queues	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=e2JOs7c7owg&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=36&pp=gAQBiAQBsAQB	" target="_blank" >	27-Module10 Lab 10 Asynchronously Process Messages by Using Azure Service Bus Queues	</a></li>
+                        <br><strong class="monitor">			Monitor	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=JEhT8DAh8Kg&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=38&pp=gAQBiAQBsAQB	" target="_blank" >	28-Module11 Monitor App Performance	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=Mi4jL4D3BtA&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=39&pp=gAQBiAQBsAQB	" target="_blank" >	29-Module11 Configure Instrumentation in an App or Service	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=DejEK5e1UcE&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=40&pp=gAQBiAQBsAQB	" target="_blank" >	30-Module11 Lab 11 Monitor Services That Are Deployed to Azure	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=I-tT2dpr2tQ&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=41&pp=gAQBiAQBsAQB	" target="_blank" >	31-Module11 Lab 11 Monitor Services That Are Deployed to Azure	</a></li>
+                        <br><strong class="cache">			Cache	</strong><br>
+                                            <li><a href="	https://www.youtube.com/watch?v=vnAtnkrBrVk&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=43&pp=gAQBiAQBsAQB	" target="_blank" >	32-Module12 Develop for Azure Cache for Redis and Develop for Storage on CDNs	</a></li>
+                                            <li><a href="	https://www.youtube.com/watch?v=LSDY_yNldI8&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=44&pp=gAQBiAQBsAQB	" target="_blank" >	33-Module12 Lab 12 Enhance a Web Application by Using the Azure Content Delivery Network	</a></li>
+                      </ul>
+
+                </div>
+
+
+                <h6 class="collapsible">[Susanth Sutheesh] full course</h6>
+                        <div class="content">
+                        <a href="https://www.youtube.com/@SusanthSutheesh/" target="_blank"> Susanth youtube </a> | <a href="https://www.youtube.com/watch?v=z2EsgHL86lM">[Susanth] Q/A </a>
+                          <ol>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=0s	" target="_blank" >	00:00:00​​​ Introduction 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=12s	" target="_blank" >	00:00:12 AZ204 Course Introduction 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=395s	" target="_blank" >	00:06:35 Azure App Service Overview 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=1193s	" target="_blank" >	00:19:53 App Service Plan 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=1746s	" target="_blank" >	00:29:06 Demo: App Service via CLI & Portal 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=2523s	" target="_blank" >	00:42:03​ Configure & Monitor App Service 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=3234s	" target="_blank" >	00:53:54 Autoscale Concepts 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=3928s	" target="_blank" >	01:05:28 Staging Environments 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=4333s	" target="_blank" >	01:12:13 Azure Functions Overview 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=5080s	" target="_blank" >	01:24:40​ Developing Azure Functions 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=5332s	" target="_blank" >	01:28:52​ Implement Durable Functions 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=5731s	" target="_blank" >	01:35:31 Solutions that use Azure Blob Storage 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=6497s	" target="_blank" >	01:48:17 Blob Storage Lifecycle 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=6770s	" target="_blank" >	01:52:50 Azure Cosmos DB Overview 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=7208s	" target="_blank" >	02:00:08 Create Cosmos DB & Data Structure 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=7589s	" target="_blank" >	02:06:29 Implement IaaS Solutions 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=8169s	" target="_blank" >	02:16:09 Azure Virtual Machine Deep Dive 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=8932s	" target="_blank" >	02:28:52​ Azure Resource Manager Templates 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=9456s	" target="_blank" >	02:37:36​ Azure Container Instances (ACI) 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=10255s	" target="_blank" >	02:50:55 Microsoft Identity Platforms 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=10769s	" target="_blank" >	02:59:29 Microsoft Graph 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=11086s	" target="_blank" >	03:04:46​​​ Azure Key Vault 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=11414s	" target="_blank" >	03:10:14 Azure Managed Identities 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=11732s	" target="_blank" >	03:15:32 Implement API Management 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=12083s	" target="_blank" >	03:21:23 Azure Event Grid 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=12620s	" target="_blank" >	03:30:20 Azure Event Hubs 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=12951s	" target="_blank" >	03:35:51​ Azure Service Bus 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=13263s	" target="_blank" >	03:41:03 Azure Queue Storage 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=13452s	" target="_blank" >	03:44:12 Monitoring in Azure 	</a></li>
+                                      <li><a href="	#VALUE!	" target="_blank" >	03:53:06 Azure CDN 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=14315s	" target="_blank" >	03:58:35​ AZ-204 Review Q&A 	</a></li>
+                                      <li><a href="	https://www.youtube.com/watch?v=WVWdqyUB0FM&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=43&t=15953s	" target="_blank" >	04:25:53 Outro	</a></li>
+                          </ol>
+
+                    </div>
+        </div>
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 01: Create Azure App Service web apps	</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+                <a href="	https://learn.microsoft.com/en-us/training/paths/create-azure-app-service-web-apps/	" target="_blank" >	AZ-204: Implement Azure App Service web apps	</a>
+            <ul>
+                <li><a href="	https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-app-service/	" target="_blank" >	1-1-Explore Azure App Service	</a></li>
+                <li><a href="	https://learn.microsoft.com/en-us/training/modules/configure-web-app-settings/	" target="_blank" >	1-2-Configure web app settings	</a></li>
+                <li><a href="	https://learn.microsoft.com/en-us/training/modules/scale-apps-app-service/	" target="_blank" >	1-3-Scale apps in Azure App Service	</a></li>
+                <li><a href="	https://learn.microsoft.com/en-us/training/modules/understand-app-service-deployment-slots/	" target="_blank" >	1-4-Explore Azure App Service deployment slots	</a></li>
+            </ul>
+          <h6>ESI June2024	</h6>
+          <ul>
+                <li><a href="	https://youtu.be/xvngnGQgRqw	" target="_blank" >	Day1-1	</a></li>
+                  <li><a href="	https://youtu.be/PaMDP8L3W_U	" target="_blank" >	Day1-2	</a></li>
+                  <li><a href="	https://www.youtube.com/watch?v=ATnkEnoCq0M&t=570s	" target="_blank" >	Day1-3-App Service	</a></li>
+                  <li><a href="	https://www.youtube.com/watch?v=ATnkEnoCq0M&t=6870s	" target="_blank" >	Day1-3-Web App	</a></li>
+          </ul>
+          <h6>MS-Learn New Video </h6>
+                <ul>
+                    <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-1/	" target="_blank" >	AZ-204 Course Introduction (1 of 29)	</a></li>
+                      <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-2/	" target="_blank" >	AZ-204 Explore Azure App Service (2 of 29)	</a></li>
+                      <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-3/	" target="_blank" >	AZ-204 Configure application settings (3 of 29)	</a></li>
+                      <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-4/	" target="_blank" >	AZ-204 Scale apps in Azure App Service (4 of 29)	</a></li>
+                </ul>
+
+          <h6>MS-Learn Last Video </h6>
+          <ul>
+                    <li><a href="	https://www.youtube.com/watch?v=XpG7jVoDiE4&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=11&pp=iAQBsAQB	" target="_blank" >	AZ204-02-Create Azure App Service web apps - Part 1	</a></li>
+                  <li><a href="	https://www.youtube.com/watch?v=AvFFAXKC77o&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=12&pp=iAQBsAQB	" target="_blank" >	AZ204-03-Create Azure App Service web apps - Part 2	</a></li>
+                  <li><a href="	https://www.youtube.com/watch?v=Ix_IbCTELSk&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=13&pp=iAQBsAQB	" target="_blank" >	Az204-04-Create Azure App Service web apps - Part 3	</a></li>
+                  <li><a href="	https://www.youtube.com/watch?v=qTMSl7VmsO0&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=14&pp=iAQBsAQB	" target="_blank" >	AZ204-05-Create Azure App Service web apps - Part 4	</a></li>
+            </ul>
+          <h6>SaskPolytech</h6>
+            <ul>
+                <li><a href="	https://www.youtube.com/watch?v=Y8YlAvkxBVk&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=1&pp=gAQBiAQBsAQB	" target="_blank" >	01-Module01-Create Azure App Service Web Apps Part I	</a></li>
+                <li><a href="	https://www.youtube.com/watch?v=tX224EE7G48&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=2&pp=gAQBiAQBsAQB	" target="_blank" >	02-Module01-Create Azure App Service Web Apps Part II	</a></li>
+                <li><a href="	https://www.youtube.com/watch?v=ZnaLLmr4UIM&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=3&pp=gAQBiAQBsAQB	" target="_blank" >	03-Module01-Lab 01 Build a Web Application on Azure Platform as a Service Offering	</a></li>
+        </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 02: Implement Azure Functions</h1>
+    <div class="content">
+            <h6>MS-Learn</h6>
+                              <ul>
+                                <li><a href="	https://learn.microsoft.com/en-us/training/paths/implement-azure-functions/	" target="_blank" >	AZ-204: Implement Azure Functions	</a></li>
+                              <li><a href="	https://learn.microsoft.com/en-us/training/modules/explore-azure-functions/	" target="_blank" >	2-1-Explore Azure Functions	</a></li>
+                              <li><a href="	https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/	" target="_blank" >	2-2-Develop Azure Functions	</a></li>
+                              </ul>
+            <h6>ESI June2024	</h6>
+                              <ul>
+                                                    <li><a href="	https://www.youtube.com/watch?v=ATnkEnoCq0M&t=14370s	" target="_blank" >	Day1-3-Function	</a></li>
+                              </ul>
+            <h6>MS-Learn New Video </h6>
+                              <ul>
+                                <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-6/	" target="_blank" >	AZ-204 Explore Azure Functions (6 of 29)	</a></li>
+                              <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-7/	" target="_blank" >	AZ-204 Develop Azure Functions (7 of 29)	</a></li>
+                              <li><a href="	https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/az-204-module-8/	" target="_blank" >	AZ-204 function(8 of 29)	</a></li>
+                              </ul>
+            <h6>MS-Learn Last Video </h6>
+                              <ul>
+                                <li><a href="	https://www.youtube.com/watch?v=NsFZYOZWYjw&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=15&pp=iAQBsAQB	" target="_blank" >	Az204-06-Implement Azure Functions - Part 1	</a></li>
+                              <li><a href="	https://www.youtube.com/watch?v=amXNdar253w&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=16&pp=iAQBsAQB	" target="_blank" >	AZ204-07-Implement Azure Functions - Part 2	</a></li>
+                              <li><a href="	https://www.youtube.com/watch?v=o_Ln6oZ69q0&list=PLt4zoIx-WdZXG5xS2xQLeyjGTcv_ryK_T&index=17&pp=iAQBsAQB	" target="_blank" >	AZ204-08-Implement Azure Functions - Part 3	</a></li>
+                              </ul>
+            <h6>SaskPolytech</h6>
+                              <ul>
+                                <li><a href="	https://www.youtube.com/watch?v=gZa_kceMd54&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=5&pp=gAQBiAQBsAQB	" target="_blank" >	04-Module02 Azure Functions Overview	</a></li>
+                              <li><a href="	https://www.youtube.com/watch?v=ZiPH785QxRM&list=PLt4zoIx-WdZULhVLb_T6NWWoPWGi1YOOC&index=6&pp=gAQBiAQBsAQB	" target="_blank" >	05-Module02 Lab 02 Implement Task Processing Logic by Using Azure Functions	</a></li>
+                              </ul>
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 03: Develop solutions that use Blob storage</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 04: Develop solutions that use Azure Cosmos DB</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 05: Implement Containerized solutions</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 06: Implement User Authentication and Authorization</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 07: Implement secure cloud solutions</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 08: Implement API Management</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 09: Develop  event-based solutions</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 10: Develop  message-based solutions</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 11: Troubleshoot solutions by using Application Insights</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 id="ch1" class="collapsible">Module 12: Implement caching for solutions</h1>
+    <div class="content">
+          <h6>MS-Learn</h6>
+
+          <h6>ESI June2024	</h6>
+
+          <h6>MS-Learn New Video </h6>
+
+          <h6>MS-Learn Last Video </h6>
+
+          <h6>SaskPolytech</h6>
+
+    </div>
+    <!-- END of Module -->
+
+
+    <!-- ‎************************************************************************************************************************************************************* -->
+
+    <!-- RoadMap -->
+    <div class="footerLinks">
+
+        <a class="LinkHover" target="_blank"
+            href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674">Mo-Plan.xls</a>
+        |
+        <a class="LinkHover" target="_blank"
+            href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit">Mo.docx</a> |
+        <a class="LinkHover" target="_blank"
+            href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD?usp=drive_link">ItsMJahan</a>
+    </div>
+
+
+
+    <div class="foot">
+        <a href="#"> Learn Azure with ❤ </a>
+    </div>
+    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZ-400: Designing and Implementing Microsoft DevOps Solutions</title>
+    <link rel="icon" href="computer/Microsoft/pic/ms.ico" type="image/x-icon" />
+    <style>
+      *{
+          margin: 0;
+          /* padding: 0; */
+          height: auto;
+          font-family: 'Work Sans', sans-serif;
+      }
+        body {
+            background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+            margin: auto auto;
+            width: 85%;
+            background-color: white;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+        .collapsible {
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+        }
+
+        .collapsible:hover {
+          background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
+        }
+
+        .content {
+          background-color: ivory;
+          text-align: justify;
+          font-family: "Times New Roman", Times, serif, Geneva, monospace;
+          color: #2d2c2c;
+          font-size: 1.2rem;
+          display: none;
+          overflow: hidden;
+        }
+
+
+
+
+
+
+        a { font-size:0.8rem; text-decoration: none;
+            padding: 0;
+            /* transition: color .6s ease-in-out, box-shadow .6s ease-in-out; */
+        }
+        a:visited{color:#1616ee}
+        a:hover {
+            /* box-shadow: inset 1000px 0 0 0 #4d4dfa;
+            padding-top: 6px; padding-bottom: 6px; */
+            color: red;
+        }
+
+
+
+        h1,h2,h3 ,h4,h5{
+            align-items: center;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1;
+            padding: 25px 1px 1px 1px;
+            background-color: #900c3f;
+        }
+        h1 {  font-size: 1.2rem;   background-color: #053B50; }
+        h2 {  font-size: 1rem;   background-color: #1450A3;  font-weight: normal;}
+        h3 {  font-size: .9rem;   background-color: #337CCF;  }
+        h4 {  font-size: .7rem;   background-color: #64CCC5; }
+        h5 {  font-size: .9rem;   background-color: #c2fffb; padding: 10px; border:0.1px solid #fcfcfc;}
+
+
+
+        h1:nth-of-type(even),
+        h2:nth-of-type(even),
+        h3:nth-of-type(even),
+        h4:nth-of-type(even) {
+            border: 1px solid grey;
+        }
+        h6{
+          display: block;
+          background-color: orange;
+          color:#1e1e1e;
+          font-size: 1rem;
+          font-weight: normal;
+          padding: .5rem;
+          text-align: center;
+          border-bottom:0.5px SOLID  grey;
+        }
+
+
+
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: .8rem;
+            /* margin:0; */
+            padding: 0.3rem 0.9rem;
+        }
+
+        .MenuLabel {
+            background-color: black;
+            font-size: 1rem;
+            color: whitesmoke;
+            text-align: right;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: center;
+            Letter-Spacing:.2rem;
+            text-transform: uppercase;:
+        }
+        p,ul,ol,li{ font-size: .8rem; }
+
+        /* ul {
+            list-style-type: none;
+        }
+
+        li a {
+            padding: 0 0 0 10px;
+        }
+
+        ol li{
+          font-family: 'Work Sans', sans-serif;
+          font-size: 1rem;
+          padding:.3rem;
+          color:Black;
+        } */
+
+        #myBtn {
+          background-color: #8b0000;
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 10%;
+          z-index: 99;
+          font-size: 23px;
+          font-weight: bold;
+          font-family: "Times New Roman", sans-serif;
+          border: none;
+          outline: none;
+          background-color: #730b0b;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+          box-shadow: 0 10px 60px black;
+        }
+
+        #myBtn:hover {
+          background-color: #2d2c2c;
+        }
+
+        .footerLinks {
+            background-color: gray;
+            font-size: 0.9rem;
+            color: white;
+            padding: 5px;
+        }
+        hr{
+          margin: .6rem;
+        }
+    </style>
+  </head>
+
+  <body>
+    <a href="..\index.html">Back to Home</a>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="navbar">
+      <a style="background-color: #be1459" href="index.html">Home</a>
+      <a href="dev.html">Software Developer</a>
+      <a href="computer\Microsoft\azure.html">Azure</a>
+      <a href="az204.html">AZ-204</a>
+      <a href="Microsoft.html">Microsoft</a>
+
+    </div>
+
+    <div class="MenuLabel">
+      <span style="background-color: gray">AZ-400</span>: Designing and
+      Implementing Microsoft DevOps Solutions
+    </div>
+
+    <h1 class="collapsible">Overview</h1>
+    <div class="content">
+      <ul>
+        <strong>Microsoft Links</strong>
+        <li>
+          <a
+            href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-400"
+            target="_blank"
+            >Study guide</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/"
+            target="_blank"
+            >Certification Pages</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://learn.microsoft.com/en-us/training/courses/az-400t00"
+            target="_blank"
+            >Course AZ-400T00-A</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://microsoftlearning.github.io/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/"
+            target="_blank"
+            >Github</a
+          >
+        </li>
+      </ul>
+      <hr />
+      <ol>
+        <strong>Skills measured</strong>
+        <li>Design and implement processes and communications (10–15%)</li>
+        <li>Design and implement a source control strategy (10–15%)</li>
+        <li>Design and implement build and release pipelines (50-55%)</li>
+        <li>Develop a security and compliance plan (10–15%)</li>
+        <li>Implement an instrumentation strategy (5–10%)</li>
+      </ol>
+      <hr />
+      <ol>
+        <strong>Preparing for AZ-400</strong>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-ca/shows/exam-readiness-zone/preparing-for-az-400-configure-processes-and-communications-1-of-5/"
+            target="_blank"
+          >
+            Preparing for AZ-400 - Configure processes and communications (1 of
+            5)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-ca/shows/exam-readiness-zone/preparing-for-az-400-design-and-implement-source-control-2-of-5/"
+            target="_blank"
+          >
+            Preparing for AZ-400 - Design and implement source control (2 of 5)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-ca/shows/exam-readiness-zone/preparing-for-az-400-design-and-implement-build-and-release-pipelines-3-of-5/"
+            target="_blank"
+          >
+            Preparing for AZ-400 - Design and implement build and release
+            pipelines (3 of 5)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-ca/shows/exam-readiness-zone/preparing-for-az-400-develop-a-security-and-compliance-plan-4-of-5/"
+            target="_blank"
+          >
+            Preparing for AZ-400 - Develop a security and compliance plan (4 of
+            5)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-ca/shows/exam-readiness-zone/preparing-for-az-400-implement-an-instrumentation-strategy-5-of-5/"
+            target="_blank"
+          >
+            Preparing for AZ-400 - Implement an instrumentation strategy (5 of
+            5)
+          </a>
+        </li>
+      </ol>
+      <hr />
+      <ol>
+        <strong>Microsoft Learn - 2024</strong>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=CbYN4oIeI2Q&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=9&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Course Introduction (1 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=tpT8nlIPtms&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=10&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Getting started on a DevOps transformation Journey Part 1 (2
+            of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=CRIT6gYHK3o&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=11&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Getting started on a DevOps transformation Journey Part 2 (3
+            of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=NDPoTwoA-jM&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=12&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Getting started on a DevOps transformation Journey Part 3 (4
+            of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=gdZgYmhTRyo&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=13&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Development for Enterprise DevOps Part 1 (5 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=ID4EG4tPTKE&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=14&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Development for Enterprise DevOps Part 2 (6 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=hhJI-olvvis&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=15&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement CI with Azure Pipelines and GitHub Actions Part 1
+            (7 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=T7JXtZi2Vq8&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=16&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement CI with Azure Pipelines and GitHub Actions Part 2
+            (8 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=a_KsX0Yuzb4&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=17&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement CI with Azure Pipelines and GitHub Actions Part 3
+            (9 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=D9yExIiSris&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=18&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Design and implement a release strategy Part 1 (10 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=V8-Lcd4MN4Q&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=19&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Design and implement a release strategy Part 2 (11 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=mcfyaee_Cpc&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=20&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement a secure continuous deployment using Azure
+            Pipelines Part 1 (12 of 21)</a
+          >
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=EDJ5fvz1leQ&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=19&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement a secure continuous deployment using Azure
+            Pipelines Part 2 (13 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=f60MfjfaF50&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=20&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Manage infrastructure as code using Azure and DSC Part 1 (14
+            of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=poKdRBL1qxw&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=21&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Manage infrastructure as code using Azure and DSC Part 2 (15
+            of 21)
+          </a>
+        </li>
+        <li>
+          <a href="	https://youtu.be/Rm8fR15ONuA	 " target="_blank">
+            AZ 400 Implement security and validate code bases for compliance
+            Part 1 (16 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=VApTR27yUqQ&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=23&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement security and validate code bases for compliance
+            Part 2 (17 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=uORmicTIHfc&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=24&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Design and implement a dependency management strategy Part 1
+            (18 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=pgO_NBU0dJM&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=25&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Design and implement a dependency management strategy Part 2
+            (19 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=UvFJ8j1_6To&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=26&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement continuous feedback Part 1 (20 of 21)
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=fF5oSPspmzc&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=27&pp=gAQBiAQBsAQB	 "
+            target="_blank"
+          >
+            AZ 400 Implement continuous feedback Part 2 (21 of 21)
+          </a>
+        </li>
+      </ol>
+      <hr />
+      <ol>
+        <strong>ESI-2024(me)</strong>
+        <a
+          href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT"
+          target="_blank"
+          >My YouTube Playlist</a
+        >
+        |
+        <a href="https://esi.learnondemand.net/ClassEnrollment/4478296">
+          LAB
+        </a>
+        <li>
+          AZ-400-ESI-Day1/4-Jul.23,2024 :
+          <a href="https://youtu.be/evcwkLaZ1nQ" target="_blank">Part 1</a> |
+          <a href="https://youtu.be/5QqSo9jdHEg" target="_blank">Part 2</a>
+        </li>
+        <li>
+          AZ-400-ESI-Day2/4-Jul.24,2024 :
+          <a href="https://youtu.be/k01Pd8-iR7U" target="_blank">Part 1</a> |
+          <a href="https://youtu.be/PTQMnyBMeDc" target="_blank">Part 2</a>
+        </li>
+        <li>
+          AZ-400-ESI-Day3/4-Jul.25,2024 :
+          <a href="https://youtu.be/p8Byp8KFg5c" target="_blank">Part 1</a> |
+          <a href="https://youtu.be/DzrlcASLsz4" target="_blank">Part 2</a>
+        </li>
+        <li>
+          AZ-400-ESI-Day4/4-Jul.26,2024 :
+          <a href="https://youtu.be/OriZGOC4Fdc" target="_blank">Part 1</a> |
+          <a href="https://youtu.be/-y7l7C3pDa4" target="_blank">Part 2</a>
+        </li>
+      </ol>
+      <hr />
+      <ol>
+        <strong>ESI-2022</strong>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=_rf-tV3U248&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=1&t=6358s&pp=gAQBiAQBsAQB"
+            target="_blank"
+          >
+            AZ-400-ESI-Day1/5-Nov.14,2022
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=xDjkEj_tcfk&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=2&pp=gAQBiAQBsAQB"
+            target="_blank"
+          >
+            AZ-400-ESI-Day2/5-Nov.15,2022
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=u00gJOAg8HI&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=3&pp=gAQBiAQBsAQB"
+            target="_blank"
+          >
+            AZ-400-ESI-Day3/5-Nov.16,2022
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=V1360RoODUI&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=4&pp=gAQBiAQBsAQB"
+            target="_blank"
+          >
+            AZ-400-ESI-Day4/5-Nov.17,2022
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://www.youtube.com/watch?v=qv1wnI3EhWw&list=PLt4zoIx-WdZWYaAde__CIfxaC4c8JPFHT&index=5&pp=gAQBiAQBsAQB"
+            target="_blank"
+          >
+            AZ-400-ESI-Day5/5-Nov.18,2022
+          </a>
+        </li>
+      </ol>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m1" class="collapsible">
+      Learning Path 01: Development for enterprise DevOps
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>AZ-400: Development for enterprise DevOps</strong>
+        [6 hr 45 min - 8 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-work-git-for-enterprise-devops/"
+          >Link</a
+        >
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/introduction-to-devops/	 "
+            target="_blank"
+          >
+            Module 01: Introduction to DevOps
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/plan-agile-github-projects-azure-boards/	 "
+            target="_blank"
+          >
+            Module 02: Plan Agile with GitHub Projects and Azure Boards
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/manage-git-branches-workflows/	 "
+            target="_blank"
+          >
+            Module 03: Design and implement branch strategies and workflows
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/collaborate-pull-requests-azure-repos/	 "
+            target="_blank"
+          >
+            Module 04: Collaborate with pull requests in Azure Repos
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/explore-git-hooks/	 "
+            target="_blank"
+          >
+            Module 05: Explore Git hooks
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/plan-fostering-inner-source/	 "
+            target="_blank"
+          >
+            Module 06: Plan foster inner source
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/manage-git-repositories/	 "
+            target="_blank"
+          >
+            Module 07: Manage and configure repositories
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/identify-technical-debt/	 "
+            target="_blank"
+          >
+            Module 08: Identify technical debt
+          </a>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <strong>Links</strong>
+        <li>
+          <a
+            href="https://www.agilealliance.org/agile101/12-principles-behind-the-agile-manifesto/"
+            target="_blank"
+            >The 12 Principles behind the Agile Manifesto</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m2" class="collapsible">
+      Learning Path 02: Implement CI with Azure Pipelines and GitHub Actions
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong
+          >AZ-400: Implement CI with Azure Pipelines and GitHub Actions</strong
+        >
+        [6 hr 33 min - 8 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-implement-ci-azure-pipelines-github-actions/"
+          >Link</a
+        >
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/explore-azure-pipelines/	 "
+            target="_blank"
+          >
+            Module 01: Explore Azure Pipelines
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/manage-azure-pipeline-agents-pools/	 "
+            target="_blank"
+          >
+            Module 02: Manage Azure Pipeline agents and pools
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/describe-pipelines-concurrency/	 "
+            target="_blank"
+          >
+            Module 03: Describe pipelines and concurrency
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/implement-pipeline-strategy/	 "
+            target="_blank"
+          >
+            Module 04: Design and implement a pipeline strategy
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/integrate-azure-pipelines/	 "
+            target="_blank"
+          >
+            Module 05: Integrate with Azure Pipelines
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/introduction-to-github-actions/	 "
+            target="_blank"
+          >
+            Module 06: Introduction to GitHub Actions
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/learn-continuous-integration-github-actions/	 "
+            target="_blank"
+          >
+            Module 07: Learn continuous integration with GitHub Actions
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/design-container-build-strategy/	 "
+            target="_blank"
+          >
+            Module 08: Design a container build strategy
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m3" class="collapsible">
+      Learning Path 03: Design and implement a release strategy
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>AZ-400: Design and implement a release strategy</strong>
+        [7 hr 22 min - 5 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-design-implement-release-strategy/"
+          >Link</a
+        >
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/create-release-pipeline-devops/	 "
+            target="_blank"
+          >
+            Module 01: Create a release pipeline
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/explore-release-strategy-recommendations/	 "
+            target="_blank"
+          >
+            Module 02: Explore release recommendations
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/configure-provision-environments/	 "
+            target="_blank"
+          >
+            Module 03: Provision and test environments
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/manage-modularize-tasks-templates/	 "
+            target="_blank"
+          >
+            Module 04: Manage and modularize tasks and templates
+          </a>
+        </li>
+        <li>
+          <a
+            href="	https://learn.microsoft.com/en-us/training/modules/automate-inspection-health/	 "
+            target="_blank"
+          >
+            Module 05: Automate inspection of health
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m4" class="collapsible">
+      Path 04: Implement a secure continuous deployment using Azure Pipelines
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>
+          AZ-400: Implement a secure continuous deployment using Azure Pipelines
+          6 Modules
+        </strong>
+        [7 hr 22 min - 6 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-implement-secure-continuous-deployment/"
+          >Link</a
+        >
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m5" class="collapsible">
+      Learning Path 05: Manage infrastructure as code using Azure and DSC
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>
+          AZ-400: Manage infrastructure as code using Azure and DSC 6 Modules
+        </strong>
+        [7 hr 22 min - 6 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-manage-infrastructure-as-code-using-azure/"
+          >Link</a
+        >
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m6" class="collapsible">Learning Path 06:</h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>
+          AZ-400: Implement security and validate code bases for compliance 4
+          Modules
+        </strong>
+        [7 hr 22 min - 4 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-implement-security-validate-code-bases-compliance/"
+          >Link</a
+        >
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m7" class="collapsible">
+      Learning Path 07: Design and implement a dependency management strategy
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong>
+          AZ-400: Design and implement a dependency management strategy 5
+          Modules
+        </strong>
+        [7 hr 22 min - 5 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-design-implement-dependency-management-strategy/	"
+          >Link</a
+        >
+      </ul>
+    </div>
+    <!-- END of Module -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m8" class="collapsible">
+      Learning Path 08: Implement continuous feedback
+    </h2>
+    <div class="content">
+      <br />
+      <ul>
+        <strong> AZ-400: Implement continuous feedback 5 Modules </strong>
+        [7 hr 22 min - 5 Modules]
+        <a
+          href="https://learn.microsoft.com/en-us/training/paths/az-400-implement-continuous-feedback/"
+          >Link</a
+        >
+      </ul>
+    </div>
+    <!-- END of Module -->
+
+    <!-- ‎************************************************************************************************************************************************************* -->
+
+    <!-- RoadMap -->
+    <div class="footerLinks">
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674"
+        >Mo-Plan.xls</a
+      >
+      |
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit"
+        >Mo.docx</a
+      >
+      |
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD?usp=drive_link"
+        >ItsMJahan</a
+      >
+    </div>
+
+    <div class="foot">
+      <a href="#"> Learn Azure with ❤ </a>
+    </div>
+    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+
+      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    </script>
+  </body>
+</html>

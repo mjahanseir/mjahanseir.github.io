@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Learn</title>
+    <link rel="icon" href="computer/Microsoft/pic/microsoft.ico" type="image/x-icon" />
+    <style>
+      *{
+          margin: 0;
+          /* padding: 0; */
+          height: auto;
+          font-family: 'Work Sans', sans-serif;
+      }
+        body {
+            background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+            margin: auto auto;
+            width: 85%;
+            background-color: white;
+            font-family: "Times New Roman", Times, serif;
+            background-image: url("computer/Microsoft/pic/microsoft.ico");
+
+            box-shadow: -10px 0 8px -8px gray, 10px 0 8px -8px gray;
+
+            background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+        .collapsible {
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+        }
+
+        .collapsible:hover {
+          background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
+        }
+
+        .content {
+          background-color: ivory;
+          text-align: justify;
+          font-family: "Times New Roman", Times, serif, Geneva, monospace;
+          color: #2d2c2c;
+          font-size: 1.2rem;
+          display: none;
+          overflow: hidden;
+        }
+
+
+
+
+
+
+        a { font-size:.9rem; text-decoration: none;
+            padding: 0;
+            /* transition: color .6s ease-in-out, box-shadow .6s ease-in-out; */
+        }
+        a:visited{color:#1616ee}
+        a:hover {
+            /* box-shadow: inset 1000px 0 0 0 #4d4dfa;
+            padding-top: 6px; padding-bottom: 6px; */
+            color: red;
+        }
+
+
+
+        h1,h2,h3 ,h4,h5{
+            align-items: center;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1;
+            padding: 25px 1px 1px 1px;
+            background-color: #900c3f;
+        }
+        h1 {  font-size: 1.2rem;   background-color: #053B50; }
+        h2 {  font-size: 1rem;   background-color: #1450A3;  font-weight: normal;}
+        h3 {  font-size: .9rem;   background-color: #337CCF;  }
+        h4 {  font-size: .7rem;   background-color: #64CCC5; }
+        h5 {  font-size: .9rem;   background-color: #c2fffb; padding: 10px; border:0.1px solid #fcfcfc;}
+
+
+
+        h1:nth-of-type(even),
+        h2:nth-of-type(even),
+        h3:nth-of-type(even),
+        h4:nth-of-type(even) {
+            border: 1px solid grey;
+        }
+        h6{
+          display: block;
+          background-color: orange;
+          color:#1e1e1e;
+          font-size: 1rem;
+          font-weight: normal;
+          padding: .5rem;
+          text-align: center;
+          border-bottom:0.5px SOLID  grey;
+        }
+
+
+
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: .8rem;
+            /* margin:0; */
+            padding: 0.3rem 0.9rem;
+        }
+
+        .MenuLabel {
+            background-color: black;
+            font-size: 1rem;
+            color: whitesmoke;
+            text-align: right;
+            margin: 0;
+            padding: 0.5rem;
+            text-align: center;
+            Letter-Spacing:.2rem;
+            text-transform: uppercase;:
+        }
+        p,ul,ol,li{ font-size: .8rem; }
+
+        /* ul {
+            list-style-type: none;
+        }
+
+        li a {
+            padding: 0 0 0 10px;
+        }
+
+        ol li{
+          font-family: 'Work Sans', sans-serif;
+          font-size: 1rem;
+          padding:.3rem;
+          color:Black;
+        } */
+
+        #myBtn {
+          background-color: #8b0000;
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 10%;
+          z-index: 99;
+          font-size: 23px;
+          font-weight: bold;
+          font-family: "Times New Roman", sans-serif;
+          border: none;
+          outline: none;
+          background-color: #730b0b;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+          box-shadow: 0 10px 60px black;
+        }
+
+        #myBtn:hover {
+          background-color: #2d2c2c;
+        }
+
+        .footerLinks {
+            background-color: gray;
+            font-size: 0.9rem;
+            color: white;
+            padding: 5px;
+        }
+        hr{
+          margin: .6rem;
+        }
+        .microsoft{font-size: .9rem; padding-top: .5rem;}
+        .admin , .dev , .data , .ai, .power,  .sec {display: inline-block;width: 80px; text-align: center; font-size: .7rem;}
+        .admin{ background-color: dodgerblue; color: whitesmoke;}
+        .dev{ background-color: purple;color: whitesmoke;}
+        .data{ background-color: tomato;color: whitesmoke;}
+        .ai{ background-color: green;color: whitesmoke;}
+        .power{ background-color: orange;color: whitesmoke;}
+        .sec{ background-color: red;color: whitesmoke;}
+
+
+    </style>
+  </head>
+
+  <body>
+    <a href="..\index.html">Back to Home</a>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="navbar">
+      <a style="background-color: #be1459" href="index.html">Home</a>
+      <a href="dev.html">Software Developer</a>
+      <a href="computer\Microsoft\azure.html">Azure</a>
+      <a href="az204.html">AZ-204</a>
+      <a href="az400.html">AZ-400</a>
+
+    </div>
+
+    <div class="MenuLabel">
+      Microsoft Learn
+    </div>
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h1 class="collapsible">Applied Skills</h1>
+    <div class="content">
+
+
+
+<div class="Administrator microsoft esi learn">
+  <span class="admin">	Admin	</span>
+  [AZ-1003] Secure storage for Azure Files and Azure Blob Storage |
+  <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/secure-storage-azure-files-azure-blob-storage/	" target="_blank" >	MS-learn	</a> |
+  <a href="	https://www.youtube.com/watch?v=DtmgYo8wHgY&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=1&t=3s&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+  <a href="	https://www.youtube.com/watch?v=a4GFKgmXXsk&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=2&t=2519s&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a> |
+  <a href="	https://www.youtube.com/watch?v=_GHoHXC-IDM&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=3&pp=gAQBiAQBsAQB	" target="_blank" >	Part 3	</a> |
+  <a href="	https://www.youtube.com/watch?v=lfh_amNAT-w&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=4&pp=gAQBiAQBsAQB	" target="_blank" >	Part 4	</a>
+</div>
+
+<div class="Administrator microsoft esi learn">
+  <span class="admin">	Admin</span>
+  [AZ-1002] Configure secure access to your workloads using Azure
+    <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/configure-secure-workloads-use-azure-virtual-networking/	" target="_blank" >	MS-learn</a> |
+    <a href="	https://www.youtube.com/watch?v=5GFaOr5mx4c&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=6&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+    <a href="	https://www.youtube.com/watch?v=GS2gaQ8Bvfs&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=7&t=1599s&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a>
+</div>
+
+
+<div class="Administrator microsoft esi learn">
+<span class="admin">	Admin</span>
+[AZ-1001] Deploy containers by using Azure Kubernetes Service (AKS)
+  <a href="	https://learn.microsoft.com/en-us/training/paths/deploy-manage-containers-azure-kubernetes-service/	" target="_blank" >	MS-learning	</a> |
+  <a href="	https://www.youtube.com/watch?v=2Ov6LxHZK0A&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=9&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+  <a href="	https://www.youtube.com/watch?v=Rrns87VhES0&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=10&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a> |
+  <a href="	https://www.youtube.com/watch?v=c52H_lLlwsY&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=11&pp=gAQBiAQBsAQB	" target="_blank" >	Part 3	</a>
+
+</div>
+
+<div class="Administrator microsoft esi learn">
+  <span class="admin">	Admin</span>
+[AZ-1004] Deploy and configure Azure Monitor
+  <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-configure-azure-monitor/	" target="_blank" >	MS-Learn</a> |
+  <a href="	https://www.youtube.com/watch?v=c3n5U-Npv1I&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=24&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+  <a href="	https://www.youtube.com/watch?v=cTwBb1rpCmo&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=25&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a>
+
+</div>
+
+<div class="database microsoft esi learn">
+  <span class="data">	Data	</span>
+    [DP-601] Implementing a Lakehouse with Microsoft Fabric
+  <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-lakehouse-microsoft-fabric/	" target="_blank" >	MS-Learn</a> |
+  <a href="	https://youtu.be/wv1l_FEmt8w	" target="_blank" >	Part 1	</a> |
+  <a href="	https://youtu.be/AyEirr1zx3E	" target="_blank" >	Part 2	</a>
+
+</div>
+
+<div class="database microsoft esi learn">
+  <span class="data">	Data	</span>
+  	[DP-3001] Migrate SQL Server workload to Azure SQL
+  <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/migrate-sql-workloads-azure-sql-database/	" target="_blank" >MS-Learn	</a> |
+  <a href="	https://youtu.be/pBS_Z4AqQnA	" target="_blank" >	Part 1	</a> |
+  <a href="	https://youtu.be/RSpJ9EBmxC0	" target="_blank" >	Part 2	</a> |
+  <a href="	https://youtu.be/IjoHnRhDfBg	" target="_blank" >	Part 3	</a> |
+  <a href="	https://youtu.be/txgGt5uvYAM	" target="_blank" >	Part 4	</a>
+
+</div>
+
+
+
+<div class="developer microsoft esi learn">
+  <span class="dev">	Dev	</span>
+    [AI-3002]Create an intelligent document processing solution with Azure AI Document Intelligence
+    <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/create-intelligent-document-solution-azure-ai/	" target="_blank" >	MS-Learn	</a> |
+    <a href="	https://www.youtube.com/watch?v=zz3E0m8VqxU&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=14&t=5527s&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+    <a href="	https://www.youtube.com/watch?v=b9C7U4fyXAM&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=15&t=1s&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a> |
+    <a href="	https://www.youtube.com/watch?v=ybTQbHCrwmI&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=16&pp=gAQBiAQBsAQB	" target="_blank" >	Part 3	</a>
+</div>
+
+<div class="developer microsoft esi learn">
+  <span class="dev">	Dev	</span>
+  	[AI-3004] Build an Azure AI Vision solution - Applied Skills
+      <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/build-azure-ai-vision-solution/	" target="_blank" >MS-learn	</a> |
+      <a href="	https://www.youtube.com/watch?v=JaR2rL-a0Rs&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=21&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+      <a href="	https://www.youtube.com/watch?v=ncnxwNfKlL8&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=22&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a>
+</div>
+
+<div class="developer microsoft esi learn">
+  <span class="dev">	Dev	</span>
+  [AZ-2003] Deploy cloud-native apps using Azure Container Apps
+    <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-cloud-native-apps-using-azure-container-apps/	" target="_blank" >	MS-learn	</a> |
+    <a href="	https://youtu.be/sS9Srf57RtU	" target="_blank" >	Part 1	</a> |
+    <a href="	https://youtu.be/KjGSCWK2vi0	" target="_blank" >	Part 2	</a> |
+    <a href="	https://youtu.be/rRbauLaEWqo	" target="_blank" >	Part 3	</a>
+</div>
+
+
+<div class="artificial microsoft esi learn">
+  <span class="ai">	AI Engineer	</span>
+  [AI-3003]Build a natural language processing solution with Azure AI
+  <a href="	https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://learn.microsoft.com/en-us/credentials/applied-skills/build-natural-language-solution-azure-ai/&ved=2ahUKEwj-9_2Q8ayGAxUQAzQIHbBpBdEQFnoECCAQAQ&usg=AOvVaw0NlmM5S7UPnjbGqJT64lf9	" target="_blank" >	MS-Learn</a> |
+  <a href="	https://www.youtube.com/watch?v=DgLnT-ZmnX4&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=18&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+  <a href="	https://www.youtube.com/watch?v=-OZNdqT7QUk&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=19&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a>
+
+</div>
+
+<div class="artificial microsoft esi learn">
+  <span class="ai">	AI Engineer	</span>
+  [AI-050] Develop generative AI solutions with Azure OpenAI Service
+  <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/develop-generative-ai-solutions-with-azure-openai-service/	" target="_blank" >	MS-learn	</a> |
+  <a href="	https://www.youtube.com/watch?v=B9kx2WOQYDc&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=38&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+  <a href="	https://www.youtube.com/watch?v=sZmOmV15YK8&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=39&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a> |
+  <a href="	https://www.youtube.com/watch?v=PtzlwigAB8M&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=40&pp=gAQBiAQBsAQB	" target="_blank" >	Part 3	</a>
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="admin">	Administrator	</span>
+[AZ-1005] Configuring Azure Virtual Desktop for the Enterprise
+<a href="	https://learn.microsoft.com/en-us/training/courses/az-1005	" target="_blank" >MS-learn </a> |
+<a href="	https://www.youtube.com/watch?v=0M6YQu4OzL8&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=30&pp=gAQBiAQBsAQB	" target="_blank" >	Part 1	</a> |
+<a href="	https://www.youtube.com/watch?v=8WpDa25iNqA&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=31&pp=gAQBiAQBsAQB	" target="_blank" >	Part 2	</a> |
+<a href="	https://www.youtube.com/watch?v=EL534THX3Hk&list=PLt4zoIx-WdZXbXWUcj6XgxIaqgW9ytNy3&index=32&pp=gAQBiAQBsAQB	" target="_blank" >	Part 3	</a>
+</div>
+
+<hr>
+
+<div class="Administrator microsoft esi learn">
+<span class="ai">	AI Engineer	</span>
+[	AI-3003	]Build a natural language processing solution with Azure AI Language
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/build-natural-language-solution-azure-ai/	" target="_blank" > MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="dev">	Developer	</span>
+[	3	]	Build collaborative apps for Microsoft Teams
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/build-collaborative-apps-microsoft-teams/	" target="_blank" > MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="sec">	Security 	</span>
+[	4	]    Configure SIEM security operations using Microsoft Sentinel
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/configure-siem-security-operations-using-microsoft-sentinel/	" target="_blank" >	 MS-learn</a> |
+</div>
+
+
+
+<div class="Administrator microsoft esi learn">
+<span class="admin">	Administrator	</span>
+[	7	]	Create and manage automated processes by using Power Automate
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/create-and-manage-automated-processes-with-power-automate/	" target="_blank" > MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="power">	Power Platform	</span>
+[	8	]	Create and manage canvas apps with Power Apps
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/create-manage-canvas-apps-power-apps/	" target="_blank" > MS-learn</a> |
+<div>
+
+  <div class="Administrator microsoft esi learn">
+<span class="power">	Power Platform	</span>
+[	9	]	 Create and manage model-driven apps with Power Apps and Dataverse
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/create-and-manage-model-driven-apps-with-power-apps-and-dataverse/	" target="_blank" >	MS-learn</a> |
+</div>
+
+</div>
+<div class="Administrator microsoft esi learn">
+<span class="dev">	Developer	</span>
+[	AZ-2003	]	 Deploy cloud-native apps using Azure Container Apps
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-cloud-native-apps-using-azure-container-apps/	" target="_blank" >	MS-learn</a> |
+</div>
+
+</div>
+<div class="Administrator microsoft esi learn">
+<span class="dev">	.NET	</span>
+[	AZ-2002	]	 	Develop an ASP.NET Core web app that consumes an API
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/develop-an-aspnet-core-web-app-that-consumes-an-api/	" target="_blank" >MS-learn</a> |
+</div>
+
+
+
+<div class="Administrator microsoft esi learn">
+<span class="data">	Data Engineer	</span>
+[	15	]  	Implement a Real-Time Intelligence Solution with Microsoft Fabric
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-a-real-time-intelligence-solution-with-microsoft-fabric/	" target="_blank" > MS-learn</a> |
+</div>
+
+
+<div class="Administrator microsoft esi learn">
+<span class="data">	Data Engineer	</span>
+[	16	]  	Implement a data science and machine learning solution with Microsoft Fabric
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-a-data-science-and-machine-learning-solution-with-microsoft-fabric/	" target="_blank" > MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="data">	Data Engineer	</span>
+[	17	]  Implement a data warehouse in Microsoft Fabric
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/work-with-data-warehouses-using-microsoft-fabric/	" target="_blank" >	 MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="data">	Data Engineer	</span>
+[	DP-601	]	  Implement a lakehouse in Microsoft Fabric
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-lakehouse-microsoft-fabric/	" target="_blank" >	 MS-learn</a> |
+</div>
+
+
+<div class="Administrator microsoft esi learn">
+<span class="admin">	Administrator	</span>
+[	19	]  Implement security through a pipeline using Azure DevOps
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-security-through-pipeline-using-devops/	" target="_blank" >	 MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="admin">	Administrator	</span>
+[	21	]  Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/secure-azure-services-and-workloads-with-microsoft-defender-for-cloud-regulatory-compliance-controls/	" target="_blank" >	 MS-learn</a> |
+</div>
+
+<div class="Administrator microsoft esi learn">
+<span class="ai">	AI Engineer	</span>
+[	DP-3007	]Train and deploy a machine learning model with Azure Machine Learning
+<a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/train-and-deploy-a-machine-learning-model-with-azure-machine-learning/	" target="_blank" >	MS-learn</a> |
+</div>
+
+
+
+
+
+<hr>
+<hr>
+
+
+
+
+    <li><a href="	https://esi.learnondemand.net/ClassEnrollment/4407693	" target="_blank" >	https://esi.learnondemand.net/ClassEnrollment/4407693	</a></li>
+    <li><a href="	https://gsi.learnondemand.net/ClassEnrollment/4407686	" target="_blank" >	https://gsi.learnondemand.net/ClassEnrollment/4407686	</a></li>
+    <li><a href="	https://netcom.learnondemand.net/ClassEnrollment/4407697	" target="_blank" >	https://netcom.learnondemand.net/ClassEnrollment/4407697	</a></li>
+
+
+  </ul>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <h2 id="m1" class="collapsible"> Learning Path 01: Development for enterprise DevOps </h2>
+    <div class="content">
+
+
+    </div>
+    <!-- END of Module -->
+
+
+
+    <!-- ‎************************************************************************************************************************************************************* -->
+
+    <!-- RoadMap -->
+    <div class="footerLinks">
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674"
+        >Mo-Plan.xls</a
+      >
+      |
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit"
+        >Mo.docx</a
+      >
+      |
+      <a
+        class="LinkHover"
+        target="_blank"
+        href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD?usp=drive_link"
+        >ItsMJahan</a
+      >
+    </div>
+
+    <div class="foot">
+      <a href="#"> Learn Azure with ❤ </a>
+    </div>
+    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+
+      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    </script>
+  </body>
+</html>
