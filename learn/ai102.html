@@ -10,6 +10,7 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="new-styles.css" />
     <style>
         .container{
@@ -20,14 +21,20 @@
         height: 4rem;
         border-radius: 0.75rem;
       }
-      /* .btn-danger, .btn-primary, .btn-warning{
-      color:white;  height: 20px; padding: 0 10px; margin: 0; font-size: 12px;
-      } */
+      .btn-danger, .btn-primary, .btn-warning, .btn-info{
+      color:white;  height: 25px; padding: 0 10px; margin: 0; font-size: 12px;
+      }
       .btn-danger::before {   content: url("pic/youtube.png"); }
       nav a:hover {   box-shadow: inset 1000px 0 0 0 #0d6efd; color: white;  }
       footer .nav-link { color: white;  }
       footer .nav-link:hover { display: block;  box-shadow: inset 1000px 0 0 0 red; color: white;  }
-      a{cursor: pointer;}
+      .btn-msrecorded , .btn-myrecorded{ color:white; height: 20px; padding: 3px 10px;  font-size: 10px;  }
+      .btn-msrecorded {background-color: dodgerblue; margin-left: 2rem;}
+      .btn-myrecorded{ background-color: red;}
+      .btn-msrecorded::before {content: "ESI Recorded"}
+      .btn-myrecorded::before {content: "My Record"}
+
+
     </style>
   </head>
 
@@ -76,26 +83,54 @@
 
 <hr>
 
-          <h1 class="esiblended2024">ESI-Blended 2024</h1>
-            <a  class="btn btn-primary" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YqhI" target="_blank" > <img src="pic/microsoft.png"> Blended learning experience Home</a>
-            <a class="btn btn-info" href="https://docs.google.com/document/d/1kL9t4pW5X7xvEBdBm3PHj4MWJdFokb4E/edit?usp=drive_link&ouid=108442140929462168259&rtpof=true&sd=true" target="_blank"><img src="pic/doc.png"> Class Notes</a>
-            <a class="btn btn-warning" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1iUR4?wt.mc_id=esi_blended_content_wwl" target="_blank"><img src="pic/pdflogo.png"> Course syllabus</a>
-            <hr>
-            <ul class="no-bullet">
-              <a href="https://youtu.be/k1lQdGy0Awg" target="_blank"> [ESI-Blend-AI102] 01Microsoft ESI AI-102 |Office Hours: Orientation - Welcome to the class | 66645<img src="pic/youtube-play.png"></a>
-              <li><a href="	https://learn.microsoft.com/en-us/training/modules/prepare-to-develop-ai-solutions-azure/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-1- Prepare to develop AI solutions in Azure	</a></li>
-              <li><a href="	https://learn.microsoft.com/en-us/training/modules/create-manage-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-2- Create and consume Azure AI Services	</a></li>
-              <li><a href="	https://learn.microsoft.com/en-us/training/modules/secure-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-3- Secure Azure AI Services	</a></li>
-              <li><a href="	https://learn.microsoft.com/en-us/training/modules/monitor-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	 1-4- Monitor Azure AI Services	</a></li>
-              <li><a href="	https://learn.microsoft.com/en-us/training/modules/investigate-container-for-use-with-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-5- Deploy Azure Services in Containers	</a></li>
-            </ul>
 
-            <ul class="no-bullet">
-              <li><a href="https://youtu.be/9WDq1_90kPs" target="_blank">[ESI-Blend-AI102] 02Microsoft ESI AI-102 |Dive into AI - Chalk Talk #1 | - 66645 <img src="pic/youtube-play.png"></a></li>
-              <li><a href="https://youtu.be/3PTU5uHPZOc" target="_blank">[ESI-Blend-AI102] 03Microsoft ESI AI-102 |Facilitated Labs/Case Study Time | - 66645 <img src="pic/youtube-play.png"></a></li>
-              <li><a href="https://youtu.be/AwFkAZukKiU" target="_blank">[ESI-Blend-AI102] 04Microsoft ESI AI-102 |Office Hours: General Technical Q&A | - 66645 <img src="pic/youtube-play.png"></a></li>
 
-            </ul>
+            <h1 id="esiblend2024"> AZ102-ESI-Blend Learning 2024</h1>
+                  <a class="btn btn-info" href="https://docs.google.com/document/d/1kL9t4pW5X7xvEBdBm3PHj4MWJdFokb4E/edit?usp=drive_link&ouid=108442140929462168259&rtpof=true&sd=true" target="_blank"><img src="pic/doc.png"> Class Notes</a>
+                  <a  class="btn btn-primary" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YqhI" target="_blank" > <img src="pic/microsoft.png"> Blended learning experience Home</a>
+                  <a class="btn btn-warning" href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1iUR4?wt.mc_id=esi_blended_content_wwl" target="_blank"><img src="pic/pdflogo.png"> Course syllabus</a>
+
+                  <ol>
+                    <hr> Week1 <br>
+                  <li>AI-102 Office Hours: Orientation - Welcome to the class - 66645 [Aug6,2024-9to11am] <a class="btn-msrecorded" href="https://youtu.be/bsPq1suS45g" target="_blank"></a> <a class="btn-myrecorded" href="https://youtu.be/k1lQdGy0Awg" target="_blank"></a> <br>
+                    <a href="	https://learn.microsoft.com/en-us/training/modules/prepare-to-develop-ai-solutions-azure/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-1- Prepare to develop AI solutions in Azure	</a><br>
+                    <a href="	https://learn.microsoft.com/en-us/training/modules/create-manage-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-2- Create and consume Azure AI Services	</a><br>
+                    <a href="	https://learn.microsoft.com/en-us/training/modules/secure-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-3- Secure Azure AI Services	</a><br>
+                    <a href="	https://learn.microsoft.com/en-us/training/modules/monitor-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	 1-4- Monitor Azure AI Services	</a><br>
+                    <a href="	https://learn.microsoft.com/en-us/training/modules/investigate-container-for-use-with-ai-services/?WT.mc_id=api_CatalogApi&wt.mc_id=esi_blended_content&context=sso&source=blended-learning	 " target="_blank">	1-5- Deploy Azure Services in Containers	</a>
+                  </li>
+                  <li>AI-102 Dive into AI - Chalk Talk #1 - 66645 [Aug6,2024-3to5pm]                      <a class="btn-msrecorded" href="https://youtu.be/8fwTrh05SRY" target="_blank"></a> <a class="btn-myrecorded" href="https://youtu.be/9WDq1_90kPs" target="_blank"></a>        </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug7,2024-9to11am]                 <a class="btn-msrecorded" href="https://youtu.be/XvOQulchNNY" target="_blank"></a> <a class="btn-myrecorded" href="https://youtu.be/3PTU5uHPZOc" target="_blank"></a>        </li>
+                  <li>AI-102 Office Hours: General Technical Q&A - 66645 [Aug7,2024-3to5pm]               <a class="btn-msrecorded" href="https://youtu.be/J_oz_gvFz20" target="_blank"></a> <a class="btn-myrecorded" href="https://youtu.be/AwFkAZukKiU" target="_blank"></a>        </li>
+                  <li>AI-102 Dive into AI - Chalk Talk #2 - 66645 [Aug8,2024-9to11am]                     <a class="btn-msrecorded" href="https://youtu.be/Lei_5XzW_sk" target="_blank"></a> <a class="btn-myrecorded" href="" target="_blank"></a>        </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug8,2024-3to5pm]                  <a class="btn-msrecorded" href="https://youtu.be/UF-9aU_fUYk" target="_blank"></a> </li>
+                  <li>AI-102 Office Hours: Weekly Review and Exam Prep - 66645 [Aug9,2024-9to11am]        <a class="btn-msrecorded" href="" target="_blank"></a> <a class="btn-myrecorded" href="" target="_blank"></a>        </li>       </li>
+                  <hr>Week2 <br>
+                  <li>AI-102 Office Hours: What to expect this week - 66645 [Aug13,2024-9to11am]	               </li>
+                  <li>AI-102 Natural Language Processing - Chalk Talk #1 - 66645 [Aug13,2024-3to5pm]	           </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug14,2024-9to11am]	                     </li>
+                  <li>AI-102 Office Hours: General Technical Q&A - 66645 [Aug14,2024-3to5pm]	                   </li>
+                  <li>AI-102 Natural Language Processing - Chalk Talk #2 - 66645 [Aug15,2024-9to11am]	           </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug15,2024-3to5pm]	                       </li>
+                  <li>AI-102 Office Hours: Weekly Review and Exam Prep - 66645 [Aug16,2024-9to11am]	             </li>
+                  <hr>Week3 <br>
+                  <li>AI-102 Office Hours: What to expect this week - 66645 [Aug20,2024-9to11am]	               </li>
+                  <li>AI-102 Generative AI - Chalk Talk #1 - 66645 [Aug20,2024-3to5pm]	                         </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug21,2024-9to11am]	                     </li>
+                  <li>AI-102 Office Hours: General Technical Q&A - 66645 [Aug21,2024-3to5pm]	                   </li>
+                  <li>AI-102 Generative AI - Chalk Talk #2 - 66645 [Aug22,2024-9to11am]	                         </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug22,2024-3to5pm]	                       </li>
+                  <li>AI-102 Office Hours: Weekly Review and Exam Prep - 66645 [Aug23,2024-9to11am]	             </li>
+                  <hr>Week4 <br>
+                  <li>AI-102 Office Hours: What to expect this week - 66645 [Aug27,2024-9to11am]	               </li>
+                  <li>AI-102 Document Intelligence - Chalk Talk #1 - 66645 [Aug27,2024-3to5pm]	                 </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug28,2024-9to11am]	                     </li>
+                  <li>AI-102 Office Hours: General Technical Q&A - 66645 [Aug28,2024-3to5pm]	                   </li>
+                  <li>AI-102 Document Intelligence - Chalk Talk #2 - 66645 [Aug29,2024-9to11am]	                 </li>
+                  <li>AI-102 Facilitated Labs/Case Study Time - 66645 [Aug29,2024-3to5pm]	                       </li>
+                  <li>AI-102 Office Hours: Final Review and Closeout - 66645 [Aug30,2024-9to11am]	               </li>
+            </ol>
+
 
 
 

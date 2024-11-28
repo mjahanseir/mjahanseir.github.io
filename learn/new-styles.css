@@ -6,21 +6,22 @@
       }
 
 
-        .collapsible {
-          color: white;
-          cursor: pointer;
-          padding: 18px;
-        }
+      .collapsible {
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+      }
 
-        .collapsible:hover {
-          background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
-        }
+      .collapsible:hover {
+        background-image:linear-gradient(hsla(0,0%,0%,.1) 100%,transparent 100%)
+      }
+
 
         .content {
-          background-color: ivory;
+          /* background-color: ivory; */
           text-align: justify;
           font-family: "Times New Roman", Times, serif, Geneva, monospace;
-          color: #2d2c2c;
+          /* color: #2d2c2c; */
           font-size: 1.2rem;
           display: none;
           overflow: hidden;
@@ -34,8 +35,8 @@
         }
         a:hover {
             color: red;
+            cursor: pointer;
         }
-
 
 
         h1,h2,h3 ,h4,h5{
@@ -134,7 +135,7 @@
 .fa{
   direction: rtl;
 }
-.boldtitle{display:block; color:white;padding: .5rem; box-shadow: -5px 5px 5px rgba(0,0,0,.1);}
+.boldtitle{display:block; color:white;padding: .5rem; border:1px solid grey; text-align: center;}
 .simpletext{   font-size: .8rem; padding-left: 2rem;}
 .simpletext a{   font-size: .8rem; padding-left: 2rem;}
 
@@ -142,3 +143,34 @@
     .3rows {
       background-color: lightblue;
   }
+}
+
+ul.auto-hover-bg, .auto-hover-bg, .auto-hover-bg a, .auto-hover-bg>li{
+   font-size: 1rem;
+   display: block;
+}
+.auto-hover-bg a{
+  transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+}
+.auto-hover-bg a:hover{
+  box-shadow: inset 1000px 0 0 0 #8b0000;
+  color: white;
+}
+                /*
+developer
+          */
+          .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.75rem;
+          }
+          .btn-danger, .btn-primary, .btn-warning, .btn-success, .btn-info{
+          color:white;  height: 20px; padding: 0 5px; margin: 0; font-size: 12px;
+          }
+          .btn-danger::before {   content: url("pic/youtube.png"); }
+          .btn-success::before {   content: url("pic/googledrive-icon.png") ; padding-right: 10px ;}
+          nav{height: 1.5rem; background-color: #1F316F;}
+          nav a, .nav-link ,.dropdown-toggle{color: white;}
+          nav a:hover {   background-color: rgba(0,0,0,.2); color: white; height: 1.9rem;}
+          footer .nav-link { color: white;  }
+          footer .nav-link:hover { display: block;  box-shadow: inset 1000px 0 0 0 red; color: white;  }
