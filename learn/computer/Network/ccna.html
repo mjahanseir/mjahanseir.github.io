@@ -1,891 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../css/style.css" />
-    <title>CCNA</title>
-    <link rel="icon" href="../pic/cisco.ico" type="image/x-icon" />
 
-    <style>
-      body {
-        background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
-        margin: auto auto;
-        width: 85%;
-        font-family: "Times New Roman", Times, serif;
-        background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/
-            32px 32px,
-          linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px
-            32px,
-          linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px,
-          linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
-      }
-      .collapsible:hover {
-        background-image: linear-gradient(
-          hsla(0, 0%, 0%, 0.2) 100%,
-          transparent 100%
-        );
-      }
-      a {
-        box-shadow: inset 0 0 0 0 #049ad2;
-        font-size: 1.2rem;
-        color: #2a12e5;
-        font-size: 1rem;
-        padding: 0 1rem;
-        transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
-      }
-      a:hover {
-        box-shadow: inset 1000px 0 0 0 #049ad2;
-        color: white;
-        padding: 0 1rem;
-      }
-      .cscontent {
-        padding: 0px 10%;
-      }
-      strong:hover {
-        background-color: dodgerblue;
-        color: whitesmoke;
-      }
-      .cscontent a {
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <title>CCNA</title>
+  <link rel="icon" href="../pic/cisco.ico" type="image/x-icon" />
 
-      h4 {
-        background-color: #049ad2;
-        color: whitesmoke;
-        font-family: "Work Sans", sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-      }
+  <style>
+    body {
+      background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+      margin: auto auto;
+      width: 85%;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px,
+        linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
+    }
 
-      .navbar {
-        overflow: hidden;
-        background-color: #333;
-        position: fixed;
-        top: 0;
-        width: 85%;
-      }
-      .navbar a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        font-size: 17px;
-      }
+    .collapsible:hover {
+      background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
+          transparent 100%);
+    }
 
-      .MenuLabel {
-        background-color: black;
-        font-size: 1.8rem;
-        color: whitesmoke;
-        text-align: center;
-        margin: 0;
-        padding: 0.2rem;
-      }
-      .pageContent {
-        background-color: whitesmoke;
-        font-size: 1.1rem;
-        text-align: left;
-        padding: 0;
-        margin: 0;
-      }
+    a {
+      box-shadow: inset 0 0 0 0 #049ad2;
+      font-size: 1.2rem;
+      color: #2a12e5;
+      font-size: 1rem;
+      padding: 0 1rem;
+      transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    }
 
-      #myBtn {
-        background-color: #049ad2;
-      }
-      .footerLinks {
-        background-color: white;
-        margin: 0;
-        padding: 0;
-      }
-      .footerLinks a {
-        font-size: 0.7rem;
-        font-family: monospace;
-      }
+    a:hover {
+      box-shadow: inset 1000px 0 0 0 #049ad2;
+      color: white;
+      padding: 0 1rem;
+    }
 
-      ul {
-        list-style-type: none;
-      }
-      li {
-        padding: 0.3rem;
-      }
-    </style>
-  </head>
+    .cscontent {
+      padding: 0px 10%;
+    }
 
-  <body>
-    <a target="_blank" href="..\index.html">Back to Home</a> <br />
+    strong:hover {
+      background-color: dodgerblue;
+      color: whitesmoke;
+    }
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    .cscontent a {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
 
-    <div class="navbar">
-      <a style="background-color: #87d4f0" href="../../index.html">Home</a>
-      <a target="_blank" href="../Microsoft/azure.html">Azure</a>
-      <a target="_blank" href="../cisco.html">CISCO</a>
-    </div>
+    h4 {
+      background-color: #049ad2;
+      color: whitesmoke;
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
 
-    <div class="MenuLabel">CCNA</div>
+    h5 {
 
-    <!----------------------------------------------    Region 1        -------------------------------------------------->
-    <div class="pageContent">
-      <!-- Start collapsible -->
-      <h4 class="ciscoColor collapsible">CCNA Study Tools</h4>
-      <div class="content">
-        <a
-          href="https://docs.google.com/document/d/1Ld77-o4tCucpdJgQJ_dKhLjWHqzSOQ9MRBodOgcV_JU/edit?usp=drive_link"
-        >
-          MyRoadMap <img src="../../pic/doc.png"
-        /></a>
-        <a
-          href="https://docs.google.com/spreadsheets/d/1wbPultHs6VWbQXUjfGiEydcITZpGeUxQ/edit?usp=drive_web&ouid=108442140929462168259&rtpof=true"
-          >[CCNA] Study Plan.xlsx <img src="../../pic/excel.png" />
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 85%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .MenuLabel {
+      background-color: black;
+      font-size: 1.8rem;
+      color: whitesmoke;
+      text-align: center;
+      margin: 0;
+      padding: 0.2rem;
+    }
+
+    .pageContent {
+      background-color: whitesmoke;
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+
+    #myBtn {
+      background-color: #049ad2;
+    }
+
+    .footerLinks {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footerLinks a {
+      font-size: 0.7rem;
+      font-family: monospace;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 0.3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a target="_blank" href="..\index.html">Back to Home</a> <br />
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <div class="navbar">
+    <a style="background-color: #87d4f0" href="../../index.html">Home</a>
+    <a target="_blank" href="../Microsoft/azure.html">Azure</a>
+    <a target="_blank" href="../cisco.html">CISCO</a>
+    <a target="_blank" href="../../work.html">work</a>
+  </div>
+
+  <div class="MenuLabel">CCNA</div>
+
+  <!----------------------------------------------   CCNA Study Tools  Region 1        -------------------------------------------------->
+  <div class="pageContent">
+    <!-- Start collapsible -->
+    <h4 class="ciscoColor collapsible">CCNA Study Tools</h4>
+    <!-- <div class="content"> -->
+    <a href="https://docs.google.com/document/d/1Ld77-o4tCucpdJgQJ_dKhLjWHqzSOQ9MRBodOgcV_JU/edit?usp=drive_link">
+      MyRoadMap <img src="../../pic/doc.png" /></a>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1wbPultHs6VWbQXUjfGiEydcITZpGeUxQ/edit?usp=drive_web&ouid=108442140929462168259&rtpof=true">[CCNA]
+      Study Plan.xlsx <img src="../../pic/excel.png" />
+    </a>
+    <br />
+    <ul style="list-style-type: circle">
+      <strong> ccna-200-301 </strong>
+      <li>
+        Wendell Odom: <br>
+        - <a href="cisco/ccna/ccna-book.html" target="_blank">Book <img src="../../pic/www.png"></a>
+        <a href="https://docs.google.com/document/d/12sPhQ0c8IvfCd6JCk5v3vwWBm_GhZ7aB6lQkcmnFOuU/edit?usp=drive_link">Book-Map
+          <img src="../../pic/doc.png" /></a>
+        <a href="https://www.youtube.com/playlist?list=PLhDAmDsTz9Xe2JrZqmPlMjYi5vsNAILG3">
+          Book Playlist-Wendell Odom <img src="../../pic/youtube.png" />
+        </a>
+        <br>
+        . . .
+        <a href="	https://learning.oreilly.com/library/view/ccna-200-301-official/9780138229856/">
+          Book1<img src="../../pic/oreilly.png" />
+        </a>
+        <a href="https://learning.oreilly.com/l - <a target=" _blank" href="books/ccna/CCNA1.pdf">Book1<img
+            src="../../pic/pdflogo.png" /></a>
+        [
+        <a target="_blank" href="books/ccna/CCNA101.pdf">Part1</a>
+        <a target="_blank" href="books/ccna/CCNA102.pdf">Part2</a>
+        <a target="_blank" href="books/ccna/CCNA103.pdf">Part3</a>
+        <a target="_blank" href="books/ccna/CCNA104.pdf">Part4</a>
+        <a target="_blank" href="books/ccna/CCNA105.pdf">Part5</a>
+        <a target="_blank" href="books/ccna/CCNA106.pdf">Part6</a>
+        <a target="_blank" href="books/ccna/CCNA107.pdf">Part7</a>
+        <a target="_blank" href="books/ccna/CCNA108.pdf">Part8</a>
+        <a target="_blank" href="books/ccna/CCNA109.pdf">Part9</a>
+        ]
+        <br>
+        . . .
+        <a href="https://learning.oreilly.com/library/view/ccna-200-301-official/9780138215187/">
+          Book 2<img src="../../pic/oreilly.png" />
+        </a>
+        <a target="_blank" href="books/ccna/CCNA2.pdf">Book2<img src="../../pic/pdflogo.png" /></a></a>
+
+
+        <br />
+        - <a target="_blank" href="https://learning.oreilly.com/videos/-/9780135338087/">
+          Exam Insights (Audio) <img src="../../pic/oreilly.png" alt="" />
         </a>
         <br />
-        <ul style="list-style-type: circle">
-          <strong> ccna-200-301 </strong>
-          <li>
-            Wendell Odom
-            <a
-              href="	https://learning.oreilly.com/library/view/ccna-200-301-official/9780138229856/"
-            >
-              Book1<img src="../../pic/oreilly.png" />
-            </a>
-            <a
-              href="https://learning.oreilly.com/library/view/ccna-200-301-official/9780138215187/"
-            >
-              Book 2<img src="../../pic/oreilly.png" />
-            </a>
-            <a
-              href="https://docs.google.com/document/d/12sPhQ0c8IvfCd6JCk5v3vwWBm_GhZ7aB6lQkcmnFOuU/edit?usp=drive_link"
-              >Book-Map <img src="../../pic/doc.png"
-            /></a>
-            <a target="_blank" href="books/CCNA-Book1.pdf"
-              >Book1<img src="../../pic/pdflogo.png"
-            /></a>
-            <a target="_blank" href="books/CCNA-Book2.pdf"
-              >Book2<img src="../../pic/pdflogo.png"
-            /></a>
-            <a
-              href="https://www.youtube.com/playlist?list=PLhDAmDsTz9Xe2JrZqmPlMjYi5vsNAILG3"
-            >
-              Book Playlist <img src="../../pic/youtube.png" />
-            </a>
-            <br />
-            <a
-              target="_blank"
-              href="https://learning.oreilly.com/videos/-/9780135338087/"
-            >
-              Exam Insights (Audio) <img src="../../pic/oreilly.png" alt="" />
-            </a>
-            <br />
-            <a
-              target="_blank"
-              href="https://learning.oreilly.com/videos/-/9780135497869/"
-              target="_blank"
-              >IP Subnetting<img src="../../pic/oreilly.png"
-            /></a>
-            <a
-              target="_blank"
-              href="https://learning.oreilly.com/videos/-/9780135647318/"
-              >Practise Subnetting <img src="../../pic/oreilly.png"
-            /></a>
-            <br />
-            <a
-              target="_blank"
-              href="https://learning.oreilly.com/videos/-/9780136767466/"
-              >Older Video <img src="../../pic/oreilly.png"
-            /></a>
-          </li>
-          <li>
-            Jason Gooley
-            <a
-              href="https://learning.oreilly.com/course/ccna-200-301-version/9780138213497/"
-              target="_blank"
-            >
-              CCNA 200-301 Video<img src="../../pic/oreilly.png" />
-            </a>
-          </li>
-          <li>
-            Allan Johnson
-            <a
-              href="https://learning.oreilly.com/library/view/31-days-before/9780138214036/"
-              target="_blank"
-              >31 Days Before your CCNA Exam <img src="../../pic/oreilly.png" />
-            </a>
-          </li>
-          <li>
-            Neil Anderson
-            <a
-              href="https://learning.oreilly.com/videos/-/9781789130089/continue"
-              target="_blank"
-              >Video <img src="../../pic/oreilly.png" />
-            </a>
-
-            <a
-              target="_blank"
-              href="https://drive.google.com/drive/folders/1D6xA7TFfi14JV3_jTNhnAUmkMpihxQO2"
-              >Files<img src="../../pic/googledrive-icon.png"
-            /></a>
-            <a
-              target="_blank"
-              href="books/Neil-CCNA Study Plan 200-301 v1.1.docx"
-              >Study Plan<img src="../../pic/doc.png"
-            /></a>
-            <a
-              target="_blank"
-              href="books/Neil-CCNA Study Plan 200-301 v1.1.pdf"
-              >Study Plan<img src="../../pic/pdflogo.png"
-            /></a>
-          </li>
-          <li>
-            Kevin Wallace
-            <a href="cisco/ccna/ccna-kevin.html">Kevin</a>
-            <a
-              href="	https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep?u=57683345"
-              target="_blank"
-            >
-              [LinkedIn]CCNA(200-301) v1.1<img src="../../pic/linkedin.png" />
-            </a>
-          </li>
-          <li>
-            Jeremy McDowell - Acing the CCNA Exam
-            <a
-              href="https://learning.oreilly.com/videos/acing-the-ccna/9781633437678VE/"
-              target="_blank"
-              >Volume1 <img src="../../pic/oreilly.png"
-            /></a>
-            <a
-              href="https://learning.oreilly.com/videos/acing-the-ccna/9781633435780VE/"
-              target="_blank"
-              >Volum2 <img src="../../pic/oreilly.png"
-            /></a>
-          </li>
-          <li>
-            Exam Cram
-            <a
-              href="	https://learning.oreilly.com/api/v1/continue/9780136632825/"
-              target="_blank"
-            >
-              CCNA 200-301 , 6th Edition<img src="../../pic/oreilly.png" />
-            </a>
-          </li>
-          <li>
-            Sams Teach Yourself TCP/IP in 24 Hours
-            <a
-              href="https://learning.oreilly.com/api/v1/continue/9780134598598/"
-              target="_blank"
-              >Book<img src="../../pic/oreilly.png"
-            /></a>
-          </li>
-        </ul>
-
+        - <a target="_blank" href="https://learning.oreilly.com/videos/-/9780135497869/" target="_blank">IP
+          Subnetting<img src="../../pic/oreilly.png" /></a>
+        <a target="_blank" href="https://learning.oreilly.com/videos/-/9780135647318/">Practise Subnetting <img
+            src="../../pic/oreilly.png" /></a>
         <br />
-      </div>
-      <!-- End of this collapsible Menu -->
-      <!-- *************************************** -->
-      <!-- Start collapsible -->
-      <h4 class="ciscoColor collapsible">cisco Tools</h4>
-      <div class="content">
-        Exam Topics<a
-          href="https://learningnetwork.cisco.com/s/ccna-exam-topics"
-          target="_blank"
-          >Cisco
+        - <a target="_blank" href="https://learning.oreilly.com/videos/-/9780136767466/">Older Video <img
+            src="../../pic/oreilly.png" /></a>
+      </li>
+      <li>
+        Jason Gooley
+        <a href="https://docs.google.com/document/d/1AO-hQ6KeiKSC_mSWLdCf0ni5ad_iFiDf/edit" target="_blank">List <img
+            src="../../pic/doc.png" /></a>
+        <a href="https://learning.oreilly.com/course/ccna-200-301-version/9780138213497/" target="_blank">
+          CCNA 200-301 Video<img src="../../pic/oreilly.png" />
         </a>
-        <a target="_blank" href="books/200-301-CCNA-v1.1.pdf"
-          ><img src="../../pic/pdflogo.png"
-        /></a>
-        <a
-          href="https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf"
-          >cisco <img src="../../pic/pdflogo.png"
-        /></a>
-        <a
-          target="_blank"
-          href="https://learningnetwork.cisco.com/s/ccna?tabset-cec5c=601f6"
-          >Prealse Note</a
-        >
-        <a
-          href="https://www.cisco.com/c/dam/en_us/training-events/certifications/career-path.pdf"
-          target="_blank"
-          >Career Path</a
-        >
-      </div>
-      <!-- End of this collapsible Menu -->
-      <!-- *************************************** -->
-      <!-- Start CCNA Ali collapsible -->
-      <h4 class="ciscoColor collapsible">علی شریعتی CCNA 200-120</h4>
-      <div class="content">
-        <p style="direction: rtl">
-          این مجموعه با تمرکز بر مدرک جدید CCNA Routing & Switching 200-120 که
-          به تازگی توسط سیسکو به جای مدرک قبلی CCNA 640-802 ارائه شده است ،
-          تولید شده و دارای وجوه تمایز بسیاری با سایر محصولات مشابه در بازارهای
-          داخلی و خارجی است. ویدئوهای تولید شده به گونه ایست که نه تنها تمامی
-          سرفصل های جدید این درس را پوشش می دهد بلکه سرفصل هائی که در ارائه جدید
-          این مدرک حذف شده است را (سرفصل هائی مانند RIP و وایرلس) نیز شامل می
-          گردد. همچنین این مجموعه شامل مطالب اضافه ایست که شاید در سرفصل های
-          اصلی این درس توسط سیسکو دیده نشده باشد ولی دراکثر محیط های کاری انتظار
-          می رود که دارندگان مدرک CCNA بتوانند این مفاهیم را پیاده سازی نمایند.
-          مفاهیمی از قبیل کابل کشی ، شبکه های بی سیم، AAA ، IPSec و ... مطالب و
-          مفاهیم تئوری با زبان ساده و مبتنی بر شاخص های استاندارد آموزش های
-          مجازی بین المللی تهیه شده و علاوه بر این بخش ها سعی بر آن بوده که
-          تمامی سناریو های مربوط به تکنولوژی ها بصورت عملی پیاده سازی گردد
-          <a
-            href="https://www.rayka-co.ir/online-shop/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%DB%8C/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%DB%8C-ccna-200-1202014-05-26-20-38-39_-detail"
-            target="_blank"
-            >Link</a
-          >
-        </p>
-        <ul style="list-style-type: none">
-          <strong> [Rayka - CCNA 200-120 - Shariaty ]</strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=lRPa-KHRU_8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=26&t=1451s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-00 Intro <img src="../../pic/youtube.png" />
-            </a>
-          </li>
-          <strong>Part 1-Operation of IP Data Networks</strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=WgRcfz1jTEo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=27&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-01 Basic Network Terminology
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=kagIThgoawE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=28&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-02 Introduction to Models
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=_QWAPoFXAzA&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=29&t=14s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-03 Describing a Sample Model
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=7ByoFtKdIQ8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=30&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-04 Introduction to OSI & TCPIP Model
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=6FhjGmnc6pw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=31&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-05 Physical Layer - Topologies and Cables
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=YiNesYAoaIo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=32&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-06 How to make Cross\straight cables
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=mdvU5kv0t2s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=33&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-07 Physical Layer - Fiber Optic and Network Devices
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=SAe3mOpxqVQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=34&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-08 Physical Layer - Hub Opration
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=AMjqVZHQ2Xk&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=35&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-09 Datalink layer
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=OCg_FWSvf-s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=36&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-10 Network Layer Protocols
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=kQToLM2xSDw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=37&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-11 IPv4 Addressing
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=SxsCu6r5fGw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=38&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-12 Subnetting
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=w3PqobYg05g&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=39&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-13 IPv6 Addressing
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=xyi-Ok_lUAM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=40&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-14 Networrk Layer - ICMP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=ee4WWD2Oae4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=41&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-15 Transport Layer
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=GplcDenss8s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=42&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-16 Application Layer
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=D8HynlC7Yj0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=43&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-17 Application Protocols Demo
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Wjwo7b-Dt4Y&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=44&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-18 Wireshark
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Mo6q10seDXU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=45&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-19 Wireless LAN
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=5ryVdEkVDWg&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=46&t=5s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-20 Configuring an Access Point
-            </a>
-          </li>
-          <strong>Part 2-LAN Switching Technologies </strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=zEQN8VMduIE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=47&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-21 Switch Basic Configuration
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=5eWEYa9iKCI&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=48&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-22 Cisco Switch Memory Types
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=0y0jy3YnlWQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=49&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-23 VTY Configuration
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=lEAzVasGTME&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=50&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-24 Port Security
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=8e2g27BHK9U&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=51&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-25 VLAN concepts and Configuration
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=TBXymBNyJyo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=52&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-26 VLAN Trunks and DTP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=tKIaBj4Sn1U&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=53&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-27 VLAN VTP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=ix_aG4z2SVM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=54&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-28 Spannin Tree Protocol
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=b1cOhmnNbYU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=55&t=20s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-29 RSTP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=lvej45-h_n4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=56&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-30 EtherChannel
-            </a>
-          </li>
-          <strong>Part 3-IP Routing Technologies</strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=bXE5dI12RPQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=57&t=3s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-31 Switch Basic Configuration
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=URCEbD25RqM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=58&t=2s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-32 InterVLAN Routing
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=xGL7ep9r3-8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=59&t=4s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-33 Static Routing
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=xudX2g1s0Ns&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=60&t=9s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-34 RIP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=9Hh5LNKz2iY&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=61&t=15s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-35 Single Area OSPF
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=lJuTVFUqguE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=62&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-36 Multi Area OSPF
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=fqNd53chNXQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=63&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-37 IPv6 Routing (Static - OSPFv3)
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Ga8zLRNbOlY&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=64&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-38 EIGRP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=R-zO82p2ew0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=65&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-39 GNS3 Introduction
-            </a>
-          </li>
-          <strong>Part 4-IP Services</strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=cHlZQzHYdi0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=66&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2- Part 4 - IP Services-40 ACL
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=nOOobUDDgQU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=67&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-41 NAT
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Rw3cYsozMlA&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=68&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-42 DHCP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=deRVEiMdWpg&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=69&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-43 HSRP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=eJyindATmxM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=70&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-44 VRRP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=91fdCrjnNaQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=71&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-45 GLBP
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=yiVEikE4M9s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=72&t=7s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-46 TShoot
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=H9vovV5pE9s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=73&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-47 Licensing
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=it1EcfnohyM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=74&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-48 AAA
-            </a>
-          </li>
-          <strong>Part 5-WAN Technologies</strong>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=t9MOKPGtXMU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=75&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-49 PPP , HDLC
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Fy2_E6uHs_4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=76&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-50 Frame Relay
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=uovxsD14avc&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=77&t=12s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-51 VPN (GRE)
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=YAQQTD-xc6E&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=78&t=1s&pp=gAQBiAQBsAQB"
-              target="_blank"
-            >
-              Ali-CCNA2-52 VPN (IPSec) [Last Video]
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- End of CCNA Ali collapsible Menu -->
-      <!-- *************************************** -->
-      <!-- Start CCNA Farsi -->
-      <h4 class="ciscoColor collapsible">CCNA-Farsi</h4>
-      <div class="content">
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCmmGjsM8XJbpij5QBt5RwYo"
-          >[Neisi] نیسی - PlayList</a
-        >
-        :
-        <a href="https://youtu.be/jGYu7RWXFsA" target="_blank">
-          CCNA - Part 1 [1~10]</a
-        >
-        <a href="https://youtu.be/JNkXNib6mQQ" target="_blank"
-          >Part 2 [10~20]</a
-        >
-        <a href="https://youtu.be/-KD_hl4Mxp8" target="_blank"
-          >Part 3 [20~28]</a
-        >
 
-        <hr />
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCm4IYQRA4w7_tnb5WY86lgC"
-          target="_blank"
-          >[FallahZadeh] فریبرز فلاح زاده - PlayList</a
-        >
+      </li>
+      <li>
+        Allan Johnson
+        <a href="https://docs.google.com/document/d/1DiszarJLoExiK82oLQNzuiXuJKJ1hyaR/edit" target="_blank">List <img
+            src="../../pic/doc.png" /></a>
+        <a href="https://learning.oreilly.com/library/view/31-days-before/9780138214036/" target="_blank">31 Days
+          Before your CCNA Exam <img src="../../pic/oreilly.png" />
+        </a>
+      </li>
+      <li>
+        Neil Anderson
+        <a href="cisco/ccna/ccna-neil.html" target="_blank">Neil<img src="../../pic/www.png"></a>
+        <a href="https://docs.google.com/document/d/1IfBveaTtDbORNgpAq4_AYDcx3w-bR-Eb/" target="_blank">List <img
+            src="../../pic/doc.png" /></a>
 
-        <hr />
-        others:
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCk44rH-YtWNw_eHVSmEushK"
-          target="_blank"
-          >Mosh</a
-        >
-        |
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCnoRND7Vd0whI88OFj3Kgm0"
-          target="_blank"
-          >Microsoft</a
-        >
-        |
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCmXjiJyjEPy2AobGzJto483"
-          target="_blank"
-          >ServiceNow</a
-        >
-        |
-        <a
-          href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCm_1bzwhTWa6HgpbiPAxmdj"
-          target="_blank"
-          >وب دولوپر</a
-        >
-        <br />
-      </div>
-      <!-- End of CCNA Farsi -->
-    </div>
-    <!-- End of pageContent" -->
-    <!-- RoadMap -->
-    <div class="footerLinks">
-      <a
-        target="_blank"
-        href="https://docs.google.com/document/d/1Ld77-o4tCucpdJgQJ_dKhLjWHqzSOQ9MRBodOgcV_JU/edit?usp=drive_link"
-      >
-        [CCNA] My RoadMap.docx
-      </a>
-      |
-      <a
-        target="_blank"
-        href="https://docs.google.com/spreadsheets/d/1wbPultHs6VWbQXUjfGiEydcITZpGeUxQ/edit?usp=drive_web&ouid=108442140929462168259&rtpof=true"
-        >[CCNA] Study Plan.xlsx
-      </a>
-    </div>
-    <div class="foot">Learn Cisco with ❤</div>
-    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+        <a href="https://learning.oreilly.com/videos/-/9781789130089/continue" target="_blank">Video <img
+            src="../../pic/oreilly.png" />
+        </a>
 
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+        <a target="_blank" href="https://drive.google.com/drive/folders/1D6xA7TFfi14JV3_jTNhnAUmkMpihxQO2">Files<img
+            src="../../pic/googledrive-icon.png" /></a>
+        <a target="_blank" href="books/Neil-CCNA Study Plan 200-301 v1.1.docx">Study Plan<img
+            src="../../pic/doc.png" /></a>
+        <a target="_blank" href="books/Neil-CCNA Study Plan 200-301 v1.1.pdf">Study Plan<img
+            src="../../pic/pdflogo.png" /></a>
+      </li>
+      <li>
+        Kevin Wallace
+        <a href="cisco/ccna/ccna-kevin.html">Kevin<img src="../../pic/www.png"></a>
+        <a href="https://docs.google.com/document/d/1FyEAhPqGp9bwA9NiOSJs1J1lzxNgyltp/edit" target="_blank">List <img
+            src="../../pic/doc.png" /></a>
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
+        <a href="https://www.linkedin.com/learning/cisco-certified-network-associate-ccna-v1-1-200-301-cert-prep?u=57683345"
+          target="_blank">
+          [LinkedIn]CCNA(200-301) v1.1<img src="../../pic/linkedin.png" />
+        </a>
+      </li>
+      <li>
+        Jeremy McDowell - Acing the CCNA Exam
+        <a href="https://learning.oreilly.com/videos/acing-the-ccna/9781633437678VE/" target="_blank">Volume1 <img
+            src="../../pic/oreilly.png" /></a>
+        <a href="https://learning.oreilly.com/videos/acing-the-ccna/9781633435780VE/" target="_blank">Volum2 <img
+            src="../../pic/oreilly.png" /></a>
+      </li>
+      <li>
+        Exam Cram
+        <a href="	https://learning.oreilly.com/api/v1/continue/9780136632825/" target="_blank">
+          CCNA 200-301 , 6th Edition<img src="../../pic/oreilly.png" />
+        </a>
+      </li>
+      <li>
+        Sams Teach Yourself TCP/IP in 24 Hours
+        <a href="https://learning.oreilly.com/api/v1/continue/9780134598598/" target="_blank">Book<img
+            src="../../pic/oreilly.png" /></a>
+      </li>
+    </ul>
 
-      // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
-      //Get the button
-      var mybutton = document.getElementById("myBtn");
+  </div>
 
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
+  <!----------------------------------------------   CISCO Tools  Region 2        -------------------------------------------------->
 
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
+  <h4 class="ciscoColor collapsible">cisco Tools</h4>
+  <div class="content">
+    Exam Topics<a href="https://learningnetwork.cisco.com/s/ccna-exam-topics" target="_blank">Cisco
+    </a>
+    <a target="_blank" href="books/200-301-CCNA-v1.1.pdf"><img src="../../pic/pdflogo.png" /></a>
+    <a href="https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf">cisco <img
+        src="../../pic/pdflogo.png" /></a>
+    <a href="https://learningnetwork.cisco.com/s/ccna?tabset-cec5c=601f6">Prealse Note</a>
+    <a href="https://www.cisco.com/c/dam/en_us/training-events/certifications/career-path.pdf" target="_blank">Career
+      Path</a>
+  </div>
+
+
+  <!----------------------------------------------   علی شریعتی   Region 3        -------------------------------------------------->
+
+
+  <h4 class="ciscoColor collapsible">علی شریعتی CCNA 200-120</h4>
+  <div class="content">
+
+    <a href="https://docs.google.com/document/d/1Aeacdn0_TuiIA9YHDAgZIjsftSS-8Ym97ISvec3H9cw/edit?usp=drive_link"
+      target="_blank">List
+      <img src="../../pic/doc.png" /></a>
+    </a>
+    <ul style="list-style-type: none">
+      <strong> [Rayka - CCNA 200-120 - Shariaty ]</strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=lRPa-KHRU_8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=26&t=1451s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-00 Intro <img src="../../pic/youtube.png" />
+        </a>
+      </li>
+      <strong>Part 1-Operation of IP Data Networks</strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=WgRcfz1jTEo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=27&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-01 Basic Network Terminology
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=kagIThgoawE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=28&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-02 Introduction to Models
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=_QWAPoFXAzA&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=29&t=14s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-03 Describing a Sample Model
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=7ByoFtKdIQ8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=30&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-04 Introduction to OSI TCPIP Model
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=6FhjGmnc6pw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=31&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-05 Physical Layer - Topologies and Cables
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=YiNesYAoaIo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=32&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-06 How to make Cross\straight cables
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=mdvU5kv0t2s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=33&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-07 Physical Layer - Fiber Optic and Network Devices
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=SAe3mOpxqVQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=34&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-08 Physical Layer - Hub Opration
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=AMjqVZHQ2Xk&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=35&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-09 Datalink layer
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=OCg_FWSvf-s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=36&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-10 Network Layer Protocols
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=kQToLM2xSDw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=37&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-11 IPv4 Addressing
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=SxsCu6r5fGw&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=38&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-12 Subnetting
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=w3PqobYg05g&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=39&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-13 IPv6 Addressing
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=xyi-Ok_lUAM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=40&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-14 Networrk Layer - ICMP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=ee4WWD2Oae4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=41&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-15 Transport Layer
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=GplcDenss8s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=42&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-16 Application Layer
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=D8HynlC7Yj0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=43&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-17 Application Protocols Demo
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Wjwo7b-Dt4Y&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=44&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-18 Wireshark
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Mo6q10seDXU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=45&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-19 Wireless LAN
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=5ryVdEkVDWg&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=46&t=5s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-20 Configuring an Access Point
+        </a>
+      </li>
+      <strong>Part 2-LAN Switching Technologies </strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=zEQN8VMduIE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=47&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-21 Switch Basic Configuration
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=5eWEYa9iKCI&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=48&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-22 Cisco Switch Memory Types
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=0y0jy3YnlWQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=49&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-23 VTY Configuration
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=lEAzVasGTME&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=50&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-24 Port Security
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=8e2g27BHK9U&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=51&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-25 VLAN concepts and Configuration
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=TBXymBNyJyo&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=52&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-26 VLAN Trunks and DTP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=tKIaBj4Sn1U&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=53&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-27 VLAN VTP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=ix_aG4z2SVM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=54&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-28 Spannin Tree Protocol
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=b1cOhmnNbYU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=55&t=20s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-29 RSTP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=lvej45-h_n4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=56&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-30 EtherChannel
+        </a>
+      </li>
+      <strong>Part 3-IP Routing Technologies</strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=bXE5dI12RPQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=57&t=3s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-31 Switch Basic Configuration
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=URCEbD25RqM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=58&t=2s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-32 InterVLAN Routing
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=xGL7ep9r3-8&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=59&t=4s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-33 Static Routing
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=xudX2g1s0Ns&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=60&t=9s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-34 RIP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=9Hh5LNKz2iY&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=61&t=15s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-35 Single Area OSPF
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=lJuTVFUqguE&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=62&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-36 Multi Area OSPF
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=fqNd53chNXQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=63&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-37 IPv6 Routing (Static - OSPFv3)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Ga8zLRNbOlY&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=64&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-38 EIGRP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=R-zO82p2ew0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=65&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-39 GNS3 Introduction
+        </a>
+      </li>
+      <strong>Part 4-IP Services</strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=cHlZQzHYdi0&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=66&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2- Part 4 - IP Services-40 ACL
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=nOOobUDDgQU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=67&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-41 NAT
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Rw3cYsozMlA&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=68&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-42 DHCP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=deRVEiMdWpg&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=69&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-43 HSRP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=eJyindATmxM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=70&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-44 VRRP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=91fdCrjnNaQ&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=71&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-45 GLBP
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=yiVEikE4M9s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=72&t=7s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-46 TShoot
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=H9vovV5pE9s&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=73&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-47 Licensing
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=it1EcfnohyM&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=74&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-48 AAA
+        </a>
+      </li>
+      <strong>Part 5-WAN Technologies</strong>
+      <li>
+        <a href="https://www.youtube.com/watch?v=t9MOKPGtXMU&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=75&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-49 PPP , HDLC
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Fy2_E6uHs_4&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=76&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-50 Frame Relay
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=uovxsD14avc&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=77&t=12s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-51 VPN (GRE)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=YAQQTD-xc6E&list=PLt4zoIx-WdZVL7dko-mSI7ECsDp2TvC3p&index=78&t=1s&pp=gAQBiAQBsAQB"
+          target="_blank">
+          Ali-CCNA2-52 VPN (IPSec) [Last Video]
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!----------------------------------------------   CCNA-Farsi  Region 34        -------------------------------------------------->
+
+  <h4 class="ciscoColor collapsible">CCNA-Farsi</h4>
+  <div class="content">
+    <h5>فرزان-یوسفی</h5>
+    <a href="https://docs.google.com/document/d/1jKwPo1xvj_Xcd1Z98Ut28gt-ntQMAnhyf8JE2lG5x1c/edit?usp=drive_link"
+      target="_blank">List<img src="../../pic/doc.png" /></a>
+
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCmBiwQ_nJUrFdKehBaDZ3bu" target="_blank">CCNA-200-120
+      PlayList <img src="../../pic/youtube.png" /></a>
+    <a href="https://youtu.be/oRoMrGVasDw" target="_blank">Update<img src="../../pic/youtube.png" /></a>
+
+    <br><br>
+    <hr>
+    <br>
+
+    <h5>نیسی</h5>
+    <a href="https://docs.google.com/document/d/1w58ZomvMROETzET-L_K4NAU_QrubIs9hv3_AdHRIUjI/edit?usp=drive_link"
+      target="_blank">List
+      <img src="../../pic/doc.png" /></a>
+    </a>
+
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCmmGjsM8XJbpij5QBt5RwYo">[Neisi] PlayList<img
+        src="../../pic/youtube.png" /></a>
+    :
+    <a href="https://youtu.be/jGYu7RWXFsA" target="_blank">
+      CCNA - Part 1 [1~10]<img src="../../pic/youtube.png" /></a>
+    <a href="https://youtu.be/JNkXNib6mQQ" target="_blank">Part 2 [10~20]<img src="../../pic/youtube.png" /></a>
+    <a href="https://youtu.be/-KD_hl4Mxp8" target="_blank">Part 3 [20~28]<img src="../../pic/youtube.png" /></a>
+
+    <br><br>
+    <hr />
+    <br>
+
+    <h5>فریبرز فلاح زاده</h5>
+    <a href="https://docs.google.com/document/d/1rpkz_Tz8tfk2JL5PDeTSPfoQ6sgK0NNTC3OEcucw8g8/edit?usp=drive_link"
+      target="_blank">List
+      <img src="../../pic/doc.png" /></a>
+    </a>
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCm4IYQRA4w7_tnb5WY86lgC" target="_blank">[FallahZadeh]
+      PlayList <img src="../../pic/youtube.png" /></a>
+
+    <br><br>
+    <hr />
+    <br>
+
+    <h5>Others</h5>
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCk44rH-YtWNw_eHVSmEushK" target="_blank">Mosh</a>
+    |
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCnoRND7Vd0whI88OFj3Kgm0" target="_blank">Microsoft</a>
+    |
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCmXjiJyjEPy2AobGzJto483" target="_blank">ServiceNow</a>
+    |
+    <a href="https://www.youtube.com/playlist?list=PLB-1_ODh6fCm_1bzwhTWa6HgpbiPAxmdj" target="_blank">وب دولوپر</a>
+    <br /><br />
+    <hr />
+
+  </div>
+  <!-- End of CCNA Farsi -->
+  </div>
+  <!-- End of pageContent" -->
+  <!-- RoadMap -->
+  <div class="footerLinks">
+    <a target="_blank"
+      href="https://docs.google.com/document/d/1Ld77-o4tCucpdJgQJ_dKhLjWHqzSOQ9MRBodOgcV_JU/edit?usp=drive_link">
+      [CCNA] My RoadMap.docx
+    </a>
+    |
+    <a target="_blank"
+      href="https://docs.google.com/spreadsheets/d/1wbPultHs6VWbQXUjfGiEydcITZpGeUxQ/edit?usp=drive_web&ouid=108442140929462168259&rtpof=true">[CCNA]
+      Study Plan.xlsx
+    </a>
+    |
+    <a target="_blank" href="https://to-do.office.com/tasks/l-1oomzqja6wa">Tasks</a>
+  </div>
+  <div class="foot">Learn Cisco with ❤</div>
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
         } else {
-          mybutton.style.display = "none";
+          content.style.display = "block";
         }
-      }
+      });
+    }
 
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
-      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
-    </script>
-  </body>
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+  </script>
+</body>
+
 </html>
