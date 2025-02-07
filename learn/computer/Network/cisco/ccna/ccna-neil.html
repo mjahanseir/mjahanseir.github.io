@@ -2,825 +2,681 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CCNA-Neil Anderson</title>
-    <link rel="stylesheet" href="../../../../../css/style.css" />
-    <link rel="icon" href="../../../pic/cisco.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCNA-Neil Anderson</title>
+        <link rel="stylesheet" href="../../../../../css/style.css" />
+        <link rel="icon" href="../../../pic/cisco.ico" type="image/x-icon" />
+        <style>
+                body {
+                        background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+                        margin: auto auto;
+                        width: 85%;
+                        font-family: "Times New Roman", Times, serif;
+                        background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+                }
+
+                .collapsible:hover {
+                        background-image: linear-gradient(hsla(0, 0%, 0%, .2) 100%, transparent 100%)
+                }
+
+                a {
+                        box-shadow: inset 0 0 0 0 #BE1459;
+                        color: #BE1459;
+                        padding: 0 1.25rem;
+                        transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+                }
+
+                a:hover {
+                        box-shadow: inset 1000px 0 0 0 #8b0000;
+                        color: white;
+                }
+
+
+
+
+                .title {
+                        font-size: 1rem;
+                        color: white;
+                        align-items: center;
+                        font-family: 'Work Sans', sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2rem;
+                        text-align: center;
+                        font-weight: bold;
+                        height: 1.5rem;
+                        padding: 0.5rem 0;
+                }
+
+                .myContent {
+                        background-color: white;
+                }
+
+
+                .footerPage {
+                        background-color: black;
+                        font-size: 0.9rem;
+                        color: white;
+                        padding: 5px;
+                }
+
+                .navbar {
+                        overflow: hidden;
+                        background-color: #333;
+                        position: fixed;
+                        top: 0;
+                        width: 85%;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                .navbar a {
+                        float: left;
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 1rem;
+                        padding: 0.1rem 0.9rem;
+                }
+        </style>
 </head>
 
 <body>
-    <a href="../../ccna.html">Back to CCNA</a>
-    <br>
-    <hr>
-    <br>
-    <strong>Neil Anderson: </strong>
-    <a href="https://docs.google.com/document/d/1IfBveaTtDbORNgpAq4_AYDcx3w-bR-Eb/" target="_blank">List <img
-            src="../../../../pic/doc.png" /></a>
-    <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD" target="_blank">Youtube <img
-            src="../../../../pic/youtube.png" /></a>
 
-    <a href="https://learning.oreilly.com/videos/-/9781789130089/continue" target="_blank">Video <img
-            src="../../../../pic/oreilly.png" />
-    </a>
+        <div class="navbar">
+                <a style="background-color:#BE1459;" href="../../../../index.html">Home</a>
+                <a href="../../ccna.html">CCNA</a>
 
-    <a target="_blank" href="https://drive.google.com/drive/folders/1D6xA7TFfi14JV3_jTNhnAUmkMpihxQO2">Files<img
-            src="../../../../pic/googledrive-icon.png" /></a>
-    <a target="_blank" href="../../books/Neil-CCNA Study Plan 200-301 v1.1.docx">Study Plan<img
-            src="../../../../pic/doc.png" /></a>
-    <a target="_blank" href="../../books/Neil-CCNA Study Plan 200-301 v1.1.pdf">Study Plan<img
-            src="../../../../pic/pdflogo.png" /></a>
-    <hr>
-    <br>
-    <ul style="list-style: none;">
-        <li> Neil01 : Welcome </li>
-        <li> Neil02 : How to Use the Lab Exercises&Anki Flashcards </li>
-        <li> Neil03 : Host to Host Communications </li>
-        <li> Neil04 : The Cisco IOS Operating System </li>
-        <li> Neil05 : OSI Layer 4 - The Transport Layer </li>
-        <li> Neil06 : OSI Layer 3 - The Network Layer </li>
-        <li> Neil07 : IP Address Classes </li>
-        <li> Neil08 : Subnetting </li>
-        <li> Neil09 : OSI Layer 2 - The Data-Link </li>
-        <li> Neil10 : OSI Layer 1 - The Physical </li>
-        <li> Neil12 : The Life of a Packet </li>
-        <li> Neil13 : The Cisco Troubleshooting Methodology </li>
-        <li> Neil14 : Cisco Router&Switch Basics </li>
-        <li> Neil15 : Cisco Device Management </li>
-        <li> Neil16 : Routing Fundamentals </li>
-        <li> Neil17 : Dynamic Routing Protocols </li>
-        <li> Neil18 : Connectivity Troubleshooting </li>
-        <li> Neil19 : IGP Interior Gateway Protocol Fundamentals </li>
-        <li> Neil20 : OSPF - Open Shortest Path First </li>
-        <li> Neil21 : VLANs Virtual Local Area Networks </li>
-        <li> Neil22 : Inter-VLAN Routing </li>
-        <li> Neil23 : DHCP - Dynamic Host Configuration Protocol </li>
-        <li> Neil24 : HSRP - Hot Standby Router Protocol </li>
-        <li> Neil25 : STP - Spanning Tree Protocol </li>
-        <li> Neil26 : EtherChannel </li>
-        <li> Neil27 : Switch Security </li>
-        <li> Neil28 : ACLs - Access Control Lists </li>
-        <li> Neil29 : NAT - Network Address Translation </li>
-        <li> Neil30 : IPv6 Addressing&Routing </li>
-        <li> Neil31 : WAN - Wide Area Networks </li>
-        <li> Neil32 : The Security Threat Landscape </li>
-        <li> Neil33 : Cisco Device Security </li>
-        <li> Neil34 : Network Device Management </li>
-        <li> Neil35 : QoS Quality of Service </li>
-        <li> Neil36 : Cloud Computing </li>
-        <li> Neil37 : Wireless Networking Fundamentals </li>
-        <li> Neil38 : Network Automation&Programmability </li>
-        <li> Neil39 : CCNA v1.1: AI Artificial Intelligence&Machine Learning </li>
-        <li> Neil40 : BONUS! Recommended Practice Tests </li>
-    </ul>
-    <br /><br />
-    <hr />
-    <br /><br />
+        </div>
+
+        <div>
+                CCNA
+        </div>
+        <div id="ccna" style="background-color: purple;" class="title">[CCNA-Neil] Udemy </div>
+        <div class="myContent">
+
+
+                <strong>Neil Anderson: </strong>
+                <a href="https://docs.google.com/document/d/1IfBveaTtDbORNgpAq4_AYDcx3w-bR-Eb/" target=" _blank">List
+                        <img src="../../../../pic/doc.png" /></a>
+                <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD" target="
+                        _blank"> Youtube <img src="../../../../pic/youtube.png" /></a>
+
+                <a href="https://www.udemy.com/course/ccna-complete" target=" _blank">Udemy <img
+                                src="../../../../pic/udemy.png" />
+                </a>
+
+                <a target=" _blank"
+                        href="https://drive.google.com/drive/folders/1D6xA7TFfi14JV3_jTNhnAUmkMpihxQO2">Files<img
+                                src="../../../../pic/googledrive-icon.png" /></a>
+                <a target=" _blank" href="../../books/Neil-CCNA Study Plan 200-301 v1.1.docx">Study Plan<img
+                                src="../../../../pic/doc.png" /></a>
+                <a target=" _blank" href="../../books/Neil-CCNA Study Plan 200-301 v1.1.pdf">Study Plan<img
+                                src="../../../../pic/pdflogo.png" /></a>
+                <hr>
+
+                Neil-01: Welcome 7 lectures • 20min 2
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=uAWxfLyPrmc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=1&pp=iAQBsAQB"
+                        target="_blank">1 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=3iH_XkNvSO0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=2&pp=iAQBsAQB"
+                        target="_blank">2 How to Make the Most of This Course</a><br>
+                <a href="https://www.youtube.com/watch?v=zwFOxPa6rcg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=3&pp=iAQBsAQB"
+                        target="_blank">4 The Study Plan</a><br>
+                <a href="https://www.youtube.com/watch?v=jxzN0a3s19g&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=4&pp=iAQBsAQB"
+                        target="_blank">5 The Udemy Interface</a><br>
+                <a href="https://www.youtube.com/watch?v=JAH7GLpi4wY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=5&pp=iAQBsAQB"
+                        target="_blank">6 Why Passing the CCNA is Going to Turbo Charge Your Career</a><br>
+
+
+                Neil-02: How to Use the Lab Exercises&Anki Flashcards5 lectures • 28min 3
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=rnhPPcycFSE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=6&pp=iAQBsAQB"
+                        target="_blank"> 7 How to Use the Lab Exercises and Anki
+                        Flashcards Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=gheWdcKhN5s&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=7&pp=iAQBsAQB"
+                        target="_blank">8 Cisco Packet Tracer Installation</a><br>
+                <a href="https://www.youtube.com/watch?v=BNyQwB0qB-Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=8&pp=iAQBsAQB"
+                        target="_blank">9 How to Use the Course Lab Exercises</a><br>
+                <a href="https://www.youtube.com/watch?v=SqXWHRtyQss&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=9&pp=iAQBsAQB"
+                        target="_blank">11 How to Use the Anki Flashcards</a><br>
 
 
 
-
-    <!-- 
-    
-    
-    lists 
-    
-    
-    -->
-
-
-    <ul class="mylist">
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil01 : Welcome </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_2.html	"
-                target="_blank"> How to Make the Most of This Course </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_3.html	"
-                target="_blank"> The Study Plan </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_4.html	"
-                target="_blank"> Recommended Practice Exams - Teachable </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_5.html	"
-                target="_blank"> Why Passing the CCNA is Going to Turbo Charge Your Career </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video1_6.html	"
-                target="_blank"> Course is Updated to CCNA v1.1 </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil02 : How to Use the Lab Exercises&Anki Flashcards </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video2_1.html	"
-                target="_blank"> How to Use the Lab Exercises&Anki Flashcards Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video2_2.html	"
-                target="_blank"> Cisco Packet Tracer Installation </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video2_3.html	"
-                target="_blank"> How to Use the Course Lab Exercises </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video2_4.html	"
-                target="_blank"> How to Use the Anki Flashcards </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil03 : Host to Host Communications </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_2.html	"
-                target="_blank"> A (Very) Basic Introduction to Networking </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_3.html	"
-                target="_blank"> The OSI Reference Model Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_4.html	"
-                target="_blank"> The TCP/IP Stack </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_5.html	"
-                target="_blank"> The Upper OSI Layers </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video3_6.html	"
-                target="_blank"> The Lower OSI Layers </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil04 : The Cisco IOS Operating System </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_2.html	"
-                target="_blank"> Cisco Operating Systems </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_3.html	"
-                target="_blank"> Connecting to a Cisco Device over the Network </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_4.html	"
-                target="_blank"> Making the Initial Connection to a Cisco Device </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_5.html	"
-                target="_blank"> Navigating the Cisco IOS Operating System Part 1 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_6.html	"
-                target="_blank"> Navigating the Cisco IOS Operating System Part 2 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video4_7.html	"
-                target="_blank"> Cisco IOS Configuration Management </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil05 : OSI Layer 4 - The Transport Layer </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video5_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video5_2.html	"
-                target="_blank"> The Transport Layer Header, TCP&UDP </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil06 : OSI Layer 3 - The Network Layer </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_2.html	"
-                target="_blank"> The IP Header </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_3.html	"
-                target="_blank"> Unicast, Broadcast&Multicast Traffic </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_4.html	"
-                target="_blank"> Converting from Decimal to Binary </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_5.html	"
-                target="_blank"> IPv4 Addresses </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_6.html	"
-                target="_blank"> Calculating an IPv4 Address in Binary </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_7.html	"
-                target="_blank"> The Subnet Mask </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video6_8.html	"
-                target="_blank"> Slash Notation </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil07 : IP Address Classes </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video7_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video7_2.html	"
-                target="_blank"> Class A IP Addresses </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video7_3.html	"
-                target="_blank"> IP Address Classes B&C </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video7_4.html	"
-                target="_blank"> IP Address Classes D&E </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil08 : Subnetting </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_2.html	"
-                target="_blank"> CIDR Classless Inter-Domain Routing </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_3.html	"
-                target="_blank"> Subnetting Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_4.html	"
-                target="_blank"> Subnetting Class C Networks&VLSM </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_5.html	"
-                target="_blank"> Subnetting Practice Questions </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_6.html	"
-                target="_blank"> 45.Variable Length Subnet Masking Example Part 1 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_7.html	"
-                target="_blank"> 46.Variable Length Subnet Masking Example Part 2 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_8.html	"
-                target="_blank"> 47.Subnetting Large Networks Part 1 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_9.html	"
-                target="_blank"> 48.Subnetting Large Networks Part 2 </a></li>
-         <li><a href="	#	" target="_blank"> 50 - Subnetting on the 3rd Octet Written Example.html </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_10.html	"
-                target="_blank"> 51.Private IP Addresses Part 1 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_11.html	"
-                target="_blank"> 52.Private IP Addresses Part 2 </a></li>
-         <li><a href="	#	" target="_blank"> 53 - Subnetting Table&Subnet Calculator.html </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video8_12.html	"
-                target="_blank"> 54.Where to Get More Subnetting Practice </a></li>
-         <li><a href="	#	" target="_blank"> ​​55 - Additional Subnetting Practice.html </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil09 : OSI Layer 2 - The Data-Link </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video9_1.html	"
-                target="_blank"> 56.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video9_2.html	"
-                target="_blank"> 57.Local Area Network Layer 2 - Ethernet </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil10 : OSI Layer 1 - The Physical </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video10_1.html	"
-                target="_blank"> 58.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video10_2.html	"
-                target="_blank"> 59.Ethernet Connection Media </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	" target="_blank">
-                Neil11 :
-                Cisco Device Functions </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video11_1.html	"
-                target="_blank"> 60.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video11_2.html	"
-                target="_blank"> 61.Switches vs Hubs </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video11_3.html	"
-                target="_blank"> 62.Switch Operation </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video11_4.html	"
-                target="_blank"> 63.Routers </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video11_5.html	"
-                target="_blank"> 64.Other Cisco Devices </a></li>
-         <li><a href="	#	" target="_blank"> 65.CiscoDeviceFunctionsLabExercises </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil12 : The Life of a Packet </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_1.html	"
-                target="_blank"> 66.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_2.html	"
-                target="_blank"> 67.DNS The Domain Name System </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_3.html	"
-                target="_blank"> 68.DNS on Cisco Routers </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_4.html	"
-                target="_blank"> 69.ARP Address Resolution Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_5.html	"
-                target="_blank"> 70.ARP for Routed Traffic </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_6.html	"
-                target="_blank"> 71.Life of a Packet Example Part 1 - DNS </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video12_7.html	"
-                target="_blank"> 72.Life of a Packet Example Part 2 - HTTP </a></li>
-         <li><a href="	https://drive.google.com/file/d/1dupY5siXPazV69FDoWcW1oKOkjZah0It/view?usp=share_link	"
-                target="_blank">
-                73 - 12TheLifeofaPacketLabExercises.zip </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil13 : The Cisco Troubleshooting Methodology </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video13_1.html	"
-                target="_blank"> 74.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video13_2.html	"
-                target="_blank"> 75.The Cisco Troubleshooting Methodology </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video13_3.html	"
-                target="_blank"> 76.Cisco Troubleshooting Methodology - Lab Example </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil14 : Cisco Router&Switch Basics </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_1.html	"
-                target="_blank"> 78.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_2.html	"
-                target="_blank"> 79.Basic Router&Switch Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_3.html	"
-                target="_blank"> 80.The Setup Wizard </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_4.html	"
-                target="_blank"> 81.Speed&Duplex Settings </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_5.html	"
-                target="_blank"> 82.CDP&LLDP </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_6.html	"
-                target="_blank"> 83.Basic Layer 1&2 Troubleshooting </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video14_7.html	"
-                target="_blank"> 84.Basic Layer 1&2 Troubleshooting - Lab Demo </a></li>
-         <li><a href="	https://drive.google.com/file/d/1vsDN0HAMlot28pmY640ct5cMOrDLbXcH/view?usp=share_link	"
-                target="_blank">
-                85 -14CiscoRouterandSwitch Basics Lab Exercises.zip </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil15 : Cisco Device Management </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_1.html	"
-                target="_blank"> 86.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_2.html	"
-                target="_blank"> 87The Boot Up Process </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_3.html	"
-                target="_blank"> 88.The Boot Up Process Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_4.html	"
-                target="_blank"> 89.Factory Reset&Password Recovery </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_5.html	"
-                target="_blank"> 90.Password Recovery Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_6.html	"
-                target="_blank"> 91.Backing up the System Image&Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video15_7.html	"
-                target="_blank"> 92.Upgrading IOS </a></li>
-         <li><a href="	https://drive.google.com/file/d/1zhKXqg-io3iMbaW3I2BF586wogwOTPEJ/view?usp=share_link	"
-                target="_blank">
-                93 - 15CiscoDeviceManagement Lab Exercises.zip </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil16 : Routing Fundamentals </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_1.html	"
-                target="_blank"> 94.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_2.html	"
-                target="_blank"> 95.Connected&Local Routes </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_3.html	"
-                target="_blank"> 96.Connected&Local Routes Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_4.html	"
-                target="_blank"> 97.Static Routes </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_5.html	"
-                target="_blank"> 98.Static Routes Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_6.html	"
-                target="_blank"> 99.Summarisation, Longest Prefix Match,&Default Routes </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_7.html	"
-                target="_blank"> 100.Summary Routes&Longest Prefix Match Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video16_8.html	"
-                target="_blank"> 101Default Routes&Load Balancing Lab Demo </a></li>
-         <li><a href="	https://drive.google.com/file/d/1h1pdV7yxd1I_On8bApJN4_6exH-UBAku/view?usp=share_link	"
-                target="_blank">
-                102 - 16 Routing Fundamentals Lab Exercises.zip </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil17 : Dynamic Routing Protocols </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_1.html	"
-                target="_blank"> 103.Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_2.html	"
-                target="_blank"> 104Dynamic Routing Protocols vs Static Routes </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_3.html	"
-                target="_blank"> Dynamic Routing Protocols Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_4.html	"
-                target="_blank"> Routing Protocol Types </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_5.html	"
-                target="_blank"> Routing Protocol Types Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_6.html	"
-                target="_blank"> Routing Protocol Metrics </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_7.html	"
-                target="_blank"> Routing Protocol Metrics Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_8.html	"
-                target="_blank"> Equal Cost Multi Path </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_9.html	"
-                target="_blank"> Equal Cost Multi Path Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_10.html	"
-                target="_blank"> Administrative Distance </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_11.html	"
-                target="_blank"> Administrative Distance Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_12.html	"
-                target="_blank"> Loopback Interfaces </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_13.html	"
-                target="_blank"> Adjacencies&Passive Interfaces </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_14.html	"
-                target="_blank"> Adjacencies&Passive Interfaces Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video17_15.html	"
-                target="_blank"> Route Precedence </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil18 : Connectivity Troubleshooting </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video18_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video18_2.html	"
-                target="_blank"> Basic Connectivity Troubleshooting </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil19 : IGP Interior Gateway Protocol Fundamentals </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video19_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video19_2.html	"
-                target="_blank"> RIP the Routing Information Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video19_3.html	"
-                target="_blank"> RIP Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video19_4.html	"
-                target="_blank"> EIGRP - the Enhanced Interior Gateway Routing Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video19_5.html	"
-                target="_blank"> EIGRP Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil20 : OSPF - Open Shortest Path First </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_2.html	"
-                target="_blank"> OSPF Characteristics </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_3.html	"
-                target="_blank"> OSPF Basic Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_4.html	"
-                target="_blank"> OSPF Basic Configuration Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_5.html	"
-                target="_blank"> OSPF Advanced Topics </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_6.html	"
-                target="_blank"> OSPF Advanced Topics Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_7.html	"
-                target="_blank"> OSPF Areas </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_8.html	"
-                target="_blank"> OSPF Areas Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_9.html	"
-                target="_blank"> Bandwidth vs Clock Rate&Speed </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_10.html	"
-                target="_blank"> OSPF Cost Metric </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_11.html	"
-                target="_blank"> OSPF Cost Metric Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_12.html	"
-                target="_blank"> OSPF Adjacencies </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_13.html	"
-                target="_blank"> OSPF Adjacencies Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_14.html	"
-                target="_blank"> OSPF DR&BDR Designated Routers </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video20_15.html	"
-                target="_blank"> OSPF DR&BDR Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil21 : VLANs Virtual Local Area Networks </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_2.html	"
-                target="_blank"> Campus LAN Design - Core, Distribution&Access Layers </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_3.html	"
-                target="_blank"> Spine-Leaf Network Design </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_4.html	"
-                target="_blank"> Why we have VLANs </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_5.html	"
-                target="_blank"> VLAN Access Ports </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_6.html	"
-                target="_blank"> VLAN Access Ports Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_7.html	"
-                target="_blank"> VLAN Trunk Ports </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_8.html	"
-                target="_blank"> VLAN Trunk Ports Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_9.html	"
-                target="_blank"> DTP Dynamic Trunking Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_10.html	"
-                target="_blank"> VTP VLAN Trunking Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video21_11.html	"
-                target="_blank"> VTP Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil22 : Inter-VLAN Routing </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video22_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video22_2.html	"
-                target="_blank"> Router with Separate Interfaces </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video22_3.html	"
-                target="_blank"> Router on a Stick </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video22_4.html	"
-                target="_blank"> Layer 3 Switch </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video22_5.html	"
-                target="_blank"> Layer 3 Switch Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil23 : DHCP - Dynamic Host Configuration Protocol </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_2.html	"
-                target="_blank"> DHCP Dynamic Host Configuration Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_3.html	"
-                target="_blank"> Cisco DHCP Server </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_4.html	"
-                target="_blank"> External DHCP Server </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_5.html	"
-                target="_blank"> Windows, Mac&Linux client IP settings </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video23_6.html	"
-                target="_blank"> Cisco DHCP Client </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil24 : HSRP - Hot Standby Router Protocol </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video24_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video24_2.html	"
-                target="_blank"> Network Redundancy </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video24_3.html	"
-                target="_blank"> FHRP First Hop Redundancy Protocols </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video24_4.html	"
-                target="_blank"> HSRP Hot Standby Router Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video24_5.html	"
-                target="_blank"> HSRP Advanced Topics </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil25 : STP - Spanning Tree Protocol </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_2.html	"
-                target="_blank"> Layer 3 Path Selection&Loop Prevention Review </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_3.html	"
-                target="_blank"> Why we have the Spanning Tree Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_4.html	"
-                target="_blank"> Spanning Tree Terminology - The Bridge </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_5.html	"
-                target="_blank"> How Spanning Tree Works </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_6.html	"
-                target="_blank"> Spanning Tree Versions </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_7.html	"
-                target="_blank"> Verification - show spanning-tree </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_8.html	"
-                target="_blank"> Verification - show mac address-table </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_9.html	"
-                target="_blank"> Manipulating the Root Bridge Election </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_10.html	"
-                target="_blank"> Spanning Tree&HSRP Alignment </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_11.html	"
-                target="_blank"> Portfast, BPDU Guard&Root Guard </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_12.html	"
-                target="_blank"> Portfast&BPDU Guard Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_13.html	"
-                target="_blank"> Root Guard Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_14.html	"
-                target="_blank"> CCNA v1.1: BPDU Filter </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_15.html	"
-                target="_blank"> CCNA v1.1: Loop Guard </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_16.html	"
-                target="_blank"> CCNA v1.1: PVST+ versus RPVST+ Convergence </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video25_17.html	"
-                target="_blank"> CCNA v1.1: RPVST+&Hub Interoperability </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil26 : EtherChannel </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_2.html	"
-                target="_blank"> Why we have EtherChannel </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_3.html	"
-                target="_blank"> EtherChannel Load Balancing </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_4.html	"
-                target="_blank"> EtherChannel Protocols&Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_5.html	"
-                target="_blank"> EtherChannel Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_6.html	"
-                target="_blank"> StackWise, VSS&vPC </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video26_7.html	"
-                target="_blank"> Layer 3 EtherChannel </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil27 : Switch Security </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_2.html	"
-                target="_blank"> DHCP Snooping </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_3.html	"
-                target="_blank"> DAI Dynamic ARP Inspection </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_4.html	"
-                target="_blank"> 802.1X Identity Based Networking </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_5.html	"
-                target="_blank"> Preventing Unauthorized Devices with Port Security </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_6.html	"
-                target="_blank"> Preventing Unauthorized Devices with Port Security Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_7.html	"
-                target="_blank"> Locking Ports to Hosts with Port Security </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video27_8.html	"
-                target="_blank"> Locking Ports to Hosts with Port Security Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil28 : ACLs - Access Control Lists </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_2.html	"
-                target="_blank"> Access Control Lists Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_3.html	"
-                target="_blank"> Standard, Extended&Named ACLs </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_4.html	"
-                target="_blank"> ACL Syntax </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_5.html	"
-                target="_blank"> ACL Operations </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_6.html	"
-                target="_blank"> Numbered ACLs Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video28_7.html	"
-                target="_blank"> Named ACLs Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil29 : NAT - Network Address Translation </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_2.html	"
-                target="_blank"> IPv4 Address Exhaustion&NAT </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_3.html	"
-                target="_blank"> Static NAT </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_4.html	"
-                target="_blank"> NAT Translations - Inside Local, Inside Global, Outside Local, Outside Global </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_5.html	"
-                target="_blank"> Static NAT Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_6.html	"
-                target="_blank"> Dynamic NAT </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_7.html	"
-                target="_blank"> Dynamic NAT Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_8.html	"
-                target="_blank"> PAT Port Address Translation </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video29_9.html	"
-                target="_blank"> PAT Port Address Translation Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil30 : IPv6 Addressing&Routing </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_2.html	"
-                target="_blank"> Why We Need IPv6 </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_3.html	"
-                target="_blank"> The IPv6 Address Format </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_4.html	"
-                target="_blank"> IPv6 Global Unicast Addresses </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_5.html	"
-                target="_blank"> IPv6 Global Unicast Addresses Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_6.html	"
-                target="_blank"> EUI-64 Addresses </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_7.html	"
-                target="_blank"> Unique Local&Link Local Addresses </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_8.html	"
-                target="_blank"> Link Local Addresses Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_9.html	"
-                target="_blank"> SLAAC Stateless Address AutoConfiguration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_10.html	"
-                target="_blank"> IPv6 Static Routes </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video30_11.html	"
-                target="_blank"> IPv6 Static Routes Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil31 : WAN - Wide Area Networks </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_2.html	"
-                target="_blank"> WAN Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_3.html	"
-                target="_blank"> VPN - Virtual Private Networks </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_4.html	"
-                target="_blank"> WAN Connectivity Options </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_5.html	"
-                target="_blank"> Leased Lines </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_6.html	"
-                target="_blank"> MPLS Multi Protocol Label Switching </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_7.html	"
-                target="_blank"> PPPoE Point to Point Protocol over Ethernet </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video31_8.html	"
-                target="_blank"> WAN Topology Options </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil32 : The Security Threat Landscape </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_2.html	"
-                target="_blank"> The Security Threat Landscape </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_3.html	"
-                target="_blank"> Common Attacks </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_4.html	"
-                target="_blank"> Firewalls&IDS/IPS </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_5.html	"
-                target="_blank"> Firewalls vs Packet Filters </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_6.html	"
-                target="_blank"> Cryptography </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_7.html	"
-                target="_blank"> TLS Transport Layer Security </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_8.html	"
-                target="_blank"> Site-to-Site VPN Virtual Private Networks </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_9.html	"
-                target="_blank"> Remote Access VPN Virtual Private Networks </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video32_10.html	"
-                target="_blank"> Threat Defense Solutions </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil33 : Cisco Device Security </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_2.html	"
-                target="_blank"> Line Level Security </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_3.html	"
-                target="_blank"> Privileged Exec&Password Encryption </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_4.html	"
-                target="_blank"> Line Level Security Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_5.html	"
-                target="_blank"> Usernames&Privilege Levels </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_6.html	"
-                target="_blank"> SSH Secure Shell </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_7.html	"
-                target="_blank"> SSH Secure Shell Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_8.html	"
-                target="_blank"> AAA Authentication, Authorization&Accounting </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_9.html	"
-                target="_blank"> AAA Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_10.html	"
-                target="_blank"> Global Security Best Practices </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video33_11.html	"
-                target="_blank"> Global Security Best Practices Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil34 : Network Device Management </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_2.html	"
-                target="_blank"> Syslog </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_3.html	"
-                target="_blank"> Terminal Monitor&Logging Synchronous </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_4.html	"
-                target="_blank"> Syslog Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_5.html	"
-                target="_blank"> SNMP Simple Network Management Protocol </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_6.html	"
-                target="_blank"> SNMP Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_7.html	"
-                target="_blank"> SNMPv3 Configuration </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_8.html	"
-                target="_blank"> SNMPv3 Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video34_9.html	"
-                target="_blank"> Syslog vs SNMP </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil35 : QoS Quality of Service </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video35_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video35_2.html	"
-                target="_blank"> QoS Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video35_3.html	"
-                target="_blank"> Classification&Marking </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video35_4.html	"
-                target="_blank"> Congestion Management </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video35_5.html	"
-                target="_blank"> Policing&Shaping </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil36 : Cloud Computing </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_2.html	"
-                target="_blank"> Traditional IT Deployment Models </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_3.html	"
-                target="_blank"> Defining Cloud Computing </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_4.html	"
-                target="_blank"> Cloud Computing Case Study </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_5.html	"
-                target="_blank"> Server Virtualization </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_6.html	"
-                target="_blank"> Virtualizing Network Devices </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_7.html	"
-                target="_blank"> Cloud Service Models </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_8.html	"
-                target="_blank"> Cloud Deployment Models </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video36_9.html	"
-                target="_blank"> Cloud Computing Advantages </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil37 : Wireless Networking Fundamentals </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_2.html	"
-                target="_blank"> Wireless Network Types </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_3.html	"
-                target="_blank"> Infrastructure Mode&Wireless Access Points </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_4.html	"
-                target="_blank"> Wireless LAN Controllers&CAPWAP </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_5.html	"
-                target="_blank"> Switch Configuration for Wireless Networks </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_6.html	"
-                target="_blank"> Wireless Channels&Radio Frequencies </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_7.html	"
-                target="_blank"> Wireless Security </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_8.html	"
-                target="_blank"> Switch Configuration for Wireless - Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video37_9.html	"
-                target="_blank"> Wireless Network Configuration - Lab Demo </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil38 : Network Automation&Programmability </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_1.html	"
-                target="_blank"> Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_2.html	"
-                target="_blank"> DNA Center renamed to Catalyst Center </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_3.html	"
-                target="_blank"> The Benefits of Network Automation&Programmability </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_4.html	"
-                target="_blank"> Python, Git, GitHub&CI-CD </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_5.html	"
-                target="_blank"> Data Serialization Formats: XML, JSON&YAML </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_6.html	"
-                target="_blank"> CCNA v1.1: APIs - CRUD, REST&SOAP </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_7.html	"
-                target="_blank"> Model Driven Programmability - YANG, NETCONF, RESTCONF&gRPC </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_8.html	"
-                target="_blank"> Lab Demo - Testing APIs with Postman </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_9.html	"
-                target="_blank"> CCNA v1.1: Configuration Management Tools - Ansible&Terraform </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_10.html	"
-                target="_blank"> Ansible Lab Demo </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_11.html	"
-                target="_blank"> SDN Software Defined Networking </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_12.html	"
-                target="_blank"> Software Defined Architecture - Catalyst Center (formerly DNA Center) </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_13.html	"
-                target="_blank"> Software Defined Architecture - SD-Access </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_14.html	"
-                target="_blank"> Software Defined Architecture - SD-WAN </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_15.html	"
-                target="_blank"> CCNA v1.1: Cisco Meraki </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video38_16.html	"
-                target="_blank"> Further Learning Resources </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil39 : CCNA v1.1: AI Artificial Intelligence&Machine Learning </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video39_1.html	"
-                target="_blank"> CCNA v1.1: Introduction </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video39_2.html	"
-                target="_blank"> CCNA v1.1: AI Artificial Intelligence&Machine Learning Overview </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video39_3.html	"
-                target="_blank"> CCNA v1.1: Generative AI Models </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video39_4.html	"
-                target="_blank"> CCNA v1.1: RAG Retrieval-Augmented Generation </a></li>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video39_5.html	"
-                target="_blank"> CCNA v1.1: Cisco AIOps Products </a></li>
-        <strong>  <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/	"
-                    target="_blank">
-                    Neil40 : BONUS! Recommended Practice Tests </a></li> </strong>
-         <li><a href="	https://learning.oreilly.com/library/view/cisco-ccna-200-301/9781789130089/video40_1.html	"
-                target="_blank"> BONUS! Recommended Practice Tests </a></li>
-    </ul>
+                Neil-03: Host to Host Communications 6 lectures • 30min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=cTCMR2MrY40&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=10&pp=iAQBsAQB"
+                        target="_blank">12 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=B85Il_v6l0U&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=11&pp=iAQBsAQB"
+                        target="_blank">13 A Very Basic Introduction to Networking</a><br>
+                <a href="https://www.youtube.com/watch?v=LY9EyLEmzRw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=12&pp=iAQBsAQB"
+                        target="_blank">14 The OSI Reference Model Overview</a><br>
+                <a href="https://www.youtube.com/watch?v=3r2RO2nAw-g&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=13&pp=iAQBsAQB"
+                        target="_blank">15 The TCPIP Stack</a><br>
+                <a href="https://www.youtube.com/watch?v=gsz63WxrS5A&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=14&pp=iAQBsAQB"
+                        target="_blank">16 The Upper OSI Layers</a><br>
+                <a href="https://www.youtube.com/watch?v=v98ttMu_wK4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=15&pp=iAQBsAQB"
+                        target="_blank">17 The Lower OSI Layers</a><br>
 
 
+
+
+
+                Neil-04: The Cisco IOS Operating System 8 lectures • 59 min 3
+                <br>
+
+
+
+                <a href="https://www.youtube.com/watch?v=O5o-BCOQpeE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=16&pp=iAQBsAQB"
+                        target="_blank">18 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=fKxgk7lTFc8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=17&pp=iAQBsAQB"
+                        target="_blank">19 Cisco Operating Systems</a><br>
+                <a href="https://www.youtube.com/watch?v=NokMPX7a470&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=18&pp=iAQBsAQB"
+                        target="_blank">20 Connecting to a Cisco Device over the network</a><br>
+                <a href="https://www.youtube.com/watch?v=-HPk_xJp4qc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=19&pp=iAQBsAQB"
+                        target="_blank">21 Making the Initial Connection to a Cisco Device</a><br>
+                <a href="https://www.youtube.com/watch?v=qAyMPMXCkbI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=20&pp=iAQBsAQB"
+                        target="_blank">22 Navigating the Cisco IOS Operating System Part 1</a><br>
+                <a href="https://www.youtube.com/watch?v=mwjPNu8seIM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=21&pp=iAQBsAQB"
+                        target="_blank">23 Navigating the Cisco IOS Operating System Part 2</a><br>
+                <a href="https://www.youtube.com/watch?v=gFRc7tv0b28&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=22&pp=iAQBsAQB"
+                        target="_blank">24 Cisco IOS Configuration Management</a><br>
+
+
+                Neil-05: OSI Layer 4 - The Transport Layer 2 lectures • 13min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=oVBQ0Tt7KI8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=23&pp=iAQBsAQB"
+                        target="_blank">26 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=NXibhv8lTtE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=24&pp=iAQBsAQB"
+                        target="_blank">27 The Transport Layer Header TCP and UDP</a><br>
+
+                Neil-06: OSI Layer 3 - The Network Layer 8 lectures • 54min 3
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=ktYXYKUvI-4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=25&pp=iAQBsAQB"
+                        target="_blank">28 Introduction </a><br>
+                <a href="https://www.youtube.com/watch?v=0BDG0i08bYQ&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=26&pp=iAQBsAQB"
+                        target="_blank">29 The IP Header</a><br>
+                <a href="https://www.youtube.com/watch?v=fI7U4liv9Jc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=27&pp=iAQBsAQB"
+                        target="_blank">30 Unicast Broadcast and Multicast Traffic</a><br>
+                <a href="https://www.youtube.com/watch?v=AgpSys7ml8Q&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=28&pp=iAQBsAQB"
+                        target="_blank">31 How to Count in Binary</a><br>
+                <a href="https://www.youtube.com/watch?v=ij0bjTZ4MP8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=29&pp=iAQBsAQB"
+                        target="_blank">32 IPv4 Addresses</a><br>
+                <a href="https://www.youtube.com/watch?v=JJpaH4q9KNw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=30&pp=iAQBsAQB"
+                        target="_blank">33 Calculating an IPv4 Address in Binary</a><br>
+                <a href="https://www.youtube.com/watch?v=pNCJGE6MkXs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=31&pp=iAQBsAQB"
+                        target="_blank">34 The Subnet Mask</a><br>
+                <a href="https://www.youtube.com/watch?v=J8JtbS3s-v0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=32&pp=iAQBsAQB"
+                        target="_blank">35 Slash Notation</a><br>
+
+
+
+
+
+                Neil-07: IP Address Classes 4 lectures • 25min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=UUQwEN34ePs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=33&pp=iAQBsAQB"
+                        target="_blank"> 36
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=n1OEcet0m5w&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=34&pp=iAQBsAQB"
+                        target="_blank">37 Class A IP Addresses</a><br>
+                <a href="https://www.youtube.com/watch?v=BFdFy7Lpyo4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=35&pp=iAQBsAQB"
+                        target="_blank">38 IP Address Classes B and C</a><br>
+                <a href="https://www.youtube.com/watch?v=d2YjQ4qYTzc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=36&pp=iAQBsAQB"
+                        target="_blank">39 IP Address Classes D and E</a><br>
+
+
+                Neil-08: Subnetting 16 lectures • 1hr 37min 3
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=OOTRLmJ6_-g&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=37&pp=iAQBsAQB"
+                        target="_blank">
+                        40 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=EA_710ipCvI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=38&pp=iAQBsAQB"
+                        target="_blank">41 CIDR Classless Inter</a><br>
+                <a href="https://www.youtube.com/watch?v=57Rt2DYy8p4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=39&pp=iAQBsAQB"
+                        target="_blank">42 Subnetting Overview</a><br>
+                <a href="https://www.youtube.com/watch?v=fOVGOUtllxo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=40&pp=iAQBsAQB"
+                        target="_blank">43 Subnetting Class C Networks and VLSM</a><br>
+                <a href="https://www.youtube.com/watch?v=hr9F3SvODhI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=41&pp=iAQBsAQB"
+                        target="_blank">44 Subnetting Practice Questions</a><br>
+                <a href="https://www.youtube.com/watch?v=tX95VUqpvAk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=42&pp=iAQBsAQB"
+                        target="_blank">45 Variable Length Subnet Masking Example Part 1</a><br>
+                <a href="https://www.youtube.com/watch?v=HO0eHD5PMOE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=43&pp=iAQBsAQB"
+                        target="_blank">46 Variable Length Subnet Masking Example Part 2</a><br>
+                <a href="https://www.youtube.com/watch?v=iwZuvkWE2Mo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=44&pp=iAQBsAQB"
+                        target="_blank">47 Subnetting Large Networks Part 1</a><br>
+                <a href="https://www.youtube.com/watch?v=hUa8tActfBg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=45&pp=iAQBsAQB"
+                        target="_blank">48 Subnetting Large Networks Part 2</a><br>
+                <a href="https://www.youtube.com/watch?v=dE0tnre3Tao&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=46&pp=iAQBsAQB"
+                        target="_blank">51 Private IP Addresses Part 1</a><br>
+                <a href="https://www.youtube.com/watch?v=IeKpS50RCOQ&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=47&pp=iAQBsAQB"
+                        target="_blank">52 Private IP Addresses Part 2</a><br>
+                <a href="https://www.youtube.com/watch?v=B2yabinCwoY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=48&pp=iAQBsAQB"
+                        target="_blank">54 Where to Get More Subnetting Practice</a><br>
+
+
+                Neil-09: OSI Layer 2 - The Datalink 2 lectures • 11min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=eHlZY1NJI8Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=49&pp=iAQBsAQB"
+                        target="_blank">
+                        56
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=fS4wE8fQKks&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=50&pp=iAQBsAQB"
+                        target="_blank">57 Local Area Network Layer 2</a><br>
+
+                Neil-10: OSI Layer 1 - The Physical 2 lectures • 13min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=wMr-XdQ987I&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=51&pp=iAQBsAQB"
+                        target="_blank"> 58
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=YjaA-fKVktM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=52&pp=iAQBsAQB"
+                        target="_blank">59 Ethernet Connection Media</a><br>
+
+                Neil-11: Cisco Device Functions 6 lectures - 24min 3
+                <br>
+                <a href="https://www.youtube.com/watch?v=B2d_cNk1OSU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=53&pp=iAQBsAQB"
+                        target="_blank"> 60
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=3pLYyGOGM6k&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=54&pp=iAQBsAQB"
+                        target="_blank">61 Switches vs Hubs</a><br>
+                <a href="https://www.youtube.com/watch?v=dY0Gt29HYWU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=55&pp=iAQBsAQB"
+                        target="_blank">62 Switch Operation</a><br>
+                <a href="https://www.youtube.com/watch?v=4Bw94V_AGHk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=56&pp=iAQBsAQB"
+                        target="_blank">63 Routers</a><br>
+                <a href="https://www.youtube.com/watch?v=f5pQ7MvURDs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=57&pp=iAQBsAQB"
+                        target="_blank">64 Other Cisco Devices</a><br>
+
+                Neil-12: The Life of a Packet 8 lectures • 57min 4
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=PPnUhVKoQ_U&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=58&pp=iAQBsAQB"
+                        target="_blank">66
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=FxSg8aNZG7A&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=59&pp=iAQBsAQB"
+                        target="_blank">67 DNS The Domain Name System</a><br>
+                <a href="https://www.youtube.com/watch?v=0OjuXl6KuSg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=60&pp=iAQBsAQB"
+                        target="_blank">68 DNS on Cisco Routers</a><br>
+                <a href="https://www.youtube.com/watch?v=QkZ-t3muwGs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=61&pp=iAQBsAQB"
+                        target="_blank">69 ARP Address Resolution Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=ZB9KVC2RPTc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=62&pp=iAQBsAQB"
+                        target="_blank">70 ARP for Routed Traffic</a><br>
+                <a href="https://www.youtube.com/watch?v=lId4ihd_M-A&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=63&pp=iAQBsAQB"
+                        target="_blank">71 Life of a Packet Example Part 1</a><br>
+                <a href="https://www.youtube.com/watch?v=BC8vELfygu0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=64&pp=iAQBsAQB"
+                        target="_blank">72 Life of a Packet Example Part 2</a><br>
+
+                Neil-13: The Cisco Troubleshooting Methodology 4 lectures • 19min 4
+                <br>
+
+                <a href="https://www.youtube.com/watch?v=Tzk0dx27lfg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=65&pp=iAQBsAQB"
+                        target="_blank">74
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=N9Sj6tk982Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=66&pp=iAQBsAQB"
+                        target="_blank">75 The Cisco Troubleshooting Methodology</a><br>
+                <a href="https://www.youtube.com/watch?v=RKCfv16_TDk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=67&pp=iAQBsAQB"
+                        target="_blank">76 Cisco Troubleshooting Methodology</a><br>
+
+                Neil-14: Cisco Router Switch Basics 8 lectures • 55min 4
+                <br>
+                <a href="https://www.youtube.com/watch?v=r-POwV2-028&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=68&pp=iAQBsAQB"
+                        target="_blank"> 78
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=D5VmXaEjR_w&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=69&pp=iAQBsAQB"
+                        target="_blank">79 Basic Router and Switch Configuration</a><br>
+                <a href="https://www.youtube.com/watch?v=wzhO23L-U5U&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=70&pp=iAQBsAQB"
+                        target="_blank">80 The Setup Wizard</a><br>
+                <a href="https://www.youtube.com/watch?v=MYRibHR7ISE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=71&pp=iAQBsAQB"
+                        target="_blank">81 Speed and Duplex Settings</a><br>
+                <a href="https://www.youtube.com/watch?v=H_D9BIoaDl4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=72&pp=iAQBsAQB"
+                        target="_blank">82 CDP and LLDP</a><br>
+                <a href="https://www.youtube.com/watch?v=RJAiFdLEklM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=73&pp=iAQBsAQB"
+                        target="_blank">83 Basic Layer 1 and 2 Troubleshooting</a><br>
+                <a href="https://www.youtube.com/watch?v=z2Fl3FQljXw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=74&pp=iAQBsAQB"
+                        target="_blank">84 Basic Layer 1 and 2 Troubleshooting</a><br>
+
+                Neil-15: Cisco Device Management 8 lectures • 47min 4
+                <br>
+                <a href="https://www.youtube.com/watch?v=FGrctOiOB-0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=75&pp=iAQBsAQB"
+                        target="_blank"> 86
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=D92zpnCGaDc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=76&pp=iAQBsAQB"
+                        target="_blank">87 The Boot Up Process</a><br>
+                <a href="https://www.youtube.com/watch?v=qhank8iV_tk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=77&pp=iAQBsAQB"
+                        target="_blank">88 The Boot Up Process Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=QdV5fw3SiQI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=78&pp=iAQBsAQB"
+                        target="_blank">89 Factory Reset and Password Recovery</a><br>
+                <a href="https://www.youtube.com/watch?v=avK6XQm2cwY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=79&pp=iAQBsAQB"
+                        target="_blank">90 Password Recovery Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=M7F_8Dxh3vc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=80&pp=iAQBsAQB"
+                        target="_blank">91 Backing up the System Image and Configuration</a><br>
+                <a href="https://www.youtube.com/watch?v=ndMwqB68Q7E&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=81&pp=iAQBsAQB"
+                        target="_blank">92 Upgrading IOS</a><br>
+
+                Neil-16: Routing Fundamentals 9 lectures - 1hr 4min 4
+                <br>
+                <a href="https://www.youtube.com/watch?v=mXDbOJvbeeY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=82&pp=iAQBsAQB"
+                        target="_blank"> 94
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=B80urguBjFw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=83&pp=iAQBsAQB"
+                        target="_blank">95 Connected and Local Routes</a><br>
+                <a href="https://www.youtube.com/watch?v=5hSUYd-2WGA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=84&pp=iAQBsAQB"
+                        target="_blank">96 Connected and Local Routes Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=e0-4nMHeV7s&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=85&pp=iAQBsAQB"
+                        target="_blank">97 Static Routes</a><br>
+                <a href="https://www.youtube.com/watch?v=0zcGODRxTPg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=86&pp=iAQBsAQB"
+                        target="_blank">98 Static Routes Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=j_5AM37h4Sk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=87&pp=iAQBsAQB"
+                        target="_blank">99 Summarisation Longest Prefix Match and Default Routes</a><br>
+                <a href="https://www.youtube.com/watch?v=832xYwPJmog&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=88&pp=iAQBsAQB"
+                        target="_blank">100 Summary Routes and Longest Prefix Match Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=Rfma3ovXFaI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=89&pp=iAQBsAQB"
+                        target="_blank">101 Default Routes and Load Balancing Lab Demo</a><br>
+
+
+                Neil-17: Dynamic Routing Protocols 16 lectures - 2hr 22min
+                <br>
+                <a href="https://www.youtube.com/watch?v=lxWHfl0WEi4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=90&pp=iAQBsAQB"
+                        target="_blank"> 103
+                        Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=VpHckf_RStk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=91&pp=iAQBsAQB"
+                        target="_blank">104 Dynamic Routing Protocols vs Static Routes</a><br>
+                <a href="https://www.youtube.com/watch?v=Vjx99acMGPw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=92&pp=iAQBsAQB"
+                        target="_blank">105 Dynamic Routing Protocols Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=HL-N3Iydb7c&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=93&pp=iAQBsAQB"
+                        target="_blank">106 Routing Protocol Types</a><br>
+                <a href="https://www.youtube.com/watch?v=fJqXOp_BadE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=94&pp=iAQBsAQB"
+                        target="_blank">107 Routing Protocol Types Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=TWIIpf4Vm5M&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=95&pp=iAQBsAQB"
+                        target="_blank">108 Routing Protocol Metrics</a><br>
+                <a href="https://www.youtube.com/watch?v=8xOIdAaml2E&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=96&pp=iAQBsAQB"
+                        target="_blank">109 Routing Protocol Metrics Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=UOzxPemfNCU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=97&pp=iAQBsAQB"
+                        target="_blank">110 Equal Cost Multi Path</a><br>
+                <a href="https://www.youtube.com/watch?v=sVU01lQiO1o&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=98&pp=iAQBsAQB"
+                        target="_blank">111 Equal Cost Multi Path Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=kt43afjnx3s&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=99&pp=iAQBsAQB"
+                        target="_blank">112 Administrative Distance</a><br>
+                <a href="https://www.youtube.com/watch?v=P_edrcdeUfI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=100&pp=iAQBsAQB"
+                        target="_blank">113 Administrative Distance Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=23Ui-W3Oj2Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=101&pp=iAQBsAQB"
+                        target="_blank">114 Loopback Interfaces</a><br>
+                <a href="https://www.youtube.com/watch?v=_wNvw0ozsnw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=102&pp=iAQBsAQB"
+                        target="_blank">115 Adjacencies and Passive Interfaces</a><br>
+                <a href="https://www.youtube.com/watch?v=4wSQHZcVyGA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=103&pp=iAQBsAQB"
+                        target="_blank">116 Adjacencies and Passive Interfaces Lab Demo</a><br>
+
+
+
+                Neil-18: Connectivity Troubleshooting 3 lectures • 14 min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=NE5UhDlCgc0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=104&pp=iAQBsAQB"
+                        target="_blank">118 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=iMbm4Hsqc14&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=105&pp=iAQBsAQB"
+                        target="_blank">119 Basic Connectivity Troubleshooting</a><br>
+
+                Neil-19: IGP Interior Gateway Protocol Fundamentals 6 lectures • 49min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=Hg0WbINT8kM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=106&pp=iAQBsAQB"
+                        target="_blank">121 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=xf0bGRI88qA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=107&pp=iAQBsAQB"
+                        target="_blank">122 RIP the Routing Information Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=1pNFgUXUxxE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=108&pp=iAQBsAQB"
+                        target="_blank">123 RIP Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=t-JZKS_Z7VY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=109&pp=iAQBsAQB"
+                        target="_blank">124 EIGRP</a><br>
+                <a href="https://www.youtube.com/watch?v=dcJhWbw9MEo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=110&pp=iAQBsAQB"
+                        target="_blank">125 EIGRP Lab Demo</a><br>
+
+                Neil-20: OSPF - Open Shortest Path First 16 lectures • 2hr 28min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=CeOGZbUFZn0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=111&pp=iAQBsAQB"
+                        target="_blank">127 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=WGV_BX96dc4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=112&pp=iAQBsAQB"
+                        target="_blank">128 OSPF Characteristics</a><br>
+                <a href="https://www.youtube.com/watch?v=sUqnFejJ7Kc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=113&pp=iAQBsAQB"
+                        target="_blank">129 OSPF Basic Configuration</a><br>
+                <a href="https://www.youtube.com/watch?v=XCQ060njY_A&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=114&pp=iAQBsAQB"
+                        target="_blank">130 OSPF Basic Configuration Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=6RqIFnVi5GA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=115&pp=iAQBsAQB"
+                        target="_blank">131 OSPF Advanced Topics</a><br>
+                <a href="https://www.youtube.com/watch?v=Y0FW9FOjZnk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=116&pp=iAQBsAQB"
+                        target="_blank">132 OSPF Advanced Topics Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=jebwJxtnasU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=117&pp=iAQBsAQB"
+                        target="_blank">133 OSPF Areas</a><br>
+                <a href="https://www.youtube.com/watch?v=FO4HciflR3I&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=118&pp=iAQBsAQB"
+                        target="_blank">134 OSPF Areas Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=NDDjU-UBb-Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=119&pp=iAQBsAQB"
+                        target="_blank">135 Bandwidth vs Clock Rate and Speed</a><br>
+                <a href="https://www.youtube.com/watch?v=IWBDSFqFpWk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=120&pp=iAQBsAQB"
+                        target="_blank">136 OSPF Cost Metric</a><br>
+                <a href="https://www.youtube.com/watch?v=fCBZa6FzNdc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=121&pp=iAQBsAQB"
+                        target="_blank">137 OSPF Cost Metric Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=Y5i99RNWXco&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=122&pp=iAQBsAQB"
+                        target="_blank">138 OSPF Adjacencies</a><br>
+                <a href="https://www.youtube.com/watch?v=OaAApYtL9-U&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=123&pp=iAQBsAQB"
+                        target="_blank">139 OSPF Adjacencies Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=9WEz8n8GQpI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=124&pp=iAQBsAQB"
+                        target="_blank">140 OSPF DR and BDR Designated Routers</a><br>
+                <a href="https://www.youtube.com/watch?v=YOcvRm7w6IE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=125&pp=iAQBsAQB"
+                        target="_blank">141 OSPF DR and BDR Lab Demo</a><br>
+
+                Neil-21: VLANs Virtual Local Area Networks 12 lectures • 1hr 33min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=zV-53S4vP9k&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=126&pp=iAQBsAQB"
+                        target="_blank">143 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=zwBWZ5mfZDM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=127&pp=iAQBsAQB"
+                        target="_blank">144 Campus LAN Design</a><br>
+                <a href="https://www.youtube.com/watch?v=5Hu-0jzKViw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=128&pp=iAQBsAQB"
+                        target="_blank">145 Spine</a><br>
+                <a href="https://www.youtube.com/watch?v=2HdRaqfBxms&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=129&pp=iAQBsAQB"
+                        target="_blank">146 Why we have VLANs</a><br>
+                <a href="https://www.youtube.com/watch?v=QbgI7Kt3eVw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=130&pp=iAQBsAQB"
+                        target="_blank">148 VLAN Access Ports Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=TUkyLi6vHnU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=131&pp=iAQBsAQB"
+                        target="_blank">145 Spine</a><br>
+                <a href="https://www.youtube.com/watch?v=KsR8LTTkW20&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=132&pp=iAQBsAQB"
+                        target="_blank">146 Why we have VLANs</a><br>
+                <a href="https://www.youtube.com/watch?v=1quMuxHZGWk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=133&pp=iAQBsAQB"
+                        target="_blank">147 VLAN Access Ports</a><br>
+                <a href="https://www.youtube.com/watch?v=RXmO-5nBfG4&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=134&pp=iAQBsAQB"
+                        target="_blank">148 VLAN Access Ports Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=8LgjlaXyQkg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=135&pp=iAQBsAQB"
+                        target="_blank">149 VLAN Trunk Ports</a><br>
+                <a href="https://www.youtube.com/watch?v=yPY1Fdjvz3E&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=136&pp=iAQBsAQB"
+                        target="_blank">150 VLAN Trunk Ports Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=XzFTDtFd12A&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=137&pp=iAQBsAQB"
+                        target="_blank">151 DTP Dynamic Trunking Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=VmsbKNqRv10&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=138&pp=iAQBsAQB"
+                        target="_blank">152 VTP VLAN Trunking Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=pThb2Pi85nA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=139&pp=iAQBsAQB"
+                        target="_blank">153 VTP Lab Demo</a><br>
+                Neil-22: Inter-VLAN Routing 6 lectures • 43min<br>
+
+
+
+                <a href="https://www.youtube.com/watch?v=wrmyV8E6skw&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=140&pp=iAQBsAQB"
+                        target="_blank">155 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=XWKgVUrYenk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=141&pp=iAQBsAQB"
+                        target="_blank">156 Router with Separate Interfaces</a><br>
+                <a href="https://www.youtube.com/watch?v=4kSBjGx6A8c&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=142&pp=iAQBsAQB"
+                        target="_blank">157 Router on a Stick</a><br>
+                <a href="https://www.youtube.com/watch?v=92jxnlxQVDY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=143&pp=iAQBsAQB"
+                        target="_blank">158 Layer 3 Switch</a><br>
+                <a href="https://www.youtube.com/watch?v=HF1K3DQerDY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=144&pp=iAQBsAQB"
+                        target="_blank">159 Layer 3 Switch Lab Demo</a><br>
+
+                Neil-23: DHCP - Dynamic Host Configuration Protocol 7 lectures • 32min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=Hlw7XijNiEE&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=145&pp=iAQBsAQB"
+                        target="_blank">161 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=9Y2yw3PuY68&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=146&pp=iAQBsAQB"
+                        target="_blank">162 DHCP Dynamic Host Configuration Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=QDIj5uHx5dc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=147&pp=iAQBsAQB"
+                        target="_blank">163 Cisco DHCP Server</a><br>
+                <a href="https://www.youtube.com/watch?v=0cbtiI1nNGo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=148&pp=iAQBsAQB"
+                        target="_blank">164 External DHCP Server</a><br>
+                <a href="https://www.youtube.com/watch?v=-NAwQt3ynC8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=149&pp=iAQBsAQB"
+                        target="_blank">165 Windows Mac and Linux client IP settings</a><br>
+                <a href="https://www.youtube.com/watch?v=X8lwEXqr5Qs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=150&pp=iAQBsAQB"
+                        target="_blank">166 Cisco DHCP Client</a><br>
+
+                Neil-24: HSRP - Hot Standby Router Protocol 6 lectures • 38min<br>
+
+
+
+                <a href="https://www.youtube.com/watch?v=sKvzuynHxIo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=151&pp=iAQBsAQB"
+                        target="_blank">168 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=Ncfe79OA0Ug&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=152&pp=iAQBsAQB"
+                        target="_blank">169 Network Redundancy</a><br>
+                <a href="https://www.youtube.com/watch?v=uWTbz6IoNFI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=153&pp=iAQBsAQB"
+                        target="_blank">170 FHRP First Hop Redundancy Protocols</a><br>
+                <a href="https://www.youtube.com/watch?v=a7l0kMsReqc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=154&pp=iAQBsAQB"
+                        target="_blank">171 HSRP Hot Standby Router Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=GyzYnYU_mUU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=155&pp=iAQBsAQB"
+                        target="_blank">172 HSRP Advanced Topics</a><br>
+
+                Neil-25: STP - Spanning Tree Protocol 19 lectures • 3hr 20min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=TlY1znL7LTc&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=156&pp=iAQBsAQB"
+                        target="_blank">174 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=TBkXYEXRSEM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=157&pp=iAQBsAQB"
+                        target="_blank">175 Layer 3 Path Selection and Loop Prevention Review</a><br>
+                <a href="https://www.youtube.com/watch?v=ADLtCJifsQY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=158&pp=iAQBsAQB"
+                        target="_blank">176 Why we have the Spanning Tree Protocol</a><br>
+                <a href="https://www.youtube.com/watch?v=UQpnlM5INBU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=159&pp=iAQBsAQB"
+                        target="_blank">177 Spanning Tree Terminology</a><br>
+                <a href="https://www.youtube.com/watch?v=eHAsyyRbuK8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=160&pp=iAQBsAQB"
+                        target="_blank">178 How Spanning Tree Works</a><br>
+                <a href="https://www.youtube.com/watch?v=a9rPmfFp0CA&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=161&pp=iAQBsAQB"
+                        target="_blank">179 Spanning Tree Versions</a><br>
+                <a href="https://www.youtube.com/watch?v=EyRJ_7y-zPQ&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=162&pp=iAQBsAQB"
+                        target="_blank">180 Verification</a><br>
+                <a href="https://www.youtube.com/watch?v=61knOqwUY6U&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=163&pp=iAQBsAQB"
+                        target="_blank">181 Verification</a><br>
+                <a href="https://www.youtube.com/watch?v=H3lCSbBOjrk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=164&pp=iAQBsAQB"
+                        target="_blank">182 Manipulating the Root Bridge Election</a><br>
+                <a href="https://www.youtube.com/watch?v=VFgFjxT6OYk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=165&pp=iAQBsAQB"
+                        target="_blank">183 Spanning Tree and HSRP Alignment</a><br>
+                <a href="https://www.youtube.com/watch?v=ZkbaHRA1PE8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=166&pp=iAQBsAQB"
+                        target="_blank">184 Portfast BPDU Guard and Root Guard</a><br>
+
+                Neil-26: EtherChannel 8 lectures • 53min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=dKYyhVxdHY8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=167&pp=iAQBsAQB"
+                        target="_blank">187 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=N3fZnt6NkxI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=168&pp=iAQBsAQB"
+                        target="_blank">188 Why we have EtherChannel</a><br>
+                <a href="https://www.youtube.com/watch?v=PCsNt_JPUNM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=169&pp=iAQBsAQB"
+                        target="_blank">189 EtherChannel Load Balancing</a><br>
+                <a href="https://www.youtube.com/watch?v=SDmt4oGdIWk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=170&pp=iAQBsAQB"
+                        target="_blank">190 EtherChannel Protocols and Configuration</a><br>
+                <a href="https://www.youtube.com/watch?v=mUuYd1TSVJ0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=171&pp=iAQBsAQB"
+                        target="_blank">191 EtherChannel Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=sJc_Na7pVog&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=172&pp=iAQBsAQB"
+                        target="_blank">192 StackWise VSS and vPC</a><br>
+                <a href="https://www.youtube.com/watch?v=CHQyqjrwOqY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=173&pp=iAQBsAQB"
+                        target="_blank">193 Layer 3 EtherChannel</a><br>
+
+                Neil-27: Switch Security 9 lectures • 54min<br>
+
+
+                <a href="https://www.youtube.com/watch?v=zFXdI3XFJX8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=174&pp=iAQBsAQB"
+                        target="_blank">195 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=A6SLfUvgp0g&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=175&pp=iAQBsAQB"
+                        target="_blank">196 DHCP Snooping</a><br>
+                <a href="https://www.youtube.com/watch?v=W5aTcKaMD5w&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=176&pp=iAQBsAQB"
+                        target="_blank">197 DAI Dynamic ARP Inspection</a><br>
+                <a href="https://www.youtube.com/watch?v=-_6dWqUpcU0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=177&pp=iAQBsAQB"
+                        target="_blank">198 8021X Identity Based Networking</a><br>
+                <a href="https://www.youtube.com/watch?v=_h_hVavhpn8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=178&pp=iAQBsAQB"
+                        target="_blank">199 Preventing Unauthorised Devices with Port Security</a><br>
+                <a href="https://www.youtube.com/watch?v=zkHNTcHnhBU&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=179&pp=iAQBsAQB"
+                        target="_blank">200 Preventing Unauthorised Devices with Port Security Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=b_Oo67UOOpg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=180&pp=iAQBsAQB"
+                        target="_blank">201 Locking Ports to Hosts with Port Security</a><br>
+                <a href="https://www.youtube.com/watch?v=YX7jIZo5zqM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=181&pp=iAQBsAQB"
+                        target="_blank">202 Locking Ports to Hosts with Port Security Lab Demo</a><br>
+
+
+                Neil-28: ACLs - Access Control Lists 8 lectures • 1hr 9min<br>
+
+
+
+
+                <a href="https://www.youtube.com/watch?v=QQ1Mj95Ht6g&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=182&pp=iAQBsAQB"
+                        target="_blank">204 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=8Rd6F41mNMs&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=183&pp=iAQBsAQB"
+                        target="_blank">205 Access Control Lists Overview</a><br>
+                <a href="https://www.youtube.com/watch?v=2VnC1DR5NT0&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=184&pp=iAQBsAQB"
+                        target="_blank">206 Standard Extended and Named ACLs</a><br>
+                <a href="https://www.youtube.com/watch?v=2ganNIPl6Pk&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=185&pp=iAQBsAQB"
+                        target="_blank">207 ACL Syntax</a><br>
+                <a href="https://www.youtube.com/watch?v=RyFB9H41iJM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=186&pp=iAQBsAQB"
+                        target="_blank">208 ACL Operations</a><br>
+                <a href="https://www.youtube.com/watch?v=OHIj5HdyabQ&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=187&pp=iAQBsAQB"
+                        target="_blank">209 Numbered ACLs Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=JXqPggoLztM&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=188&pp=iAQBsAQB"
+                        target="_blank">210 Named ACLs Lab Demo</a><br>
+
+
+                Neil30: IPv6 Addressing&Routing 12 lectures • 1hr 45min<br>
+
+
+
+
+                <a href="https://www.youtube.com/watch?v=vBpnH6qjN7Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=189&pp=iAQBsAQB"
+                        target="_blank">212 Introduction</a><br>
+                <a href="https://www.youtube.com/watch?v=Xp3NOl1uoQY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=190&pp=iAQBsAQB"
+                        target="_blank">213 IPv4 Address Exhaustion and NAT</a><br>
+                <a href="https://www.youtube.com/watch?v=gQLIubXEBeg&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=191&pp=iAQBsAQB"
+                        target="_blank">214 Static NAT</a><br>
+                <a href="https://www.youtube.com/watch?v=q1Mg57pHa_8&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=192&pp=iAQBsAQB"
+                        target="_blank">215 NAT Translations</a><br>
+                <a href="https://www.youtube.com/watch?v=-A7i0c0Vy6w&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=193&pp=iAQBsAQB"
+                        target="_blank">216 Static NAT Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=CS28KDNMJWI&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=194&pp=iAQBsAQB"
+                        target="_blank">217 Dynamic NAT</a><br>
+                <a href="https://www.youtube.com/watch?v=qD-Vdh4OVpo&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=195&pp=iAQBsAQB"
+                        target="_blank">218 Dynamic NAT Lab Demo</a><br>
+                <a href="https://www.youtube.com/watch?v=PzsUsspAQoY&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=196&pp=iAQBsAQB"
+                        target="_blank">219 PAT Port Address Translation</a><br>
+                <a href="https://www.youtube.com/watch?v=ZqrsWesYw7Y&list=PLt4zoIx-WdZUN4raj60jfgCTAMbLKqGZD&index=197&pp=iAQBsAQB"
+                        target="_blank">220 PAT Port Address Translation Lab Demo</a><br>
+                Neil-31 : WAN - Wide Area Networks<br>
+                Neil-32 : The Security Threat Landscape<br>
+                Neil-33 : Cisco Device Security<br>
+                Neil-34 : Network Device Management<br>
+                Neil-35 : QoS Quality of Service<br>
+                Neil-36 : Cloud Computing<br>
+                Neil-37 : Wireless Networking Fundamentals<br>
+                Neil-38 : Network Automation&Programmability<br>
+                Neil-39 : CCNA v1.1: AI Artificial Intelligence&Machine Learning<br>
+                Neil40 : BONUS! Recommended Practice Tests<br>
+
+
+
+        </div>
+        <div class="footerPage">
+                <br>
+        </div>
+
+
+
+        <div class="foot">
+                <a href="#"> with ❤ </a>
+        </div>
 
 </body>
 
