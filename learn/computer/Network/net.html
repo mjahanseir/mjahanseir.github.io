@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <title>Networking Concepts Academic</title>
+  <link rel="icon" href="../pic/net.ico" type="image/x-icon" />
+
+  <style>
+    body {
+      background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+      margin: auto auto;
+      width: 85%;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(135deg, #f087de 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(225deg, #f087de 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(315deg, #f087de 25%, transparent 25%) 0px 0/ 32px 32px,
+        linear-gradient(45deg, #f087de 25%, #ffffff 25%) 0px 0/ 32px 32px;
+    }
+
+    .collapsible:hover {
+      background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
+          transparent 100%);
+    }
+
+    a {
+      box-shadow: inset 0 0 0 0 #d204a5;
+      font-size: 1.2rem;
+      color: #3f0435;
+      font-size: 1rem;
+      padding: 0 1rem;
+      transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    }
+
+    a:hover {
+      box-shadow: inset 1000px 0 0 0 #d204a5;
+      color: white;
+      padding: 0 1rem;
+    }
+
+    .cscontent {
+      padding: 0px 10%;
+    }
+
+    strong:hover {
+      background-color: rgb(255, 30, 169);
+      color: whitesmoke;
+    }
+
+    .cscontent a {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    h4 {
+      background-color: #d20483;
+      color: whitesmoke;
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    h5 {
+
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 85%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .MenuLabel {
+      background-color: black;
+      font-size: 1.8rem;
+      color: whitesmoke;
+      text-align: center;
+      margin: 0;
+      padding: 0.2rem;
+    }
+
+    .pageContent {
+      background-color: whitesmoke;
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+
+    #myBtn {
+      background-color: #d20483;
+    }
+
+    .footerLinks {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footerLinks a {
+      font-size: 0.7rem;
+      font-family: monospace;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 0.3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a target="_blank" href="..\index.html">Back to Home</a> <br />
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <div class="navbar">
+    <a style="background-color: #f12ab6" href="../../index.html">Home</a>
+    <a target="_blank" href="../Microsoft/azure.html">Azure</a>
+    <a target="_blank" href="../cisco.html">CISCO</a>
+    <a target="_blank" href="../../work.html">work</a>
+  </div>
+
+  <div class="MenuLabel">Networking Concepts Academic</div>
+
+  <!----------------------------------------------      Region 1        -------------------------------------------------->
+
+  <p style="background-color: rgb(252, 239, 217);">
+    <a href="https://docs.google.com/document/d/16SODK4ZmP31E1JSG2Ku3dsx9hVuqVExp/edit" target="_blank"> Network <img
+        src="../../pic/doc.png"> </a>
+  </p>
+  <h4 class="ciscoColor collapsible">شبکه های کامپیوتری - دانشگاه شریف - پاکروان</h4>
+  <div class="fa content">
+    <a href="https://drive.google.com/drive/u/2/folders/1SLYHfa8btuWdXk0U8P5-SO0tP4zIwxWc" target="_blank"> PDF <img
+        src="../../pic/pdflogo.png"></a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=j1u0yToTpFo&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=1&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه اول تاریخچه شبکه </a><br>
+    <a href="https://www.youtube.com/watch?v=ry6hQs37QOI&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=2&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه دوم ساختار لایه ای شبکه </a><br>
+    <a href="https://www.youtube.com/watch?v=9SYv52RzrAY&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=3&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه هفتم - فیبر در خانه FTTH، ساختار SONET </a><br>
+    <a href="https://www.youtube.com/watch?v=EixBPBR2MAw&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=4&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه چهارم لایه فیزیکی کابل مسی، فیبر نوری، ارتباط بیسیم </a><br>
+    <a href="https://www.youtube.com/watch?v=O9ILFzBLuRw&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=5&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه ششم ساختار تلفن ثابت و ADSL </a><br>
+    <a href="https://www.youtube.com/watch?v=SbdhZHTGSoQ&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=6&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه سوم مدل OSI، مدل TCPIP، معماری اینترنت </a><br>
+    <a href="https://www.youtube.com/watch?v=zcyq7p8DoJo&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=7&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه پنجم لایه فیزیکی ارتباط بیسیم و ماهواره ای </a><br>
+    <a href="https://www.youtube.com/watch?v=4UK6ouOFMYw&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=8&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه هشتم - تلفن همراه GSM, 3G, LTE </a><br>
+    <a href="https://www.youtube.com/watch?v=YWMTPAoG_lg&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=9&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه یازدهم - لایه پیوند داده ها، Go-Back-N و Selective-Repeat </a><br>
+    <a href="https://www.youtube.com/watch?v=BmCDVzOco0A&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=10&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه دهم - لایه پیوند داده ها، Data Link Layer (بخش دوم) </a><br>
+    <a href="https://www.youtube.com/watch?v=pyQ8ZFZ4hfA&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=11&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه نهم - لایه پیوند داده ها، Data Link Layer </a><br>
+    <a href="https://www.youtube.com/watch?v=rkdrubh4aXQ&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=12&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه دوازدهم - مثال هایی از لایه پیوند داده ها، HDLC و ATM </a><br>
+    <a href="https://www.youtube.com/watch?v=mBXAqMPFVKQ&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=13&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه سیزدهم - معرفی لایه MAC با مثالی از ALOHA </a><br>
+    <a href="https://www.youtube.com/watch?v=vryv08Hi2bM&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=14&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه چهاردهم - تکنیک های مختلف لایه MAC </a><br>
+    <a href="https://www.youtube.com/watch?v=Q3oRSaDOrdk&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=15&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه پانزدهم - استاندارد های سری IEEE 802.x و Ethernet </a><br>
+    <a href="https://www.youtube.com/watch?v=RiTFp3Cf2XQ&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=16&pp=gAQBiAQBsAQB"
+      target="_blank">قسمت شانزدهم: استاندارد IEEE 802.5 – ترافیک خود متشابه – شروع مبحث شبکه های بی سیم </a><br>
+    <a href="https://www.youtube.com/watch?v=Xr0sKU0h2Vw&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=17&pp=gAQBiAQBsAQB"
+      target="_blank">قسمت هفدهم: ادامه مبحث شبکه های بی سیم و استاندارد </a><br>
+    <a href="https://www.youtube.com/watch?v=bUt1Df80MOs&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=18&pp=gAQBiAQBsAQB"
+      target="_blank">IEEE 802.11۱۸قسمت هجدهم: استاندارد 802.16 و 802.15 – وایمکس – بلوتوث – سویچینگ لایه MAC و Bridge
+    </a><br>
+    <a href="https://www.youtube.com/watch?v=Xgt0U-w9fug&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=19&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه نوزدهم - لایه شبکه و مسیریابی </a><br>
+    <a href="https://www.youtube.com/watch?v=s_Ayc5AOUUk&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=20&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیستم - ادامه مبحث مسیریابی </a><br>
+    <a href="https://www.youtube.com/watch?v=JaPhiTlPEqE&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=21&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و یکم - مسیریابی - Broadcast, Multicast, Ad-Hoc </a><br>
+    <a href="https://www.youtube.com/watch?v=mmlY3nRfamA&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=22&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و دوم - Congestion Control, Jitter Control, QoS </a><br>
+    <a href="https://www.youtube.com/watch?v=5qvisymky_A&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=23&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و سوم - Traffic Shaping, Admission Control, Internet </a><br>
+    <a href="https://www.youtube.com/watch?v=lvu974522c4&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=24&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و چهارم - IP, NAT </a><br>
+    <a href="https://www.youtube.com/watch?v=bqo0wiY21Iw&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=25&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و پنجم - مسیریابی در اینترنت، IPv6, مسیریابی در ATM, ATM QoS </a><br>
+    <a href="https://www.youtube.com/watch?v=KUEjITJJhPM&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=26&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و ششم - Transport Layer, TCP, Congestion Control </a><br>
+    <a href="https://www.youtube.com/watch?v=oeFnLiPJM6Q&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=27&pp=gAQBiAQBsAQB"
+      target="_blank">جلسه بیست و هفتم - TCP, UDP, RTP </a><br>
+    <a href="https://www.youtube.com/watch?v=zWmo3ejmGxg&list=PLt4zoIx-WdZU5fS1NkdtowhO0K4wZnS-g&index=28&pp=gAQBiAQBsAQB"
+      target="_blank">قسمت بیست و هشتم: لایه اپلیکیشن (Application Layer) </a><br>
+
+
+  </div>
+  <h4 class="ciscoColor collapsible">شبکه مخابرات داده پیشرفته - دانشگاه شریف - پاکروان</h4>
+  <div class="fa content">
+
+    <a href="https://www.youtube.com/watch?v=oLKAVkvNfJk&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=1"
+      target="_blank">
+      قسمت اول: معرفی درس و مقدمه ای بر سینکرانوس دیجیتال هیرارکی (SDH) در سیستم های مخابراتی
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=qhZpnaXiyRI&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=2"
+      target="_blank">
+      قسمت دوم: آشنایی با نگاشت در سینکرانوس دیجیتال هیرارکی (SDH)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=KMA0g_eRMyY&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=3"
+      target="_blank">
+      قسمت سوم: آشنایی با اترنت (Ethernet) و پروتکل های اترنت بر روی سیستم سینکرانوس دیجیتال هیرارکی (SDH)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=0lyAg81IxIM&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=4"
+      target="_blank">
+      قسمت چهارم: آشنایی با اترنت بر روی سیستم SDH و پروتکل LDH
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=UZ6hFJfsBGw&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=5"
+      target="_blank">
+      قسمت پنجم: خدمات شبکه WAN بر روی اترنت
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=zNQJ3L9koMM&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=6"
+      target="_blank">
+      قسمت ششم: آشنایی با شبکه های نوری ، هماهنگ سازی و تغییر در تاخیر بسته (Jitter)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=m5iB29e0zQg&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=7"
+      target="_blank">
+      قسمت هفتم: حلقه زمان بندی و تغییر در تاخیر بسته (Jitter)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=GCzqd_Hjtwc&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=8"
+      target=" _blank">
+      قسمت هشتم: حفاظت در شبکه های نوری
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=IYPSXZuBH-A&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=9"
+      target="_blank">
+      قسمت نهم: استراتژی های حفاظت در حلقه ها
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=8TTOZyb1Lzg&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=10"
+      target="_blank">
+      قسمت دهم: آشنایی با GPON و EPON در شبکه های دسترسی نوری
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=_FtLtLUGnyE&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=11"
+      target="_blank">
+      قسمت یازدهم: آشنایی با فیبر و لیزر
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=X-yQj0CiYLM&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=12"
+      target="_blank">
+      قسمت دوازدهم: آشنایی با شبکه های تمام نوری
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=nMU4qCQBhNs&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=13"
+      target="_blank">
+      قسمت سیزدهم: آشنایی با شبکه های تمام نوری
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=6eFcfn1K4kQ&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=14"
+      target="_blank">
+      قسمت چهاردهم: آشنایی با PSTN در شبکه های تلفنی
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=hYaJsn-4N2c&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=15"
+      target="_blank">
+      قسمت پانزدهم: آشنایی با PSTN در شبکه های تلفنی
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=mqQ1vw7P43U&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=16"
+      target="_blank">
+      قسمت شانزدهم: تحول ها در انواع شبکه
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=fpU23AZRH7g&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=17"
+      target="_blank">
+      قسمت هفدهم: آشنایی با شبکه های نسل آینده (NGN)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=5f0rz3LgIXk&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=20"
+      target="_blank">
+      قسمت هجدهم: کیفیت خدمات (QoS) در شبکه ها
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=T40Pg8CCx7c&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=19"
+      target="_blank">
+      قسمت نوزدهم: مدیریت بافر در کیفیت خدمات (QoS)
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=7WKlbhMl6NQ&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=20"
+      target="_blank">
+      قسمت بیستم: بهبنه سازی پروتکل TCP
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=ksVCSR323oM&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=21"
+      target="_blank">
+      قسمت بیست و یکم: کیفیت خدمات در شبکه پروتکل اینترنت (IP) و شبکه های MPLS
+    </a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=JJhY7o58-ls&list=PLt4zoIx-WdZV3GfsMPnDwUe0dl05pIdiS&index=22"
+      target="_blank">
+      قسمت بیست و دوم: آشنایی با شبکه نرم افزار محور (SDN)
+    </a>
+    <br>
+
+  </div>
+
+
+  </div>
+  <h4 class="ciscoColor collapsible"> مهندسی اینترنت از دانشگاه تهران - دکتر رامتین خسروی </h4>
+  <div class="fa content">
+
+    <a href="#" target="_blank">
+      قسمت اول: مقدمه درس
+    </a>
+    <br>
+    <a href="#" target="_blank">
+      قسمت دوم: آشنایی با مفاهیم وب و زبان جاوا
+    </a>
+    <br>
+    <a href="#" target="_blank">
+      قسمت سوم: آشنایی با برنامه نویسی سوکت (Socket Programming)
+    </a>
+    <br>
+    <a href="#" target="_blank">
+      قسمت چهارم: آشنایی با HTTP Server
+      <a href="#" target="_blank">
+      </a>
+      <br>
+
+      <a href="#" target="_blank">
+        قسمت پنجم: ادامه بحث وب سرور
+      </a>
+      <br>
+
+
+      <a href="#" target="_blank">
+        قسمت ششم – تزریق وابستگی (Dependency Injection)
+      </a>
+      <br>
+
+
+      <a href="#" target="_blank">
+        قسمت هفتم: Reflection
+      </a>
+      <br>
+
+
+      <a href="#" target="_blank">
+        قسمت هشتم – آشنایی با برنامه نویسی همروندی
+      </a>
+      <br>
+
+
+
+      <a href="#" target="_blank">قسمت نهم: مقدمه ای بر تکنولوژی HTML و CSS
+      </a>
+
+      <br>
+
+
+      <a href="#" target="_blank">قسمت دهم: مقدمه ای بر Servlet ها و JSP ها
+      </a>
+
+      <br>
+
+
+      <a href="#" target="_blank">قسمت یازدهم: آشنایی با برنامه های وب با JSP
+      </a>
+
+      <br>
+
+
+      <a href="#" target="_blank"> قسمت دوازدهم: رسیدگی به خطا ها
+      </a>
+
+      <br>
+
+
+      <a href="#" target="_blank">قسمت سیزدهم: آشنایی با الگوی MVC
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت چهاردهم: مقدمه ای بر جاوا اسکریپت بخش اول
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت پانزدهم: مقدمه ای بر جاوا اسکریپت بخش دوم
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت شانزدهم: مقدمه ای بر جاوا اسکریپت بخش سوم
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت هفدهم: آشنایی با برنامه‌ های غنی اینترنتی (Rich Internet Applications)
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت هجدهم: آشنایی با Angular JS بخش اول
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت نوزدهم: آشنایی با Angular JS بخش دوم
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست: آشنایی با Angular JS بخش سوم
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و یکم: آشنایی با معماری اریه ای
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و دوم: ارتباط با پایگاه داده ها از طریق JDBC
+
+      </a>
+      <br>
+
+
+      <a href="#" target="_blank"> قسمت بیست و سوم: آشنایی با نگاشت اشیا به رابطه ها
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و چهارم: مقدمه ای بر هایبرنیت
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و پنجم: آشنایی با نگهداری نشست ها
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و ششم: مروری بر حملات امنیتی مهم
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و هفتم: پیاده سازی مکانیزم های امنیتی
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و هشتم: آشنایی با کنترل همروندی
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت بیست و نهم: کارایی و مقیاس پذیری
+
+      </a>
+
+      <br>
+
+      <a href="#" target="_blank"> قسمت سی: آشنایی با توزیع مولفه ها
+
+      </a>
+
+      <br>
+      <a href="#" target="_blank">
+        قسمت سی و یک: مقدمه ای بر میکرو سرویس ها
+      </a>
+
+
+  </div>
+
+  <h4 class="ciscoColor collapsible"> امنیت شبکه از دانشگاه تهران - دکتر محمد صیاد حقیقی</h4>
+  <div class="fa content">
+
+  </div>
+  </div>
+  <!-- End of pageContent" -->
+  <!-- RoadMap -->
+  <div class="footerLinks">
+    <a target="_blank"
+      href="https://docs.google.com/document/d/1Ld77-o4tCucpdJgQJ_dKhLjWHqzSOQ9MRBodOgcV_JU/edit?usp=drive_link">
+      [CCNA] My RoadMap.docx
+    </a>
+    |
+    <a target="_blank"
+      href="https://docs.google.com/spreadsheets/d/1wbPultHs6VWbQXUjfGiEydcITZpGeUxQ/edit?usp=drive_web&ouid=108442140929462168259&rtpof=true">[CCNA]
+      Study Plan.xlsx
+    </a>
+    |
+
+    <a target="_blank"
+      href="https://docs.google.com/document/d/12sPhQ0c8IvfCd6JCk5v3vwWBm_GhZ7aB6lQkcmnFOuU">CCNA.docx</a>
+    |
+    <a target="_blank"
+      href="https://docs.google.com/document/d/1LtJho20RTJV3riHoFpzHnhuu2TsDPe5joLgE73rt9UU">Farsi.docx</a>
+    |
+    <a target="_blank" href="https://to-do.office.com/tasks/l-1oomzqja6wa">Tasks</a>
+  </div>
+  <div class="foot">Learn Cisco with ❤</div>
+  <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+  </script>
+</body>
+
+</html>
