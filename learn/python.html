@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="computer/pic/dev.ico" type="image/x-icon" />
+
+    <style>
+        body {
+            background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+            margin: auto auto;
+            width: 85%;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+                linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+                linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px,
+                linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
+                    transparent 100%);
+        }
+
+        a {
+            box-shadow: inset 0 0 0 0 #049ad2;
+            font-size: 1.2rem;
+            color: #2a12e5;
+            font-size: 1rem;
+            padding: 0 1rem;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 #049ad2;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .cscontent {
+            padding: 0px 10%;
+        }
+
+        strong:hover {
+            background-color: dodgerblue;
+            color: whitesmoke;
+        }
+
+        .cscontent a {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        h4 {
+            background-color: #049ad2;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h5 {
+
+            font-family: "Work Sans", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .MenuLabel {
+            background-color: black;
+            font-size: 1.8rem;
+            color: whitesmoke;
+            text-align: center;
+            margin: 0;
+            padding: 0.2rem;
+        }
+
+        .pageContent {
+            background-color: whitesmoke;
+            font-size: 1.1rem;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myBtn {
+            background-color: #049ad2;
+        }
+
+        .footerLinks {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footerLinks a {
+            font-size: 0.7rem;
+            font-family: monospace;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            padding: 0.3rem;
+        }
+
+        .fa {
+            direction: rtl;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Back to Home</a>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
+
+
+    <div class="navbar">
+        <a style="background-color: #87d4f0" href="index.html">Home</a>
+        <a target="_blank" href="dev.html">dev</a>
+    </div>
+
+    <div class="MenuLabel">Python</div>
+
+
+    <div class="pageContent">
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <h4 class="ciscoColor collapsible"> Mosh</h4>
+        The Complete Python Programming Course for Beginners to Advanced <a target="_blank"
+            href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ"> Youtube <img
+                src="pic/youtube.png" /> </a>
+        <a href="https://docs.google.com/document/d/1ywwRcbLx7iYCDA3VYrJBbSgmvA--zoV81C2pVJeFo44/edit">List <img
+                src="pic/doc.png" /></a>
+        <br>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <h4 class="ciscoColor collapsible">Deitel and Detiel</h4>
+        <a target="_blank" href="https://drive.google.com/file/d/1s3IenoxMsvQA1F5YNl6_derP1XWqYI_9/view?usp=drive_link">
+            Python for Programmers : with Big Data and Artificial Intelligence Case Studies <img src="pic/pdflogo.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/file/d/1r_h7db5D2jblmYyFm1R33jAjDiYFUD-A/view?usp=share_link">
+            Intro to Python for Computer Science and Data Science : Learning to Program with AI, Big Data and the
+            Cloud
+            <img src="pic/pdflogo.png">
+            <br>
+
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+            <h4 class="ciscoColor collapsible">Liang</h4>
+            Introduction to Python Programming and Data Structures:
+            <br>
+            - 3 Edition <a target="_blank" href="https://media.pearsoncmg.com/ph/esm/ecs_liang_python_3e/cw/">[
+                Companion
+                Site ]</a>
+            <br>
+            - 2 Edition <a target="_blank"
+                href="https://www.youtube.com/playlist?list=PLVr2C-iCNS5p4t5HFDcMW5lqwpuW51GQ9">[
+                Youtube Videos
+                ]
+            </a>
+            <br>
+            - 1 Edition <a target="_blank"
+                href="https://drive.google.com/file/d/1MUNjW06tsCTTDITU4lEPyKVtVf4iwwE9/view?usp=drive_link">
+                Book<img src="pic/pdflogo.png"> </a>
+            <a target="_blank" href="http://liveexample.pearsoncmg.com/liang/py/toc.html">[ Pearson
+                Resources ] </a>
+            <br>
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+            <h4 class="ciscoColor collapsible">Books</h4>
+            Python for Programmers: with Big Data and Artificial Intelligence Case Studies
+            <a target="_blank"
+                href="https://drive.google.com/file/d/1s3IenoxMsvQA1F5YNl6_derP1XWqYI_9/view?usp=drive_link">
+                [ Book ] <img src="pic/pdflogo.png"> </a>
+            <br>
+            Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud
+            <a target="_blank"
+                href="https://drive.google.com/file/d/1r_h7db5D2jblmYyFm1R33jAjDiYFUD-A/view?usp=share_link">
+                [ Book ] <img src="pic/pdflogo.png"> </a>
+            <a target="_blank" href="https://learning.oreilly.com/api/v1/continue/9780135404799/"> [ O'Reilly ] </a>
+            <br>
+            Introduction to Python Programming and Data Structures - 3 Edition
+            <a target="_blank" href="https://media.pearsoncmg.com/ph/esm/ecs_liang_python_3e/cw/">[ Companion Site ]</a>
+            <br>
+
+            Introduction to Python Programming and Data Structures - 2 Edition
+            <a target="_blank" href="https://www.youtube.com/playlist?list=PLVr2C-iCNS5p4t5HFDcMW5lqwpuW51GQ9">[ Youtube
+                ]
+            </a>
+            <br>
+            Advanced Python Development: Using Powerful Language Features in Real-World Applications
+            <a target="_blank"
+                href="https://drive.google.com/file/d/1Xt5q7mLrHC4wAu7AU8HBUobL7B7o8TE7/view?usp=drive_link">
+                [ Book ] <img src="pic/pdflogo.png"> </a>
+            <a target="_blank"
+                href="https://learning.oreilly.com/library/view/advanced-python-development/9781484257937/">
+                [ O'Reilly ] </a>
+            <br>
+
+            Learning Python, 5th Edition <a target="_blank"
+                href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/"> [ O'Reilly ]
+            </a> <br>
+            Python in a Nutshell 4th Edition <a target="_blank"
+                href="https://drive.google.com/file/d/1HKmxQtaZmxJUtUIo054e3YqNXoAw8hnA/view?usp=drive_link">
+                [ Book ] <img src="pic/pdflogo.png"> </a> <br>
+            Web Scraping with Python <a target="_blank"
+                href="https://drive.google.com/file/d/1hKjyY2LKvTWnNEIfnijVba37QWiBq_uI/view?usp=drive_link">
+                [ Book ] <img src="pic/pdflogo.png"> </a>
+
+
+
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+
+            <h4 class="ciscoColor collapsible">Sarvin-Python</h4>
+            <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVFNAHqZ2ewVrytbn88H5m8">
+                Youtube <img src="pic/youtube.png"> </a>
+
+            <a href="https://docs.google.com/document/d/1bttB6VAbt9vuv31CtUPkaValQjRVkLJZJi1UcbwQJVE/edit">
+                List <img src="pic/doc.png" />
+            </a>
+
+
+            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+
+            <h4 class="ciscoColor collapsible">مبانی زبان برنامه‌نویسی پایتون - دانشگاه صنعتی شریف </h4>
+            <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWcf7M7EXzf3ZLq0Kn0spH2">
+                [Sharif-Fa] Python <img src="pic/youtube.png"> </a>
+
+            <a href="https://docs.google.com/document/d/1ekL1OicVXfdY-ditUpIlhZZ7R1GeCIQJiStZWH21DkQ/edit">
+                List <img src="pic/doc.png" />
+            </a>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="footerLinks">
+
+        <a class="LinkHover" target="_blank"
+            href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674">Mo-Plan.xls</a>
+        |
+        <a class="LinkHover" target="_blank"
+            href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit">Mo.docx</a> |
+        <a class="LinkHover" target="_blank"
+            href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD?usp=drive_link">ItsMJahan</a>
+        |
+
+        <a class="LinkHover" target="_blank" href="computer/Mosh.html"> Mosh</a> |
+        <a class="LinkHover" target="_blank" href="computer/cs.html">C#</a> |
+        <a class="LinkHover" target="_blank" href="computer/Python.html">Python</a> |
+        <a class="LinkHover" target="_blank" href="computer/DataBase.html">DB</a> |
+        <a class="LinkHover" target="_blank" href="computer/DataStructureAlgorithm.html">DS</a> |
+        <!-- <a class="LinkHover" target="_blank" href="computer/SoftwareEngineering.html">SE</a> | -->
+        <a class="LinkHover" target="_blank" href="computer/SaskPolytech.html">SaskPol</a> |
+        <a class="LinkHover" target="_blank" href="computer/j.html">JavaN</a> |
+        <a class="LinkHover" target="_blank" href="computer/java.html">Java</a> |
+        <!-- <a class="LinkHover" target="_blank" href="computer/JavaScript.html">JavaScript</a> | -->
+        <!-- <a class="LinkHover" target="_blank" href="computer/NodeJS.html">NodeJS</a> | -->
+        <!-- <a class="LinkHover" target="_blank" href="computer/React.html">REACT</a> | -->
+        <!-- <a class="LinkHover" target="_blank" href="computer/htmlcss.html">HTML/CSS</a> | -->
+        <a class="LinkHover" target="_blank" href="computer/htmlcss.html">MySQL</a> |
+
+    </div>
+
+
+
+    <div class="foot">
+        <a href="#"> Learn Software Developement with ❤ </a>
+    </div>
+    <!--------------------------------------------------    SCRIPT          ------------------------------------>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    </script>
+</body>
+
+</html>
