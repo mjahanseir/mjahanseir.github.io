@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ToastMasters</title>
+    <link rel="icon" href="ToastMasters/toastmasters.ico" type="image/x-icon" />
+
+    <style>
+        body {
+            background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+            margin: auto auto;
+            width: 85%;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .2) 100%, transparent 100%)
+        }
+
+        a {
+            box-shadow: inset 0 0 0 0 #BE1459;
+            color: #BE1459;
+            padding: 0 1.25rem;
+            transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 #8b0000;
+            color: white;
+        }
+
+        #myBtn {
+            background-color: #049ad2;
+        }
+
+
+
+        .footerPage {
+            background-color: black;
+            font-size: 0.9rem;
+            color: white;
+            padding: 5px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.1rem 0.9rem;
+        }
+
+
+
+        /*                                              Gallery                                      */
+
+
+        .imageGallery {
+            width: 98%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 1%;
+        }
+
+        .imageGallery img {
+            width: 100%;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .imageGallery img:hover {
+            transform: scale(1.5) rotate3d(1, 1, 1, 0deg);
+            border-radius: 5px;
+            box-shadow: 0 32px 75px rgba(68, 77, 136, 0.9);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .fullImageClass {
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            /* z-index: 100; */
+        }
+
+        .fullImageClass img {
+            width: fit-content;
+            max-width: 700px;
+            height: max-content;
+            border-radius: 20px;
+            border: 2px solid white;
+        }
+
+        .fullImageClass span {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        figure {
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(104, 104, 104, 0.5);
+            padding-bottom: 2%;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 1rem;
+        }
+		figure a:hover{
+		   box-shadow: inset 1px 0 0 0 #8b0000;
+			color: #8b0000;
+		}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a style="background-color:#BE1459;" href="index.html">Home</a>
+        <p style="color: #ffffff; font-weight: bold; text-align: center ;"> T O A S T - M A S T E R S </p>
+
+    </div>
+
+
+    <div style="background-color: white;">
+
+        <br>
+        <h1>Certifications</h1>
+
+        <div class=" imageGallery">
+
+            <figure>
+				<a href="ToastMasters/toastmasters-certs/22-Leadership Strategies for Women-1.png" target="_blank">
+				<img src="ToastMasters/toastmasters-certs/22-Leadership Strategies for Women-1.png">
+
+                <figcaption>Leadership Strategies for Women</figcaption></a>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/21-Delivery Tips for Speaking in Public-1.png">
+                <figcaption>Delivery Tips for Speaking in Public</figcaption>
+            </figure>
+			<figure><img src="ToastMasters/toastmasters-certs/20-Leading from the Middle-1.png">
+                <figcaption>Leading from the Middle</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/19-Icebreakers for Teams Meetings and Groups-1.png">
+                <figcaption>Icebreakers for Teams, Meetings, and Groups</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/18-Communication within Teams-1.png">
+                <figcaption>Communication within Teams</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/17-A Guide to ERGs Employee Resource Groups-1.png">
+                <figcaption>A Guide to ERGs (Employee Resource Groups)</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/16-Inclusive and Professional Conversations on LinkedIn Tips for Success-1.png">
+                <figcaption>Inclusive and Professional Conversations on LinkedIn: Tips for Success</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/15-Tips for Writing Business Emails-1.png">
+                <figcaption>Tips for Writing Business Emails</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/14-Leading Diverse Teams to Success-1.png">
+                <figcaption>Leading Diverse Teams to Success</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/13-Making the Move to Middle Management-1.png">
+                <figcaption>Making the Move to Middle Management</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/12-Holding Your Team Accountable-1.png">
+                <figcaption>Holding Your Team Accountable</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/11-Managing Teams-1.png">
+                <figcaption>Managing Teams</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/10-Storytelling for Leaders-1.png">
+                <figcaption>Storytelling for Leaders</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/09-Crisis Communication-1.png">
+                <figcaption>Crisis Communication</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/08-Collaborative Leadership-1.png">
+                <figcaption>Collaborative Leadership</figcaption>
+            </figure>
+
+
+
+        </div>
+		 <br>
+        <hr>
+        <br>
+
+        <h4>
+            Public Speaking Skills Professional Certificate by Toastmasters International
+            <a href="https://www.linkedin.com/learning/paths/public-speaking-skills-professional-certificate-by-toastmasters-international"
+                target="_blank">LinkedIn</a>
+        </h4>
+        <div class=" imageGallery">
+            <figure><img src="ToastMasters/toastmasters-certs/01-Public Speaking Foundations-1.png">
+                <figcaption>Public Speaking Foundations</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/02-Writing and Delivering Speeches-1.png">
+                <figcaption>Writing and Delivering Speeches</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/03-Communicating with Confidence-1.png">
+                <figcaption>Communicating with Confidence</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/04-Body Language for Leaders and Managers-1.png">
+                <figcaption>Body Language for Leaders and Managers</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/05-Establishing Credibility as a Speaker-1.png">
+                <figcaption>Establishing Credibility as a Speaker</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/06-Presenting Technical Information with Stories-1.png">
+                <figcaption>Presenting Technical Information with Stories</figcaption>
+            </figure>
+            <figure><img src="ToastMasters/toastmasters-certs/07-Impromptu Speaking -1.png">
+                <figcaption>Impromptu Speaking</figcaption>
+            </figure>
+        </div>
+       
+        <br><br>
+		
+		
+        <img src="ToastMasters/toastmasters.png"> ToastMasters
+
+    </div>
+
+    <div class="footerPage">
+        <br>
+    </div>
+
+
+
+    <div class="foot">
+        <a href="#"> with ❤ </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------------------------------    SCRIPT          ----------------------------------  -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        var mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
