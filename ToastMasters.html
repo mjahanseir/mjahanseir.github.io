@@ -15,24 +15,73 @@
             margin: auto auto;
             width: 85%;
             font-family: "Times New Roman", Times, serif;
-            background: linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+            background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+                linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
+                linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px,
+                linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
         }
 
         .collapsible:hover {
-            background-image: linear-gradient(hsla(0, 0%, 0%, .2) 100%, transparent 100%)
+            background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
+                    transparent 100%);
         }
 
         a {
-            box-shadow: inset 0 0 0 0 #BE1459;
-            color: #BE1459;
-            padding: 0 1.25rem;
-            transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+            box-shadow: inset 0 0 0 0 #049ad2;
+            font-size: 1.2rem;
+            color: #2a12e5;
+            font-size: 1rem;
+            padding: 0 1rem;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
         }
 
         a:hover {
-            box-shadow: inset 1000px 0 0 0 #8b0000;
+            box-shadow: inset 1000px 0 0 0 #049ad2;
             color: white;
+            padding: 0 1rem;
         }
+
+        h4 {
+            background-color: #049ad2;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h5 {
+
+            font-family: "Work Sans", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 85%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .MenuLabel {
+            background-color: black;
+            font-size: 1.8rem;
+            color: whitesmoke;
+            text-align: center;
+            margin: 0;
+            padding: 0.2rem;
+        }
+
 
         #myBtn {
             background-color: #049ad2;
@@ -47,31 +96,8 @@
             padding: 5px;
         }
 
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            width: 85%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 0.1rem 0.9rem;
-        }
 
 
-        h4 {
-            background-color: gray;
-            color: whitesmoke;
-        }
 
         /*                                              Gallery                                      */
 
@@ -147,9 +173,10 @@
 </head>
 
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
 
     <div class="navbar">
-        <a style="background-color:#BE1459;" href="index.html">Home</a>
+        <a style="background-color: #049ad2;" href="index.html">Home</a>
         <p style="color: #ffffff; font-weight: bold; text-align: center ;"> T O A S T - M A S T E R S </p>
 
     </div>
@@ -158,19 +185,133 @@
     <div style="background-color: white;">
 
 
-        <img src="ToastMasters/toastmasters.png"> 
-<br>
-My Works:
-<br>
- <a href="ToastMasters/mywork/20250515-IceBreakerSpeech-LocalLingo.ppsx"> Ice Breaker Speech - LocalLingo (2025/05/15) </a>
- <br>
+        <img src="ToastMasters/toastmasters.png">
+        <br>
+
+        ToastMaster International - Level 1: <br>
+        01-01-Ice Breaker - Pathway-Toastmasters
+        <a target="_blank"
+            href="https://app.basecamp.toastmasters.org/learning/course/course-v1:Toastmasters+8701+8_15_2023/block-v1:Toastmasters+8701+8_15_2023+type@chapter+block@fbbb5d238907471c8778b344950d3baa/block-v1:Toastmasters+8701+8_15_2023+type@sequential+block@ea65ca06228d4c45a85141e2d14f33f0/block-v1:Toastmasters+8701+8_15_2023+type@vertical+block@c9e03b84e9b4413095a080bcb02c1a1e">
+            <img src="ToastMasters/toastmasters-logo.png"></a>
+        <a href="https://drive.google.com/drive/folders/1wE1NzjGlzcTUlzQRYN313Ouc-SYoP0HA?usp=drive_link"
+            target="_blank">
+            <img src="learn/pic/googledrive-icon.png"></a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="https://drive.google.com/drive/folders/19o-97lsnWwMUqxBlER08L7FmTJPMm0as?usp=drive_link"
+            target="_blank">
+            01-01-Speech01-May 15, 2025-Local-Lingo at Saskatchewan </a> <br>
 
 
+        01-02-Writing a Speech with Purpose
+        <a target="_blank"
+            href="https://app.basecamp.toastmasters.org/learning/course/course-v1:Toastmasters+8701+8_15_2023/block-v1:Toastmasters+8701+8_15_2023+type@chapter+block@fbbb5d238907471c8778b344950d3baa/block-v1:Toastmasters+8701+8_15_2023+type@sequential+block@fc2098ada4a24143a5f86642636fc7c0/block-v1:Toastmasters+8701+8_15_2023+type@vertical+block@966e7da4d9f74f5fb8ceea0959adfb63">
+            <img src="ToastMasters/toastmasters-logo.png"></a>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1MImT2W9C0E3V-xhAGHiWy7EIXqCAUPYG?usp=drive_link"
+            target="_blank">
+            <img src="learn/pic/googledrive-icon.png"></a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="https://drive.google.com/drive/folders/1MImT2W9C0E3V-xhAGHiWy7EIXqCAUPYG?usp=drive_link"
+            target="_blank">
+            01-02-Speech02-May 29, 2025-The Power of Volunteering - Building Stronger Communities </a> <br>
+
+        01-03-Introduction to Vocal Variety and Body Language
+        <a target="_blank"
+            href="https://app.basecamp.toastmasters.org/learning/course/course-v1:Toastmasters+8701+8_15_2023/block-v1:Toastmasters+8701+8_15_2023+type@chapter+block@fbbb5d238907471c8778b344950d3baa/block-v1:Toastmasters+8701+8_15_2023+type@sequential+block@7284a1d11cb04d79a96321f60583187b/block-v1:Toastmasters+8701+8_15_2023+type@vertical+block@00260dbf346a47b983e52f3c71271d18">
+            <img src="ToastMasters/toastmasters-logo.png"></a>
+
+        <a href="https://drive.google.com/drive/folders/1ouBq8RN0KG1MpZs1YOJcD6y3Zu4EImFg?usp=drive_link"
+            target="_blank">
+            <img src="learn/pic/googledrive-icon.png"></a> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="https://drive.google.com/drive/folders/1LaYOeDYAUAN9qeJe2TOAoGFzVtHWdPSO?usp=drive_link"
+            target="_blank">
+            01-03-Speech03-July 03, 2025-Talk about myself and challenges faced as an immigrant and how our homeland
+            shaped our
+            journey </a> <br>
+        01-04-Evaluation and Feedback - Pathway-Toastmasters
+        <a target="_blank"
+            href="https://app.basecamp.toastmasters.org/learning/course/course-v1:Toastmasters+8701+8_15_2023/block-v1:Toastmasters+8701+8_15_2023+type@chapter+block@fbbb5d238907471c8778b344950d3baa/block-v1:Toastmasters+8701+8_15_2023+type@sequential+block@320976afc23a493c8b0afa9a530d919c/block-v1:Toastmasters+8701+8_15_2023+type@vertical+block@40afce19922d49f0b04c991f70ff7b11">
+            <img src="ToastMasters/toastmasters-logo.png">
+        </a>
+        <a href="https://drive.google.com/drive/folders/1TRQmU0z52lzrSJgmkjqQhdKlD1hrl6zN?usp=drive_link"
+            target="_blank">
+            <img src="learn/pic/googledrive-icon.png"></a> <br>
+
+
+
+        <hr>
+        ToastMaster International - Level 2: <br>
+        <a href="#" target="_blank"> 02-01-Understanding Your Communication Style </a> <br>
+        <a href="#" target="_blank"> 02-02-Effective Body Language </a> <br>
+        <a href="#" target="_blank"> 02-03-Introduction to Toastmasters Mentoring </a> <br>
+
+        <hr>
+        ToastMaster International - Level 3: <br>
+
+        <a href="#" target="_blank"> 03-01-Persuasive Speaking </a> <br>
+        <a href="#" target="_blank"> 03-02-Electives </a> <br>
+
+        <hr>
+        ToastMaster International - Level 4: <br>
+        <a href="#" target="_blank"> 04-01-Managing a Difficult Audience </a> <br>
+        <a href="#" target="_blank"> 04-02-Electives </a> <br>
+
+        <hr>
+
+        ToastMaster International - Level 5: <br>
+        <a href="#" target="_blank"> 05-01-Prepare to Speak Professionally </a> <br>
+        <a href="#" target="_blank"> 05-02-Electives </a> <br>
+        <hr>
+        Path Completion <br>
+        <a href="#" target="_blank"> Reflect on Your Path </a> <br>
+        <a href="#" target="_blank"> Path Completion </a> <br>
 
 
         <br>
-        <h1>Certifications</h1>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
+        <h1 id="Certifications">Certifications</h1>
+
+        <center>
+            <a href="#Public_Speaking_Skills_Professional_Certificate_by_Toastmasters_International">
+                Public Speaking Skills Professional Certificate by Toastmasters International</a><br>
+
+            <a href="#Enhance_Your_Leadership_Skills">
+                Enhance Your Leadership Skills</a><br>
+
+            <a href="#Advance_Your_Skills_as_a_Leader_in_the_HybridRemote_Workplace">
+                Advance Your Skills as a Leader in the HybridRemote Workplace</a><br>
+
+            <a href="#Develop_Your_Skills_as_a_New_or_Emerging_People_Leader">
+                Develop Your Skills as a New or Emerging People Leader</a><br>
+
+            <a href="#Manage_Remote_and_Hybrid_Teams_as_a_Senior_Manager">
+                Manage Remote and Hybrid Teams as a Senior Manager</a><br>
+
+            <a href="#Advance_Your_Thought_Leadership">
+                Advance Your Thought Leadership</a><br>
+
+
+            <a href="#Leadership_Foundations">
+                Leadership Foundations</a><br>
+
+
+            <a href="#The_Top_15_Most_Popular_Courses_Leadership_Edition">
+                The Top 15 Most Popular Courses: Leadership Edition</a><br>
+
+
+
+            <a href="#Master_Your_Leadership_Effectiveness_Skills">
+                Master Your Leadership Effectiveness Skills</a><br>
+
+            <a href="#Become_a_Leader_People_Love">
+                Become a Leader People Love</a><br>
+
+            <a href="#Career_Planning">
+                Career Planning</a><br>
+
+            <a href="#Improve_Your_Organizational_Skills">
+                Improve Your Organizational Skills</a><br>
+        </center>
 
         <div class=" imageGallery">
 
@@ -423,10 +564,12 @@ My Works:
 -->
 
 
-            <figure> <img src="ToastMasters/toastmasters-certs/	How to Be a Better Professional Speaker in the Workplace-1.png">
+            <figure> <img
+                    src="ToastMasters/toastmasters-certs/	How to Be a Better Professional Speaker in the Workplace-1.png">
                 <figcaption> <a
                         href="ToastMasters/toastmasters-certs/	How to Be a Better Professional Speaker in the Workplace-1.png"
-                        target="_blank"> How to Be a Better Professional Speaker in the Workplace </a> </a> </figcaption>
+                        target="_blank"> How to Be a Better Professional Speaker in the Workplace </a> </a>
+                </figcaption>
             </figure>
             <figure> <img
                     src="ToastMasters/toastmasters-certs/24-Performance Management Conducting Performance Reviews-1.png">
@@ -580,7 +723,7 @@ My Works:
         <hr>
         <br>
 
-        <h4>
+        <h4 id="Public_Speaking_Skills_Professional_Certificate_by_Toastmasters_International">
             Public Speaking Skills Professional Certificate by Toastmasters International
             <a href="https://www.linkedin.com/learning/paths/public-speaking-skills-professional-certificate-by-toastmasters-international"
                 target="_blank">LinkedIn</a>
@@ -644,7 +787,7 @@ My Works:
 
         <br>
         <hr> <br>
-        <h4> Enhance Your Leadership Skills </h4>
+        <h4 id="Enhance_Your_Leadership_Skills"> Enhance Your Leadership Skills </h4>
         <div class=" imageGallery">
 
             </figure>
@@ -700,7 +843,8 @@ My Works:
                 </figcaption>
             </figure>
         </div>
-        <h4> Advance Your Skills as a Leader in the HybridRemote Workplace </h4>
+        <h4 id="Advance_Your_Skills_as_a_Leader_in_the_HybridRemote_Workplace"> Advance Your Skills as a Leader in the
+            HybridRemote Workplace </h4>
         <div class=" imageGallery">
 
             <figure>
@@ -767,7 +911,8 @@ My Works:
             </figure>
 
         </div>
-        <h4> Develop Your Skills as a New or Emerging People Leader</h4>
+        <h4 id="Develop_Your_Skills_as_a_New_or_Emerging_People_Leader"> Develop Your Skills as a New or Emerging People
+            Leader</h4>
         <div class=" imageGallery">
 
             <figure>
@@ -827,7 +972,8 @@ My Works:
             </figure>
 
         </div>
-        <h4>Manage Remote and Hybrid Teams as a Senior Manager</h4>
+        <h4 id="Manage_Remote_and_Hybrid_Teams_as_a_Senior_Manager">Manage Remote and Hybrid Teams as a Senior Manager
+        </h4>
         <div class=" imageGallery">
 
 
@@ -974,7 +1120,7 @@ My Works:
                 </figcaption>
             </figure>
         </div>
-        <h4>Advance Your Thought Leadership</h4>
+        <h4 id="Advance_Your_Thought_Leadership">Advance Your Thought Leadership</h4>
         <div class=" imageGallery">
 
             <figure>
@@ -1051,7 +1197,7 @@ My Works:
 
 
         </div>
-        <h4>Leadership Foundations</h4>
+        <h4 id="Leadership_Foundations">Leadership Foundations</h4>
         <div class=" imageGallery">
 
             <figure> <img src="cert\leadership\Business Execution  How Things Get Done.png">
@@ -1155,7 +1301,8 @@ My Works:
 
         </div>
 
-        <h4>The Top 15 Most Popular Courses: Leadership Edition</h4>
+        <h4 id="The_Top_15_Most_Popular_Courses_Leadership_Edition">The Top 15 Most Popular Courses: Leadership Edition
+        </h4>
         <div class=" imageGallery">
 
             <figure> <img src="cert\leadership\The Top 15 Most Popular Courses Leadership Edition.png">
@@ -1273,7 +1420,7 @@ My Works:
             </figure>
 
         </div>
-        <h4>Master Your Leadership Effectiveness Skills</h4>
+        <h4 id="Master_Your_Leadership_Effectiveness_Skills">Master Your Leadership Effectiveness Skills</h4>
         <div class=" imageGallery">
             <figure> <img src="cert\leadership\Master Your Leadership Effectiveness Skills.png">
                 <figcaption> <a target="_blank" href="cert\leadership\Master Your Leadership Effectiveness Skills.png">
@@ -1352,42 +1499,43 @@ My Works:
         </div>
 
 
-        <h4> Become a Leader People Love</h4>
+
+        <h4 id="Become_a_Leader_People_Love"> Become a Leader People Love</h4>
         <div class=" imageGallery">
-            <figcaption> <a target="_blank" href="cert\leadership\Become a Leader People Love.png">
-                    <figure> <img src="cert\leadership\Become a Leader People Love.png">
+            <figure> <img src="cert\leadership\Become a Leader People Love.png">
+                <figcaption> <a target="_blank" href="cert\leadership\Become a Leader People Love.png">
                         Become a Leader People Love
-                </a></figcaption>
+                    </a></figcaption>
             </figure>
 
 
+            <figure> <img src="cert\leadership\Leading with a Heavy Heart.png">
+                <figcaption> <a target="_blank" href="cert\leadership\Leading with a Heavy Heart.png">
 
-            <figcaption> <a target="_blank" href="cert\leadership\Leading with a Heavy Heart.png">
-                    <figure> <img src="cert\leadership\Leading with a Heavy Heart.png">
                         Leading with a Heavy Heart
-                </a></figcaption>
+                    </a></figcaption>
             </figure>
 
-            <figcaption> <a target="_blank" href="cert\leadership\Daniel Pink on Motivation.png">
-                    <figure> <img src="cert\leadership\Daniel Pink on Motivation.png">
+            <figure> <img src="cert\leadership\Daniel Pink on Motivation.png">
+                <figcaption> <a target="_blank" href="cert\leadership\Daniel Pink on Motivation.png">
                         Daniel Pink on Motivation
-                </a></figcaption>
+                    </a></figcaption>
             </figure>
 
-            <figcaption> <a target="_blank" href="cert\leadership\Transformational Leadership.png">
-                    <figure> <img src="cert\leadership\Transformational Leadership.png">
+            <figure> <img src="cert\leadership\Transformational Leadership.png">
+                <figcaption> <a target="_blank" href="cert\leadership\Transformational Leadership.png">
                         Transformational Leadership
-                </a></figcaption>
+                    </a></figcaption>
             </figure>
 
-            <figcaption> <a target="_blank" href="cert\leadership\Ken Blanchard on Servant Leadership.png">
-                    <figure> <img src="cert\leadership\Ken Blanchard on Servant Leadership.png">
+            <figure> <img src="cert\leadership\Ken Blanchard on Servant Leadership.png">
+                <figcaption> <a target="_blank" href="cert\leadership\Ken Blanchard on Servant Leadership.png">
                         Ken Blanchard on Servant Leadership
-                </a></figcaption>
+                    </a></figcaption>
             </figure>
 
         </div>
-        <h4> Career Planning </h4>
+        <h4 id="Career_Planning"> Career Planning </h4>
         <div class=" imageGallery">
 
             <figcaption> <a target="_blank" href="cert\leadership\Power Up  Turning on Your Self-starter Potential.png">
@@ -1434,7 +1582,7 @@ My Works:
             </figure>
 
         </div>
-        <h4> Improve Your Organizational Skills </h4>
+        <h4 id="Improve_Your_Organizational_Skills"> Improve Your Organizational Skills </h4>
         <div class=" imageGallery">
             <figure> <img src="cert\leadership\Improve Your Organizational Skills.png">
                 <figcaption> <a target="_blank" href="cert\leadership\Improve Your Organizational Skills.png">
@@ -1469,7 +1617,7 @@ My Works:
 
         <br><br>
 
-
+    </div>
 
     <div class="footerPage">
         <br>
@@ -1478,7 +1626,7 @@ My Works:
 
 
     <div class="foot">
-        <a href="#"> with ❤ </a>
+        <a href="#"> Learning Toastmaster with ❤ </a>
     </div>
 
 
@@ -1493,8 +1641,6 @@ My Works:
 
 
 
-
-    <!-- ------------------------------------------------    SCRIPT          ----------------------------------  -->
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -1512,8 +1658,11 @@ My Works:
             });
         }
 
+        // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+        //Get the button
         var mybutton = document.getElementById("myBtn");
 
+        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
             scrollFunction();
         };
@@ -1529,17 +1678,13 @@ My Works:
             }
         }
 
+        // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-
-
-
+        //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
     </script>
-
-
-
 </body>
 
 </html>

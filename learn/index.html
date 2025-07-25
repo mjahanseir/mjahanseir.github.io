@@ -60,12 +60,7 @@
     <p class="space">Home</p>
   </div>
 
-
-
-
-
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <!----------------------------------------------    Region workout        -------------------------------------------------->
 
   <h1 class="EnPurple collapsible">Workout</h1>
   <div class="content">
@@ -82,7 +77,7 @@
         href="https://anc.ca.apm.activecommunities.com/ymcasaskatoon/calendars?onlineSiteId=0&no_scroll_top=true&defaultCalendarId=1&locationId=2&displayType=0&view=2">
         YMCA Schedule</a></h4>
 
-  </div <!---------------------------------------------- Region 1 -------------------------------------------------->
+  </div>
   <h1 class="EnDarkRed collapsible">Software </h1>
   <div class="content">
     <a href="dev.html">
@@ -95,7 +90,7 @@
       <h4> Mosh </h4>
     </a>
     <a href="JavaScript.html">
-      <h4> Python </h4>
+      <h4> Java Script </h4>
     </a>
     <a href="python.html">
       <h4> Python </h4>
@@ -104,38 +99,9 @@
       <h4> ServiceNow </h4>
     </a>
 
-    <!--
-                                      <h2 class="EnRed collapsible">Software Developer</h2>
-                                      <div class="content">
-                                        <a href="dev.html">  <h4>Software Developer</h4> </a>
-                                      </div>
 
-                                  <h2 class="EnRed collapsible">Code With Mosh</h2>
-                                      <div class="content">
-                                        <a href="computer/Mosh.html">  <h4>Code With Mosh</h4> </a>
-                                  </div>
-
-                                  <h2 class="EnRed collapsible">Programming Languages</h2>
-                                    <div class="content">
-                                            <h4><a href="computer/cs.html">C#</a></h4>
-                                            <h4><a href="computer/Python.html">Python</a></h4>
-                                            <h4><a href="computer/DataBase.html">Data Base</a></h4>
-                                            <h4><a href="computer/DataStructureAlgorithm.html">Data Structure and Algorithm</a></h4>
-                                            <h4><a href="computer/SoftwareEngineering.html">Software Engineering</a></h4>
-                                            <h4><a href="computer/SaskPolytech.html">SaskPolytech</a></h4>
-                                            <h4><a href="computer/j.html">New - Java</a></h4>
-                                            <h4><a href="computer/java.html">Java</a></h4>
-                                            <h4><a href="computer/JavaScript.html">Java Script</a></h4>
-                                            <h4><a href="computer/NodeJS.html">NodeJS</a></h4>
-                                            <h4><a href="computer/React.html">REACT</a></h4>
-                                            <h4><a href="computer/htmlcss.html">HTML/CSS</a></h4>
-                                            <h4><a href="computer/htmlcss.html">My SQL</a></h4>
-                                            <h4><a href="computer/htmlcss.html">My SQL</a></h4>
-                                          </div>
-                -->
   </div>
 
-  <!----------------------------------------------    DevOps   -------------------------------------------------->
   <h1 class=" collapsible" style="background-color: #a60d49;">Devops and Tools</h1>
   <div class="content">
     <a href="devops.html">
@@ -144,10 +110,13 @@
     </a>
 
   </div>
-  <!----------------------------------------------        Microsoft   -------------------------------------------------->
+
   <h1 class="EnRed collapsible">Microsoft</h1>
   <div class="content">
-    <!-- <a href="computer/Microsoft/Microsoft.html"> <h4> Microsoft</h4> </a> -->
+
+    <a href="powerplatform.html">
+      <h4> Power Platform</h4>
+    </a>
     <a href="microsoft.html">
       <h4> Microsoft Learn</h4>
     </a>
@@ -174,25 +143,23 @@
     <a href="computer/Network/security.html">
       <h4>Security</h4>
     </a>
-    <!-- <a href="computer/Network/net.html">
-      <h4>Network Academic</h4>
-    </a> -->
+
 
   </div>
-  <!---------------------------------------------- Region 3 -------------------------------------------------->
+
+
 
   <h1 class="EnOrange collapsible"> Languages</h1>
   <div class="content">
     <h4> <a href="english\english.html"> Learn English </a></h4>
     <h4> <a href="danish/index.html"> Learn Danish </a></h4>
   </div>
-  <!---------------------------------------------- Region Personal Developments
-    -------------------------------------------------->
+
 
   <h1 class="EnYellow collapsible" style="color:whitesmoke;">Personal Developments</h1>
   <div class="content">
-    <a href="personal_development\JobGuides.html">
-      <h4> Job Guides</h4>
+    <a href="work.html">
+      <h4> Work</h4>
     </a>
     <a href="personal_development\personal_development.html">
       <h4> Personal Developments</h4>
@@ -229,8 +196,6 @@
 
 
 
-    <!-- <a class="LinkHover" target="_blank" href="https://docs.google.com/spreadsheets/d/19fWzZlCAIfOtXZVnfV2_A24xlu2Sb9_Q/edit#gid=1056065844">Mo.learn</a> -->
-    <!-- <a class="LinkHover"  target="_blank" href="old/MoLearningPath2.html">LearningPath 2</a> -->
   </div>
 
   <div class="tileBG">
@@ -252,11 +217,7 @@
     <div> </div>
     <div> </div>
   </div>
-  <!-- <p id="clock"> </p> -->
-  <!-- <p id="clock" style=" align-items: center; font-family: 'Work Sans', sans-serif;  font-size:4rem ;color:#e45d20;  text-transform: uppercase;  text-align: center; font-weight: 900; line-height: 1;">Yoga</p> -->
 
-
-  <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
   <script>
     var coll = document.getElementsByClassName("collapsible");
@@ -274,11 +235,9 @@
       });
     }
 
-    // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
-    //Get the button
+
     var mybutton = document.getElementById("myBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {
       scrollFunction();
     };
@@ -294,13 +253,11 @@
       }
     }
 
-    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
 
-    // clock
     function startTime() {
       const today = new Date();
       let h = today.getHours();
@@ -313,12 +270,11 @@
     }
 
     function checkTime(i) {
-      if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+      if (i < 10) { i = "0" + i };
       return i;
     }
 
 
-    //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
   </script>
 </body>
 
