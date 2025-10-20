@@ -7,95 +7,418 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="..\..\css\style.css" />
   <title>Data Base</title>
+  <link rel="icon" href="pic/dev.ico" type="image/x-icon" />
+
+  <style>
+    body {
+      background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+      margin: auto auto;
+      width: 85%;
+      font-family: "Times New Roman", Times, serif;
+      line-height: 1.5;
+      background:
+        linear-gradient(135deg, #a64ca6 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(225deg, #800080 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(315deg, #a64ca6 25%, transparent 25%) 0px 0/ 32px 32px,
+        linear-gradient(45deg, #a64ca6 25%, #ffffff 25%) 0px 0/ 32px 32px;
+
+
+
+      background:
+        linear-gradient(135deg, #a5d2ff55 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(225deg, #a5d2ff 25%, transparent 25%) -16px 0/ 32px 32px,
+        linear-gradient(315deg, #a5d2ff55 25%, transparent 25%) 0px 0/ 32px 32px,
+        linear-gradient(45deg, #a5d2ff 25%, #ffffff 25%) 0px 0/ 32px 32px;
+    }
+
+
+    .collapsible:hover {
+      background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
+          transparent 100%);
+    }
+
+    a {
+      box-shadow: inset 0 0 0 0 #044769;
+      font-size: 1.2rem;
+      color: #2a12e5;
+      font-size: 1rem;
+      padding: 0 1rem;
+      transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    }
+
+    a:hover {
+      box-shadow: inset 1000px 0 0 0 #044769;
+      color: white;
+      padding: 0 1rem;
+    }
+
+    .cscontent {
+      padding: 0px 10%;
+    }
+
+    strong:hover {
+      background-color: dodgerblue;
+      color: whitesmoke;
+    }
+
+    .cscontent a {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    h4 {
+
+      background-color: #006892;
+      color: whitesmoke;
+      height: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+
+    h5 {
+      background-color: #ffc300;
+      font-family: 'Work Sans', sans-serif;
+      text-align: left;
+      border-bottom: 1px dashed rgb(255, 255, 255, 0.5);
+      height: 0.1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: lighter;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 85%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .MenuLabel {
+      background-color: black;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: dodgerblue;
+      text-align: center;
+      margin: 0;
+      padding: 0.2rem;
+    }
+
+    .pageContent {
+      background-color: whitesmoke;
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid gray;
+
+    }
+
+    #myBtn {
+      background-color: #044769;
+    }
+
+    .footerLinks {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footerLinks a {
+      font-size: 0.7rem;
+      font-family: monospace;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 0.3rem;
+    }
+
+
+
+    .fa {
+      direction: rtl;
+      text-align: right;
+      padding-right: 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
- <a target="_blank" href="..\index.html">Back to Home</a>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-  <p class="headerPage">  Data Base </p>
-<div class="dbBlue"> .</div><div class="dbOrange"> .</div>
+  <a href="../index.html">Back to Home</a>
 
-  <h1 class="dbBlue collapsible">DataBase Resources</h1>
-  <div class="content">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
 
-
-    <ul>
-      <li><a href="https://drive.google.com/file/d/1yOCWVotMlya3SHvJK-FM9iOzxVEtDxy3/view?usp=sharing">Database in
-          Depth Relational Theory for Practitioners-Date</a></li>
-      <hr>
-      <li><a href="https://drive.google.com/file/d/1g6o4LsxB0QA3YgTLB5Be-7tiMmUpPqnB/view?usp=sharing">DATABASE
-          SYSTEM CONCEPTS - SIXTH EDITION - Silberschatz</a></li>
-      <hr>
-      <li><a
-          href="https://drive.google.com/file/d/1qbosPHUc3y43-GINjZiGcgeDK9YbMB0Z/view?usp=sharing">Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe</a>
-      </li>
-      <hr>
-      <li><a href="https://drive.google.com/file/d/1GfOw20hW9YN7jbMgy2_wM6t5fjWRgRV4/view?usp=sharing">روحانی</a>
-      </li>
-    </ul>
+  <div class="navbar">
+    <a style="background-color: dodgerblue" href="../index.html">Home</a>
+    <a href="../data.html">Data Path</a>
+    <a href="../data-analyst.html">Data Analyst</a>
+    <a href="../powerplatform.html">PowerPlatform</a>
+    <a href="../microsoft.html">Microsoft</a>
+    <a href="../dev.html">Software Developer</a>
   </div>
 
-  <h1 class="dbBlue collapsible">Database Consept Video</h1>
+  <div class="MenuLabel">Data Base </div>
+
+
+  <div class="pageContent">
+
+    <a target="_blank" href="https://docs.google.com/spreadsheets/d/1UZOlNGKdg7WQI4q7t0sMBP7GA_bBDxQElezhRtBtSGU/edit">
+      Database <img src="../pic/xlxs.png">
+    </a>
+    <a target="_blank" href="https://docs.google.com/document/d/1NHeFYNnfQTCufyCOJBQi69AVAQ2HizOghH6W2pu4O80/edit">
+      Database <img src="../pic/doc.png">
+    </a>
+    <a target="_blank" href="https://drive.google.com/drive/u/2/folders/1S7vwMFfsywTKPyADdxd6bC-clD_eQuGl">
+      Files <img src="../pic/googledrive-icon.png"> </a>
+
+    <!--                ***********************************************                  -->
+    <h4 class="dbBlue collapsible">DataBase Resources</h4>
     <div class="content">
-          <h2 class="dbOrange collapsible">Udemy  Database Management</h2>
-          <div class="content">
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWohlmnSB6dJW6dqk4bp_M-"><h4>[DB-Udemy1] Database Management System from scratch - Part 1 2020-2</h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVOlpbj7ZgjNJ8T-keHcRQd"><h4>[DB-Udemy2] Database Management System from scratch - Part 2 2020-8</h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXH_YkMnhf3SQ-XbfaApa_H"><h4>[DB-Udemy3] Database Management Systems Part 3 SQL Interview Course 2020-8</h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUO4nAriILYJHyAIPMKZOo1"><h4>[DB-Udemy4] Database Management Systems Part 4  Transactions 2020-8</h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUIGPdkhojvbUYpBPGAdIt9"><h4>[DB-Udemy5] Database Management Final Part 5 Indexing B Trees B Trees 2020-8</h4></a>
-          </div><!-- h2-->
-          <h2 class="dbOrange collapsible">Udemy  </h2>
-          <div class="content">
-           <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZV7KkPgn-_hLpipfbIuJEvD"><h4>[DB-Pluralsight] Relational Database Design</h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU421YezFwade4u0pRc9p7W"><h4> [DB-Udemy] Udemy - Introduction to Database Engineering 2021-2 </h4></a>
-            </div><!-- h2-->
+      <a href="https://drive.google.com/file/d/1yOCWVotMlya3SHvJK-FM9iOzxVEtDxy3/view?usp=sharing">Database in
+        Depth Relational Theory for Practitioners-Date</a><br>
+      <hr>
+      <a href="https://drive.google.com/file/d/1g6o4LsxB0QA3YgTLB5Be-7tiMmUpPqnB/view?usp=sharing">DATABASE
+        SYSTEM CONCEPTS - SIXTH EDITION - Silberschatz</a><br>
+      <hr>
+      <a
+        href="https://drive.google.com/file/d/1qbosPHUc3y43-GINjZiGcgeDK9YbMB0Z/view?usp=sharing">Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe</a>
+      <br>
+      <hr>
+      <a href="https://drive.google.com/file/d/1GfOw20hW9YN7jbMgy2_wM6t5fjWRgRV4/view?usp=sharing">روحانی</a>
+      <br>
 
-            <h2 class="dbOrange collapsible">Database concepts  </h2>
-            <div class="content">
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVot6qp3ygI9IJ0vwgnjx-e"><h4>[Stanford-Database] Introduction to Database by Jennifer Widom</h4></a>
-             <a target="_blank" href="#"><h4></h4></a>
-             <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVHJmvJY2IPg7_I-mNi7J8v"><h4>[Java-DB] Database Fundamentals for Java Programmers by Martin Kalin</h4></a>
+    </div>
 
-          </div><!-- h2-->
-  </div><!-- h1-->
 
-    <h1 class="dbBlue collapsible">پایگاه داده ها - فارسی  </h1>
+
+    <!--                ***********************************************                  -->
+    <h4 class="dbBlue collapsible">Database Consept Video</h4>
+    <div class="content">
+      <h5 class="dbOrange collapsible">Udemy Database Management</h5>
       <div class="content">
-          <h2 class="dbOrange collapsible">پایگاه داده ها - مرتضی امینی</h2>
-            <div class="content">
-               <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXIVA7yBue9RJ5NMXpJh_st">Youtube</a>
-                <ol class="fa">
-                    <li>	معرفی درس 	</li><li>	مقدمه‌ای بر سیستم‌های پایگاهی- بخش ۱ 	</li><li>	مقدمه‌ای بر سیستم‌های پایگاهی- بخش 2 	</li><li>	معماری سیستم‌های پایگاهی 	</li><li>	مدلسازی معنایی داده‌ها - بخش ۱ 	</li><li>	مدلسازی معنایی داده‌ها- بخش ۲ 	</li><li>	مدلسازی معنایی داده‌ها- بخش 3 	</li><li>	مدلسازی معنایی داده‌ها-بخش4 	</li><li>	مدلسازی معنایی داده‌ها-بخش5 	</li><li>	طراحی منطقی پایگاه داده‌ها-بخش1 	</li><li>	طراحی منطقی پایگاه داده‌ها-بخش2 	</li><li>	طراحی منطقی پایگاه داده‌ها-بخش3 	</li><li>	مقدمات پیاده سازی و SQL-بخش1 	</li><li>	مقدمات پیاده سازی و SQL-بخش 2 	</li><li>	مقدمات پیاده سازی و SQL-بخش 3 	</li><li>	مقدمات پیاده سازی و SQL-بخش4 	</li><li>	معماری پایگاه داده‌ها- بخش ۱ 	</li><li>	معماری پایگاه داده- بخش 2 	</li><li>	معماری پایگاه داده- بخش ۳ 	</li><li>	معماری پایگاه داده- بخش 4 	</li><li>	مدل داده رابطه‌ای- بخش ۱ 	</li><li>	مدل داده رابطه‌ای- بخش ۲ 	</li><li>	جامعیت در مدل رابطه‌ای- بخش ۲ 	</li><li>	عملیات در پایگاه داده رابطه‌ای- بخش ۱ 	</li><li>	عملیات در پایگاه داده رابطه‌ای- بخش ۲ 	</li><li>	عملیات در پایگاه داده رابطه‌ای- بخش ۳ 	</li><li>	نرمالتر سازی پایگاه داده - بخش ۱ 	</li><li>	نرمالتر سازی پایگاه داده - بخش 2 	</li><li>	نرمالتر سازی پایگاه داده - بخش 3 	</li><li>	نرمالتر سازی پایگاه داده - بخش4 	</li><li>	پایگاه داده‌های NoSQL - بخش ۱ 	</li><li>	پایگاه داده‌های NoSQL - بخش ۲ 	</li><li>	پایگاه داده‌های NoSQL-بخش 3 	</li><li>	جامعیت در مدل رابطه‌ای- بخش ۱ 	</li>
-                    </ol>
-            </DIV>
-            <h2 class="dbOrange collapsible">پایگاه داده ها - شیرافکن </h2>
-            <div class="content">
-              <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVDJsCbH6N7gXBWRFBnBgwq">YouTube</a><br>
-              <a target="_blank"  href="https://drive.google.com/drive/folders/1P6u9XBvD8OAlVa6kFGWZLUvnh8DtjHDH?usp=sharing">Slides and Notes</a>
-              <hr>
-                  <ol class="fa">
-                    <li>  تعاریف اولیه سیستم پایگاه داده</li><li> ساختار داده ای رابطه ای</li><li>  مدل ER</li><li>جبر رابطه ای (الف)</li><li>جبر رابطه ایی (ب)</li><li> زبان SQL (الف)</li><li>زبان SQL (ب)</li><li>وابستگی تابعی</li><li> نرمال تر سازی (الف)</li><li> نرمال تر سازی (ب)</li>
-                  </ol>
-            </div>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWohlmnSB6dJW6dqk4bp_M-">
+          [DB-Udemy1] Database Management System from scratch - Part 1 2020-2<img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVOlpbj7ZgjNJ8T-keHcRQd">
+          [DB-Udemy2] Database Management System from scratch - Part 2 2020-8<img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXH_YkMnhf3SQ-XbfaApa_H">
+          [DB-Udemy3] Database Management Systems Part 3 SQL Interview Course 2020-8<img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUO4nAriILYJHyAIPMKZOo1">
+          [DB-Udemy4] Database Management Systems Part 4 Transactions 2020-8<img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUIGPdkhojvbUYpBPGAdIt9">
+          [DB-Udemy5] Database Management Final Part 5 Indexing B Trees B Trees 2020-8<img src="../pic/youtube.png"><br>
+        </a>
+      </div>
+      <h5 class="dbOrange collapsible">Udemy </h5>
+      <div class="content">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZV7KkPgn-_hLpipfbIuJEvD">
+          [DB-Pluralsight] Relational Database Design<img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU421YezFwade4u0pRc9p7W">
+          [DB-Udemy] Udemy - Introduction to Database Engineering 2021-2 <img src="../pic/youtube.png"><br>
+        </a>
+      </div><!-- h5-->
 
+      <h5 class="dbOrange collapsible">Database concepts </h5>
+      <div class="content">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVot6qp3ygI9IJ0vwgnjx-e">
+          [Stanford-Database] Introduction to Database by Jennifer Widom <img src="../pic/youtube.png"><br>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVHJmvJY2IPg7_I-mNi7J8v">
+          [Java-DB] Database Fundamentals for Java Programmers by Martin Kalin <img src="../pic/youtube.png">
+        </a>
 
+      </div>
+    </div>
+    <!--                ***********************************************                  -->
 
+    <h4 class="dbBlue collapsible">پایگاه داده ها - فارسی </h4>
+    <div class="content">
+      <h5 class="dbOrange collapsible">پایگاه داده ها - مرتضی امینی</h5>
+      <div class="fa content">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZXIVA7yBue9RJ5NMXpJh_st">
+          Youtube <img src="../pic/youtube.png"></a>
+        <br>
+        <a target="_blank"
+          href="https://docs.google.com/spreadsheets/d/1Gl7m9q4nenu_v_Zt0EiDOcOmib2r7x127AMKkgZeGrw/edit?">
+          Database <img src="../pic/xlxs.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://docs.google.com/document/d/1OpsJU2QxiG0knlQYSbqeW7wujgxPnxHAsfsT6oY7MSQ/edit">
+          Database <img src="../pic/doc.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/drive/u/2/folders/1eAvqAo5GPaekEgL-lmlBm53MIJ2PwQJ4">
+          Files <img src="../pic/googledrive-icon.png"> </a>
+        <br>
+        معرفی درس <br>
+        مقدمه‌ای بر سیستم‌های پایگاهی- بخش ۱ <br>
+        مقدمه‌ای بر سیستم‌های پایگاهی- بخش 2 <br>
+        معماری سیستم‌های پایگاهی <br>
+        مدلسازی معنایی داده‌ها - بخش ۱ <br>
+        مدلسازی معنایی داده‌ها- بخش ۲ <br>
+        مدلسازی معنایی داده‌ها- بخش 3 <br>
+        مدلسازی معنایی داده‌ها-بخش4 <br>
+        مدلسازی معنایی داده‌ها-بخش5 <br>
+        طراحی منطقی پایگاه داده‌ها-بخش1 <br>
+        طراحی منطقی پایگاه داده‌ها-بخش2 <br>
+        طراحی منطقی پایگاه داده‌ها-بخش3 <br>
+        مقدمات پیاده سازی و SQL-بخش1 <br>
+        مقدمات پیاده سازی و SQL-بخش 2 <br>
+        مقدمات پیاده سازی و SQL-بخش 3 <br>
+        مقدمات پیاده سازی و SQL-بخش4 <br>
+        معماری پایگاه داده‌ها- بخش ۱ <br>
+        معماری پایگاه داده- بخش 2 <br>
+        معماری پایگاه داده- بخش ۳ <br>
+        معماری پایگاه داده- بخش 4 <br>
+        مدل داده رابطه‌ای- بخش ۱ <br>
+        مدل داده رابطه‌ای- بخش ۲ <br>
+        جامعیت در مدل رابطه‌ای- بخش ۲ <br>
+        عملیات در پایگاه داده رابطه‌ای- بخش ۱ <br>
+        عملیات در پایگاه داده رابطه‌ای- بخش ۲ <br>
+        عملیات در پایگاه داده رابطه‌ای- بخش ۳ <br>
+        نرمالتر سازی پایگاه داده - بخش ۱ <br>
+        نرمالتر سازی پایگاه داده - بخش 2 <br>
+        نرمالتر سازی پایگاه داده - بخش 3 <br>
+        نرمالتر سازی پایگاه داده - بخش4 <br>
+        پایگاه داده‌های NoSQL - بخش ۱ <br>
+        پایگاه داده‌های NoSQL - بخش ۲ <br>
+        پایگاه داده‌های NoSQL-بخش 3 <br>
+        جامعیت در مدل رابطه‌ای- بخش ۱ <br>
 
-  <!--                   Irani - Phase 4            -->
-  <h2 class="dbOrange collapsible"> فاز ۴: طراحی پایگاه داده ها -  ایرانی</h2>
-  <div class="content">
-   <a target="_blank" href="https://www.youtube.com/playlist?list=PLKwsMoYJqrLIUfclTe45Q_WFfyelJQbs4">YouTube</a><br>
-      <ol class="fa">
-          <li>اول: قوانین کلاسی، سرفصل ها، منابع درس، پروژه ها و بارم بندی  </li><li>   جلسه دوم: مفاهیم بنیادی، تاریخچه و پیدایش DBMS ها </li><li>   جلسه سوم: جایگاه پایگاه داده و مدلسازی داده در مهندسی نرم افزار </li><li>   جلسه چهارم: مفهوم و جایگاه مدلسازی داده در مهندسی نرم افزار </li><li>   جلسه پنجم: تاریخچه ذخیره سازی داده و مفهوم مدل رابطه ای </li><li>   جلسه ششم: مفاهیم بنیادی مدل رابطه ای </li><li>   جلسه هفتم: مقدمات اولیه مدلسازی داده </li><li>   جلسه هشتم: الگوهای مدلسازی داده، رابطه داشتن </li><li>   جلسه نهم: انواع صفتهای ترکیبی، چندمقداری و مشتق شده </li><li>   جلسه دهم: مدلسازی دادۀ درخت و گراف </li><li>   جلسه یازدهم: نگاشت مدلهای شئ گرا به مدل داده رابطه ای </li><li>   جلسه دوازدهم: الگوی لیست و دام حلقوی در مدلسازی داده </li><li>   جلسه سیزدهم: الگوی Status Pattern در مدلسازی داده </li><li>   جلسه چهاردهم: مثال: مدل داده فارغ التحصیلی آموزشی دانشجو </li><li>   جلسه پانزدهم: مثال: مدل داده زیر سیستم AAA </li><li>   جلسه شانزدهم: مثال: مدل داده فرایند ارجاع در سیستم اتوماسیون اداری </li><li>   جلسه هفدهم: مقدمه ای بر مفاهیم SQL, JPQL, HQL, TSQL, PL-SQL,… </li><li>   جلسه هجدهم: دستورات SQL: مقدمات دستور Select </li><li>   جلسه نوزدهم: دستورات SQL: دستور Group By در دستور Select </li><li>   جلسه بیستم: دستورات SQL: انواع Join ها </li><li>   جلسه بیست و یکم: دستورات SQL: دستورات Inset, Update, Delete </li><li>   جلسه بیست و دوم: آموزش عملی دستورات SQL در PostgreSQL </li><li>   جلسه بیست و سوم: آموزش عملی Group By و Join در PostgreSQL </li><li>   جلسه بیست و چهارم: مفهوم Transaction، اصول ACID و Data Integrity </li><li>   جلسه بیست و پنجم: مفاهیم اولیه Distributed Transactions </li><li>   جلسه بیست و ششم: مفاهیم ORM, ORDBMS, OODBMS </li><li>   جلسه بیست و هفتم: الگوی Enterprise در مدلسازی داده، مقدمات BigData </li><li>   جلسه بیست و هشتم: مدلهای داده NoSQL – Key-Value, Column Family </li><li>  جلسه بیست و نهم: مدلهای Document Store, Graph و مفهوم CAP Theorem </li>
-      </ol>
+      </DIV>
+      <h5 class="dbOrange collapsible">پایگاه داده ها - شیرافکن </h5>
+      <div class="fa content">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVDJsCbH6N7gXBWRFBnBgwq">
+          YouTube<img src="../pic/youtube.png"></a><br>
+        <a target="_blank"
+          href="https://drive.google.com/drive/folders/1P6u9XBvD8OAlVa6kFGWZLUvnh8DtjHDH?usp=sharing">Slides and
+          Notes</a>
+        <br>
+        <a target="_blank"
+          href="https://docs.google.com/spreadsheets/d/1asXxYAUqCOFRqqGV9VKpv-lZsEElZfh08Ak5tWo8rIw/edit">
+          Shirafkan <img src="../pic/xlxs.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://docs.google.com/document/d/1dEorQOMW1i3S3Yw6RDXwAgkO9pKgcTmUZmG2o-2czxc/edit">
+          Shirafkan <img src="../pic/doc.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/drive/u/2/folders/1P6u9XBvD8OAlVa6kFGWZLUvnh8DtjHDH">
+          Files <img src="../pic/googledrive-icon.png"> </a>
+        <hr>
+        تعاریف اولیه سیستم پایگاه داده<br>
+        ساختار داده ای رابطه ای<br>
+        مدل ER<br>
+        جبر رابطه ای (الف)<br>
+        جبر رابطه ایی (ب)<br>
+        زبان SQL (الف)<br>
+        زبان SQL (ب)<br>
+        وابستگی تابعی<br>
+        نرمال تر سازی (الف)<br>
+        نرمال تر سازی (ب)<br>
+
+      </div>
+
+      <!--                   Irani - Phase 4            -->
+      <h5 class="dbOrange collapsible"> فاز ۴: طراحی پایگاه داده ها - ایرانی</h5>
+      <div class="content fa ">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLKwsMoYJqrLIUfclTe45Q_WFfyelJQbs4">
+          YouTube <img src="../pic/youtube.png">
+        </a><br>
+
+        <a target="_blank"
+          href="https://docs.google.com/spreadsheets/d/1iVMDeTTi2lN_ULgWXJ3dUq1YHH-ipKLv2bgbClqynu0/edit">
+          Database <img src="../pic/xlxs.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://docs.google.com/document/d/1STR_Ymd99T_KgcaYlIjoSIduzS-jBKNLnDos-2U0Ldc/edit">
+          Database <img src="../pic/doc.png">
+        </a>
+        <br>
+        <a target="_blank" href="https://drive.google.com/drive/u/2/folders/1hH076sukwFGcjd68J2RlH0dpeQeKFtQL">
+          Files <img src="../pic/googledrive-icon.png"> </a>
+
+        <hr>
+        اول: قوانین کلاسی، سرفصل ها، منابع درس، پروژه ها و بارم بندی <br>
+        جلسه دوم: مفاهیم بنیادی، تاریخچه و پیدایش DBMS ها <br>
+        جلسه سوم: جایگاه پایگاه داده و مدلسازی داده در مهندسی نرم افزار <br>
+        جلسه چهارم: مفهوم و جایگاه مدلسازی داده در مهندسی نرم افزار <br>
+        جلسه پنجم: تاریخچه ذخیره سازی داده و مفهوم مدل رابطه ای <br>
+        جلسه ششم: مفاهیم بنیادی مدل رابطه ای <br>
+        جلسه هفتم: مقدمات اولیه مدلسازی داده <br>
+        جلسه هشتم: الگوهای مدلسازی داده، رابطه داشتن <br>
+        جلسه نهم: انواع صفتهای ترکیبی، چندمقداری و مشتق شده <br>
+        جلسه دهم: مدلسازی دادۀ درخت و گراف <br>
+        جلسه یازدهم: نگاشت مدلهای شئ گرا به مدل داده رابطه ای <br>
+        جلسه دوازدهم: الگوی لیست و دام حلقوی در مدلسازی داده <br>
+        جلسه سیزدهم: الگوی Status Pattern در مدلسازی داده <br>
+        جلسه چهاردهم: مثال: مدل داده فارغ التحصیلی آموزشی دانشجو <br>
+        جلسه پانزدهم: مثال: مدل داده زیر سیستم AAA <br>
+        جلسه شانزدهم: مثال: مدل داده فرایند ارجاع در سیستم اتوماسیون اداری <br>
+        جلسه هفدهم: مقدمه ای بر مفاهیم SQL, JPQL, HQL, TSQL, PL-SQL,… <br>
+        جلسه هجدهم: دستورات SQL: مقدمات دستور Select <br>
+        جلسه نوزدهم: دستورات SQL: دستور Group By در دستور Select <br>
+        جلسه بیستم: دستورات SQL: انواع Join ها <br>
+        جلسه بیست و یکم: دستورات SQL: دستورات Inset, Update, Delete <br>
+        جلسه بیست و دوم: آموزش عملی دستورات SQL در PostgreSQL <br>
+        جلسه بیست و سوم: آموزش عملی Group By و Join در PostgreSQL <br>
+        جلسه بیست و چهارم: مفهوم Transaction، اصول ACID و Data Integrity <br>
+        جلسه بیست و پنجم: مفاهیم اولیه Distributed Transactions <br>
+        جلسه بیست و ششم: مفاهیم ORM, ORDBMS, OODBMS <br>
+        جلسه بیست و هفتم: الگوی Enterprise در مدلسازی داده، مقدمات BigData <br>
+        جلسه بیست و هشتم: مدلهای داده NoSQL – Key-Value, Column Family <br>
+        جلسه بیست و نهم: مدلهای Document Store, Graph و مفهوم CAP Theorem <br>
+
+      </div>
+    </div>
+  </div>
+  <div class="footerLinks">
+    <a class="LinkHover" href="../acc.html">my Links</a>
+    |
+    <a class="LinkHover" href="JavaScript.html"> JavaScript</a> |
+    <a class="LinkHover" href="Mosh.html"> Mosh</a> |
+    <a class="LinkHover" href="cs.html">C#</a> |
+    <a class="LinkHover" href="DataBase.html">DB</a> |
+    <a class="LinkHover" href="DataStructureAlgorithm.html">DS</a> |
+    <a class="LinkHover" href="SaskPolytech.html">SaskPol</a> |
+    <a class="LinkHover" href="j.html">JavaN</a> |
+    <a class="LinkHover" href="java.html">Java</a> |
+
+    <a class="LinkHover" href="htmlcss.html">MySQL</a> |
+
   </div>
 
-</div>
+  <div class="foot">
+    <a style="color: dodgerblue;" href="#"> Learn Data Base with ❤ </a>
+  </div>
 
-<br><br>
-<div class="dbOrange"> .</div>   <div class="dbBlue"> .</div>
   <!--------------------------------------------------    SCRIPT          ------------------------------------>
 
   <script>
@@ -139,7 +462,7 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-      //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
+    //  end  ------------------------------------------------------------------ jQuery for top floating menu  --------------------------------------------------
   </script>
 </body>
 
