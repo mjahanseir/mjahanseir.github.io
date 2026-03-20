@@ -91,7 +91,7 @@ h4 {
 
 
 .collapsible {
-  color: white;
+  /* color: white; */
   cursor: pointer;
   padding: 18px;
 }
