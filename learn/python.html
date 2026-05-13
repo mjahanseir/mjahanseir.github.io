@@ -15,16 +15,31 @@
             margin: auto auto;
             width: 85%;
             font-family: "Times New Roman", Times, serif;
-            background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
-                linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px,
-                linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px,
-                linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
+            background: linear-gradient(135deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(225deg, #87d4f0 25%, transparent 25%) -16px 0/ 32px 32px, linear-gradient(315deg, #87d4f0 25%, transparent 25%) 0px 0/ 32px 32px, linear-gradient(45deg, #87d4f0 25%, #ffffff 25%) 0px 0/ 32px 32px;
+        }
+
+
+        .collapsible {
+            /* color: white; */
+            cursor: pointer;
+            padding: 18px;
         }
 
         .collapsible:hover {
-            background-image: linear-gradient(hsla(0, 0%, 0%, 0.2) 100%,
-                    transparent 100%);
+            /* background-color: rgba(0, 0, 0, 0.8); */
+            background-image: linear-gradient(hsla(0, 0%, 0%, .1) 100%, transparent 100%)
         }
+
+        .content {
+            background-color: ivory;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif, Geneva, monospace;
+            color: #2d2c2c;
+            font-size: 1.2rem;
+            display: none;
+            overflow: hidden;
+        }
+
 
         a {
             box-shadow: inset 0 0 0 0 #049ad2;
@@ -65,7 +80,6 @@
         }
 
         h5 {
-
             font-family: "Work Sans", sans-serif;
             text-transform: uppercase;
             text-align: center;
@@ -144,27 +158,367 @@
 
     <div class="navbar">
         <a style="background-color: #87d4f0" href="index.html">Home</a>
-        <a target="_blank" href="https://docs.google.com/spreadsheets/d/1lQ0dNCjIDlQhJein2zlZZl_OGt87Rc7HnRTs7go3XXc/edit?">Python.xlxs <img src="pic/xlxs.png"></a>
-        <a target="_blank" href="https://docs.google.com/document/d/1KDbd5dnpbQAJ_Kj5oNHBz29F_DQMVvnaHZViabwZkLE/edit?">Python.docx <img src="pic/doc.png"></a>
-       
-        <a target="_blank" href="https://drive.google.com/drive/u/0/folders/19ND-QAF0650ROHsnxDYLipsoyMUEPuWf">Drive<img src="pic/googledrive-icon.png"></a>
-        </div>
+        <a target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1lQ0dNCjIDlQhJein2zlZZl_OGt87Rc7HnRTs7go3XXc/edit?">Python.xlxs
+            <img src="pic/xlxs.png"></a>
+        <a target="_blank"
+            href="https://docs.google.com/document/d/1KDbd5dnpbQAJ_Kj5oNHBz29F_DQMVvnaHZViabwZkLE/edit?">Python.docx
+            <img src="pic/doc.png"></a>
+
+        <a target="_blank" href="https://drive.google.com/drive/u/0/folders/19ND-QAF0650ROHsnxDYLipsoyMUEPuWf">Drive<img
+                src="pic/googledrive-icon.png"></a>
+    </div>
 
     <div class="MenuLabel">Python</div>
 
 
     <div class="pageContent">
 
-        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - - - - -                BOOKS        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-        <h4 class="ciscoColor collapsible"> Mosh</h4>
-        The Complete Python Programming Course for Beginners to Advanced <a target="_blank"
-            href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ"> Youtube <img
-                src="pic/youtube.png" /> </a>
-        <a href="https://docs.google.com/document/d/1ywwRcbLx7iYCDA3VYrJBbSgmvA--zoV81C2pVJeFo44/edit">List <img
-                src="pic/doc.png" /></a>
+
+        <h4 class="ciscoColor collapsible">Books</h4>
+        Python for Programmers: with Big Data and Artificial Intelligence Case Studies
+        <a target="_blank" href="https://drive.google.com/file/d/1s3IenoxMsvQA1F5YNl6_derP1XWqYI_9/view?usp=drive_link">
+            [ Book ] <img src="pic/pdflogo.png"> </a>
+        <br>
+        Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud
+        <a target="_blank" href="https://drive.google.com/file/d/1r_h7db5D2jblmYyFm1R33jAjDiYFUD-A/view?usp=share_link">
+            [ Book ] <img src="pic/pdflogo.png"> </a>
+        <a target="_blank" href="https://learning.oreilly.com/api/v1/continue/9780135404799/"> [ O'Reilly ] </a>
+        <br>
+        Introduction to Python Programming and Data Structures - 3 Edition
+        <a target="_blank" href="https://media.pearsoncmg.com/ph/esm/ecs_liang_python_3e/cw/">[ Companion Site ]</a>
         <br>
 
+        Introduction to Python Programming and Data Structures - 2 Edition
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PLVr2C-iCNS5p4t5HFDcMW5lqwpuW51GQ9">[ Youtube
+            ]
+        </a>
+        <br>
+        Advanced Python Development: Using Powerful Language Features in Real-World Applications
+        <a target="_blank" href="https://drive.google.com/file/d/1Xt5q7mLrHC4wAu7AU8HBUobL7B7o8TE7/view?usp=drive_link">
+            [ Book ] <img src="pic/pdflogo.png"> </a>
+        <a target="_blank" href="https://learning.oreilly.com/library/view/advanced-python-development/9781484257937/">
+            [ O'Reilly ] </a>
+        <br>
+
+        Learning Python, 5th Edition <a target="_blank"
+            href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/"> [ O'Reilly ]
+        </a> <br>
+        Python in a Nutshell 4th Edition <a target="_blank"
+            href="https://drive.google.com/file/d/1HKmxQtaZmxJUtUIo054e3YqNXoAw8hnA/view?usp=drive_link">
+            [ Book ] <img src="pic/pdflogo.png"> </a> <br>
+        Web Scraping with Python <a target="_blank"
+            href="https://drive.google.com/file/d/1hKjyY2LKvTWnNEIfnijVba37QWiBq_uI/view?usp=drive_link">
+            [ Book ] <img src="pic/pdflogo.png"> </a>
+
+
+
+
+
+
+
+        <!-- - - - - - - - - - - - - - - - - -      MOSH       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <h4 class="collapsible"> Mosh</h4>
+        <div class="content">
+
+            The Complete Python Programming Course for Beginners to Advanced <a target="_blank"
+                href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ"> Youtube <img
+                    src="pic/youtube.png" /> </a>
+            <a href="https://docs.google.com/document/d/1ywwRcbLx7iYCDA3VYrJBbSgmvA--zoV81C2pVJeFo44/edit">List <img
+                    src="pic/doc.png" /></a>
+            <hr>
+            https://codewithmosh.com/p/python-programming-course-beginners - 12 Hours . 13 Sections . 200 Lessons <br>
+            1. Getting Started(33m) <br>
+            2. Primitive Types(35m) <br>
+            3. Control Flow(39m) <br>
+            4. Functions(41m) <br>
+            5. Data Structures(1h) <br>
+            6. Exceptions(23m) <br>
+            7. Classes(1h) <br>
+            8. Modules(18m) <br>
+            9. Python Standard Library(1h) <br>
+            10. Python Package Index(46m) <br>
+            11. Popular Python Packages(1h) <br>
+            12. Building Web Applications with Django(2h) <br>
+            13. Machine Learning with Python(48m)
+            <hr>
+
+
+            1- Getting Started (32m) <br>
+            <a href="https://www.youtube.com/watch?v=EsGnJljYtmk&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=1&pp=iAQBsAQBsAgC"
+                target="_blank"> 1- What is Python (3:21) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=chbVmEQE0W4&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=2&pp=iAQBsAQBsAgC"
+                target="_blank"> 2- Installing Python (1:52) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=Mi18tIuJRJ8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=3&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- Python Interpreter (1:55) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=mxU4hmNUrT8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=4&pp=iAQBsAQBsAgC"
+                target="_blank"> 4- Code Editors (1:19) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=x09GFe9evJc&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=5&pp=iAQBsAQBsAgC"
+                target="_blank"> 5- Your First Python Program (3:36) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=4OxNFb1Vtys&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=6&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- Python Extension (2:52) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=-WUhIjL-O7o&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=7&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- Linting Python Code (4:14) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=hS04ePeQU34&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=8&pp=iAQBsAQBsAgC"
+                target="_blank"> 8- Formatting Python Code (3:54) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=c16FuBR2X98&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=9&pp=iAQBsAQBsAgC"
+                target="_blank"> 9- Running Python Code (2:59) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=xRG4eydEQcA&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=10&pp=iAQBsAQBsAgC"
+                target="_blank"> 10- Python Implementations (2:28) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=tqKL8XVRRjs&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=11&pp=iAQBsAQBsAgC"
+                target="_blank"> 11- How Python Code is Executed (2:46) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=bLAzH6Lt550&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=12&pp=iAQBsAQBsAgC"
+                target="_blank"> 12- Quiz (1:37) <img src="pic/youtube.png" /></a><br>
+            . . 13- Follow Me Around <br>
+            . . 14- Learning Paths <br>
+            2- Primitive Types (34m) <br>
+            <a href="https://www.youtube.com/watch?v=NhfGybN7kJY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=13&pp=iAQBsAQBsAgC"
+                target="_blank"> 1- Variables (3:04) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=9CRVLNUjqTY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=14&pp=iAQBsAQBsAgC"
+                target="_blank"> 2- Variable Names (3:02) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=u_PpQiVEDn4&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=15&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- Strings (5:30) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=TuS7Fa8AahM&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=16&pp=iAQBsAQBsAgC"
+                target="_blank"> 4- Escape Sequences (2:40) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=0z6ZqigdYiM&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=17&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 5- Formatted Strings (2:08) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=iHzioja8MsM&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=18&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- String Methods (5:54) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=xmYEnTcjUTM&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=19&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- Numbers (2:46) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=XaE-QMamWAw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=20&pp=iAQBsAQBsAgC"
+                target="_blank"> 8- Working with Numbers (2:09) <img src="pic/youtube.png" /></a><br>
+            <a href="https://youtu.be/DvVaVXyRzUQ" target="_blank"> 9- Type Conversion (5:04) <img
+                    src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=6UlPmrvgCTE&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=21&pp=iAQBsAQBsAgC"
+                target="_blank"> 10- Quiz (2:43) <img src="pic/youtube.png" /></a><br>
+            3- Control Flow (37m) <br>
+            <a
+                href="https://www.youtube.com/watch?v=3BmD7pFUOLs&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=22&pp=iAQBsAQBsAgC">
+                1- Comparison Operators (2:04) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=V0v6yGORMos&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=23&pp=iAQBsAQBsAgC">
+                2- Conditional Statements (4:09) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=HDeEx6cbfT4&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=24&pp=iAQBsAQBsAgC">
+                3- Ternary Operator (2:09) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=f4XLDdEA8jo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=25&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC">
+                4- Logical Operators (4:02) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=pNnjTAgj3tY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=26&pp=iAQBsAQBsAgC">
+                5- Short-circuit Evaluation (2:06) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=WhWViDYa34s&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=27&pp=iAQBsAQBsAgC">
+                6- Chaining Comparison Operators (1:22) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=KtNMgoNSKSo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=28&pp=iAQBsAQBsAgC">
+                7- Quiz (1:43) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=ilZ6bcfL98I&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=29&pp=iAQBsAQBsAgC">
+                8- For Loops (3:38) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=T8rfEy7oOKk&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=30&pp=iAQBsAQBsAgC">
+                9- For..Else (2:46) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=wsIz1Cq2XsQ&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=31&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC">
+                10- Nested Loops (2:44) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=Qd8I8m4LJho&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=32&pp=iAQBsAQBsAgC">
+                11- Iterables (3:08) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=LMGxsnTVnZA&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=33&pp=iAQBsAQBsAgC">
+                12- While Loops (4:59) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=0YdYbKhX8yg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=34&pp=iAQBsAQBsAgC">
+                13- Infinite Loops (1:37) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=2-WBGxIl-8E&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=35&pp=iAQBsAQBsAgC">
+                14- Exercise (2:05) <img src="pic/youtube.png" /></a><br>
+            4- Functions (41m) <br>
+            <a
+                href="https://www.youtube.com/watch?v=YUk0ejnm9fo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=36&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC">
+                1- Defining Functions (2:24) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=eovFgHY44Y4&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=37&pp=iAQBsAQBsAgC">
+                2- Arguments (2:20) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=0R8t8Rr3A28&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=38&pp=iAQBsAQBsAgC">
+                3- Types of Functions (4:02) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=c_g2rs4CO5o&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=39&pp=iAQBsAQBsAgC">
+                4- Keyword Arguments (2:00) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=09krSL2FOWA&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=40&pp=iAQBsAQBsAgC">
+                5- Default Arguments (1:35) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=1T-DY906e-8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=41&pp=iAQBsAQBsAgC">
+                6- xargs (4:15) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=n2O5fhCNElc&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=42&pp=iAQBsAQBsAgC">
+                7- xxargs (2:20) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=Hxp9VVL8sbU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=43&pp=iAQBsAQBsAgC">
+                8- Scope (5:09) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=sbYZkGwExHs&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=44&pp=iAQBsAQBsAgC">
+                9- Debugging (6:50) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=Jdn2oUBEIu8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=45&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC">
+                10- VSCode Coding Tricks - Windows (2:21) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=2E6BOm1yE98&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=46&pp=iAQBsAQBsAgC">
+                11- VSCode Coding Tricks - Mac (1:49) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=xM0MgXcEDOU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=47&pp=iAQBsAQBsAgC">
+                12- Exercise (1:29) <img src="pic/youtube.png" /></a><br>
+            <a
+                href="https://www.youtube.com/watch?v=NksK41LD5XY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=48&pp=iAQBsAQBsAgC">
+                13- Solution (4:41) <img src="pic/youtube.png" /></a><br>
+            . . A Quick Note <br>
+            5- Data Structures (1h20m) <br>
+            <a href="https://www.youtube.com/watch?v=AfnRIik9Cy0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=49&pp=iAQBsAQBsAgC"
+                target="_blank"> 1- Lists (3:54) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=TtP-wUD6eeU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=50&pp=iAQBsAQBsAgC"
+                target="_blank"> 2- Accessing Items (3:13) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=jzINMNV3fFk&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=51&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- List Unpacking (3:51) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=C1_ti77Po3U&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=52&pp=iAQBsAQBsAgC"
+                target="_blank"> 4- Looping over Lists (2:54) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=hikeayAlccw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=53&pp=iAQBsAQBsAgC"
+                target="_blank"> 5- Adding or Removing Items (2:56) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=m4jeGvvscOg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=54&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- Finding Items (1:28) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=NnFmQu1shTg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=55&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- Sorting Lists (4:35) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=eCnm2YBcSL8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=56&pp=iAQBsAQBsAgC"
+                target="_blank"> 8- Lambda Functions (1:49) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=RNoprsWBUhw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=57&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 9- Map Function (3:25) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=6-WUxA6YDzo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=58&pp=iAQBsAQBsAgC"
+                target="_blank"> 10- Filter Function (2:05) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=e32Tjw909yY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=59&pp=iAQBsAQBsAgC"
+                target="_blank"> 11- List Comprehensions (3:10) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=6p2BSIs_8zw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=60&pp=iAQBsAQBsAgC"
+                target="_blank"> 12- Zip Function (1:49) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=_6zafgZg5bk&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=61&pp=iAQBsAQBsAgC"
+                target="_blank"> 13- Stacks (4:24) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=IQmlJeQN9-c&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=62&pp=iAQBsAQBsAgC"
+                target="_blank"> 14- Queues (2:50) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=V4xg8MzEhL0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=63&pp=iAQBsAQBsAgC"
+                target="_blank"> 15- Tuples (4:02) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=pjdOrHkXNPA&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=64&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 16- Swapping Variables (2:37) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=9WG7eCRXkso&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=65&pp=iAQBsAQBsAgC"
+                target="_blank"> 17- Arrays (3:11) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=obsBx-XYqlo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=66&pp=iAQBsAQBsAgC"
+                target="_blank"> 18- Sets (4:03) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=kYEnWlr8by0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=67&pp=iAQBsAQBsAgC"
+                target="_blank"> 19- Dictionaries (5:24) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=wKXDSUvOSeg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=68&pp=iAQBsAQBsAgC"
+                target="_blank"> 20- Dictionary Comprehensions (3:19) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=F51nCs4P4EY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=69&pp=iAQBsAQBsAgC"
+                target="_blank"> 21- Generator Expressions (3:51) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=zBMU2jVku24&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=70&pp=iAQBsAQBsAgC"
+                target="_blank"> 22- Unpacking Operator (4:05) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=LSVLgx1xuDc&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=71&pp=iAQBsAQBsAgC"
+                target="_blank"> 23- Exercise (6:21) <img src="pic/youtube.png" /></a><br>
+            6- Exceptions (20m) <br>
+            <a href="https://www.youtube.com/watch?v=1AShf8tLvrg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=72&pp=iAQBsAQBsAgC"
+                target="_blank"> 1- Exceptions (2:16) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=8myd4nDqgNw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=73&pp=iAQBsAQBsAgC"
+                target="_blank"> 2- Handling Exceptions (4:10) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=TPwU3yVw8Cs&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=74&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- Handling Different Exceptions (3:05) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=t6v2fyNofYc&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=75&pp=iAQBsAQBsAgC"
+                target="_blank"> 4- Cleaning Up (1:57) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=USXtxYlP6qw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=76&pp=iAQBsAQBsAgC"
+                target="_blank"> 5- The With Statement (3:07) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=xPmXf06_DP0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=77&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- Raising Exceptions (3:21) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=qH9cHTwYN_Q&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=78&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- Cost of Raising Exceptions (4:41) <img src="pic/youtube.png" /></a><br>
+            7- Classes (1h25m) <br>
+            <a href="https://www.youtube.com/watch?v=5eR7wAOEE8g&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=79&pp=iAQBsAQBsAgC"
+                target="_blank"> 1- Classes (2:35) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=xEbyLsZrqic&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=80&pp=iAQBsAQBsAgC"
+                target="_blank"> 2- Creating Classes (3:45) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=duNrvMsXGb0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=81&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- Constructors (4:37) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=JmA6d29wfFU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=82&pp=iAQBsAQBsAgC"
+                target="_blank"> 4- Class vs Instance Attributes (3:58) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=4jJr7tsFa5k&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=83&pp=iAQBsAQBsAgC"
+                target="_blank"> 5- Class vs Instance Methods (4:05) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=yAgvZWG9RBk&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=84&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- Magic Methods (3:13) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=lXg0e27kq90&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=85&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- Comparing Objects (3:11) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=4WH0e2Qt2m4&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=86&pp=iAQBsAQBsAgC"
+                target="_blank"> 8- Performing Arithmetic Operations (1:31) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=hODZ8cHIURg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=87&pp=iAQBsAQBsAgC"
+                target="_blank"> 9- Making Custom Containers (6:55) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=PhjaRbeE50I&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=88&pp=iAQBsAQBsAgC"
+                target="_blank"> 10- Private Members (3:40) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=5wl1bvBUtmI&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=89&pp=iAQBsAQBsAgC"
+                target="_blank"> 11- Properties (7:30) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=-LUyjCCSlQA&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=90&pp=iAQBsAQBsAgC"
+                target="_blank"> 12- Inheritance (4:23) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=rwxI9D1Pb_8&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=91&pp=iAQBsAQBsAgC"
+                target="_blank"> 13- The Object Class (2:23) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=sPVoTWiAMlw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=92&pp=iAQBsAQBsAgC"
+                target="_blank"> 14- Method Overriding (3:14) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=qNniEf1IZls&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=93&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 15- Multi-level Inheritance (2:42) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=EMN3sL2w5LQ&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=94&pp=iAQBsAQBsAgC"
+                target="_blank"> 16- Multiple Inheritance (3:22) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=Ze6ZD2DWAZo&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=95&pp=iAQBsAQBsAgC"
+                target="_blank"> 17- A Good Example of Inheritance (4:31) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=aif7il3psgg&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=96&pp=iAQBsAQBsAgC"
+                target="_blank"> 18- Abstract Base Classes (4:50) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=qV2UQ_m-5BY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=97&pp=iAQBsAQBsAgC"
+                target="_blank"> 19- Polymorphism (3:56) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=228ymU9oVHI&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=98&pp=iAQBsAQBsAgC"
+                target="_blank"> 20- Duck Typing (2:50) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=O-Nzck8NwAQ&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=99&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 21- Extending Built-in Types (2:26) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=TVSyar-KjTU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=100&pp=iAQBsAQBsAgC"
+                target="_blank"> 22- Data Classes (4:36) <img src="pic/youtube.png" /></a><br>
+            8- Modules (20m) <br>
+            <a href="https://www.youtube.com/watch?v=d0QhxuWHqS0&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=101&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 1- Creating Modules (4:16) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=rhapqWyeSrw&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=102&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 2- Compiled Python Files (2:19) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=RVvkzD3xi_c&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=103&pp=iAQBsAQBsAgC"
+                target="_blank"> 3- Module Search Path (1:35) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=vc1LsqxQP8s&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=104&pp=iAQBsAQB0gcJCQQLAYcqIYzvsAgC"
+                target="_blank"> 4- Packages (2:27) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=4s28Zl26PoY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=105&pp=iAQBsAQBsAgC"
+                target="_blank"> 5- Sub-packages (1:01) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=oeLb0c8Fe8Y&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=106&pp=iAQBsAQBsAgC"
+                target="_blank"> 6- Intra-package References (1:36) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=Zx_PXnx3tAY&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=107&pp=iAQBsAQBsAgC"
+                target="_blank"> 7- The dir Function (1:39) <img src="pic/youtube.png" /></a><br>
+            <a href="https://www.youtube.com/watch?v=1fEEpHKN0uU&list=PLt4zoIx-WdZU2IisRdvlkYQiL1DFnUzjQ&index=108&pp=iAQBsAQBsAgC"
+                target="_blank"> 8- Executing Modules as Scripts (2:55) <img src="pic/youtube.png" /></a><br>
+            9- Python Standard Library (1h) <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
         <h4 class="ciscoColor collapsible">Deitel and Detiel</h4>
@@ -200,51 +554,6 @@
             <a target="_blank" href="http://liveexample.pearsoncmg.com/liang/py/toc.html">[ Pearson
                 Resources ] </a>
             <br>
-
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-
-            <h4 class="ciscoColor collapsible">Books</h4>
-            Python for Programmers: with Big Data and Artificial Intelligence Case Studies
-            <a target="_blank"
-                href="https://drive.google.com/file/d/1s3IenoxMsvQA1F5YNl6_derP1XWqYI_9/view?usp=drive_link">
-                [ Book ] <img src="pic/pdflogo.png"> </a>
-            <br>
-            Intro to Python for Computer Science and Data Science: Learning to Program with AI, Big Data and the Cloud
-            <a target="_blank"
-                href="https://drive.google.com/file/d/1r_h7db5D2jblmYyFm1R33jAjDiYFUD-A/view?usp=share_link">
-                [ Book ] <img src="pic/pdflogo.png"> </a>
-            <a target="_blank" href="https://learning.oreilly.com/api/v1/continue/9780135404799/"> [ O'Reilly ] </a>
-            <br>
-            Introduction to Python Programming and Data Structures - 3 Edition
-            <a target="_blank" href="https://media.pearsoncmg.com/ph/esm/ecs_liang_python_3e/cw/">[ Companion Site ]</a>
-            <br>
-
-            Introduction to Python Programming and Data Structures - 2 Edition
-            <a target="_blank" href="https://www.youtube.com/playlist?list=PLVr2C-iCNS5p4t5HFDcMW5lqwpuW51GQ9">[ Youtube
-                ]
-            </a>
-            <br>
-            Advanced Python Development: Using Powerful Language Features in Real-World Applications
-            <a target="_blank"
-                href="https://drive.google.com/file/d/1Xt5q7mLrHC4wAu7AU8HBUobL7B7o8TE7/view?usp=drive_link">
-                [ Book ] <img src="pic/pdflogo.png"> </a>
-            <a target="_blank"
-                href="https://learning.oreilly.com/library/view/advanced-python-development/9781484257937/">
-                [ O'Reilly ] </a>
-            <br>
-
-            Learning Python, 5th Edition <a target="_blank"
-                href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/"> [ O'Reilly ]
-            </a> <br>
-            Python in a Nutshell 4th Edition <a target="_blank"
-                href="https://drive.google.com/file/d/1HKmxQtaZmxJUtUIo054e3YqNXoAw8hnA/view?usp=drive_link">
-                [ Book ] <img src="pic/pdflogo.png"> </a> <br>
-            Web Scraping with Python <a target="_blank"
-                href="https://drive.google.com/file/d/1hKjyY2LKvTWnNEIfnijVba37QWiBq_uI/view?usp=drive_link">
-                [ Book ] <img src="pic/pdflogo.png"> </a>
-
-
 
 
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
