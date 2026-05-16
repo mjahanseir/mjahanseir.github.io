@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code with Mosh</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="computer/pic/dev.ico" type="image/x-icon" />
+
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", system-ui;
+            min-height: 100vh;
+
+            display: block;
+            /* ✅ REMOVE FLEX */
+
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* ✅ ENABLE SCROLL */
+
+            color: #e6ffff;
+            background: #05080c;
+        }
+
+        .collapsible {
+            /* color: white; */
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .1) 100%, transparent 100%)
+        }
+
+        h4 {
+            background-color: #306998;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 35px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(78, 77, 77, 0.5);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+        }
+
+
+        h4:hover {
+            background: rgba(0, 234, 255, 0.1);
+        }
+
+        .content {
+            border-radius: 18px;
+            background: rgba(252, 252, 252, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            transition: .3s;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif, Geneva, monospace;
+            color: #0f0f0f;
+            font-size: 1.2rem;
+            display: none;
+            overflow: hidden;
+        }
+
+        /* ================= LIGHT MODE (FIXED ✅) ================= */
+        body.light {
+            background:
+                radial-gradient(circle at 10% 20%, #dceff122, transparent),
+                radial-gradient(circle at 80% 60%, #c0dbe922, transparent),
+                linear-gradient(135deg, #f2f6fb, #dfe7f1);
+            color: #111;
+        }
+
+        /* ================= GRID BACKGROUND ================= */
+        .grid-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image:
+                linear-gradient(#00eaff11 1px, transparent 1px),
+                linear-gradient(90deg, #00eaff11 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* ✅ LIGHT MODE GRID FIX */
+        body.light .grid-bg {
+            background-image:
+                linear-gradient(#00000015 1px, transparent 1px),
+                linear-gradient(90deg, #00000015 1px, transparent 1px);
+        }
+
+        /* ================= CANVAS ================= */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+
+            width: 92%;
+            max-width: 1200px;
+            text-align: center;
+
+            margin: 80px auto;
+            /* ✅ centers AND allows scroll */
+        }
+
+
+        /* ================= TITLE ================= */
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #f1f3f3, #0c0c0c);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        /* ================= CARD ================= */
+        .card {
+            padding: 35px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+        }
+
+
+        /* ✅ LIGHT MODE CARD */
+        body.light .card {
+            background: #ffffffcc;
+            border: 1px solid #ddd;
+        }
+
+        /* ================= HOVER ================= */
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border: 1px solid #00eaff;
+            background: rgba(0, 234, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 234, 255, 0.25);
+        }
+
+        /* ================= TEXT ================= */
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* ================= TOGGLE ================= */
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            cursor: pointer;
+            background: #00eaff;
+            border-radius: 8px;
+            z-index: 5;
+            border: none;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        a {
+            color: rgb(5, 92, 179);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 rgb(5, 92, 179);
+            color: white;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+
+            width: 50px;
+            height: 50px;
+
+            bottom: 20px;
+            right: 5%;
+            z-index: 99;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: monospace;
+
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+
+            border: none;
+            outline: none;
+            background-color: rgb(5, 92, 179);
+            color: white;
+            cursor: pointer;
+            padding: 0.6rem;
+            border-radius: 50%;
+            box-shadow: 0 1px 7px rgb(197, 194, 4);
+
+        }
+
+        #myBtn:hover {
+            background-color: #2d2c2c;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> ˄ </button>
+    <div class="grid-bg"></div>
+    <canvas id="bg"></canvas>
+
+    <button class="toggle" onclick="toggleMode()">🌗</button>
+
+    <div class="wrapper">
+
+
+
+        <h1> 🎓Code with Mosh </h1>
+
+
+        <div>
+            <span class="title">🚀 Learning Path with Mosh Hamedani </span>
+        </div>
+        <br>
+
+
+        <div class="grid">
+
+
+            <a href="#python" class="card">
+                <div class="icon">🐍</div>
+                <div class="title">Python</div>
+                <div class="subtitle">Python Programming Course</div>
+            </a>
+
+            <a href="#java" class="card">
+                <div class="icon">☕</div>
+                <div class="title">Java</div>
+                <div class="subtitle">Java Programming Course</div>
+            </a>
+
+            <a href="#git" class="card">
+                <div class="icon">🌱</div>
+                <div class="title">Git</div>
+                <div class="subtitle">Git Programming Course</div>
+            </a>
+
+            <a href="#claude" class="card">
+                <div class="icon">🤖</div>
+                <div class="title">Claude</div>
+                <div class="subtitle">Claude Programming Course</div>
+            </a>
+
+            <a href="JavaScript.html" class="card">
+                <div class="icon">🟨</div>
+                <div class="title">JavaScript</div>
+            </a>
+            <a href="computer/cs.html" class="card">
+                <div class="icon">#️⃣</div>
+                <div class="title">C#</div>
+            </a>
+
+            <a href="database.html" class="card">
+                <div class="icon">🗄️</div>
+                <div class="title">Database</div>
+            </a>
+            <a href="Mosh.html" class="card">
+                <div class="icon">🎓</div>
+                <div class="title">Mosh</div>
+            </a>
+            <a href="servicenow.html" class="card">
+                <div class="icon">☁️</div>
+                <div class="title">ServiceNow</div>
+            </a>
+        </div>
+
+
+
+
+        <br> <br>
+
+
+
+        <!-- ------------------------------------     Python     -------------------------------------- -->
+        <h4 id="python" class="collapsible">🐍 Python</h4>
+        <div class="content">
+            The Complete Python Programming Course for Beginners to Advanced [12 Hours . 13 Sections . 200 Lessons]
+            <br>
+            <a href="https://youtu.be/bq12kuAOSRM" target="_blank">
+                All-in-One▶️</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/document/d/1ywwRcbLx7iYCDA3VYrJBbSgmvA--zoV81C2pVJeFo44/edit"
+                target="_blank"> List📘</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/spreadsheets/d/1lQ0dNCjIDlQhJein2zlZZl_OGt87Rc7HnRTs7go3XXc/edit?gid=840810407#gid=840810407"
+                target="_blank"> List📗</a> &nbsp;&nbsp;
+            <a href="https://drive.google.com/drive/u/0/folders/19ND-QAF0650ROHsnxDYLipsoyMUEPuWf" target="_blank">
+                Drive📂</a> &nbsp;&nbsp;
+            <a href="https://codewithmosh.com/p/python-programming-course-beginners" target="_blank">
+                CodewithMosh🌐</a> &nbsp;&nbsp;
+            <hr>
+            <a href="https://youtu.be/tVzCnX4lSs4" target="_blank">
+                1- Getting Started (32m)▶️</a> <br>
+            <a href="https://youtu.be/vwvUFBYjfqk" target="_blank">
+                2- Primitive Types (34m)▶️</a> <br>
+            <a href="https://youtu.be/WYO6BqeMI_4" target="_blank">
+                3- Control Flow (37m)▶️</a> <br>
+            <a href="https://youtu.be/MYYYRS3yi_w" target="_blank">
+                4- Functions (41m)▶️</a> <br>
+            <a href="https://youtu.be/Z9KZB2x9T-I" target="_blank">
+                5- Data Structures (1h20m)▶️</a> <br>
+            <a href="https://youtu.be/zOZBZfN0a5A" target="_blank">
+                6- Exceptions (20m)▶️</a> <br>
+            <a href="https://youtu.be/VanAjPB6wXw" target="_blank">
+                7- Classes (1h25m)▶️</a> <br>
+            <a href="https://youtu.be/AoaTowKn8_w" target="_blank">
+                8- Modules (20m)▶️</a> <br>
+            <a href="https://youtu.be/Xb8r-iDeyNM" target="_blank">
+                9- Python Standard Library (1h)▶️</a> <br>
+            <a href="https://youtu.be/G5Ns2POjIg8" target="_blank">
+                10- Python Package Index (46m)▶️</a> <br>
+            <a href="https://youtu.be/nKS_DpRTxL4" target="_blank">
+                11- Popular Python Packages (1h)▶️</a> <br>
+            <a href="https://youtu.be/ztcb4wnH798" target="_blank">
+                12- Building Web Applications with Django (2h)▶️</a> <br>
+            <a href="https://youtu.be/nokLr39Vt1U" target="_blank">
+                13- Machine Learning with Python (48m)▶️</a><br>
+        </div>
+
+
+        <br> <br>
+        <!-- ------------------------------------     Java     -------------------------------------- -->
+        <h4 id="java" class="collapsible">☕ Java</h4>
+        <div class="content">
+            The Ultimate Java Mastery Series [14 Hours . 3 courses . 260 Lessons]
+            <br>
+            <a href="https://youtu.be/CKS-8XjBc-o" target="_blank">
+                Part1▶️</a> &nbsp;&nbsp;
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4" target="_blank">
+                Part2▶️</a> &nbsp;&nbsp;
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls" target="_blank">
+                Part3▶️</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/document/d/1OQZ5yWhzSQ33Cjrsk8qF8HdEWY5To2iEnvMnh3rFMSc/edit?tab=t.kavdfmmm23fr"
+                target="_blank"> List📘</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/spreadsheets/d/1dwpWfWQMyMuuNH6FANICJplt6mTkrIYd2dieiIx5jJ0/edit?gid=111145878#gid=111145878"
+                target="_blank"> List📗</a> &nbsp;&nbsp;
+
+
+
+
+
+            <a href="https://drive.google.com/drive/u/0/folders/1O28SFdPkgGuCAj2EF7BS4MgtFbPUXr0S" target="_blank">
+                Drive 📂</a>
+            <a href="https://codewithmosh.com/p/the-ultimate-java-mastery-series" target="_blank">
+                CodewithMosh🌐</a> &nbsp;&nbsp;
+            <br><br>
+            <hr><br>
+            [Mosh-Java] 1- The Ultimate Java Mastery Series - Part 1 - Fundamentals
+            <br>
+            <a href="https://www.youtube.com/watch?v=CKS-8XjBc-o" target="_blank">1.1. Getting Started(23m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=CKS-8XjBc-o&t=1380s" target="_blank">1.2. Types(1h)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=CKS-8XjBc-o&t=5735s" target="_blank">1.3. Control Flow(51m)
+                ▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=CKS-8XjBc-o&t=8787s" target="_blank"> 02:26:27 1.4. Clean
+                Coding(37m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=CKS-8XjBc-o&t=11000s" target="_blank">1.5. Debugging and Deploying
+                Applications(18m)▶️</a>
+
+
+            <br><br>
+            <hr><br>
+
+
+            [Mosh-Java] 2- The Ultimate Java Mastery Series - Part 2- Object-oriented Programming
+            <br>
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4" target="_blank">2.1.Getting Started (8 min)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4&t=538s" target="_blank">2.2.Classes (1h 4 min)▶️</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4&t=4374s" target="_blank">2.3.Refactoring Towards an
+                Object-oriented Design (41 min)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4&t=6896s" target="_blank">2.4.Inheritance (50 min)▶️</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=Z3fQgTyKar4&t=9666s" target="_blank">2.5.Interfaces (55 min)▶️</a>
+
+
+            <br><br>
+            <hr><br>
+
+
+            [Mosh-Java] 3- The Ultimate Java Mastery Series - Part 3- Advanced topic
+            <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls" target="_blank"> 3.1.Getting Started (2m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=71s" target="_blank">3.2.Exceptions(43m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=2663s" target="_blank">3.3.Generics(43m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=5388s" target="_blank">3.4.Collections(1h)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=9081s" target="_blank">3.5.Lambda Expressions &
+                Functional Interfaces(44m)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=11781s" target="_blank">3.6.Streams(1h)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=15295s" target="_blank">3.7.Concurrency &
+                Multi-threading(1h)▶️</a> <br>
+            <a href="https://www.youtube.com/watch?v=aeS4KBvt6ls&t=18978s" target="_blank">3.8.The Executive
+                Framework(70m)▶️</a> <br>
+
+
+        </div>
+
+
+        <br> <br>
+        <!-- ------------------------------------     Git     -------------------------------------- -->
+        <h4 id="git" class="collapsible">🌱 Git</h4>
+        <div class="content">
+            The Ultimate Git Course [6 Hours . 120 Lessons]
+            <br>
+            <a href="https://codewithmosh.com/p/the-ultimate-git-course" target="_blank">
+                CodewithMosh🌐</a>
+            <hr>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c" target="_blank">
+                [Mosh-Git]01-Getting Started (15m)▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c&t=895s" target="_blank">
+                [Mosh-Git]02-Creating Snapshots (60m)▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c&t=4442s" target="_blank">
+                [Mosh-Git]03-Browsing History (44m)▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c&t=7075s" target="_blank">
+                [Mosh-Git]04-Branching (76m)▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c&t=11708s" target="_blank">
+                [Mosh-Git]05-Collaboration (70m)▶️</a><br>
+            <a href="https://www.youtube.com/watch?v=GgnVZTtqL9c&t=15894s" target="_blank">
+                [Mosh-Git]06-Rewriting History (56m)▶️</a>
+        </div>
+        <br> <br>
+        <!-- ------------------------------------     Claude     -------------------------------------- -->
+        <h4 id="claude" class="collapsible">🤖 Claude</h4>
+        <div class="content">
+            Claude Code for Professional Developers
+            <br>
+            <a href="https://youtu.be/UR6Y71ISrp0" target="_blank">
+                All-in-One▶️</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/document/d/1ap-dUqmQ6tfVA80fV41pShuHQ8m7q74te0TsdjWaiw4/edit?tab=t.fdyoobwrs0zh"
+                target="_blank"> List📘</a> &nbsp;&nbsp;
+            <a href="https://docs.google.com/spreadsheets/d/14eIB3mxQS_yZtSjPJSSLmDsssJQ9Z7j6c6TS9iR3d94/edit?gid=0#gid=0"
+                target="_blank"> List📗</a> &nbsp;&nbsp;
+            <a href="https://drive.google.com/drive/u/0/folders/19ND-QAF0650ROHsnxDYLipsoyMUEPuWf" target="_blank">
+                Drive📂</a> &nbsp;&nbsp;
+            <a href="https://drive.google.com/drive/u/0/folders/1QDm5pMHxZw0PoS5vOpTUI5m7sEICLYMv" target="_blank">
+                CodewithMosh🌐</a> &nbsp;&nbsp;
+            <hr>
+            <a href="https://youtu.be/8nDCCcNyV9s" target="_blank">1- Getting Started (10m)▶️</a><br>
+            <a href="https://youtu.be/iXPH99ZCpTU" target="_blank">2- Getting Started with Claude Code (1h)▶️</a><br>
+            <a href="https://youtu.be/VRk0aKqOJTk" target="_blank">3- Project Planning and Setup (37m)▶️</a><br>
+            <a href="https://youtu.be/o1IN5cV3FUo" target="_blank">4- Authentication (2h)▶️</a><br>
+            <a href="https://youtu.be/nyni2wFieQU" target="_blank">5- User Management (1h)▶️</a><br>
+            <a href="https://youtu.be/4v86L5YGHbM" target="_blank">6- Ticket Management (2h)▶️</a><br>
+            <a href="https://youtu.be/VjrL9b68FOw" target="_blank">7- AI‑Powered Features (1h)▶️</a><br>
+            <a href="https://youtu.be/kSAWJwb6sV4" target="_blank">8- Email Integration (17m)▶️</a><br>
+            <a href="https://youtu.be/ijF6IL64JPo" target="_blank">9- Production (46m)▶️</a><br>
+        </div>
+
+        <div class="links">
+            <a target="_blank" href="acc.html"> Links🌐</a>
+
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674">Plan25📗</a>
+
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1o2WuwBTvB1oWaaFk68n0YhGwfQMdd-UOjgGje52H9yU/edit?gid=1704488621#gid=1704488621">Plan26📗</a>
+
+            <a target="_blank" href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit">Mo📘</a>
+
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD">ItsMJahan📂</a>
+
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/16avPp_AjJyt0HYpvYVgc9CFPxOPslacD">ItsMoJahan📂</a>
+
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/1-m9vxz8bk4GY4frDhMB9PzoLpfFwmMtz">ItsMoPC📂</a>
+
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/15QBKsXmIF2Icq4NQUgZLBCcdI5ie1Ve2">ItsLastEmperor📂</a>
+
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/1mWFb8oYVbNTwErkIlDRpdY1JuM8hsNmg">NetiBaz📂</a>
+
+            <a target="_blank" https://drive.google.com/drive/folders/1N4lB3Ll9fHT9cLoC4YUyhvJEl99gWBn3">Com&az📂</a>
+
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1h8tKY9qCyGCSWZ_wlbBSHWJyMtSrYwMF0vzyhzG-DVY">Pesonal📘</a>
+
+            <a target="_blank" href="work.html">work🌐</a>
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div>
+
+            © 2026 Learning by Mo with ❤️
+
+
+        </div>
+
+        <script>
+
+            /* ================= DARK / LIGHT ================= */
+            function toggleMode() {
+                document.body.classList.toggle("light");
+            }
+
+            /* ================= AI NETWORK BACKGROUND ================= */
+            const canvas = document.getElementById("bg");
+            const ctx = canvas.getContext("2d");
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.onresize = resize;
+
+            let dots = [];
+            for (let i = 0; i < 120; i++) {
+                dots.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                dots.forEach(d => {
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                    if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+                    ctx.fillStyle =
+                        document.body.classList.contains("light")
+                            ? "#555"
+                            : "#00eaff";
+
+                    ctx.fillRect(d.x, d.y, 2, 2);
+                });
+
+                for (let i = 0; i < dots.length; i++) {
+                    for (let j = i + 1; j < dots.length; j++) {
+                        let dx = dots[i].x - dots[j].x;
+                        let dy = dots[i].y - dots[j].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 130) {
+                            ctx.strokeStyle =
+                                document.body.classList.contains("light")
+                                    ? "rgba(0,0,0,0.08)"
+                                    : "rgba(0,234,255,0.12)";
+
+                            ctx.beginPath();
+                            ctx.moveTo(dots[i].x, dots[i].y);
+                            ctx.lineTo(dots[j].x, dots[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+
+
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+
+            // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            //  end 
+
+
+
+
+
+        </script>
+
+</body>
+
+</html>
