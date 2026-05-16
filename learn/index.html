@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-Planning</title>
+    <link rel="icon" href="pic/logo.ico" type="image/x-icon" />
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", system-ui;
+            min-height: 100vh;
+
+            display: block;
+            /* ✅ REMOVE FLEX */
+
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* ✅ ENABLE SCROLL */
+
+            color: #e6ffff;
+            background: #05080c;
+        }
+
+        /* ================= LIGHT MODE (FIXED ✅) ================= */
+        body.light {
+            background:
+                radial-gradient(circle at 10% 20%, #dceff122, transparent),
+                radial-gradient(circle at 80% 60%, #c0dbe922, transparent),
+                linear-gradient(135deg, #f2f6fb, #dfe7f1);
+            color: #111;
+        }
+
+        /* ================= GRID BACKGROUND ================= */
+        .grid-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image:
+                linear-gradient(#00eaff11 1px, transparent 1px),
+                linear-gradient(90deg, #00eaff11 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* ✅ LIGHT MODE GRID FIX */
+        body.light .grid-bg {
+            background-image:
+                linear-gradient(#00000015 1px, transparent 1px),
+                linear-gradient(90deg, #00000015 1px, transparent 1px);
+        }
+
+        /* ================= CANVAS ================= */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+
+            width: 92%;
+            max-width: 1200px;
+            text-align: center;
+
+            margin: 80px auto;
+            /* ✅ centers AND allows scroll */
+        }
+
+
+        /* ================= TITLE ================= */
+        h1 {
+            font-size: 8rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #f1f3f3, #0c0c0c);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        /* ================= CARD ================= */
+        .card {
+            padding: 35px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+        }
+
+        /* ✅ LIGHT MODE CARD */
+        body.light .card {
+            background: #ffffffcc;
+            border: 1px solid #ddd;
+        }
+
+        /* ================= HOVER ================= */
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border: 1px solid #00eaff;
+            background: rgba(0, 234, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 234, 255, 0.25);
+        }
+
+        /* ================= TEXT ================= */
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* ================= TOGGLE ================= */
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            cursor: pointer;
+            background: #00eaff;
+            border-radius: 8px;
+            z-index: 5;
+            border: none;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+    <canvas id="bg"></canvas>
+
+    <button class="toggle" onclick="toggleMode()">🌗</button>
+
+    <div class="wrapper">
+
+
+
+        <h1> 🎓Learn </h1>
+
+
+        <div>
+            <span class="title">🚀 My Learning Path </span> &nbsp; &nbsp;
+            [
+            <span id="quote" ">
+                Loading quote... </span>
+            <span class=" subtitle" id="author"></span> ]
+
+        </div>
+        <br>
+
+
+        DEVOPS <br><br>
+        <div class="grid">
+            <!-- DEVOPS -->
+
+            <a href="devops.html" class="card">
+                <div class="icon">⚙️</div>
+                <div class="title">DevOps</div>
+                <div class="subtitle">[DevOps, Git, Docker, Linux]</div>
+            </a>
+
+            <a href="data.html" class="card">
+                <div class="icon">📊</div>
+                <div class="title">Data</div>
+                <div class="subtitle">Microsoft Path, Data Analysis and Science and Database</div>
+            </a>
+            <a href="powerplatform.html" class="card">
+                <div class="icon">🧩</div>
+                <div class="title">Power Platform</div>
+                <div class="subtitle">Microsoft Path</div>
+
+            </a>
+            <a href="microsoft.html" class="card">
+                <div class="icon">💻</div>
+                <div class="title">Microsoft</div>
+            </a>
+        </div>
+        <br> PROGRAMMING <br><br>
+        <div class="grid">
+
+            <a href="dev.html" class="card">
+                <div class="icon">👨‍💻 </div>
+                <div class="title">Software Developer </div>
+            </a>
+
+            <a href="python.html" class="card">
+                <div class="icon">🐍</div>
+                <div class="title">Python</div>
+            </a>
+
+            <a href="Java.html" class="card">
+                <div class="icon">☕</div>
+                <div class="title">Java</div>
+            </a>
+
+            <a href="JavaScript.html" class="card">
+                <div class="icon">🟨</div>
+                <div class="title">JavaScript</div>
+            </a>
+            <a href="computer/cs.html" class="card">
+                <div class="icon">#️⃣</div>
+                <div class="title">C#</div>
+            </a>
+
+            <a href="database.html" class="card">
+                <div class="icon">🗄️</div>
+                <div class="title">Database</div>
+            </a>
+            <a href="Mosh.html" class="card">
+                <div class="icon">🎓</div>
+                <div class="title">Mosh</div>
+            </a>
+            <a href="servicenow.html" class="card">
+                <div class="icon">☁️</div>
+                <div class="title">ServiceNow</div>
+            </a>
+        </div>
+        <br> NETWORK <br><br>
+        <div class="grid">
+            <!-- Networking -->
+            <a href="computer/network.html" class="card">
+                <div class="icon">🌐</div>
+                <div class="title">Networks</div>
+            </a>
+
+            <a href="computer/cisco.html" class="card">
+                <div class="icon">📡</div>
+                <div class="title">Cisco</div>
+            </a>
+
+            <a href="computer/Network/ccna.html" class="card">
+                <div class="icon">📘</div>
+                <div class="title">CCNA</div>
+            </a>
+
+            <a href="computer/Network/security.html" class="card">
+                <div class="icon">🔐</div>
+                <div class="title">Security</div>
+            </a>
+
+        </div>
+        <br> OTHERS <br><br>
+        <div class="grid">
+
+            <a href="workout/yoga.html" class="card">
+                <div class="icon">🧘</div>
+                <div class="title">Yoga</div>
+            </a>
+            <a href="english/english.html" class="card">
+                <div class="icon">📚</div>
+                <div class="title">English</div>
+            </a>
+            <a href="work.html" class="card">
+                <div class="icon">💼</div>
+                <div class="title">Work</div>
+            </a>
+            <a href="personal_development/personal_development.html" class="card">
+                <div class="icon">🌱</div>
+                <div class="title">Personal Development</div>
+            </a>
+
+        </div>
+
+        <div class="links">
+            <a href="acc.html"> My Links🌐</a> |
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/14dckNRGGj-JxSOh54Eup6fp6bb9yUm6I/edit?gid=639054674#gid=639054674">
+                Plan25📗</a>
+            |
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1o2WuwBTvB1oWaaFk68n0YhGwfQMdd-UOjgGje52H9yU/edit?gid=1704488621#gid=1704488621">
+                Plan26📗</a>
+            |
+            <a target="_blank" href="https://docs.google.com/document/d/1HeYBNSPOQ5qPqxTx3y1Ofr--xtiQ9tRB/edit">
+                Mo📘</a> |
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/1NXpEgRFYNyd2BVHXG9qWlaSTzKHu42UD?usp=drive_link">
+                ItsMJahan📂</a> |
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/16avPp_AjJyt0HYpvYVgc9CFPxOPslacD?usp=drive_link">
+                ItsMoJahan📂</a> |
+            <a target="_blank"
+                href="https://drive.google.com/drive/folders/158eaptuUm0kOPp5twtRDvyVN9TJQo-nU?usp=drive_link">
+                ItsLastEmperor📂</a>
+            |
+            <a target="_blank" href="https://drive.google.com/drive/folders/1-m9vxz8bk4GY4frDhMB9PzoLpfFwmMtz">
+                ItsMoPC📂</a> |
+
+            <a target="_blank" href="https://docs.google.com/document/d/1h8tKY9qCyGCSWZ_wlbBSHWJyMtSrYwMF0vzyhzG-DVY">
+                Pesonal📘</a>
+            |
+            <a target="_blank" href="work.html">work🌐</a>
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div>
+
+            © 2026 Planning by Mo with ❤️
+
+
+        </div>
+
+        <script>
+
+            /* ================= DARK / LIGHT ================= */
+            function toggleMode() {
+                document.body.classList.toggle("light");
+            }
+
+            /* ================= AI NETWORK BACKGROUND ================= */
+            const canvas = document.getElementById("bg");
+            const ctx = canvas.getContext("2d");
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.onresize = resize;
+
+            let dots = [];
+            for (let i = 0; i < 120; i++) {
+                dots.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                dots.forEach(d => {
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                    if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+                    ctx.fillStyle =
+                        document.body.classList.contains("light")
+                            ? "#555"
+                            : "#00eaff";
+
+                    ctx.fillRect(d.x, d.y, 2, 2);
+                });
+
+                for (let i = 0; i < dots.length; i++) {
+                    for (let j = i + 1; j < dots.length; j++) {
+                        let dx = dots[i].x - dots[j].x;
+                        let dy = dots[i].y - dots[j].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 130) {
+                            ctx.strokeStyle =
+                                document.body.classList.contains("light")
+                                    ? "rgba(0,0,0,0.08)"
+                                    : "rgba(0,234,255,0.12)";
+
+                            ctx.beginPath();
+                            ctx.moveTo(dots[i].x, dots[i].y);
+                            ctx.lineTo(dots[j].x, dots[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+
+
+            /* FETCH DAILY QUOTE */
+            // async function loadQuote() {
+            //     try {
+            //         const res = await fetch("https://api.quotable.io/random");
+            //         const data = await res.json();
+
+            //         document.getElementById("quote").innerText = data.content;
+            //         document.getElementById("author").innerText = "— " + data.author;
+
+            //     } catch (e) {
+            //         document.getElementById("quote").innerText = "Stay consistent. Progress comes daily.";
+            //         document.getElementById("author").innerText = "";
+            //     }
+            // }
+
+            // loadQuote();
+
+
+            /* SIMPLE QUOTE FETCH (refresh every load) */
+
+
+
+
+            /* ✅ LIST OF SHORT ENERGETIC QUOTES */
+            const quotes = [
+                "Do it now. Sometimes later becomes never. (Unknown)",
+                "Overnight success takes time. (Steve Jobs)",
+                "Go as far as you can see. (Carlyle)",
+                "What you do makes a difference. (William James)",
+                "Make a positive difference. (Roy Bennett)",
+                "Good is enemy of great. (Rockefeller)",
+                "Everything you imagine is real. (Picasso)",
+                "Turn ideas into action. (Musk)",
+                "Bounce higher after failure. (Patton)",
+                "Persistence conquers all. (Franklin)",
+                "Success comes after work. (Sassoon)",
+                "Small actions build greatness. (Van Gogh)",
+                "Strike until it's hot. (Yeats)",
+                "Fear what you must do. (Ferriss)",
+                "Love what you do. (Maya Angelou)",
+                "Don’t live in yesterday. (Will Rogers)",
+                "Expect greatness. (Michael Jordan)",
+                "If you dream it, do it. (Disney)",
+                "Start to get ahead. (Mark Twain)",
+                "Keep going no matter what. (Confucius)"
+            ];
+
+            /* ✅ PICK RANDOM QUOTE EACH LOAD */
+            function loadQuote() {
+                const randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("quote").innerText = quotes[randomIndex];
+            }
+
+            loadQuote();
+
+
+
+            function loadQuote() {
+
+                const randomIndex = Math.floor(Math.random() * quotes.length);
+                const fullQuote = quotes[randomIndex];
+
+                // split at last "("
+                const parts = fullQuote.split("(");
+
+                const quoteText = parts[0].trim();
+                const author = parts[1].replace(")", "").trim();
+
+                document.getElementById("quote").innerText = quoteText;
+                document.getElementById("author").innerText = " " + author;
+            }
+
+            loadQuote();
+
+
+
+        </script>
+
+</body>
+
+</html>
