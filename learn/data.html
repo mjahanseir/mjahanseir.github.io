@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/refs/heads/master/learn/pic/data.ico"
+        type="image/x-icon" />
+
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ================= NEW AZURE THEME ================= */
+        body {
+            font-family: "Segoe UI", system-ui;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #dbeafe;
+
+            background:
+                radial-gradient(circle at 20% 30%, #0b1f33, transparent),
+                radial-gradient(circle at 80% 60%, #0a3d62, transparent),
+                linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        /* ================= BACKGROUND GRID ================= */
+        .grid-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+            background:
+                radial-gradient(circle at 30% 40%, #3b82f610 2px, transparent 3px),
+                radial-gradient(circle at 70% 60%, #60a5fa10 2px, transparent 3px);
+
+            animation: floatBg 20s linear infinite;
+        }
+
+        @keyframes floatBg {
+            100% {
+                transform: translateY(-200px);
+            }
+        }
+
+        /* ================= CANVAS ================= */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: 92%;
+            max-width: 1200px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        /* ================= TITLE ================= */
+
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        /* ================= CARD ================= */
+        .card {
+            padding: 35px;
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(148, 163, 184, .2);
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.04);
+            border: 1px solid #3b82f6;
+            background: rgba(59, 130, 246, .15);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, .25);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* ================= TOP BUTTON ================= */
+        #myBtn {
+            display: none;
+            position: fixed;
+
+            width: 50px;
+            height: 50px;
+
+            bottom: 20px;
+            right: 5%;
+            z-index: 99;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: monospace;
+
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+
+            border: none;
+            outline: none;
+            background-color: rgb(5, 92, 179);
+            color: white;
+            cursor: pointer;
+            padding: 0.6rem;
+            border-radius: 50%;
+            box-shadow: 0 1px 7px rgb(197, 194, 4);
+
+        }
+
+        #myBtn:hover {
+            background-color: #2d2c2c;
+        }
+
+        /* ================= COLLAPSIBLE ================= */
+        .collapsible {
+            /* color: white; */
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .1) 100%, transparent 100%)
+        }
+
+        h4 {
+            background-color: #306998;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(78, 77, 77, 0.5);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+            margin: 1rem 0;
+            box-shadow: 0 4px 5px rgba(13, 13, 13, 0.4)
+        }
+
+
+        h4:hover {
+            background: rgba(0, 234, 255, 0.1);
+        }
+
+        .content {
+            border-radius: 18px;
+            background: rgba(252, 252, 252, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            transition: .3s;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif, Geneva, monospace;
+            color: #0f0f0f;
+            font-size: 1.2rem;
+            display: none;
+            overflow: hidden;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #f1f3f3, #4f4f4f);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        a {
+            color: rgb(5, 92, 179);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 rgb(5, 92, 179);
+            color: white;
+        }
+
+
+
+        .card {
+            color: rgb(245, 246, 247);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+
+
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+            bgcolor: rgba(255, 255, 255, 0.05);
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            box-shadow: inset 1000px 0 0 0 rgba(9, 9, 9, 0.1);
+            color: white;
+        }
+
+        /* Fall- Down  */
+
+
+        .header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 0.03rem;
+        }
+
+        .plus {
+            font-size: 1.8rem;
+            font-family: monospace;
+            margin: 0 15px;
+            transition: transform 0.3s;
+
+        }
+
+        .plus:hover {
+            color: greenyellow;
+        }
+
+        .fallContent {
+            font-size: 1rem;
+            display: none;
+            margin: 0 45px;
+            transition: max-height 0.4s ease;
+
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+            /* turns + into x */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> ˄ </button>
+    <div class="grid-bg"></div>
+    <canvas id="bg"></canvas>
+
+    <div class="wrapper">
+
+        <h1>Data</h1>
+        <br>
+        <div class="grid">
+
+            <a href="#dataanalysis" class="card">
+                <div class="icon">📈</div>
+                <div class="title">Data Analyst</div>
+                <div class="subtitle">PowerBI Roadmap </div>
+            </a>
+
+            <a href="#fabric" class="card">
+                <div class="icon">📊</div>
+                <div class="title">Fabric</div>
+                <div class="subtitle">Fabric Roadmap</div>
+            </a>
+            <a href="#db-admin" class="card">
+                <div class="icon">🗄️</div>
+                <div class="title">Database Administrator</div>
+                <div class="subtitle">Database Roadmap</div>
+            </a>
+            <a href="#data-scientist" class="card">
+                <div class="icon">🔬</div>
+                <div class="title">Data Scientist</div>
+                <div class="subtitle">Data Science Roadmap</div>
+            </a>
+            <a href="#microsoft-roadmap" class="card">
+                <div class="icon">📌</div>
+                <div class="title">Microsoft RoadMap</div>
+                <div class="subtitle">Microsoft Roadmap</div>
+            </a>
+            <a href="https://mjahanseir.github.io/Microsoft" class="card">
+                <div class="icon">
+                    <img
+                        src="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/refs/heads/master/learn/pic/microsoft.png">
+                </div>
+                <div class="title">Microsoft </div>
+                <div class="subtitle">My Microsoft Directotry</div>
+            </a>
+
+
+
+            <a href="https://mjahanseir.github.io/learn/powerplatform.html" class="card">
+                <div class="icon">🧩</div>
+                <div class="title">Power Platform</div>
+                <div class="subtitle">Power Platform Course</div>
+            </a>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!--------------------------------------------------              ------------------------------------>
+
+        <h4 id="dataanalysis" class="collapsible"> Data Analysis</h4>
+        <div class="content">
+
+
+            <a target="_blank"
+                href="https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate">
+                [PL-300] Power BI Data Analyst Associate <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/pl-300t00">
+                pl-300t00 <img src="pic/ms.png">
+            </a>
+
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1qiqrNFa-gM2ixRQRoC91tALWyQ0Q7dy3">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1MA7LoZ5PbqrPMkXbHlnnXEjzGL0xHAgd_z7byuqwW7g/edit">PL-300
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/15agfzDVkV-lLtQ-VuJm1g2llpW5igIYqVfeQEhmAbmw/edit?tab=t.0">PL-300
+                <img src="pic/doc.png"> </a>
+
+            <a href="https://drive.google.com/file/d/119nQATmDEdbaqkZbMjC3_t9F50vNlJsx/view?usp=drive_link"
+                target="_blank">PowerBI-Pathway</a>
+
+
+            <div class="header"><span class="plus">></span><span>[PL-300] Microsoft Resources</span></div>
+            <div class="fallContent">
+
+                <div class="header"><span class="plus">></span><span>1.Prepare the data (25–30%)</span></div>
+                <div class="fallContent">
+                    <a href="https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft" target="_blank">
+                        M02: Prepare Data in Power Bl </a> <br>
+                    <a href="https://learn.microsoft.com/en-us/training/paths/prepare-data-power-bi/" target="_blank">
+                        M02: Prepare Data in Power Bl </a><br>
+                    <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/" target="_blank">
+                        M03: Cleaning,Transforming, and Loading Data </a><br>
+
+                    <hr>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/00-setup.html	 "
+                        target="_blank"> Lab00-Set up your own environment </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/01-get-data-in-power-bi.html	 "
+                        target="_blank"> Lab01-Get data in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/02-transform-data-power-bi.html	 "
+                        target="_blank"> Lab02-Clean, transform, and load data in </a>
+                </div>
+
+                <div class="header"><span class="plus">></span><span>2.Model the data (25–30%)</span></div>
+                <div class="fallContent">
+                    <a href="	https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/" target="_blank">
+                        M04~M06: Model data with Power BI
+                        [M04: Designing a Data Model in Power Bl - M05: Create Model Calculations using DAX in Power Bl
+                        -
+                        M06: Optimize Model
+                        Performance]
+                    </a>
+                    <hr>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/03-configure-semantic-model.html	 "
+                        target="_blank"> Lab03-Configure a semantic model in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/04-create-dax-calculations.html	 "
+                        target="_blank"> Lab04-Create DAX calculations in semantic models </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/05-modify-dax-filter-context.html	 "
+                        target="_blank"> Lab05-Modify DAX filter context in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/06-use-dax-time-intelligence.html	 "
+                        target="_blank"> Lab06-Use DAX time intelligence functions in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/07-create-visual-calculations.html	 "
+                        target="_blank"> Lab07-Create visual calculations in Desktop </a> <br>
+
+                </div>
+
+                <div class="header"><span class="plus">></span><span>3.Visualize and analyze the data (25–30%)</span>
+                </div>
+                <div class="fallContent">
+                    <a href="	https://learn.microsoft.com/en-us/training/paths/power-bi-effective/	 " target="_blank">
+                        M07~M10: Design effective reports in Power BI
+                        [M07: Create Reports - M08: Create Dashboards - M09: Create Paginated Reports - M10: Perform
+                        Advanced Analytics]
+                    </a>
+                    <hr>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/08-design-power-bi-reports.html	 "
+                        target="_blank"> Lab08-Design reports </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/09-enhance-power-bi-reports.html	 "
+                        target="_blank"> Lab09-Enhance report designs </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/10-perform-analytics-power-bi.html	 "
+                        target="_blank"> Lab10-Perform analytics in </a>
+                </div>
+
+                <div class="header"><span class="plus">></span><span>4.Manage and secure (15–20%)</span></div>
+                <div class="fallContent">
+                    <a href="	https://learn.microsoft.com/en-us/training/paths/manage-secure-power-bi/" target="_blank">
+                        M11~M13:Manage and secure Power BI
+                        [M11: Create and Manage Workspaces - M12: Manage Datasets in Power Bl - M13: Row - level
+                        Security]
+                    </a>
+                    <hr>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/11-secure-data-access.html	 "
+                        target="_blank"> Lab11-Secure data access in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/12-create-power-bi-dashboard.html	 "
+                        target="_blank"> Lab12-(Optional) Create dashboards in </a> <br>
+
+                </div>
+                <div class="header"><span class="plus">></span><span>LABS DEMOS</span></div>
+                <div class="fallContent">
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/00-setup.html	 "
+                        target="_blank"> Set up your own environment </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/01-get-started-data-analytics.html	 "
+                        target="_blank"> Get started with Microsoft data analytics </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/02-get-data.html	 "
+                        target="_blank"> Get data in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/03-clean-transform-data.html	 "
+                        target="_blank"> Clean, transform, and load data in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/04-design-data-model.html	 "
+                        target="_blank"> Design a data model in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/05-create-measures-DAX.html	 "
+                        target="_blank"> Create measures using DAX in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/06-optional-model-optimization.html	 "
+                        target="_blank"> (Optional) Optimize model performance in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/07-create-reports.html	 "
+                        target="_blank"> Create reports in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/08-perform-data-analysis.html	 "
+                        target="_blank"> Perform data analysis in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/09-create-manage-workspaces.html	 "
+                        target="_blank"> Create and manage workspaces in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/10-manage-items-service.html	 "
+                        target="_blank"> Manage files and semantic models in </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/11-create-dashboards.html	 "
+                        target="_blank"> Create dashboards in the service </a> <br>
+                    <a href="https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Demos/12-enforce-rls.html	 "
+                        target="_blank"> Enforce Row-level security in </a> <br>
+                </div>
+
+            </div>
+
+
+            <!--                    ##########################################################################                   -->
+            <div class="header"><span class="plus">></span><span>[PL-300] Microsoft Learn - Videos</span></div>
+            <div class="fallContent">
+
+                Blendening Learning 2025: <br>
+                <a href="https://youtu.be/j37_pPrgfqA" target="_blank"> 1-Building Block </a><br>
+                <a href="https://youtu.be/tmendt_mIo0" target="_blank"> 2-Transforming </a><br>
+                <a href="https://youtu.be/qFDTK2C8NZE" target="_blank"> 3-Modeling</a><br>
+                <a href="https://youtu.be/1QE9z9mSzjg" target="_blank"> 4-DAX </a><br>
+                <a href="https://youtu.be/pqeQ9onFIF8" target="_blank"> 5-Report </a><br>
+                <a href="https://youtu.be/KaP4BWklGwk" target="_blank"> 6-Identifying Patterns & Trends </a><br>
+                <a href="https://youtu.be/k1ByvpYYGlE" target="_blank"> 7-Dashboarding </a><br>
+                <a href="https://youtu.be/ij-MZsQafCQ" target="_blank"> 8-Managing workspace </a><br>
+
+
+                <div class="header"><span class="plus">></span><span>1.Prepare the data (25–30%)</span></div>
+                <div class="fallContent">
+
+                    ▶ Microsoft-Andrew Conniff-2025 </b> <br>
+                    <a href="https://www.youtube.com/watch?v=Kx4VpQQd6xs&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=1&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2025] 01 Course Introduction </a> <br>
+                    <a href="https://www.youtube.com/watch?v=nxbEuABLr4Q&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=2&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2025] 02 1 Discover Data Analysis in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Ga0-8OxaL1E&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=3&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2025] 03 1 Get started building with Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=H8IXihEBK0c&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=4&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2025] 04 1 Get data in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=6tOHl6SMQ8Y&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=5&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2025] 05 1 Clean, transform, and load data </a> <br>
+                    ▶ Microsoft-2024-Victoria Eshelby </a> <br>
+                    <a href="https://www.youtube.com/watch?v=lp_NRQTDWQc&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=33&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Course Introduction 1 of 10 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=nyMaIhGp3SI&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=34&t=1s&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Get Started With Data Analytics 2 of 10 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=qlymtKFVf3M&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=35&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Your Data Into PowerBI Desktop 3 of 10 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=8QcSDFetRY4&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=36&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Prepare Your Data Inside Of PowerBI 4 of 10 </a>
+                    <br>
+                    ▶ Microsoft-2023-Linda Larkan & Andrew Connif <br>
+                    <a href="https://www.youtube.com/watch?v=tjCF70slEII&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=8&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 01 Introduction to Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Yjy6JfR-Fiw&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=9&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 02 Get started with Microsoft data analytics </a> <br>
+                    <a href="https://www.youtube.com/watch?v=6rrQF46bzTc&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=10&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 03 Get data in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ofcgeSJXx7M&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=11&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 04 Clean transform and load datain Power BI </a> <br>
+                </div>
+                <div class="header"><span class="plus">></span><span>2.Model the data (25–30%)</span></div>
+                <div class="fallContent">
+
+                    ▶ Microsoft-Andrew Conniff-2025 </b> <br>
+                    <a href="https://www.youtube.com/watch?v=xRNMJ0nr17E&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=6&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 06 2 Design a semantic model in Power BI PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=FrKwx-AEWo8&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=7&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 07 2 Add measures to semantic models PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ycc89ImwgBc&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=8&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 08 2 Use DAX functions PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=raCR_AHEym0&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=9&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 09 2 Optimize model performance PL 300 </a> <br>
+                    ▶ Microsoft-2024-Victoria Eshelby </a> <br>
+                    <a href="https://www.youtube.com/watch?v=aPkl4U2CwVM&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=37&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Model Data PowerBI Desktop 5 of 10</a> <br>
+                    <a href="https://www.youtube.com/watch?v=xNMX3rTmZV8&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=38&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 DAX In PowerBI 6 of 10</a> <br>
+                    ▶ Microsoft-2023-Linda Larkan & Andrew Connif </a> <br>
+                    <a href="https://www.youtube.com/watch?v=dmDeGBFGF8A&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=12&t=1222s&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 05 Design a data modein Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=9IV82CEwk2g&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=13&t=369s&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 06 Introduction to creating measures using Data Analysis
+                        Expressions m
+                        Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=_80wIBEYLc8&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=14&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 07 Optimize a model for performance rn Power Bl </a> <br>
+
+                </div>
+                <div class="header"><span class="plus">></span><span>3.Visualize and analyze the data (25–30%)</span>
+                </div>
+                <div class="fallContent">
+
+                    ▶ Microsoft-Andrew Conniff-2025 </b> <br>
+                    <a href="https://www.youtube.com/watch?v=WtZVMDK-_gc&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=11&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 10 3 Create visual calculations PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=VNXREzKcjIs&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=10&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 11 3 Design Power BI reports PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=z7wGZP8cJqk&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=12&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 12 3 Enhance reports for user experience PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ta0OcmbgsvM&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=13&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 13 3 Perform advanced analytics PL 300 </a> <br>
+                    ▶ Microsoft-2024-Victoria Eshelby </b> <br>
+                    <a href="https://www.youtube.com/watch?v=zSEpn8ccDTo&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=39&pp=gAQBiAQBsAQB0gcJCfwJAYcqIYzv	 "
+                        target="_blank"> [ESI-2024] PL 300 Create Reports In PowerBI Desktop 7 of 10 Microsoft Learn
+                    </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ZRnh2xFMQKM&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=40&pp=gAQBiAQBsAQB0gcJCfwJAYcqIYzv	 "
+                        target="_blank"> [ESI-2024] PL 300 Perform Advanced Analytics PowerBI Desktop 8 of 10 Microsoft
+                        Learn </a>
+                    <br>
+                    ▶ Microsoft-2023-Linda Larkan & Andrew Connif </b> <br>
+                    <a href="https://www.youtube.com/watch?v=He5YOJt_IGY&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=15&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 08 Creating reports in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=FmnAfSaoRFk&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=16&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 09 Dashboards rn Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Wvztv7pbVVc&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=17&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 10 Identify patterns and trends </a> <br>
+                </div>
+                <div class="header"><span class="plus">></span><span>4.Manage and secure (15–20%)</span></div>
+                <div class="fallContent">
+                    ▶ Microsoft-Andrew Conniff-2025 </b> <br>
+                    <a href="https://www.youtube.com/watch?v=i0TIh-4g9nM&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=14&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 14 4 Create and manage workspaces PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=lBfDByIeAao&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=15&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 15 4 Manage semantic models PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=XP3L9fNKQ3g&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=16&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 16 4 Create dashboards PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=d6zXG7Vz41U&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=17&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 17 4 Implement row level security PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=7OF0akcKot8&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=18&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 18 4 Explore Copilot for Power BI PL 300 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=oUAgc3TSLpE&list=PLt4zoIx-WdZUE_H1zOoOFjPTv2NaJ-Ddz&index=19&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 19 4 Explore end to end analytics with Microsoft Fabric PL 300 </a> <br>
+                    ▶ Microsoft-2024-Victoria Eshelby </b> <br>
+                    <a href="https://www.youtube.com/watch?v=PbFvY7hL8Oo&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=41&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 De[ESI-2024] PLoy And Manage PowerBI Service 9 of 10
+                        Microsoft Learn </a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=KyWjA_WqjsE&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=42&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2024] PL 300 Course Summary 10 of 10</a> <br>
+                    ▶ Microsoft-2023-Linda Larkan & Andrew Connif </b> <br>
+                    <a href="https://www.youtube.com/watch?v=76is2_YCkGg&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=18&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 11 Creating and managing workspacesin Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=y6KjjA_0-wg&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=19&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 12 Managing files and data sets in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=bvV9exkEdjs&list=PLt4zoIx-WdZUiRJJsoo5nTLeuVVfHo_WA&index=20&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> [ESI-2023] PL300 13 Row level securityin Power BI </a> <br>
+
+
+                </div>
+            </div>
+
+
+
+            <!--                    ##########################################################################                   -->
+
+
+
+            <div class="header"><span class="plus">></span><span>[PL-300] Alvi</span></div>
+            <div class="fallContent">
+
+
+                <div class="header"><span class="plus">></span><span>2.Model the data (25–30%)</span></div>
+                <div class="fallContent">
+
+                    <a href="https://www.youtube.com/watch?v=nkgvr-V30MI&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=1&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 30. Create a common date table in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ovTaYWQQ2dY&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=2&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 31. Relationship's cardinality in Power BI (Part 1) </a> <br>
+                    <a href="https://www.youtube.com/watch?v=cIA_7f_-LVM&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=3&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 32. Relationship's cardinality in Power BI (Part 2) </a> <br>
+                    <a href="https://www.youtube.com/watch?v=6GWcxjNCwsM&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=4&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 33. Implement role playing dimensions in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=_ImyVOPEggg&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=5&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 34. Configure table & column properties in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=pcyizCqjkKs&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=6&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 35. Import vs DirectQuery vs Dual mode (Part 1) </a> <br>
+                    <a href="https://www.youtube.com/watch?v=zDkVT2Mvn68&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=7&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 36. Import vs DirectQuery vs Dual mode (Part 2) </a> <br>
+                    <a href="https://www.youtube.com/watch?v=tt9WLObuvhE&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=8&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 37. Import vs DirectQuery vs Dual mode (Part 3) </a> <br>
+                    <a href="https://www.youtube.com/watch?v=yYvhOXy1V7M&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=9&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 38. Choosing optimal data types in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=2WF1oyGRgz4&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=10&t=1s&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 39. Removing unnecessary rows and columns in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=bN8TNgolE8M&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=11&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 40. Summarizing data & Aggregations in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=7GXBvAuAf4M&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=12&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 41. Replace implicit measures w/ explicit DAX measures </a> <br>
+                    <a href="https://www.youtube.com/watch?v=fnpnvDqCJcI&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=13&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 42. Create single aggregation DAX measures in Power BI </a> <br>
+                    <a href="https://www.youtube.com/watch?v=oxnOm9sOXN8&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=14&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 43. Use basic statistical functions in DAX </a> <br>
+                    <a href="https://www.youtube.com/watch?v=1OL4uLaLVuo&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=15&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 44. CALCULATE function in DAX - Part 1 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ImIQIq64GW0&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=16&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 45. CALCULATE function in DAX - Part 2 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=nRa3rTVXp4c&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=17&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 46. CALCULATE function in DAX - Part 3 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Q4Eh-4zZiK8&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=18&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 47. CALCULATE function in DAX - Part 4 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=s5Vka8GNtkw&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=19&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 48. CALCULATE function in DAX - Part 5 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=If4aArMz3FQ&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=20&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 49. CALCULATE function in DAX - Part 6 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=tia4NrxE2So&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=21&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 50. CALCULATE function in DAX - Part 7 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=R0ft8NsihRo&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=22&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 51. Create calculated tables using DAX - Part 1 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=7zi1ZUtcTMU&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=23&pp=gAQBiAQBsAQB0gcJCfwJAYcqIYzv	 "
+                        target="_blank"> 52. Create calculated tables in DAX - Part 2 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=wMT_K1TwA6o&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=24&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 53. Create calculated tables in DAX - Part 3 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=slx1-BRmkAY&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=25&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 54. Create calculated tables in DAX - Part 4 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Gw8ugZjZ_As&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=26&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 55. Create calculated tables in DAX - Part 5 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=rrn8_zyhbBU&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=27&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 56. Create calculated tables in DAX - Part 6 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=JsIT8k2uA0s&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=28&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 57. Create calculated tables in DAX - Part 7 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=z4D2YpoGibk&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=29&pp=gAQBiAQBsAQB0gcJCfwJAYcqIYzv	 "
+                        target="_blank"> 58. Time Intelligence measures in DAX - Part 1 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=ZshT1kA-1LA&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=30&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 59. Time Intelligence measures in DAX - Part 2 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=2-1wkd_bapQ&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=31&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 60. Time Intelligence measures in DAX - Part 3 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=3yKeZ8lBzKk&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=32&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 61. Time Intelligence measures in DAX - Part 4 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=Mux0skRsSRk&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=33&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> 62. Create semi-additive measures in DAX </a> <br>
+                    <a href="https://www.youtube.com/watch?v=j9u5gPF0FTk&list=PLt4zoIx-WdZU1HM5YP-_04ZIunZbmwyrP&index=34&pp=gAQBiAQBsAQB0gcJCfwJAYcqIYzv	 "
+                        target="_blank"> 63. Create DAX Quick Measures in Power BI </a> <br>
+
+
+                </div>
+
+
+            </div>
+
+            <!--                    ##########################################################################                   -->
+            <div class="header"><span class="plus">></span><span>[DP-605] Develop reports with Power BI</span></div>
+            <div class="fallContent">
+                <img src="pic/microsoft.png"> [DP-605] Develop reports with Power BI
+                <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX" target="_blank">
+                    YouTube</a>
+                <a href="https://learn.microsoft.com/en-us/shows/on-demand-instructor-led-training-series/dp-605-01-fy25	 "
+                    target="_blank">
+                    Microsoft
+                </a> <br>
+                <a href="https://www.youtube.com/watch?v=D9Uis0tvvio&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=1&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 1 Course Introduction DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=UrdLp2THJKw&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=2&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 2 Prepare data in Power BI Desktop DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=IAwTTNyzDS0&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=3&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 3 Clean and transform data in Power BI DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=D7SQRCpTYBI&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=4&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 4 Design a data model in Power BI Desktop DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=wl_FgLZy9zg&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=5&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 5 Create measures using DAX in Power BI Desktop DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=4CDADq2BacA&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=6&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 6 Create reports in Power BI Desktop DP 605 </a> <br>
+                <a href="https://www.youtube.com/watch?v=tkqVKYbma44&list=PLt4zoIx-WdZVRdFhZoG1tH3lIr-V2oFpX&index=7&pp=gAQBiAQBsAQB	 "
+                    target="_blank"> DP605 7 Deploy and maintain assets in Power BI service DP 605 </a> <br>
+
+
+
+                <img src="pic/microsoft.png">
+                Prepare and visualize data with Microsoft Power BI - 8 hr 10 min -Learning Path -7 Modules
+                <a href="https://learn.microsoft.com/en-us/training/paths/prepare-visualize-data-power-bi/	 "
+                    target="_blank"> Microsoft </a> <br>
+                01-Get started building with Power BI <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction1 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/2-using-power-bi/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Use Power BI3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/3-building-blocks-of-power-bi/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Building blocks of Power BI8 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/4-exercise-touring-and-using-power-bi/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Tour and use the Power BI service5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/6-get-started-with-power-bi-quiz/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Knowledge check3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/5-summary-cleanup/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+                02-Get data in Power BI <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction2 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/2-data-files/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get data from files10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/3-relational-data/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get data from relational data sources14 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/3b-parameters/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Create dynamic reports with parameters6 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/4-nosql-database/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get data from a NoSQL database5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/5-online-services/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get data from online services5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/6-storage-mode/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Select a storage mode6 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/7-azure-analysis-services/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get data from Azure Analysis Services5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/8-performance-issues/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Fix performance issues10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/9-import-errors/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Resolve data import errors7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/lab-prepare/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Exercise - Get data in Power BI30 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/10-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Check your knowledge5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/get-data/11-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+                03-Clean, transform, and load data in Power BI <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction2 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/2-shape-data/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Shape the initial data18 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/3-data-structure/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Simplify the data structure8 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/4-column-data-types/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Evaluate and change column data types10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/5-combine-tables/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Combine multiple tables into a single table8 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/6-profile-data/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Profile data in Power BI20 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/7-advanced-editor/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Use Advanced Editor to modify M code4 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/8-lab/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Exercise - Load data in Power BI Desktop45 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/9-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Check your knowledge5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/clean-data-power-bi/10-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+                04-Configure a semantic model <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction2 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/2-relationships/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure relationships12 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/3-tables/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure tables3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/4-columns/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure columns5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/5-hierarchies/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure hierarchies1 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/6-measures/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure measures5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/7-parameters/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Configure parameters3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/8-lab/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Exercise - Configure a semantic model in Power BI Desktop45 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/9-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Check your knowledge3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/configure-semantic-model-power-bi/10-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+                05-Design Power BI reports <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/2-design-layout/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Design the analytical report layout7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/3-design-reports/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Design visually appealing reports10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/4-report-objects/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Use report objects7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/5-report-visuals/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Select report visuals14 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/6-report-filters/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Apply filters and slicers to reports10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/7-filter-techniques/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Understand filtering techniques and considerations10 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/8-report-filters-case-study/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Case study - Configure report filters based on feedback3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/9-lab/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Exercise - Design Power BI reports45 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/10-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Check your knowledge5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-effective-reports/11-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+                06-Get started with Copilot in Power BI <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction1 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/2-prepare-data-copilot/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Use Copilot in Power BI to prepare and model data7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/3-create-reports-copilot/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Create reports with Copilot in Power BI7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/4-prep-data-for-ai/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Get your data ready for AI usage in Power BI7 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/6-knowledge-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Module assessment3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/7-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary2 min </a> <br>
+                07-Introduction to end-to-end analytics using Microsoft Fabric <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/1-introduction/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Introduction1 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/2-explore-analytics-fabric/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Explore end-to-end analytics with Microsoft Fabric5 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/3-data-team/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Explore data teams and Microsoft Fabric4 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/4-use-fabric/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Enable and use Microsoft Fabric6 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/5-knowledge-check/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Module assessment3 min </a> <br>
+                <a href="https://learn.microsoft.com/en-us/training/modules/introduction-end-analytics-use-microsoft-fabric/6-summary/?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.prepare-visualize-data-power-bi	 "
+                    target="_blank"> Summary1 min </a> <br>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="fabric" class="collapsible">Fabric</h4>
+        <div class="content">
+
+
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate">
+                [DP-600] Fabric Analytics Engineer Associate <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-600t00">
+                dp-600t00 <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1tDE-8q6Dg9sanGf6SJw9zqBPhPHHVaob">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1rLE-AyKsPceSGL-ZbSI0dboaoKB5rgF6ezxViwalVpY/edit">DP-600
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1wDCc2sOirzpiuYA8Q1FwDAG6ozV9AVimodJb94JAick/edit">DP-600
+                <img src="pic/doc.png"> </a>
+            <a href="https://learn.microsoft.com/en-us/collections/22d2ugt10py0m1"
+                target="_blank">My-MicrosoftCollection</a>
+
+
+            <!--                    ##########################################################################                   -->
+            <div class="header"><span class="plus">></span><span>[DP-600] Microsoft Resources</span>
+            </div>
+            <div class="fallContent">
+
+
+
+                <div class="header"><span class="plus">></span><span>1.Maintain a data analytics solution
+                        (25–30%)</span></div>
+                <div class="fallContent">
+                    1.1. Implement security and governance <br>
+                    - 1.1.1. Implement workspace-level access controls <br>
+                    - 1.1.2. Implement item-level access controls <br>
+                    - 1.1.3. Implement row-level, column-level, object-level, and file-level access control <br>
+                    - 1.1.4. Apply sensitivity labels to items <br>
+                    - 1.1.5. Endorse items <br>
+                    2.1. Maintain the analytics development lifecycle <br>
+                    - 1.2.1. Configure version control for a workspace <br>
+                    - 1.2.2. Create and manage a Power BI Desktop project (.pbip) <br>
+                    - 1.2.3. Create and configure deployment pipelines <br>
+                    - 1.2.4. Perform impact analysis of downstream dependencies from lakehouses, data warehouses,
+                    dataflows,
+                    and semantic
+                    models <br>
+                    - 1.2.5. Deploy and manage semantic models by using the XMLA endpoint <br>
+                    - 1.2.6. Create and update reusable assets, including Power BI template (.pbit) files, Power BI data
+                    source (.pbids)
+                    files, and shared semantic models
+                </div>
+                <div class="header"><span class="plus">></span><span>2.Prepare data (45–50%)</span></div>
+                <div class="fallContent">
+                    2.1. Get data <br>
+                    - 2.1.1. Create a data connection <br>
+                    - 2.1.2. Discover data by using OneLake data hub and real-time hub <br>
+                    - 2.1.3. Ingest or access data as needed <br>
+                    - 2.1.4. Choose between a lakehouse, warehouse, or eventhouse <br>
+                    - 2.1.5. Implement OneLake integration for eventhouse and semantic models <br>
+                    2.2. Transform data <br>
+                    - 2.2.1. Create views, functions, and stored procedures <br>
+                    - 2.2.2. Enrich data by adding new columns or tables <br>
+                    - 2.2.3. Implement a star schema for a lakehouse or warehouse <br>
+                    - 2.2.4. Denormalize data <br>
+                    - 2.2.5. Aggregate data <br>
+                    - 2.2.6. Merge or join data <br>
+                    - 2.2.7. Identify and resolve duplicate data, missing data, or null values <br>
+                    - 2.2.8. Convert column data types <br>
+                    - 2.2.9. Filter data <br>
+                    2.3. Query and analyze data <br>
+                    - 2.3.1. Select, filter, and aggregate data by using the Visual Query Editor <br>
+                    - 2.3.2. Select, filter, and aggregate data by using SQL <br>
+                    - 2.3.3. Select, filter, and aggregate data by using KQL
+                </div>
+                <div class="header"><span class="plus">></span><span>3.Implement and manage semantic models
+                        (25–30%)</span></div>
+                <div class="fallContent">
+                    3.1. Design and build semantic models <br>
+                    - 3.1.1. Choose a storage mode <br>
+                    - 3.1.2. Implement a star schema for a semantic model <br>
+                    - 3.1.3. Implement relationships, such as bridge tables and many-to-many relationships <br>
+                    - 3.1.4. Write calculations that use DAX variables and functions, such as iterators, table
+                    filtering,
+                    windowing, and
+                    information functions <br>
+                    - 3.1.5. Implement calculation groups, dynamic format strings, and field parameters <br>
+                    - 3.1.6. Identify use cases for and configure large semantic model storage format <br>
+                    - 3.1.7. Design and build composite models <br>
+                    3.2. Optimize enterprise-scale semantic models <br>
+                    - 3.2.1. Implement performance improvements in queries and report visuals <br>
+                    - 3.2.2. Improve DAX performance <br>
+                    - 3.2.3. Configure Direct Lake, including default fallback and refresh behavior <br>
+                    - 3.2.4. Implement incremental refresh for semantic models
+                </div>
+                <div class="header"><span class="plus">></span><span>Labs</span></div>
+                <div class="fallContent">
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/01-lakehouse.html"
+                        target="_blank">Lab01-Create a Microsoft Fabric Lakehouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/02-analyze-spark.html"
+                        target="_blank">Lab02-Analyze data with Apache Spark</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03-delta-lake.html"
+                        target="_blank">Lab03-Use delta tables in Apache Spark</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/03b-medallion-lakehouse.html"
+                        target="_blank">Lab04-Create a medallion architecture in a Microsoft Fabric lakehouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/04-ingest-pipeline.html"
+                        target="_blank">Lab05-Ingest data with a pipeline in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/05-dataflows-gen2.html"
+                        target="_blank">Lab06-Create and use Dataflows (Gen2) in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06-data-warehouse.html"
+                        target="_blank">Lab07-Analyze data in a data warehouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06a-data-warehouse-load.html"
+                        target="_blank">Lab08-Load data into a warehouse using T-SQL</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06b-data-warehouse-query.html"
+                        target="_blank">Lab09-Query a data warehouse in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06c-monitor-data-warehouse.html"
+                        target="_blank">Lab10-Monitor a data warehouse in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06d-secure-data-warehouse.html"
+                        target="_blank">Lab11-Secure a Microsoft Fabric data warehouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/07-real-time-Intelligence.html"
+                        target="_blank">Lab12-Get started with Real-Time Intelligence in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/08-data-science-get-started.html"
+                        target="_blank">Lab13-Get started with data science in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/08a-data-science-explore-data.html"
+                        target="_blank">Lab14-Explore data for data science with notebooks in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/08b-data-science-preprocess-data-wrangler.html"
+                        target="_blank">Lab15-Preprocess data with Data Wrangler in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/08c-data-science-train.html"
+                        target="_blank">Lab16-Train and track machine learning models with MLflow in Microsoft
+                        Fabric</a>
+                    <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/08d-data-science-batch.html"
+                        target="_blank">Lab17-Generate batch predictions using a deployed model in Microsoft Fabric</a>
+                    <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/09-real-time-analytics-eventstream.html"
+                        target="_blank">Lab18-Ingest real-time data with Eventstream in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/11-data-activator.html"
+                        target="_blank">Lab19-Use Activator in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/12-query-data-in-kql-database.html"
+                        target="_blank">Lab20-Work with data in a Microsoft Fabric eventhouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/13-real-time-dashboards.html"
+                        target="_blank">Lab21-Get started with Real-time Dashboards in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/14-create-dax-calculations.html"
+                        target="_blank">Lab22-Create DAX calculations in Power BI Desktop</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/15-design-scalable-semantic-models.html"
+                        target="_blank">Lab23-Design scalable semantic models</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/16-create-reusable-power-bi-assets.html"
+                        target="_blank">Lab24-Create reusable Power BI assets</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/17-enforce-model-security.html"
+                        target="_blank">Lab25-Enforce semantic model security</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/18-monitor-hub.html"
+                        target="_blank">Lab26-Monitor Fabric activity in the monitoring hub</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/19-secure-data-access.html"
+                        target="_blank">Lab27-Secure data access in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/20-work-with-database.html"
+                        target="_blank">Lab28-Work with SQL Database in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/20a-work-with-graphql.html"
+                        target="_blank">Lab29-Work with API for GraphQL in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/21-implement-cicd.html"
+                        target="_blank">Lab30-Implement deployment pipelines in Microsoft Fabric</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/22a-copilot-fabric-dataflow-gen2.html"
+                        target="_blank">Lab31-Work smarter with Copilot in Microsoft Fabric Dataflow Gen2</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/22b-copilot-fabric-notebooks.html"
+                        target="_blank">Lab32-Analyze data with Apache Spark and Copilot in Microsoft Fabric
+                        notebooks</a>
+                    <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/22c-copilot-fabric-data-warehouse.html"
+                        target="_blank">Lab33-Use Copilot in Microsoft Fabric data warehouse</a> <br>
+                    <a href="https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/22d-copilot-fabric-data-agents.html"
+                        target="_blank">Lab34-Chat with your data using Microsoft Fabric data agents</a> <br>
+
+                </div>
+
+
+                <div class="header"><span class="plus">></span><span>[DP-600] Micorosoft Road Map</span></div>
+                <div class="fallContent">
+                    Microsoft Learn <br>
+                    <a target="_blank"
+                        href="https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate">
+                        Certification <img src="pic/ms.png">
+                    </a>
+                    <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-600t00">
+                        dp-600t00 <img src="pic/ms.png">
+                    </a>
+                    <br>
+                    <a href="https://learn.microsoft.com/en-us/training/paths/get-started-fabric/" target="_blank">
+                        M01:Get started with Microsoft Fabric [9 hr 55 min - 10 modules ]</a> <br>
+                    <a href="	https://learn.microsoft.com/en-us/training/paths/work-with-data-warehouses-using-microsoft-fabric/ "
+                        target="_blank"> M02: Implement a data warehouse with Microsoft Fabric[6 hr 12 min - 5 Modules]
+                    </a>
+                    <br>
+                    <a href="https://learn.microsoft.com/en-us/training/paths/work-semantic-models-microsoft-fabric/"
+                        target="_blank">
+                        M03: Work with semantic models in Microsoft Fabric [6 hr 12 min - 5 Modules] </a> <br>
+                    <a href="https://learn.microsoft.com/en-us/training/paths/microsoft-fabric-admin-governance/"
+                        target="_blank">
+                        M04: Administer and govern Microsoft Fabric 3 hr 15 min - 4 Modules] </a> <br>
+
+
+                    <hr>
+                    <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu"
+                        target="_blank">Youtube PlayList <img src="pic/youtube.png"> </a> <br>
+                    <img src="pic/microsoft.png">
+                    [DP600-MicrosoftLearn] Preparing for DP-600 <br>
+                    <a href="	https://www.youtube.com/watch?v=bDsTTF4ifFc&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=1&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> Preparing for DP 600 Maintain a data analytics solution Part 1 of 3 Microsoft
+                        Learn
+                    </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=7XihTK9sbUc&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=2&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> Preparing for DP 600 Prepare data Part 2 of 3 Microsoft Learn </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=BhXtwyB5X-I&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=3&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> Preparing for DP 600 Implement and manage semantic models Part 3 of 3 Microsoft
+                        Learn
+                    </a>
+                    <hr>
+                    <img src="pic/microsoft.png">
+                    [DP600-MicrosoftLearn] DP-600: Microsoft Fabric Analytics Engineer <br>
+                    <a href="	https://www.youtube.com/watch?v=CRnJCEfJtvc&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=4&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 01 Course Introduction </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=FawlTIHem_E&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=5&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 02 Introduction to end to end analytics using Microsoft Fabric </a>
+                    <br>
+                    <a href="	https://www.youtube.com/watch?v=vPRDv1NxB1s&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=6&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 03 Administer Microsoft Fabric</a> <br>
+                    <a href="	https://www.youtube.com/watch?v=TzsupeHQIOU&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=7&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 04 Get started with Lakehouses in Microsoft Fabric </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=zkZW6EpfvGM&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=8&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 05 Use Apache Spark in Microsoft Fabric </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=HUfq2du-PwI&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=9&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 06 Work with Delta Lake tables in Microsoft Fabric </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=1MGrdIi0uPA&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=10&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 07 Ingest Data with Dataflows Gen2 in Microsoft Fabric </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=vHjJkM6iuu4&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=11&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 08 Use Data Factory pipelines in Microsoft Fabric DP 600 </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=SvJkcRuUArE&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=12&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 09 Ingest data with Spark and Microsoft Fabric notebooks DP 600 </a>
+                    <br>
+                    <a href="	https://www.youtube.com/watch?v=NBt5cNPYirs&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=13&pp=gAQBiAQBsAQB	 "
+                        target="_blank"> DP 600 10 Organize a Fabric Lakehouse using medallion architecture design DP
+                        600
+                    </a> <br>
+
+
+                    <a href="https://www.youtube.com/watch?v=OK8afNv093g&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=14&pp=gAQBiAQBsAQB0gcJCQYKAYcqIYzv"
+                        target="_blank"> DP 600 11 Get started with data warehouses in Microsoft Fabric DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=qH_P2fsnyXs&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=15&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 12 Load data into a Microsoft Fabric data warehouse DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=QBg3YKWaIXQ&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=16&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 13 Query a data warehouse in Microsoft Fabric DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=yNWcdGFcJCc&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=17&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 14 Monitor a Microsoft Fabric data warehouse DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=qTLAVOv7krE&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=18&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 15 Understand scalability in Power BI DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=lNgsPlPCWT8&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=19&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 16 Module: Create Power BI model relationships DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=uv_W-9vQIXg&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=20&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 17 Module: Use tools to optimize Power BI performance DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=KTnVuMvhhuc&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=21&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 18 Module: Enforce Power BI model security DP-600 </a> <br>
+                    <a href="https://www.youtube.com/watch?v=n72Lc5dXguU&list=PLt4zoIx-WdZWpJXQMpNcma70iNtipMKtu&index=22&pp=gAQBiAQBsAQB"
+                        target="_blank"> DP 600 19 Closing: Exam Resources DP-600 </a> <br>
+
+                    <hr>
+                    <img src="pic/microsoft.png">
+                    [DP600] DP 600 Fabric Analytics Engineer Associate Exam Prep Meetup PUG Turkiye <br>
+                    <a href="	https://youtu.be/piAfzPOh9Ig	 " target="_blank"> Youtube </a>
+                    <a href="	https://drive.google.com/drive/folders/1SH31812t7uNbbgdJ8pnUhlZDzTfDrAWx?usp=drive_link	 "
+                        target="_blank">
+                        Slides </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5s	 " target="_blank"> 00:00:05 Introduction
+                        to
+                        DP-600 exam
+                        preparation and Microsoft Fabric overview. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=175s	 " target="_blank"> 00:02:55 Microsoft
+                        Fabric integrates
+                        multiple workloads into a unified platform for data management. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=511s	 " target="_blank"> 00:08:31 Fabric
+                        integrates data
+                        engineering and warehousing for sca Lable processing. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=692s	 " target="_blank"> 00:11:32
+                        Understanding
+                        data ingestion,
+                        processing, and the role of analytics engineering. </a> <br>
+
+                    Module 1 - Maintain a Data Analytics Solution <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1062s	 " target="_blank"> 00:17:42 Overview
+                        of
+                        the Module -
+                        Implement Security & Governance + maintain development lifecycle </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1153s	 " target="_blank"> 00:19:13
+                        Understanding
+                        the
+                        hierarchical levels in fabric capacity management. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1398s	 " target="_blank"> 00:23:18
+                        Understanding
+                        the principle
+                        of least privilege in user data access. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1514s	 " target="_blank"> 00:25:14
+                        Implementing
+                        row, column, and
+                        object level security in Fabric Analytics. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1757s	 " target="_blank"> 00:29:17
+                        Understanding
+                        changes in data
+                        management and endorsement in Fabric. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=1885s	 " target="_blank"> 00:31:25 Overview
+                        of
+                        deployment
+                        strategies and Version Control in Fabric. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=2136s	 " target="_blank"> 00:35:36
+                        Understanding
+                        Power BI Report
+                        Structures and Version Control. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=2275s	 " target="_blank"> 00:37:55
+                        Introduction
+                        to the updated
+                        deployment pipelines in Fabric for easier version control. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=2532s	 " target="_blank"> 00:42:12 Overview
+                        of
+                        semantic model
+                        deployment with XMLA endpoints. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=2666s	 " target="_blank"> 00:44:26 Utilizing
+                        Power BI tools for
+                        efficient report creation and data connection management. </a> <br>
+
+                    Module 2 - Prepare Data <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=2845s	 " target="_blank"> 00:47:25 Overview
+                        of
+                        on-premises data
+                        ingestion and management in Microsoft Fabric. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3059s	 " target="_blank"> 00:50:59 Overview
+                        of
+                        managing
+                        connections and data ingestion in OneLake. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3322s	 " target="_blank"> 00:55:22
+                        Introduction
+                        to star and
+                        snowflake schemas for data warehousing. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3458s	 " target="_blank"> 00:57:38
+                        Understanding
+                        data merging
+                        and querying in Fabric using SQL and KQL. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3733s	 " target="_blank"> 01:02:13 Overview
+                        of
+                        advanced
+                        filtering in data flows using Power Query and TSQL. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3874s	 " target="_blank"> 01:04:34 KQL is
+                        preferred for
+                        efficient data querying in Fabric analytics. </a> <br>
+
+                    Module 3 - Implement & Manage Semantic Models <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=3972s	 " target="_blank"> 01:06:12 Overview
+                        of
+                        the Module -
+                        Design and Build Semantic Models & Model Optimization </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=4071s	 " target="_blank"> 01:07:51 Discusses
+                        data duplication
+                        and latency in Power BI's import mode versus direct query. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=4263s	 " target="_blank"> 01:11:03 Direct
+                        Lake
+                        revolutionizes
+                        data handling in Power BI by combining import and direct query features. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=4530s	 " target="_blank"> 01:15:30
+                        Understanding
+                        the limitations
+                        and relationships in Fabric Analytics. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=4662s	 " target="_blank"> 01:17:42
+                        Understanding
+                        many-to-many
+                        relationships and their implementation with bridge tables </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=4939s	 " target="_blank"> 01:22:19
+                        Understanding
+                        window
+                        functions for enhanced calculations in data analytics. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5073s	 " target="_blank"> 01:24:33
+                        Understanding
+                        window
+                        functions in analyzing customer sales data. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5338s	 " target="_blank"> 01:28:58 Using
+                        calculation groups and
+                        field parameters simplifies data analysis in Power BI. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5472s	 " target="_blank"> 01:31:12
+                        Structuring
+                        semantic models
+                        enhances Power BI performance. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5747s	 " target="_blank"> 01:35:47 Key
+                        strategies for optimizing
+                        Power BI performance. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=5883s	 " target="_blank"> 01:38:03
+                        Optimizing
+                        Power BI report
+                        performance with fewer visuals and understanding DAX queries </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=6146s	 " target="_blank"> 01:42:26
+                        Incremental
+                        refresh optimizes
+                        data synchronization in Power BI. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=6281s	 " target="_blank"> 01:44:41
+                        Understanding
+                        incremental
+                        refresh and data partitioning in Power BI. </a> <br>
+
+                    Module 4 - Practice Test & Exam Discussion <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=6557s	 " target="_blank"> 01:49:17
+                        Participants
+                        discussed
+                        Microsoft Learn documentation and multiple-choice questions for exam preparation. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=6685s	 " target="_blank"> 01:51:25
+                        Understanding
+                        security
+                        permissions in SQL and best practices for multi-developer environments. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=6994s	 " target="_blank"> 01:56:34
+                        Discussion on
+                        Auto Binding in
+                        Admin Portal for Fabric Analytics. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=7167s	 " target="_blank"> 01:59:27 Overview
+                        of
+                        data input types
+                        and advantages of using Parquet format. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=7450s	 " target="_blank"> 02:04:10
+                        Comparison of
+                        SQL and KQL
+                        queries for calculating average duration. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=7667s	 " target="_blank"> 02:07:47
+                        Understanding
+                        Slowly Changing
+                        Dimensions in Data Modeling </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=7909s	 " target="_blank"> 02:11:49
+                        Discussion on
+                        limited
+                        relationships in data models and DAX format function. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=8090s	 " target="_blank"> 02:14:50 Dynamic
+                        format strings in
+                        data analytics can follow Excel syntax. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=8388s	 " target="_blank"> 02:19:48 Exam
+                        preparation focuses on
+                        confidence and updated quiz content. </a> <br>
+                    <a href="	https://www.youtube.com/watch?v=piAfzPOh9Ig&t=8505s	 " target="_blank"> 02:21:45
+                        Discussion on
+                        study resources
+                        and community learning for the DP-600 exam. </a> <br>
+
+                </div>
+
+
+            </div>
+
+            <!--                    ##########################################################################                   -->
+            <div class="header"><span class="plus">></span><span>[DP-700] Fabric Data Engineer Associate</span></div>
+            <div class="fallContent">
+                <a href="https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate">
+                    [DP-700] Fabric Data Engineer Associate
+                </a>
+
+                <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-700t00">
+                    dp-700t00 <img src="pic/ms.png">
+                </a>
+                <a target="_blank"
+                    href="https://drive.google.com/drive/u/0/folders/14azpRedmTVguzsH6cPTZqczLn8OL4yi1">Files
+                    <img src="pic/googledrive-icon.png"> </a>
+                <a target="_blank"
+                    href="https://docs.google.com/spreadsheets/d/1WeHAzCtoEYyOkg3H0wT1gtcpfPfZdRcHXC-ARb1fQUw/edit">DP-700
+                    <img src="pic/xlxs.png"> </a>
+                <a target="_blank"
+                    href="https://docs.google.com/document/d/1r8iol4g0lnpH754EzKQV042erPPtFoWH08qMgKtaGWk/edit">DP-700
+                    <img src="pic/doc.png"> </a>
+
+                <div class="header"><span class="plus">></span><span>1.</span></div>
+                <div class="fallContent">
+
+                </div>
+            </div>
+
+            <!--                    ##########################################################################                   -->
+            <div class="header"><span class="plus">></span><span>[DP-601] Implementing a Lakehouse with Microsoft Fabric
+                </span></div>
+            <div class="fallContent">
+                <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/implement-lakehouse-microsoft-fabric/	"
+                    target="_blank"> [DP-601] Implementing a Lakehouse with Microsoft Fabric <img src="pic/ms.png"></a>
+                <a href="	https://youtu.be/wv1l_FEmt8w" target="_blank"> Part 1 <img src="pic/youtube.png"> </a>
+                <a href="	https://youtu.be/AyEirr1zx3E" target="_blank"> Part 2 <img src="pic/youtube.png"></a>
+
+                <div class="header"><span class="plus">></span><span>1.</span></div>
+                <div class="fallContent">
+
+                </div>
+
+
+            </div>
+            <!--                    ##########################################################################                   -->
+
+
+
+        </div> <!-- end of part -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="db-admin" class="collapsible">Database Administrator</h4>
+        <div class="content">
+            &nbsp; Azure <br>
+            <a
+                href="https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate">
+                [DP-300] Azure Database Administrator Associate <img src="pic/ms.png"></a>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-300t00">
+                dp-300t00 <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1oOUSkn01eP3tiszMwNWndrz6XejE99xb">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1mP22wzE2i9U9wwQFgIoEvHl4PBV5RUpHd98uncpOUxw/edit">DP-300
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1aoL3nPZdLlBAU42ajIMOSXY9M2VFnqJrdwEmOx9zPL0/edit">DP-300
+                <img src="pic/doc.png"> </a>
+
+            <hr>
+            &nbsp; SQL Server <br>
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1dpo00Fw7HYsPvx3gLC9_QxT6vL9mAw7m">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1JgxBXrQbZ8GErKCYtDijG3oe5s2QvgG2fWI-s3JwOTk/edit">SQL
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1Zq3_mcSxDUeXTh7Nx5dj0wL_9q6IOqVfdSjUPbKM52Y/edit">SQL
+                <img src="pic/doc.png"> </a>
+            <br>
+            <a href="	https://learn.microsoft.com/en-us/credentials/applied-skills/migrate-sql-workloads-azure-sql-database/	"
+                target="_blank">[DP-3001] Migrate SQL Server workload to Azure SQL<img src="pic/ms.png"></a>
+            <a href="https://youtu.be/pBS_Z4AqQnA	" target="_blank"> Part 1 <img src="pic/youtube.png"></a>
+            <a href="https://youtu.be/RSpJ9EBmxC0	" target="_blank"> Part 2 <img src="pic/youtube.png"></a>
+            <a href="https://youtu.be/IjoHnRhDfBg	" target="_blank"> Part 3 <img src="pic/youtube.png"></a>
+            <a href="https://youtu.be/txgGt5uvYAM	" target="_blank"> Part 4 <img src="pic/youtube.png"></a>
+
+            <hr>
+            &nbsp; Cosmos <br>
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-cosmos-db-developer-specialty"
+                target="_blank">[DP-420] Azure Cosmos DB Developer Specialty<img src="pic/ms.png"></a>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-420t00">
+                dp-420t00 <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1_DEctenOTweIpm279AGEXWKVMFrzLrAP">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1Z1Y1xU9c-RuRwZFVibY--ctKkU815OETPZCgNFTE5e0/edit">DP-420
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1iG326KMvpwj8GuWu-FHxSH6fkLGZBb11168_vf98Mt8/edit">DP-420
+                <img src="pic/doc.png"> </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="data-scientist" class="collapsible">Data Scientist</h4>
+        <div class="content">
+            <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist"
+                target="_blank">[DP-100]
+                Azure Data Scientist Associate <img src="pic/ms.png"> </a>
+            <a target="_blank" href="https://learn.microsoft.com/en-us/training/courses/dp-100t00">
+                dp-100t00 <img src="pic/ms.png">
+            </a>
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1-sm78SlPMIcC8bywKts5t2DnvPbqPzzv">Files
+                <img src="pic/googledrive-icon.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/spreadsheets/d/16Rz3iIj9Nppk92A5aRqGAexHeL7jvHeUtdaGG6hObwk/edit">DP-100
+                <img src="pic/xlxs.png"> </a>
+            <a target="_blank"
+                href="https://docs.google.com/document/d/1svzu-j8Jt9DsJZXjqvdoKjMWNjF6391p8Q2IX8QggXA/edit">DP-100
+                <img src="pic/doc.png"> </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="data-scientist" class="collapsible">Data Scientist</h4>
+        <div class="content">
+
+            <a href="https://arch-center.azureedge.net/Credentials/Certification-Poster_en-us.pdf"
+                target="_blank">Microsoft Certification RoadMap
+                <img src="pic/pdflogo.png"> </a>
+
+            <hr>
+            <a href="https://learning-pathways.co.uk/home/learning-pathways-family-march-2025/" target="_blank">
+                Learning Pathway Family-2025</a>
+            <br>
+            Data & AI
+            <br>
+            <a href="https://learning-pathways.co.uk/data-skills-learning-pathway/" target="_blank"> Data Skills
+                (aspiring Analyst)</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/power-bi-learning-companion/" target="_blank"> Power BI</a>
+            <br>
+            <a href="https: //learning-pathways.co.uk/azure-data-scientist-learning-pathway/" target="_blank">
+                Data Scientist</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/microsoft-purview-learning-companion/" target="_blank">
+                Microsoft Purview</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/fabric-learning-companion/" target="_blank">
+                Microsoft Fabric</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/ai-learning-companion/" target="_blank"> AI
+                Learning Companion</a>
+            <br>
+
+
+
+            <hr>
+
+            <a href="https://learning-pathways.co.uk/digital-skills-learning-pathway/" target="_blank"> Digital Skills
+            </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/power-platform-learning-pathway/" target="_blank"> Power
+                Platform </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/microsoft-365-copilot-learning-pathway/" target="_blank">
+                Microsoft 365 Copilot </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/accessibility-learning-pathway/" target="_blank">
+                Accessibility </a>
+            <br>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="microsoft-roadmap" class="collapsible">Microsoft RoadMap</h4>
+        <div class="content">
+
+            <a href="https://arch-center.azureedge.net/Credentials/Certification-Poster_en-us.pdf"
+                target="_blank">Microsoft Certification RoadMap
+                <img src="pic/pdflogo.png"> </a>
+
+            <hr>
+            <a href="https://learning-pathways.co.uk/home/learning-pathways-family-march-2025/" target="_blank">
+                Learning Pathway Family-2025</a>
+            <br>
+            Data & AI
+            <br>
+            <a href="https://learning-pathways.co.uk/data-skills-learning-pathway/" target="_blank"> Data Skills
+                (aspiring Analyst)</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/power-bi-learning-companion/" target="_blank"> Power BI</a>
+            <br>
+            <a href="https: //learning-pathways.co.uk/azure-data-scientist-learning-pathway/" target="_blank">
+                Data Scientist</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/microsoft-purview-learning-companion/" target="_blank">
+                Microsoft Purview</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/fabric-learning-companion/" target="_blank">
+                Microsoft Fabric</a>
+            <br>
+            <a href="https://learning-pathways.co.uk/ai-learning-companion/" target="_blank"> AI
+                Learning Companion</a>
+            <br>
+
+
+
+            <hr>
+
+            <a href="https://learning-pathways.co.uk/digital-skills-learning-pathway/" target="_blank"> Digital Skills
+            </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/power-platform-learning-pathway/" target="_blank"> Power
+                Platform </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/microsoft-365-copilot-learning-pathway/" target="_blank">
+                Microsoft 365 Copilot </a>
+            <br>
+
+
+            <a href="https://learning-pathways.co.uk/accessibility-learning-pathway/" target="_blank">
+                Accessibility </a>
+            <br>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="links">
+            <a target="_blank" href="https://mjahanseir.github.io/learn/index.html"> Learn🚀</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/devops.html"> DEVOPS⚙️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/data.html"> Data📊</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/powerplatform.html"> Power Platform🧩</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/microsoft.html"> Microsoft🪟</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/dev.html">Software Developer👨‍💻</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/python.html">Python🐍</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Java.html">Java☕</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/JavaScript.html">JavaScript🟨</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/cs.html">C##️⃣</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/database.html">Database🗄️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Mosh.html">Mosh🎓</a>
+
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div>
+
+            © 2026 Learning Microsoft with ❤️
+
+
+        </div>
+        <script>
+
+            /* ================= INSANE AI NETWORK ================= */
+
+            const canvas = document.getElementById("bg");
+            const ctx = canvas.getContext("2d");
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.onresize = resize;
+
+            let dots = [];
+            for (let i = 0; i < 140; i++) {
+                dots.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    size: Math.random() * 2 + 1
+                });
+            }
+
+            let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+
+            window.addEventListener("mousemove", e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                dots.forEach(d => {
+
+                    let dxm = d.x - mouse.x;
+                    let dym = d.y - mouse.y;
+                    let dist = Math.sqrt(dxm * dxm + dym * dym);
+
+                    if (dist < 160) {
+                        d.vx += dxm * 0.00005;
+                        d.vy += dym * 0.00005;
+                    }
+
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                    if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+                    ctx.shadowBlur = 20;
+                    ctx.shadowColor = "#00eaff";
+                    ctx.fillStyle = "#00eaff";
+
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.shadowBlur = 0;
+                });
+
+                /* connections */
+                for (let i = 0; i < dots.length; i++) {
+                    for (let j = i + 1; j < dots.length; j++) {
+
+                        let dx = dots[i].x - dots[j].x;
+                        let dy = dots[i].y - dots[j].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 140) {
+
+                            let op = 1 - dist / 140;
+
+                            ctx.strokeStyle = `rgba(0,234,255,${op * .3})`;
+
+                            ctx.beginPath();
+                            ctx.moveTo(dots[i].x, dots[i].y);
+                            ctx.lineTo(dots[j].x, dots[j].y);
+                            ctx.stroke();
+
+                            /* moving data */
+                            let t = Date.now() * 0.004 + i;
+                            let progress = (t % 1000) / 1000;
+
+                            let px = dots[i].x + (dots[j].x - dots[i].x) * progress;
+                            let py = dots[i].y + (dots[j].y - dots[i].y) * progress;
+
+                            ctx.fillStyle = "#ffffff";
+                            ctx.beginPath();
+                            ctx.arc(px, py, 2, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+            /* ================= INTERACTIONS ================= */
+
+            document.querySelectorAll(".collapsible").forEach(btn => {
+                btn.onclick = () => {
+                    let c = btn.nextElementSibling;
+                    c.style.display = c.style.display === "block" ? "none" : "block";
+                };
+            });
+
+            // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            //  end 
+
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            // FALL_DOWN_MENU
+            document.querySelectorAll(".header").forEach(function (header) {
+                header.addEventListener("click", function () {
+                    const fallContent = this.nextElementSibling;
+                    const plus = this.querySelector(".plus");
+
+                    if (fallContent.style.display === "block") {
+                        fallContent.style.display = "none";
+                        plus.textfallContent = "+";
+                    } else {
+                        fallContent.style.display = "block";
+                        plus.textfallContent = "-";
+                    }
+                    plus.classList.toggle("rotate");
+                });
+            });
+        </script>
+
+</body>
+
+</html>
