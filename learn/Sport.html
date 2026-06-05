@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/refs/heads/master/learn/pic/favicon.ico"
+        type="image/x-icon" />
+
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ================= NEW AZURE THEME ================= */
+        body {
+            font-family: "Segoe UI", system-ui;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #dbeafe;
+
+            background:
+                radial-gradient(circle at 20% 30%, #0b1f33, transparent),
+                radial-gradient(circle at 80% 60%, #0a3d62, transparent),
+                linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        /* ================= BACKGROUND GRID ================= */
+        .grid-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+            background:
+                radial-gradient(circle at 30% 40%, #3b82f610 2px, transparent 3px),
+                radial-gradient(circle at 70% 60%, #60a5fa10 2px, transparent 3px);
+
+            animation: floatBg 20s linear infinite;
+        }
+
+        @keyframes floatBg {
+            100% {
+                transform: translateY(-200px);
+            }
+        }
+
+        /* ================= CANVAS ================= */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: 92%;
+            max-width: 1200px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        /* ================= TITLE ================= */
+
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        /* ================= CARD ================= */
+        .card {
+            padding: 35px;
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(148, 163, 184, .2);
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.04);
+            border: 1px solid #3b82f6;
+            background: rgba(59, 130, 246, .15);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, .25);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* ================= TOP BUTTON ================= */
+        #myBtn {
+            display: none;
+            position: fixed;
+
+            width: 50px;
+            height: 50px;
+
+            bottom: 20px;
+            right: 5%;
+            z-index: 99;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: monospace;
+
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+
+            border: none;
+            outline: none;
+            background-color: rgb(5, 92, 179);
+            color: white;
+            cursor: pointer;
+            padding: 0.6rem;
+            border-radius: 50%;
+            box-shadow: 0 1px 7px rgb(197, 194, 4);
+
+        }
+
+        #myBtn:hover {
+            background-color: #2d2c2c;
+        }
+
+        /* ================= COLLAPSIBLE ================= */
+        .collapsible {
+            /* color: white; */
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .1) 100%, transparent 100%)
+        }
+
+        h4 {
+            background-color: #306998;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(78, 77, 77, 0.5);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+            margin: 1rem 0;
+            box-shadow: 0 4px 5px rgba(13, 13, 13, 0.4)
+        }
+
+
+        h4:hover {
+            background: rgba(0, 234, 255, 0.1);
+        }
+
+        .content {
+            border-radius: 18px;
+            background: rgba(252, 252, 252, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            transition: .3s;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif, Geneva, monospace;
+            color: #0f0f0f;
+            font-size: 1.2rem;
+            display: none;
+            overflow: hidden;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #f1f3f3, #4f4f4f);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        a {
+            color: rgb(5, 92, 179);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 rgb(5, 92, 179);
+            color: white;
+        }
+
+
+
+        .card {
+            color: rgb(245, 246, 247);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+
+
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+            bgcolor: rgba(255, 255, 255, 0.05);
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            box-shadow: inset 1000px 0 0 0 rgba(9, 9, 9, 0.1);
+            color: white;
+        }
+
+        /* Fall- Down  */
+
+
+        .header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 0.03rem;
+        }
+
+        .plus {
+            font-size: 1.8rem;
+            font-family: monospace;
+            margin: 0 15px;
+            transition: transform 0.3s;
+
+        }
+
+        .plus:hover {
+            color: greenyellow;
+        }
+
+        .fallContent {
+            font-size: 1rem;
+            display: none;
+            margin: 0 45px;
+            transition: max-height 0.4s ease;
+
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+            /* turns + into x */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> ˄ </button>
+    <div class="grid-bg"></div>
+    <canvas id="bg"></canvas>
+
+    <div class="wrapper">
+
+        <h1>Sports and Work out</h1>
+        <br>
+        <div class="grid">
+
+            <a href="#betterme" class="card">
+                <div class="icon">🤸‍♂️ </div>
+                <div class="title">Better Me</div>
+                <div class="subtitle">BetterMe Work out Serries</div>
+            </a>
+
+            <a href="#yoga" class="card">
+                <div class="icon">🧘</div>
+                <div class="title">Yoga</div>
+                <div class="subtitle">Complete Beginner Yoga Course</div>
+            </a>
+            <a href="#oneyoga" class="card">
+                <div class="icon">🧘</div>
+                <div class="title">One Yoga</div>
+                <div class="subtitle">One Yoga classes Online </div>
+            </a>
+
+            <a href="#abworkout" class="card">
+                <div class="icon">💪</div>
+                <div class="title">AB WORKOUT</div>
+                <div class="subtitle">Abs Workout Challenge </div>
+            </a>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <!--------------------------------------------------              ------------------------------------>
+
+        <h4 id="betterme" class="collapsible"> 🤸‍♂️ Better Me </h4>
+        <div class="content">
+            <a href="https://www.youtube.com/watch?v=tB-ay5SDkbU&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=1&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe01 - Full body wall routine </a><br>
+            <a href="https://www.youtube.com/watch?v=egz_jI3Datg&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=2&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe02 - Glute-Focused day </a><br>
+            <a href="https://www.youtube.com/watch?v=CEWkT-dvaXQ&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=3&t=4s&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe03- Daily Mobility Routine </a><br>
+            <a href="https://www.youtube.com/watch?v=aAkdgmGqvSs&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=4&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe04- Core Sculptor </a><br>
+            <a href="https://www.youtube.com/watch?v=I-naZkmi-rA&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=5&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe05- Ultimate Wall Workout </a><br>
+            <a href="https://www.youtube.com/watch?v=2dQPtZu_GFQ&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=6&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe06- Daily Mobility Routine </a><br>
+            <a href="https://www.youtube.com/watch?v=w_P6SSH0Tbg&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=7&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe07- Full Body Wall Routine </a><br>
+            <a href="https://www.youtube.com/watch?v=6B2ToZof-DI&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=8&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe08-Glute-Focused Day </a><br>
+            <a href="https://www.youtube.com/watch?v=3brH5TK9BjU&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=9&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe09-Core Sculpture </a><br>
+            <a href="https://www.youtube.com/watch?v=aVeBUyQjKhg&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=10&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe15- Butt Sculpt Training </a><br>
+            <a href="https://www.youtube.com/watch?v=Svvq2ZtRPVE&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=11&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe17- Fit and Fab Workout </a><br>
+            <a href="https://www.youtube.com/watch?v=n54kbHOQpdY&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=12&t=166s&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe18- Core and Glutes Wall Combo </a><br>
+            <a href="https://www.youtube.com/watch?v=r0_UGXXwe0g&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=13&t=1s&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe19- Intense Wall Circuit </a><br>
+            <a href="https://www.youtube.com/watch?v=AoQbS4ohz1Y&ltarget=" _blank"> ▶
+                ist=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=14&t=2s&pp=iAQBsAQBsAgC"
+                BetterMe20-Lean Back Workout </a><br>
+            <a href="https://www.youtube.com/watch?v=y_hn0-lazvE&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=18&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe21-Butt Sculpt Training </a><br>
+            <a href="https://www.youtube.com/watch?v=k8hRxqJVkZc&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=15&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe22-Head to Toe at the Wall </a><br>
+            <a href="https://www.youtube.com/watch?v=k8hRxqJVkZc&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=15&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ BetterMe02 Dance </a><br>
+            <a href="https://www.youtube.com/watch?v=wzeAQhBNckc&list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg&index=16&pp=iAQBsAQBsAgC"
+                target="_blank"> ▶ March 4, 2024 </a><br>
+
+            <hr>
+            <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZUmpWg0GYZnsJpirNjHgOPg" target="_blank"> ▶ Sport
+                Page </a>
+
+        </div>
+
+        <h4 id="yoga" class="collapsible"> 🧘 Complete Beginner Yoga Course </h4>
+        <div class="content">
+            <a href="https://www.youtube.com/watch?v=gGdKp_ICahE&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=1"
+                target="_blank"> ▶ 1- Introduction</a><br>
+            <a href="https://www.youtube.com/watch?v=PzDNffr_4HM&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=2"
+                target="_blank"> ▶ 2- Seated Stretching Part 1 - 23:12</a><br>
+            <a href="https://www.youtube.com/watch?v=rinWHLFa5aw&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=3"
+                target="_blank"> ▶ 3- Seated Stretching Part 2 - 22:43</a><br>
+            <a href="https://www.youtube.com/watch?v=d93qbQ65SPg&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=4"
+                target="_blank"> ▶ 4- Core Strength - 25:04</a><br>
+            <a href="https://www.youtube.com/watch?v=Uhupgrxw0d0&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=5"
+                target="_blank"> ▶ 5- Suryanamaskara Sun Salutation - 29:18</a><br>
+            <a href="https://www.youtube.com/watch?v=LKA4Erljn9U&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=7"
+                target="_blank"> ▶ 6- Standing Stretches and Forward Folds Part 1 - 20:03</a><br>
+            <a href="https://www.youtube.com/watch?v=ETh_a6eTTAM&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=8"
+                target="_blank"> ▶ 7- Standing Stretches and Forward Folds Part 2 - 23:05</a><br>
+            <a href="https://www.youtube.com/watch?v=XGYC5CFjxJY&list=PLt4zoIx-WdZXxT0ym_y8gNBuPRo1_bBwE&index=9"
+                target="_blank"> ▶ 8- Back Bending Part 1 - 24:37</a><br>
+            <a href="https://www.youtube.com/watch?v=dbhFPUMTuXs&list=PLt4zoI-WdZXxT0ym_y8gNBuPRo1_bBwE&index=10"
+                target="_blank"> ▶ 9- Back Bending Part 2 - 30:35</a><br>
+
+            <a href="https://www.udemy.com/course/complete-beginner-yoga-course/">udemy - page</a>
+        </div>
+        <h4 id="oneyoga" class="collapsible"> 🧘 One Yoga </h4>
+        <div class="content">
+            <a href="https://www.youtube.com/watch?v=5E6cD2lOxRA&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=1"
+                target="_blank"> ▶ Vinyasa </a>Christine Chénier<br>
+            <a href="https://www.youtube.com/watch?v=5MXfrVaN41Q&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=2"
+                target="_blank"> ▶ Spa Flow</a> Carolyn Budgell<br>
+            <a href="https://www.youtube.com/watch?v=AqGNnW3uc6Y&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=3"
+                target="_blank"> ▶ Vinyasa </a>Christie Baumgartner<br>
+            <a href="https://www.youtube.com/watch?v=DkjIvLxIJdc&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=4"
+                target="_blank"> ▶ Vinyasa </a>Ryan Leier Unfinished<br>
+            <a href="https://www.youtube.com/watch?v=FXN66SRC9q0&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=5"
+                target="_blank"> ▶ Vinyasa </a>Cecily Elmas<br>
+            <a href="https://www.youtube.com/watch?v=JySSqixkQjE&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=6"
+                target="_blank"> ▶ Flow + Restore </a>Christine Chénier<br>
+            <a href="https://www.youtube.com/watch?v=PYrLiZy05cM&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=7"
+                target="_blank"> ▶ Vinyasa </a>Peter Elmas<br>
+            <a href="https://www.youtube.com/watch?v=PreMdgw32xQ&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=8"
+                target="_blank"> ▶ Power Flow </a>Amy Chalmers<br>
+            <a href="https://www.youtube.com/watch?v=f0rlf9fMP10&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=9"
+                target="_blank"> ▶ Vinyasa </a>Sophie Trudeau<br>
+            <a href="https://www.youtube.com/watch?v=kx5WaIksGO8&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=10"
+                target="_blank"> ▶ Vinyasa </a>Vanessa Bourget<br>
+            <a href="https://www.youtube.com/watch?v=podBO6ej8sg&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=11"
+                target="_blank"> ▶ Slow Flow + Restore </a>Ariffa Lalani<br>
+            <a href="https://www.youtube.com/watch?v=qikJmf7aOng&list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk&index=12"
+                target="_blank"> ▶ Vinyasa </a>Kiyah Leier Marshall<br>
+
+            <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZX2NPrJxHBr7H6mxEr-oGMk" target="_blank"> ▶All
+                Playlist</a>
+        </div>
+
+
+
+        <h4 id="abworkout" class="collapsible">💪 AB WORKOUT</h4>
+        <div class="content">
+
+            <a href="https://www.youtube.com/watch?v=-IkNs41LrBo&list=PLt4zoIx-WdZXvZKubK5KTMRu8yXOvtLA1&index=4"
+                target="_blank"> ▶ Get a
+                “6 Pack” in 22 Days! HOME AB WORKOUT </a> <br>
+            1- Lower Ab Spikes x 10 reps <br>
+            2- Seated Knee Tuck Drags x 45 seconds <br>
+            3- Power Ups x 10 reps <br>
+            4- Seated High Twists x 45 seconds <br>
+            5- Backwards 7’s x 5 reps each side <br>
+            6- Sunrise Situps x 45 seconds <br>
+            <hr>
+            <a href="https://www.youtube.com/watch?v=MGPJ9kpwtX4&list=PLt4zoIx-WdZXvZKubK5KTMRu8yXOvtLA1&index=2"
+                target="_blank"> ▶
+                BEGINNER AB WORKOUT LEVEL 1 ABS EASY</a><br>
+            1- Jackknives <br>
+            2- AB Crunches <br>
+            3- Scissor Kick <br>
+            4- Heel Touch <br>
+            5- Low Plank <br>
+            6- Side Tucks 1 <br>
+            7- Side Tucks 2 <br>
+            8- Bicycle Kick <br>
+            9- Side Plank 1 <br>
+            10- Side Plank 2 <br>
+            11- Outro
+
+            <hr>
+            <a href="https://www.youtube.com/watch?v=4FVi4hTYIjI&list=PLt4zoIx-WdZXvZKubK5KTMRu8yXOvtLA1&index=3"
+                target="_blank"> ▶
+                Get 6 PACK ABS in 28 Days Abs Workout Challenge </a </div>
+
+
+
+        </div>
+
+
+        <div class="links">
+            <a target="_blank" href="https://mjahanseir.github.io/learn/index.html"> Learn🚀</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/devops.html"> DEVOPS⚙️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/data.html"> Data📊</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/powerplatform.html"> Power Platform🧩</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/microsoft.html"> Microsoft🪟</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/dev.html">Software Developer👨‍💻</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/python.html">Python🐍</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Java.html">Java☕</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/JavaScript.html">JavaScript🟨</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/cs.html">C##️⃣</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/database.html">Database🗄️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Mosh.html">Mosh🎓</a>
+
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div>
+
+            © 2026 Learning Microsoft with ❤️
+
+
+        </div>
+        <script>
+
+            /* ================= INSANE AI NETWORK ================= */
+
+            const canvas = document.getElementById("bg");
+            const ctx = canvas.getContext("2d");
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.onresize = resize;
+
+            let dots = [];
+            for (let i = 0; i < 140; i++) {
+                dots.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    size: Math.random() * 2 + 1
+                });
+            }
+
+            let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+
+            window.addEventListener("mousemove", e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                dots.forEach(d => {
+
+                    let dxm = d.x - mouse.x;
+                    let dym = d.y - mouse.y;
+                    let dist = Math.sqrt(dxm * dxm + dym * dym);
+
+                    if (dist < 160) {
+                        d.vx += dxm * 0.00005;
+                        d.vy += dym * 0.00005;
+                    }
+
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                    if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+                    ctx.shadowBlur = 20;
+                    ctx.shadowColor = "#00eaff";
+                    ctx.fillStyle = "#00eaff";
+
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.shadowBlur = 0;
+                });
+
+                /* connections */
+                for (let i = 0; i < dots.length; i++) {
+                    for (let j = i + 1; j < dots.length; j++) {
+
+                        let dx = dots[i].x - dots[j].x;
+                        let dy = dots[i].y - dots[j].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 140) {
+
+                            let op = 1 - dist / 140;
+
+                            ctx.strokeStyle = `rgba(0,234,255,${op * .3})`;
+
+                            ctx.beginPath();
+                            ctx.moveTo(dots[i].x, dots[i].y);
+                            ctx.lineTo(dots[j].x, dots[j].y);
+                            ctx.stroke();
+
+                            /* moving data */
+                            let t = Date.now() * 0.004 + i;
+                            let progress = (t % 1000) / 1000;
+
+                            let px = dots[i].x + (dots[j].x - dots[i].x) * progress;
+                            let py = dots[i].y + (dots[j].y - dots[i].y) * progress;
+
+                            ctx.fillStyle = "#ffffff";
+                            ctx.beginPath();
+                            ctx.arc(px, py, 2, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+            /* ================= INTERACTIONS ================= */
+
+            document.querySelectorAll(".collapsible").forEach(btn => {
+                btn.onclick = () => {
+                    let c = btn.nextElementSibling;
+                    c.style.display = c.style.display === "block" ? "none" : "block";
+                };
+            });
+
+            // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            //  end 
+
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            // FALL_DOWN_MENU
+            document.querySelectorAll(".header").forEach(function (header) {
+                header.addEventListener("click", function () {
+                    const fallContent = this.nextElementSibling;
+                    const plus = this.querySelector(".plus");
+
+                    if (fallContent.style.display === "block") {
+                        fallContent.style.display = "none";
+                        plus.textfallContent = "+";
+                    } else {
+                        fallContent.style.display = "block";
+                        plus.textfallContent = "-";
+                    }
+                    plus.classList.toggle("rotate");
+                });
+            });
+        </script>
+
+</body>
+
+</html>
