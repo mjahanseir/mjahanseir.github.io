@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/refs/heads/master/learn/pic/ai.ico"
+        type="image/x-icon" />
+
+    <style>
+        /* ================= RESET ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ================= NEW AZURE THEME ================= */
+        body {
+            font-family: "Segoe UI", system-ui;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #dbeafe;
+
+            background:
+                radial-gradient(circle at 20% 30%, #0b1f33, transparent),
+                radial-gradient(circle at 80% 60%, #0a3d62, transparent),
+                linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        /* ================= BACKGROUND GRID ================= */
+        .grid-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+
+            background:
+                radial-gradient(circle at 30% 40%, #3b82f610 2px, transparent 3px),
+                radial-gradient(circle at 70% 60%, #60a5fa10 2px, transparent 3px);
+
+            animation: floatBg 20s linear infinite;
+        }
+
+        @keyframes floatBg {
+            100% {
+                transform: translateY(-200px);
+            }
+        }
+
+        /* ================= CANVAS ================= */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* ================= WRAPPER ================= */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: 92%;
+            max-width: 1200px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        /* ================= TITLE ================= */
+
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        /* ================= CARD ================= */
+        .card {
+            padding: 35px;
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(148, 163, 184, .2);
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.04);
+            border: 1px solid #3b82f6;
+            background: rgba(59, 130, 246, .15);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, .25);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* ================= TOP BUTTON ================= */
+        #myBtn {
+            display: none;
+            position: fixed;
+
+            width: 50px;
+            height: 50px;
+
+            bottom: 20px;
+            right: 5%;
+            z-index: 99;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: monospace;
+
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+
+            border: none;
+            outline: none;
+            background-color: rgb(5, 92, 179);
+            color: white;
+            cursor: pointer;
+            padding: 0.6rem;
+            border-radius: 50%;
+            box-shadow: 0 1px 7px rgb(197, 194, 4);
+
+        }
+
+        #myBtn:hover {
+            background-color: #2d2c2c;
+        }
+
+        /* ================= COLLAPSIBLE ================= */
+        .collapsible {
+            /* color: white; */
+            cursor: pointer;
+            padding: 18px;
+        }
+
+        .collapsible:hover {
+            background-image: linear-gradient(hsla(0, 0%, 0%, .1) 100%, transparent 100%)
+        }
+
+        h4 {
+            background-color: #306998;
+            color: whitesmoke;
+            font-family: "Work Sans", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(78, 77, 77, 0.5);
+            text-decoration: none;
+            color: inherit;
+            transition: .3s;
+            margin: 1rem 0;
+            box-shadow: 0 4px 5px rgba(13, 13, 13, 0.4)
+        }
+
+
+        h4:hover {
+            background: rgba(0, 234, 255, 0.1);
+        }
+
+        .content {
+            border-radius: 18px;
+            background: rgba(252, 252, 252, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            transition: .3s;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif, Geneva, monospace;
+            color: #0f0f0f;
+            font-size: 1.2rem;
+            display: none;
+            overflow: hidden;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #f1f3f3, #4f4f4f);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width:600px) {
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+        a {
+            color: rgb(5, 92, 179);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+        a:hover {
+            box-shadow: inset 1000px 0 0 0 rgb(5, 92, 179);
+            color: white;
+        }
+
+
+
+        .card {
+            color: rgb(245, 246, 247);
+            text-decoration: none;
+            transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        }
+
+
+
+        .footer {
+
+            position: relative;
+            margin-top: 40px;
+
+            text-align: center;
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        body.light .footer {
+            color: #333;
+        }
+
+        .links {
+            color: rgb(151, 150, 150);
+            margin: 30px;
+            font-size: 14px;
+            bgcolor: rgba(255, 255, 255, 0.05);
+        }
+
+        .links a {
+            color: rgb(151, 150, 150);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            box-shadow: inset 1000px 0 0 0 rgba(9, 9, 9, 0.1);
+            color: white;
+        }
+
+        /* Fall- Down  */
+
+
+        .header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 0.03rem;
+        }
+
+        .plus {
+            font-size: 1.8rem;
+            font-family: monospace;
+            margin: 0 15px;
+            transition: transform 0.3s;
+
+        }
+
+        .plus:hover {
+            color: greenyellow;
+        }
+
+        .fallContent {
+            font-size: 1rem;
+            display: none;
+            margin: 0 45px;
+            transition: max-height 0.4s ease;
+
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+            /* turns + into x */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> ˄ </button>
+    <div class="grid-bg"></div>
+    <canvas id="bg"></canvas>
+
+    <div class="wrapper">
+
+        <h1>Data</h1>
+        <br>
+
+      
+        <div class="grid">
+
+            <a href="#ai-en" class="card">
+                <div class="icon">En</div>
+                <div class="title">English</div>
+                <div class="subtitle">AI resources in English </div>
+            </a>
+
+          
+            <a href="#ai-fa" class="card">
+                <div class="icon">Fa</div>
+                <div class="title">فارسی</div>
+                <div class="subtitle">AI resources in Persian </div>
+            </a>
+          
+                <a href="https://docs.google.com/spreadsheets/d/1aaAKBfICDfYxnoDUDPQa-u2KGPHVxmjlW1d802jyTbA/edit?"
+                class="card">
+                <div class="icon">📗 </div>
+                <div class="title">AI Sheets</div>
+                <div class="subtitle">AI Spreadsheets</div>
+            </a>
+            <a href="https://docs.google.com/document/d/1XsG9_8EO4lG40kyHnj2_dSXKNn1lovv-oKPXgxb3X6Y/edit?"
+                class="card">
+                <div class="icon"> 📘</div>
+                <div class="title">AI document</div>
+                <div class="subtitle">AI Documents</div>
+            </a>
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="ai-en" class="collapsible">AI-English</h4>
+        <div class="content">
+           <a href="#" target="_blank"> AAA </a>
+
+        </div>
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <h4 id="ai-fa" class="collapsible">AI-Farsi</h4>
+        <div class="content">
+           [AI-Farsi] <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZX0TxUy68z-qU0jjuvZjwwq" target="_blank"> Youtube PlayList </a>
+           <a href="https://youtu.be/sEHE47CGtrI" target="_blank"> [AI-SharifiZarchi]01 - ورود به دنیای هوش مصنوعی </a>
+           <a href="#" target="_blank"> [AI-SharifiZarchi]02 -  </a>
+           <a href="#" target="_blank"> [AI-SharifiZarchi]03 -  </a>
+           <a href="#" target="_blank"> [AI-SharifiZarchi]04 -  </a>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- ---------------------------------         ----------------------------------------- -->
+        <div class="links">
+            <a target="_blank" href="https://mjahanseir.github.io/learn/index.html"> Learn🚀</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/devops.html"> DEVOPS⚙️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/data.html"> Data📊</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/powerplatform.html"> Power Platform🧩</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/microsoft.html"> Microsoft🪟</a>
+
+            <a target="_blank" href="https://mjahanseir.github.io/learn/dev.html">Software Developer👨‍💻</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/python.html">Python🐍</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Java.html">Java☕</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/JavaScript.html">JavaScript🟨</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/cs.html">C##️⃣</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/database.html">Database🗄️</a>
+            <a target="_blank" href="https://mjahanseir.github.io/learn/Mosh.html">Mosh🎓</a>
+
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div>
+
+            © 2026 Learning Microsoft with ❤️
+
+
+        </div>
+        <script>
+
+            /* ================= INSANE AI NETWORK ================= */
+
+            const canvas = document.getElementById("bg");
+            const ctx = canvas.getContext("2d");
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.onresize = resize;
+
+            let dots = [];
+            for (let i = 0; i < 140; i++) {
+                dots.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    size: Math.random() * 2 + 1
+                });
+            }
+
+            let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+
+            window.addEventListener("mousemove", e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                dots.forEach(d => {
+
+                    let dxm = d.x - mouse.x;
+                    let dym = d.y - mouse.y;
+                    let dist = Math.sqrt(dxm * dxm + dym * dym);
+
+                    if (dist < 160) {
+                        d.vx += dxm * 0.00005;
+                        d.vy += dym * 0.00005;
+                    }
+
+                    d.x += d.vx;
+                    d.y += d.vy;
+
+                    if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                    if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+                    ctx.shadowBlur = 20;
+                    ctx.shadowColor = "#00eaff";
+                    ctx.fillStyle = "#00eaff";
+
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.shadowBlur = 0;
+                });
+
+                /* connections */
+                for (let i = 0; i < dots.length; i++) {
+                    for (let j = i + 1; j < dots.length; j++) {
+
+                        let dx = dots[i].x - dots[j].x;
+                        let dy = dots[i].y - dots[j].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 140) {
+
+                            let op = 1 - dist / 140;
+
+                            ctx.strokeStyle = `rgba(0,234,255,${op * .3})`;
+
+                            ctx.beginPath();
+                            ctx.moveTo(dots[i].x, dots[i].y);
+                            ctx.lineTo(dots[j].x, dots[j].y);
+                            ctx.stroke();
+
+                            /* moving data */
+                            let t = Date.now() * 0.004 + i;
+                            let progress = (t % 1000) / 1000;
+
+                            let px = dots[i].x + (dots[j].x - dots[i].x) * progress;
+                            let py = dots[i].y + (dots[j].y - dots[i].y) * progress;
+
+                            ctx.fillStyle = "#ffffff";
+                            ctx.beginPath();
+                            ctx.arc(px, py, 2, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+            /* ================= INTERACTIONS ================= */
+
+            document.querySelectorAll(".collapsible").forEach(btn => {
+                btn.onclick = () => {
+                    let c = btn.nextElementSibling;
+                    c.style.display = c.style.display === "block" ? "none" : "block";
+                };
+            });
+
+            // start   ------------------------------------------ jQuery for top floating menu  ----------------------------------
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            //  end 
+
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+            // FALL_DOWN_MENU
+            document.querySelectorAll(".header").forEach(function (header) {
+                header.addEventListener("click", function () {
+                    const fallContent = this.nextElementSibling;
+                    const plus = this.querySelector(".plus");
+
+                    if (fallContent.style.display === "block") {
+                        fallContent.style.display = "none";
+                        plus.textfallContent = "+";
+                    } else {
+                        fallContent.style.display = "block";
+                        plus.textfallContent = "-";
+                    }
+                    plus.classList.toggle("rotate");
+                });
+            });
+        </script>
+
+</body>
+
+</html>
