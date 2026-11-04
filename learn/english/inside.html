@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#020617">
+
+    <title>Inside English</title>
+
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/mjahanseir/mjahanseir.github.io/refs/heads/master/learn/computer/pic/dev.ico"
+        type="image/x-icon">
+
+    <style>
+        /* ================= RESET ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #3b82f6;
+            --cyan: #06b6d4;
+            --text: #dbeafe;
+            --muted: #94a3b8;
+            --dim: #64748b;
+            --border: rgba(148, 163, 184, .14);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+                radial-gradient(circle at 20% 30%, #0b1f33, transparent 42%),
+                radial-gradient(circle at 80% 60%, #0a3d62, transparent 42%),
+                linear-gradient(135deg, #020617, #0f172a);
+
+            background-attachment: fixed;
+        }
+
+
+        /* ================= WRAPPER ================= */
+
+        .wrapper {
+            width: 92%;
+            max-width: 1150px;
+
+            margin: 55px auto 25px;
+
+            text-align: center;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .logo {
+            width: 52px;
+            height: 52px;
+
+            display: grid;
+            place-items: center;
+
+            margin: 0 auto 14px;
+
+            color: white;
+
+            font-size: 22px;
+            font-weight: 800;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(135deg,
+                    var(--blue),
+                    var(--cyan));
+        }
+
+        h1 {
+            color: #f8fafc;
+
+            font-size:
+                clamp(2.5rem, 6vw, 4.5rem);
+
+            font-weight: 800;
+
+            letter-spacing: -2px;
+        }
+
+        .header-subtitle {
+            margin-top: 8px;
+            margin-bottom: 40px;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= TOP CARDS ================= */
+
+        .grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+
+            margin-bottom: 45px;
+        }
+
+        .card {
+            min-height: 165px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 28px 20px;
+
+            color: #cbd5e1;
+            text-decoration: none;
+
+            background:
+                rgba(255, 255, 255, .035);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            backdrop-filter: blur(12px);
+
+            transition:
+                .25s ease;
+        }
+
+        .card:hover {
+            transform:
+                translateY(-6px);
+
+            color: white;
+
+            background:
+                rgba(59, 130, 246, .09);
+
+            border-color:
+                rgba(96, 165, 250, .45);
+
+            box-shadow:
+                0 20px 50px rgba(2, 6, 23, .30);
+        }
+
+        .icon {
+            margin-bottom: 14px;
+
+            font-size: 30px;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .card-subtitle {
+            margin-top: 7px;
+
+            color: #64748b;
+
+            font-size: 10px;
+        }
+
+        .card-arrow {
+            margin-top: 15px;
+
+            color: #60a5fa;
+
+            font-size: 14px;
+
+            transition:
+                transform .2s ease;
+        }
+
+        .card:hover .card-arrow {
+            transform:
+                translateY(4px);
+        }
+
+
+        /* ================= BOOKS LABEL ================= */
+
+        .section-label {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 10px;
+
+            color: #64748b;
+
+            font-size: 9px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .section-line {
+            height: 1px;
+
+            flex: 1;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(148, 163, 184, .18),
+                    transparent);
+        }
+
+
+        /* ================= COLLAPSIBLE ================= */
+
+        .collapsible {
+            position: relative;
+
+            width: 100%;
+
+            margin-top: 9px;
+
+            padding:
+                15px 48px 15px 18px;
+
+            color: #aab8c9;
+
+            background:
+                rgba(255, 255, 255, .025);
+
+            border:
+                1px solid rgba(148, 163, 184, .13);
+
+            border-radius: 12px;
+
+            outline: none;
+
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition:
+                background .2s,
+                color .2s,
+                border-color .2s;
+        }
+
+        .collapsible:hover {
+            color: white;
+
+            background:
+                rgba(59, 130, 246, .055);
+
+            border-color:
+                rgba(96, 165, 250, .30);
+        }
+
+
+        /* ================= DROPDOWN ARROW ================= */
+
+        .collapsible::after {
+            content: "⌄";
+
+            position: absolute;
+
+            right: 18px;
+            top: 50%;
+
+            color: #60a5fa;
+
+            font-size: 20px;
+
+            transform:
+                translateY(-55%);
+
+            transition:
+                transform .25s ease;
+        }
+
+        .collapsible.active::after {
+            transform:
+                translateY(-45%) rotate(180deg);
+        }
+
+        .collapsible.active {
+            color: #e2e8f0;
+
+            border-color:
+                rgba(96, 165, 250, .28);
+        }
+
+
+        /* ================= SIMPLE DROPDOWN ================= */
+
+        /*
+   Completely simple:
+   NO background
+   NO border
+   NO bullets
+   NO icons
+   NO individual boxes
+*/
+
+        .content {
+            display: none;
+
+            padding:
+                10px 18px 16px;
+
+            text-align: left;
+
+            background: transparent;
+
+            border: none;
+        }
+
+        .content.open {
+            display: block;
+        }
+
+
+        /* ================= PLAIN LINKS ================= */
+
+        /* ================= SIMPLE DROPDOWN ================= */
+
+        .content {
+            display: none;
+            padding: 12px 18px;
+            text-align: left;
+            background: transparent;
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .content.open {
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        /* LINKS STAY ON SAME LINE */
+
+        .content a {
+            padding: 3px 0;
+
+            color: #8ea0b5;
+            text-decoration: none;
+
+            font-size: 0.8rem;
+            font-weight: 500;
+
+            background: none;
+            border: none;
+
+            white-space: nowrap;
+        }
+
+        .content a:hover {
+            color: #60a5fa;
+        }
+
+        /* separator between links */
+
+        .content a:not(:last-child)::after {
+            content: " | ";
+            margin: 0 10px;
+            color: #475569;
+        }
+
+        /* ================= TOP BUTTON ================= */
+
+        #topButton {
+            display: none;
+
+            position: fixed;
+
+            right: 24px;
+            bottom: 24px;
+
+            z-index: 100;
+
+            width: 42px;
+            height: 42px;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 0;
+
+            color: white;
+
+            background:
+                rgba(37, 99, 235, .80);
+
+            border:
+                1px solid rgba(96, 165, 250, .35);
+
+            border-radius: 50%;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            backdrop-filter:
+                blur(10px);
+
+            transition:
+                background .2s,
+                transform .2s;
+        }
+
+        #topButton:hover {
+            transform:
+                translateY(-3px);
+
+            background:
+                #2563eb;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            margin-top: 35px;
+
+            color: #64748b;
+
+            font-size: 9px;
+
+            opacity: .5;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:800px) {
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .card {
+                min-height: 120px;
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            .wrapper {
+                width: calc(100% - 18px);
+                margin-top: 30px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-subtitle {
+                margin-bottom: 25px;
+            }
+
+            #topButton {
+                right: 14px;
+                bottom: 14px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button id="topButton" type="button" title="Go to top">
+        ↑
+    </button>
+
+
+
+    <div class="wrapper">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <div class="logo">
+                IE
+            </div>
+
+            <h1>
+                Inside English
+            </h1>
+
+            <div class="header-subtitle">
+                Reading • Writing • Listening & Speaking
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= TOP CARDS ================= -->
+
+        <div class="grid">
+
+
+            <!-- READING -->
+
+            <a href="#inside-reading" class="card">
+
+                <div class="icon">
+                    📘
+                </div>
+
+                <div class="card-title">
+                    Inside Reading
+                </div>
+
+                <div class="card-subtitle">
+                    Introductory • 1 • 2 • 3 • 4
+                </div>
+
+                <div class="card-arrow">
+                    ↓
+                </div>
+
+            </a>
+
+
+
+            <!-- WRITING -->
+
+            <a href="#inside-writing" class="card">
+
+                <div class="icon">
+                    ✍️
+                </div>
+
+                <div class="card-title">
+                    Inside Writing
+                </div>
+
+                <div class="card-subtitle">
+                    Introductory • 1 • 2 • 3 • 4
+                </div>
+
+                <div class="card-arrow">
+                    ↓
+                </div>
+
+            </a>
+
+
+
+            <!-- LISTENING AND SPEAKING -->
+
+            <a href="#inside-listening" class="card">
+
+                <div class="icon">
+                    🎧
+                </div>
+
+                <div class="card-title">
+                    Inside Listening and Speaking
+                </div>
+
+                <div class="card-subtitle">
+                    Introductory • 1 • 2 • 3 • 4
+                </div>
+
+                <div class="card-arrow">
+                    ↓
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ================= BOOK SECTIONS ================= -->
+
+        <div class="section-label">
+
+            <span>
+                Books
+            </span>
+
+            <span class="section-line"></span>
+
+        </div>
+
+
+
+        <!-- =====================================================
+         INSIDE READING
+    ====================================================== -->
+
+        <button id="inside-reading" class="collapsible">
+
+            Inside Reading
+
+        </button>
+
+
+        <div class="content">
+            - Inside Reading 0 - Intro : &nbsp
+            <a href="https://www.youtube.com/playlist?list=PLctciTHlzW1g" target="_blank" rel="noopener noreferrer">
+                Faramarzi-Youtube ▶
+            </a>
+            <a href="https://drive.google.com/drive/u/2/folders/1Ytn_j5joCiAs2I0h1SFIPR_FrkBGPVc0" target="_blank"
+                rel="noopener noreferrer">
+                Faramarzi-Files 📂
+                <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                    rel="noopener noreferrer">
+                    Insides-Files 📂
+                </a>
+
+            </a>
+
+
+
+            <BR>
+            - Inside Reading 1 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://www.youtube.com/playlist?list=PLt4zoIx-WdZWhFLb6JQLUtGaDO_q5qF5v" target="_blank"
+                rel="noopener noreferrer">
+                Faramarzi-Youtube ▶
+            </a>
+            <a href="https://drive.google.com/drive/u/2/folders/17MmU-TUBrWRBpaQbnVRYKZd7aI2DnOhi" target="_blank"
+                rel="noopener noreferrer">
+                Faramarzi-Files 📂
+            </a>
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+
+            <BR>
+            - Inside Reading 2 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+
+            <BR>
+            - Inside Reading 3 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+            <BR>
+
+
+
+            - Inside Reading 4 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+         INSIDE WRITING
+    ====================================================== -->
+
+        <button id="inside-writing" class="collapsible">
+
+            Inside Writing
+
+        </button>
+
+
+        <div class="content">
+
+
+            - Inside Writing 0 - Intro : &nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Writing 1 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Writing 2 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Writing 3 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Writing 4 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+         INSIDE LISTENING AND SPEAKING
+    ====================================================== -->
+
+        <button id="inside-listening" class="collapsible">
+
+            Inside Listening and Speaking
+
+        </button>
+
+
+        <div class="content">
+
+
+            - Inside Listening & Speaking 0 - Intro : &nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Listening & Speaking 1 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Listening & Speaking 2 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Listening & Speaking 3 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+            <br>
+            - Inside Listening & Speaking 4 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+            <a href="https://drive.google.com/drive/u/2/folders/1PVfTTP3z5E9cjkOQN2bmBNjIt1aCdkmr" target="_blank"
+                rel="noopener noreferrer">
+                Insides-Files 📂
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <div class="footer">
+
+            © <span id="year"></span>
+            Inside English • Learning with ❤️
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+        "use strict";
+
+
+        /* =========================================================
+           SIMPLE DROPDOWNS
+        ========================================================= */
+
+        document
+            .querySelectorAll(".collapsible")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        button.classList.toggle(
+                            "active"
+                        );
+
+                        const content =
+                            button.nextElementSibling;
+
+                        content.classList.toggle(
+                            "open"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           TOP CARDS
+           SCROLL TO SECTION + OPEN IT
+        ========================================================= */
+
+        document
+            .querySelectorAll(".card")
+            .forEach(card => {
+
+                card.addEventListener(
+                    "click",
+                    event => {
+
+                        event.preventDefault();
+
+                        const id =
+                            card.getAttribute("href");
+
+                        const section =
+                            document.querySelector(id);
+
+                        if (!section) {
+                            return;
+                        }
+
+
+                        /* Open dropdown */
+
+                        section.classList.add(
+                            "active"
+                        );
+
+                        const content =
+                            section.nextElementSibling;
+
+                        if (content) {
+
+                            content.classList.add(
+                                "open"
+                            );
+
+                        }
+
+
+                        /* Smooth scroll */
+
+                        setTimeout(() => {
+
+                            section.scrollIntoView({
+
+                                behavior: "smooth",
+
+                                block: "center"
+
+                            });
+
+                        }, 50);
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           BACK TO TOP BUTTON
+        ========================================================= */
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                topButton.style.display =
+                    window.scrollY > 250
+                        ? "flex"
+                        : "none";
+
+            }
+        );
+
+
+        topButton.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+
+        /* =========================================================
+           CURRENT YEAR
+        ========================================================= */
+
+        document.getElementById(
+            "year"
+        ).textContent =
+            new Date().getFullYear();
+
+    </script>
+
+
+</body>
+
+</html>
